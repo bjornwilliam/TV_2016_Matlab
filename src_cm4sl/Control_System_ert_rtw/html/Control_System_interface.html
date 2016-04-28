@@ -1,0 +1,1431 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript">function rtwTableShrink(o) {var t = o.nextSibling;if (t.nodeType != 1) {t = t.nextSibling;}if (t.style.display == "none") {t.style.display = "";o.innerHTML = "[-]"} else {t.style.display = "none";o.innerHTML = "[+] ... "}}</script><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+Code Interface Report for Control_System
+</title>
+
+</head>
+<body ONLOAD="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdCodeInterface'); else local_onload();}} catch(err) {};">
+<h1>
+Code Interface Report for Control_System
+</h1>
+<h3>
+Table of Contents
+</h3>
+<ul>
+<li>
+<a href="#sec_Entry_Point_Functions">
+Entry Point Functions
+</a>
+
+</li>
+<li>
+<a href="#sec_Inports">
+Inports
+</a>
+
+</li>
+<li>
+<a href="#sec_Outports">
+Outports
+</a>
+
+</li>
+<li>
+<a href="#sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</li>
+<li>
+<a href="#sec_Data_Stores">
+Data Stores
+</a>
+
+</li>
+
+</ul>
+<h3>
+<a name="sec_Entry_Point_Functions">
+Entry Point Functions
+</a>
+
+</h3>
+<p>
+Function: <a href="Control_System_c.html#fcn_Control_System_initialize">Control_System_initialize</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void Control_System_initialize(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Initialization entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called exactly once
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="Control_System_h.html">Control_System.h</a>
+</td>
+
+</tr>
+
+</table>
+<p>
+Function: <a href="Control_System_c.html#fcn_Control_System_step">Control_System_step</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void Control_System_step(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Output entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called periodically, every 0.01 seconds
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="Control_System_h.html">Control_System.h</a>
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Inports">
+Inports
+</a>
+
+</h3>
+<table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Block Name
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4054')" name="code2model" class="code2model">&lt;S1&gt;/states</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_U.states
+</td>
+<td width="21%" align="left" valign="top">
+States
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Outports">
+Outports
+</a>
+
+</h3>
+<span title="Click to shrink or expand table" onclick="rtwTableShrink(this)">[-]</span><table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Block Name
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1203')" name="code2model" class="code2model">&lt;S1&gt;/Ti_pos </a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.Ti_pos_e
+</td>
+<td width="21%" align="left" valign="top">
+Ti_pos
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1204')" name="code2model" class="code2model">&lt;S1&gt;/Ti_neg</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.Ti_neg_n
+</td>
+<td width="21%" align="left" valign="top">
+Ti_neg
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1205')" name="code2model" class="code2model">&lt;S1&gt;/wi_sp</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.wi_sp
+</td>
+<td width="21%" align="left" valign="top">
+wi_set
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1703')" name="code2model" class="code2model">&lt;S1&gt;/States</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.States_b
+</td>
+<td width="21%" align="left" valign="top">
+States
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1712')" name="code2model" class="code2model">&lt;S1&gt;/Ti_lim </a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.Ti_lim_o
+</td>
+<td width="21%" align="left" valign="top">
+Ti_lim
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1721')" name="code2model" class="code2model">&lt;S1&gt;/r_ref</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.r_ref
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1720')" name="code2model" class="code2model">&lt;S1&gt;/T_req</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.T_req
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1722')" name="code2model" class="code2model">&lt;S1&gt;/Mz_error</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.Mz_error
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1718')" name="code2model" class="code2model">&lt;S1&gt;/Mz_ref</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.Mz_ref
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4711')" name="code2model" class="code2model">&lt;S1&gt;/OutputTelemetri_Control</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_Y.OutputTelemetri_Control_h
+</td>
+<td width="21%" align="left" valign="top">
+OutputTelemetri_Control
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</h3>
+<span title="Click to shrink or expand table" onclick="rtwTableShrink(this)">[-]</span><table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Parameter Source
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:2284')" name="code2model" class="code2model">&lt;S5&gt;/constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.constant_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3247')" name="code2model" class="code2model">&lt;S5&gt;/constant2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.constant2_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:2210:1684')" name="code2model" class="code2model">&lt;S10&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3178')" name="code2model" class="code2model">&lt;S27&gt;/Gain7</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain7_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3170')" name="code2model" class="code2model">&lt;S27&gt;/Constant1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant1_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3173')" name="code2model" class="code2model">&lt;S27&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain1_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3172')" name="code2model" class="code2model">&lt;S27&gt;/Gain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3169')" name="code2model" class="code2model">&lt;S27&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant_Value_h
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5075')" name="code2model" class="code2model">&lt;S28&gt;/Gain7</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain7_Gain_l
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5069')" name="code2model" class="code2model">&lt;S28&gt;/Constant1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant1_Value_h
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5073')" name="code2model" class="code2model">&lt;S28&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain1_Gain_h
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5072')" name="code2model" class="code2model">&lt;S28&gt;/Gain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain_Gain_b
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5068')" name="code2model" class="code2model">&lt;S28&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant_Value_c
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5107')" name="code2model" class="code2model">&lt;S29&gt;/Gain7</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain7_Gain_b
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5101')" name="code2model" class="code2model">&lt;S29&gt;/Constant1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant1_Value_p
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5105')" name="code2model" class="code2model">&lt;S29&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain1_Gain_k
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5104')" name="code2model" class="code2model">&lt;S29&gt;/Gain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain_Gain_i
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5100')" name="code2model" class="code2model">&lt;S29&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant_Value_o
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5139')" name="code2model" class="code2model">&lt;S30&gt;/Gain7</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain7_Gain_d
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5133')" name="code2model" class="code2model">&lt;S30&gt;/Constant1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant1_Value_d
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5137')" name="code2model" class="code2model">&lt;S30&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain1_Gain_m
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5136')" name="code2model" class="code2model">&lt;S30&gt;/Gain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain_Gain_k
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5132')" name="code2model" class="code2model">&lt;S30&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Constant_Value_m
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3221')" name="code2model" class="code2model">&lt;S5&gt;/Switch</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch_Threshold
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:2210:1668')" name="code2model" class="code2model">&lt;S10&gt;/Integrator</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Integrator_gainval
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:2210:1668')" name="code2model" class="code2model">&lt;S10&gt;/Integrator</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Integrator_IC
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4924')" name="code2model" class="code2model">&lt;S9&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain1_Gain_f
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4927')" name="code2model" class="code2model">&lt;S9&gt;/Kd lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Kdlookup_tableData
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4927')" name="code2model" class="code2model">&lt;S9&gt;/Kd lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Kdlookup_bp01Data
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4918')" name="code2model" class="code2model">&lt;S9&gt;/Gain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain_Gain_ip
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4923')" name="code2model" class="code2model">&lt;S9&gt;/Kp Lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.KpLookup_tableData
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4923')" name="code2model" class="code2model">&lt;S9&gt;/Kp Lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.KpLookup_bp01Data
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4716')" name="code2model" class="code2model">&lt;S9&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_gainval
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4716')" name="code2model" class="code2model">&lt;S9&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_IC
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:1138')" name="code2model" class="code2model">&lt;S9&gt;/Saturation</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Saturation_LowerSat
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3188')" name="code2model" class="code2model">&lt;S27&gt;/Switch</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch_Threshold_c
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3171')" name="code2model" class="code2model">&lt;S27&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_gainv_i
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3171')" name="code2model" class="code2model">&lt;S27&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_IC_f
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3189')" name="code2model" class="code2model">&lt;S27&gt;/Switch1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch1_Threshold
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:3190')" name="code2model" class="code2model">&lt;S27&gt;/Switch2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch2_Threshold
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5088')" name="code2model" class="code2model">&lt;S28&gt;/Switch</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch_Threshold_b
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5071')" name="code2model" class="code2model">&lt;S28&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_gainv_n
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5071')" name="code2model" class="code2model">&lt;S28&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_IC_i
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5089')" name="code2model" class="code2model">&lt;S28&gt;/Switch1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch1_Threshold_f
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5090')" name="code2model" class="code2model">&lt;S28&gt;/Switch2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch2_Threshold_o
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5120')" name="code2model" class="code2model">&lt;S29&gt;/Switch</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch_Threshold_n
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5103')" name="code2model" class="code2model">&lt;S29&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_gainv_f
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5103')" name="code2model" class="code2model">&lt;S29&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_IC_l
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5121')" name="code2model" class="code2model">&lt;S29&gt;/Switch1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch1_Threshold_d
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5122')" name="code2model" class="code2model">&lt;S29&gt;/Switch2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch2_Threshold_p
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5152')" name="code2model" class="code2model">&lt;S30&gt;/Switch</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch_Threshold_h
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5135')" name="code2model" class="code2model">&lt;S30&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_gain_fb
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5135')" name="code2model" class="code2model">&lt;S30&gt;/Discrete-Time Integrator2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.DiscreteTimeIntegrator2_IC_c
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5153')" name="code2model" class="code2model">&lt;S30&gt;/Switch1</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch1_Threshold_p
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:5154')" name="code2model" class="code2model">&lt;S30&gt;/Switch2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Switch2_Threshold_k
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:2210:1676')" name="code2model" class="code2model">&lt;S12&gt;/ZeroGain</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.ZeroGain_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4919')" name="code2model" class="code2model">&lt;S9&gt;/Gain2</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Gain2_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4926')" name="code2model" class="code2model">&lt;S9&gt;/Ki lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Kilookup_tableData
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('TV2016:4926')" name="code2model" class="code2model">&lt;S9&gt;/Ki lookup</a>
+</td>
+<td width="26%" align="left" valign="top">
+Control_System_P.Kilookup_bp01Data
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  2]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+yawRateControl
+</td>
+<td width="26%" align="left" valign="top">
+yawRateControl
+</td>
+<td width="21%" align="left" valign="top">
+YawRateControl
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+tractionControl
+</td>
+<td width="26%" align="left" valign="top">
+tractionControl
+</td>
+<td width="21%" align="left" valign="top">
+TractionControl
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+powerLimitControl
+</td>
+<td width="26%" align="left" valign="top">
+powerLimitControl
+</td>
+<td width="21%" align="left" valign="top">
+PowerLimitControl
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+settings
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+settings
+</td>
+<td width="21%" align="left" valign="top">
+Settings
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+car_params
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+car_params
+</td>
+<td width="21%" align="left" valign="top">
+CarParams
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Data_Stores">
+Data Stores
+</a>
+
+</h3>
+<p>
+No data stores in the model; note that this report lists only data stores with non-auto storage class and global data stores
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="ct">/* Copyright 2013 The MathWorks, Inc. */</span></td></tr>
+<tr name="2" id="2">
+<td>2</td><td></td></tr>
+<tr name="3" id="3">
+<td>3</td><td><span class="ct">/****************************************************</span></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="ct">*                                                   *   </span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="ct">* wrapper fuctions for CMSIS  functions             *</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="ct">*                                                   *  </span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td><span class="ct">****************************************************/</span></td></tr>
+<tr name="8" id="8">
+<td>8</td><td></td></tr>
+<tr name="9" id="9">
+<td>9</td><td><span class="pp">#ifndef</span> <a id="9c9" class="tk">MW_CMSIS_H</a></td></tr>
+<tr name="10" id="10">
+<td>10</td><td><span class="pp">#define</span> <a id="10c9" class="tk">MW_CMSIS_H</a></td></tr>
+<tr name="11" id="11">
+<td>11</td><td></td></tr>
+<tr name="12" id="12">
+<td>12</td><td><span class="pp">#include "arm_math.h"</span></td></tr>
+<tr name="13" id="13">
+<td>13</td><td></td></tr>
+<tr name="14" id="14">
+<td>14</td><td><span class="pp">#define</span> <a id="14c9" class="tk">mw_arm_abs_f32</a>(<a id="14c24" class="tk">pSrc</a>, <a id="14c30" class="tk">pDst</a>, <a id="14c36" class="tk">blockSize</a>) <a id="14c47" class="tk">arm_abs_f32</a>((<a id="14c60" class="tk">float32_t</a> *)<a id="14c72" class="tk">pSrc</a>, (<a id="14c79" class="tk">float32_t</a> *)<a id="14c91" class="tk">pDst</a>, <a id="14c97" class="tk">blockSize</a>)</td></tr>
+<tr name="15" id="15">
+<td>15</td><td><span class="pp">#define</span> <a id="15c9" class="tk">mw_arm_abs_q7</a>(<a id="15c23" class="tk">pSrc</a>, <a id="15c29" class="tk">pDst</a>, <a id="15c35" class="tk">blockSize</a>) <a id="15c46" class="tk">arm_abs_q7</a>((<a id="15c58" class="tk">q7_t</a> *)<a id="15c65" class="tk">pSrc</a>, (<a id="15c72" class="tk">q7_t</a> *)<a id="15c79" class="tk">pDst</a>, <a id="15c85" class="tk">blockSize</a>) </td></tr>
+<tr name="16" id="16">
+<td>16</td><td><span class="pp">#define</span> <a id="16c9" class="tk">mw_arm_abs_q15</a>(<a id="16c24" class="tk">pSrc</a>, <a id="16c30" class="tk">pDst</a>, <a id="16c36" class="tk">blockSize</a>) <a id="16c47" class="tk">arm_abs_q15</a>((<a id="16c60" class="tk">q15_t</a> *)<a id="16c68" class="tk">pSrc</a>, (<a id="16c75" class="tk">q15_t</a> *)<a id="16c83" class="tk">pDst</a>, <a id="16c89" class="tk">blockSize</a>) </td></tr>
+<tr name="17" id="17">
+<td>17</td><td><span class="pp">#define</span> <a id="17c9" class="tk">mw_arm_abs_q31</a>(<a id="17c24" class="tk">pSrc</a>, <a id="17c30" class="tk">pDst</a>, <a id="17c36" class="tk">blockSize</a>) <a id="17c47" class="tk">arm_abs_q31</a>((<a id="17c60" class="tk">q31_t</a> *)<a id="17c68" class="tk">pSrc</a>, (<a id="17c75" class="tk">q31_t</a> *)<a id="17c83" class="tk">pDst</a>, <a id="17c89" class="tk">blockSize</a>) </td></tr>
+<tr name="18" id="18">
+<td>18</td><td></td></tr>
+<tr name="19" id="19">
+<td>19</td><td><span class="pp">#define</span> <a id="19c9" class="tk">mw_arm_sqrt_q15</a>(<a id="19c25" class="tk">in</a>, <a id="19c29" class="tk">pOut</a>) <a id="19c35" class="tk">arm_sqrt_q15</a>((<a id="19c49" class="tk">q15_t</a>)<a id="19c55" class="tk">in</a>,(<a id="19c59" class="tk">q15_t</a> *)<a id="19c67" class="tk">pOut</a>)</td></tr>
+<tr name="20" id="20">
+<td>20</td><td><span class="pp">#define</span> <a id="20c9" class="tk">mw_arm_sqrt_q31</a>(<a id="20c25" class="tk">in</a>, <a id="20c29" class="tk">pOut</a>) <a id="20c35" class="tk">arm_sqrt_q31</a>((<a id="20c49" class="tk">q31_t</a>)<a id="20c55" class="tk">in</a>,(<a id="20c59" class="tk">q31_t</a> *)<a id="20c67" class="tk">pOut</a>)</td></tr>
+<tr name="21" id="21">
+<td>21</td><td><span class="pp">#define</span> <a id="21c9" class="tk">mw_arm_sqrt_f32</a>(<a id="21c25" class="tk">in</a>, <a id="21c29" class="tk">pOut</a>) <a id="21c35" class="tk">arm_sqrt_f32</a>((<a id="21c49" class="tk">float32_t</a>)<a id="21c59" class="tk">in</a>,(<a id="21c63" class="tk">float32_t</a> *)<a id="21c75" class="tk">pOut</a>)</td></tr>
+<tr name="22" id="22">
+<td>22</td><td></td></tr>
+<tr name="23" id="23">
+<td>23</td><td><span class="pp">#define</span> <a id="23c9" class="tk">mw_arm_float_to_q31</a>(<a id="23c29" class="tk">pSrc</a>, <a id="23c35" class="tk">pDst</a>, <a id="23c41" class="tk">blockSize</a>) <a id="23c52" class="tk">arm_float_to_q31</a>((<a id="23c70" class="tk">float32_t</a> *)<a id="23c82" class="tk">pSrc</a>, (<a id="23c89" class="tk">q31_t</a> *)<a id="23c97" class="tk">pDst</a>, <a id="23c103" class="tk">blockSize</a>)</td></tr>
+<tr name="24" id="24">
+<td>24</td><td><span class="pp">#define</span> <a id="24c9" class="tk">mw_arm_float_to_q15</a>(<a id="24c29" class="tk">pSrc</a>, <a id="24c35" class="tk">pDst</a>, <a id="24c41" class="tk">blockSize</a>) <a id="24c52" class="tk">arm_float_to_q15</a>((<a id="24c70" class="tk">float32_t</a> *)<a id="24c82" class="tk">pSrc</a>, (<a id="24c89" class="tk">q15_t</a> *)<a id="24c97" class="tk">pDst</a>, <a id="24c103" class="tk">blockSize</a>)</td></tr>
+<tr name="25" id="25">
+<td>25</td><td><span class="pp">#define</span> <a id="25c9" class="tk">mw_arm_float_to_q7</a>(<a id="25c28" class="tk">pSrc</a>, <a id="25c34" class="tk">pDst</a>, <a id="25c40" class="tk">blockSize</a>) <a id="25c51" class="tk">arm_float_to_q7</a>((<a id="25c68" class="tk">float32_t</a> *)<a id="25c80" class="tk">pSrc</a>, (<a id="25c87" class="tk">q7_t</a> *)<a id="25c94" class="tk">pDst</a>, <a id="25c100" class="tk">blockSize</a>)</td></tr>
+<tr name="26" id="26">
+<td>26</td><td></td></tr>
+<tr name="27" id="27">
+<td>27</td><td><span class="pp">#define</span> <a id="27c9" class="tk">mw_arm_q15_to_float</a>(<a id="27c29" class="tk">pSrc</a>, <a id="27c35" class="tk">pDst</a>, <a id="27c41" class="tk">blockSize</a>) <a id="27c52" class="tk">arm_q15_to_float</a>((<a id="27c70" class="tk">q15_t</a> *)<a id="27c78" class="tk">pSrc</a>, (<a id="27c85" class="tk">float32_t</a> *)<a id="27c97" class="tk">pDst</a>, <a id="27c103" class="tk">blockSize</a>)</td></tr>
+<tr name="28" id="28">
+<td>28</td><td><span class="pp">#define</span> <a id="28c9" class="tk">mw_arm_q15_to_q31</a>(<a id="28c27" class="tk">pSrc</a>, <a id="28c33" class="tk">pDst</a>, <a id="28c39" class="tk">blockSize</a>) <a id="28c50" class="tk">arm_q15_to_q31</a>((<a id="28c66" class="tk">q15_t</a> *)<a id="28c74" class="tk">pSrc</a>, (<a id="28c81" class="tk">q31_t</a> *)<a id="28c89" class="tk">pDst</a>, <a id="28c95" class="tk">blockSize</a>)</td></tr>
+<tr name="29" id="29">
+<td>29</td><td><span class="pp">#define</span> <a id="29c9" class="tk">mw_arm_q15_to_q7</a>(<a id="29c26" class="tk">pSrc</a>, <a id="29c32" class="tk">pDst</a>, <a id="29c38" class="tk">blockSize</a>) <a id="29c49" class="tk">arm_q15_to_q7</a>((<a id="29c64" class="tk">q15_t</a> *)<a id="29c72" class="tk">pSrc</a>, (<a id="29c79" class="tk">q7_t</a> *)<a id="29c86" class="tk">pDst</a>, <a id="29c92" class="tk">blockSize</a>)</td></tr>
+<tr name="30" id="30">
+<td>30</td><td></td></tr>
+<tr name="31" id="31">
+<td>31</td><td><span class="pp">#define</span> <a id="31c9" class="tk">mw_arm_q31_to_float</a>(<a id="31c29" class="tk">pSrc</a>, <a id="31c35" class="tk">pDst</a>, <a id="31c41" class="tk">blockSize</a>) <a id="31c52" class="tk">arm_q31_to_float</a>((<a id="31c70" class="tk">q31_t</a> *)<a id="31c78" class="tk">pSrc</a>, (<a id="31c85" class="tk">float32_t</a> *)<a id="31c97" class="tk">pDst</a>, <a id="31c103" class="tk">blockSize</a>)</td></tr>
+<tr name="32" id="32">
+<td>32</td><td><span class="pp">#define</span> <a id="32c9" class="tk">mw_arm_q31_to_q15</a>(<a id="32c27" class="tk">pSrc</a>, <a id="32c33" class="tk">pDst</a>, <a id="32c39" class="tk">blockSize</a>) <a id="32c50" class="tk">arm_q31_to_q15</a>((<a id="32c66" class="tk">q31_t</a> *)<a id="32c74" class="tk">pSrc</a>, (<a id="32c81" class="tk">q15_t</a> *)<a id="32c89" class="tk">pDst</a>, <a id="32c95" class="tk">blockSize</a>)</td></tr>
+<tr name="33" id="33">
+<td>33</td><td><span class="pp">#define</span> <a id="33c9" class="tk">mw_arm_q31_to_q7</a>(<a id="33c26" class="tk">pSrc</a>, <a id="33c32" class="tk">pDst</a>, <a id="33c38" class="tk">blockSize</a>) <a id="33c49" class="tk">arm_q31_to_q7</a>((<a id="33c64" class="tk">q31_t</a> *)<a id="33c72" class="tk">pSrc</a>, (<a id="33c79" class="tk">q7_t</a> *)<a id="33c86" class="tk">pDst</a>, <a id="33c92" class="tk">blockSize</a>)</td></tr>
+<tr name="34" id="34">
+<td>34</td><td></td></tr>
+<tr name="35" id="35">
+<td>35</td><td><span class="pp">#define</span> <a id="35c9" class="tk">mw_arm_q7_to_float</a>(<a id="35c28" class="tk">pSrc</a>, <a id="35c34" class="tk">pDst</a>, <a id="35c40" class="tk">blockSize</a>) <a id="35c51" class="tk">arm_q7_to_float</a>((<a id="35c68" class="tk">q7_t</a> *)<a id="35c75" class="tk">pSrc</a>, (<a id="35c82" class="tk">float32_t</a> *)<a id="35c94" class="tk">pDst</a>, <a id="35c100" class="tk">blockSize</a>)</td></tr>
+<tr name="36" id="36">
+<td>36</td><td><span class="pp">#define</span> <a id="36c9" class="tk">mw_arm_q7_to_q31</a>(<a id="36c26" class="tk">pSrc</a>, <a id="36c32" class="tk">pDst</a>, <a id="36c38" class="tk">blockSize</a>) <a id="36c49" class="tk">arm_q7_to_q31</a>((<a id="36c64" class="tk">q7_t</a> *)<a id="36c71" class="tk">pSrc</a>, (<a id="36c78" class="tk">q31_t</a> *)<a id="36c86" class="tk">pDst</a>, <a id="36c92" class="tk">blockSize</a>)</td></tr>
+<tr name="37" id="37">
+<td>37</td><td><span class="pp">#define</span> <a id="37c9" class="tk">mw_arm_q7_to_q15</a>(<a id="37c26" class="tk">pSrc</a>, <a id="37c32" class="tk">pDst</a>, <a id="37c38" class="tk">blockSize</a>) <a id="37c49" class="tk">arm_q7_to_q15</a>((<a id="37c64" class="tk">q7_t</a> *)<a id="37c71" class="tk">pSrc</a>, (<a id="37c78" class="tk">q15_t</a> *)<a id="37c86" class="tk">pDst</a>, <a id="37c92" class="tk">blockSize</a>)</td></tr>
+<tr name="38" id="38">
+<td>38</td><td></td></tr>
+<tr name="39" id="39">
+<td>39</td><td><span class="pp">#define</span> <a id="39c9" class="tk">mw_arm_add_f32</a>(<a id="39c24" class="tk">pSrcA</a>, <a id="39c31" class="tk">pSrcB</a>, <a id="39c38" class="tk">pDst</a>, <a id="39c44" class="tk">blockSize</a>) <a id="39c55" class="tk">arm_add_f32</a>((<a id="39c68" class="tk">float32_t</a> *)<a id="39c80" class="tk">pSrcA</a>, (<a id="39c88" class="tk">float32_t</a> *)<a id="39c100" class="tk">pSrcB</a>, (<a id="39c108" class="tk">float32_t</a> *)<a id="39c120" class="tk">pDst</a>, <a id="39c126" class="tk">blockSize</a>)</td></tr>
+<tr name="40" id="40">
+<td>40</td><td><span class="pp">#define</span> <a id="40c9" class="tk">mw_arm_add_q31</a>(<a id="40c24" class="tk">pSrcA</a>, <a id="40c31" class="tk">pSrcB</a>, <a id="40c38" class="tk">pDst</a>, <a id="40c44" class="tk">blockSize</a>) <a id="40c55" class="tk">arm_add_q31</a>((<a id="40c68" class="tk">q31_t</a> *)<a id="40c76" class="tk">pSrcA</a>, (<a id="40c84" class="tk">q31_t</a> *)<a id="40c92" class="tk">pSrcB</a>, (<a id="40c100" class="tk">q31_t</a> *)<a id="40c108" class="tk">pDst</a>, <a id="40c114" class="tk">blockSize</a>)</td></tr>
+<tr name="41" id="41">
+<td>41</td><td><span class="pp">#define</span> <a id="41c9" class="tk">mw_arm_add_q15</a>(<a id="41c24" class="tk">pSrcA</a>, <a id="41c31" class="tk">pSrcB</a>, <a id="41c38" class="tk">pDst</a>, <a id="41c44" class="tk">blockSize</a>) <a id="41c55" class="tk">arm_add_q15</a>((<a id="41c68" class="tk">q15_t</a> *)<a id="41c76" class="tk">pSrcA</a>, (<a id="41c84" class="tk">q15_t</a> *)<a id="41c92" class="tk">pSrcB</a>, (<a id="41c100" class="tk">q15_t</a> *)<a id="41c108" class="tk">pDst</a>, <a id="41c114" class="tk">blockSize</a>)</td></tr>
+<tr name="42" id="42">
+<td>42</td><td><span class="pp">#define</span> <a id="42c9" class="tk">mw_arm_add_q7</a>(<a id="42c23" class="tk">pSrcA</a>, <a id="42c30" class="tk">pSrcB</a>, <a id="42c37" class="tk">pDst</a>, <a id="42c43" class="tk">blockSize</a>)  <a id="42c55" class="tk">arm_add_q7</a>((<a id="42c67" class="tk">q7_t</a> *)<a id="42c74" class="tk">pSrcA</a>, (<a id="42c82" class="tk">q7_t</a> *)<a id="42c89" class="tk">pSrcB</a>, (<a id="42c97" class="tk">q7_t</a> *)<a id="42c104" class="tk">pDst</a>, <a id="42c110" class="tk">blockSize</a>)</td></tr>
+<tr name="43" id="43">
+<td>43</td><td></td></tr>
+<tr name="44" id="44">
+<td>44</td><td><span class="pp">#define</span> <a id="44c9" class="tk">mw_arm_sub_f32</a>(<a id="44c24" class="tk">pSrcA</a>, <a id="44c31" class="tk">pSrcB</a>, <a id="44c38" class="tk">pDst</a>, <a id="44c44" class="tk">blockSize</a>) <a id="44c55" class="tk">arm_sub_f32</a>((<a id="44c68" class="tk">float32_t</a> *)<a id="44c80" class="tk">pSrcA</a>, (<a id="44c88" class="tk">float32_t</a> *)<a id="44c100" class="tk">pSrcB</a>, (<a id="44c108" class="tk">float32_t</a> *)<a id="44c120" class="tk">pDst</a>, <a id="44c126" class="tk">blockSize</a>)</td></tr>
+<tr name="45" id="45">
+<td>45</td><td><span class="pp">#define</span> <a id="45c9" class="tk">mw_arm_sub_q31</a>(<a id="45c24" class="tk">pSrcA</a>, <a id="45c31" class="tk">pSrcB</a>, <a id="45c38" class="tk">pDst</a>, <a id="45c44" class="tk">blockSize</a>) <a id="45c55" class="tk">arm_sub_q31</a>((<a id="45c68" class="tk">q31_t</a> *)<a id="45c76" class="tk">pSrcA</a>, (<a id="45c84" class="tk">q31_t</a> *)<a id="45c92" class="tk">pSrcB</a>, (<a id="45c100" class="tk">q31_t</a> *)<a id="45c108" class="tk">pDst</a>, <a id="45c114" class="tk">blockSize</a>)</td></tr>
+<tr name="46" id="46">
+<td>46</td><td><span class="pp">#define</span> <a id="46c9" class="tk">mw_arm_sub_q15</a>(<a id="46c24" class="tk">pSrcA</a>, <a id="46c31" class="tk">pSrcB</a>, <a id="46c38" class="tk">pDst</a>, <a id="46c44" class="tk">blockSize</a>) <a id="46c55" class="tk">arm_sub_q15</a>((<a id="46c68" class="tk">q15_t</a> *)<a id="46c76" class="tk">pSrcA</a>, (<a id="46c84" class="tk">q15_t</a> *)<a id="46c92" class="tk">pSrcB</a>, (<a id="46c100" class="tk">q15_t</a> *)<a id="46c108" class="tk">pDst</a>, <a id="46c114" class="tk">blockSize</a>)</td></tr>
+<tr name="47" id="47">
+<td>47</td><td><span class="pp">#define</span> <a id="47c9" class="tk">mw_arm_sub_q7</a>(<a id="47c23" class="tk">pSrcA</a>, <a id="47c30" class="tk">pSrcB</a>, <a id="47c37" class="tk">pDst</a>, <a id="47c43" class="tk">blockSize</a>)  <a id="47c55" class="tk">arm_sub_q7</a>((<a id="47c67" class="tk">q7_t</a> *)<a id="47c74" class="tk">pSrcA</a>, (<a id="47c82" class="tk">q7_t</a> *)<a id="47c89" class="tk">pSrcB</a>, (<a id="47c97" class="tk">q7_t</a> *)<a id="47c104" class="tk">pDst</a>, <a id="47c110" class="tk">blockSize</a>)</td></tr>
+<tr name="48" id="48">
+<td>48</td><td></td></tr>
+<tr name="49" id="49">
+<td>49</td><td><span class="pp">#define</span> <a id="49c9" class="tk">mw_arm_mult_f32</a>(<a id="49c25" class="tk">pSrcA</a>, <a id="49c32" class="tk">pSrcB</a>, <a id="49c39" class="tk">pDst</a>, <a id="49c45" class="tk">blockSize</a>) <a id="49c56" class="tk">arm_mult_f32</a>((<a id="49c70" class="tk">float32_t</a> *)<a id="49c82" class="tk">pSrcA</a>, (<a id="49c90" class="tk">float32_t</a> *)<a id="49c102" class="tk">pSrcB</a>, (<a id="49c110" class="tk">float32_t</a> *)<a id="49c122" class="tk">pDst</a>, <a id="49c128" class="tk">blockSize</a>)</td></tr>
+<tr name="50" id="50">
+<td>50</td><td><span class="pp">#define</span> <a id="50c9" class="tk">mw_arm_mult_q31</a>(<a id="50c25" class="tk">pSrcA</a>, <a id="50c32" class="tk">pSrcB</a>, <a id="50c39" class="tk">pDst</a>, <a id="50c45" class="tk">blockSize</a>) <a id="50c56" class="tk">arm_mult_q31</a>((<a id="50c70" class="tk">q31_t</a> *)<a id="50c78" class="tk">pSrcA</a>, (<a id="50c86" class="tk">q31_t</a> *)<a id="50c94" class="tk">pSrcB</a>, (<a id="50c102" class="tk">q31_t</a> *)<a id="50c110" class="tk">pDst</a>, <a id="50c116" class="tk">blockSize</a>)</td></tr>
+<tr name="51" id="51">
+<td>51</td><td><span class="pp">#define</span> <a id="51c9" class="tk">mw_arm_mult_q15</a>(<a id="51c25" class="tk">pSrcA</a>, <a id="51c32" class="tk">pSrcB</a>, <a id="51c39" class="tk">pDst</a>, <a id="51c45" class="tk">blockSize</a>) <a id="51c56" class="tk">arm_mult_q15</a>((<a id="51c70" class="tk">q15_t</a> *)<a id="51c78" class="tk">pSrcA</a>, (<a id="51c86" class="tk">q15_t</a> *)<a id="51c94" class="tk">pSrcB</a>, (<a id="51c102" class="tk">q15_t</a> *)<a id="51c110" class="tk">pDst</a>, <a id="51c116" class="tk">blockSize</a>)</td></tr>
+<tr name="52" id="52">
+<td>52</td><td><span class="pp">#define</span> <a id="52c9" class="tk">mw_arm_mult_q7</a>(<a id="52c24" class="tk">pSrcA</a>, <a id="52c31" class="tk">pSrcB</a>, <a id="52c38" class="tk">pDst</a>, <a id="52c44" class="tk">blockSize</a>)  <a id="52c56" class="tk">arm_mult_q7</a>((<a id="52c69" class="tk">q7_t</a> *)<a id="52c76" class="tk">pSrcA</a>, (<a id="52c84" class="tk">q7_t</a> *)<a id="52c91" class="tk">pSrcB</a>, (<a id="52c99" class="tk">q7_t</a> *)<a id="52c106" class="tk">pDst</a>, <a id="52c112" class="tk">blockSize</a>)</td></tr>
+<tr name="53" id="53">
+<td>53</td><td></td></tr>
+<tr name="54" id="54">
+<td>54</td><td><span class="pp">#define</span> <a id="54c9" class="tk">mw_arm_cmplx_conj_f32</a>(<a id="54c31" class="tk">pSrc</a>, <a id="54c37" class="tk">pDst</a>, <a id="54c43" class="tk">numSamples</a>) <a id="54c55" class="tk">arm_cmplx_conj_f32</a>((<a id="54c75" class="tk">float32_t</a> *)<a id="54c87" class="tk">pSrc</a>, (<a id="54c94" class="tk">float32_t</a> *)<a id="54c106" class="tk">pDst</a>, <a id="54c112" class="tk">numSamples</a>)</td></tr>
+<tr name="55" id="55">
+<td>55</td><td><span class="pp">#define</span> <a id="55c9" class="tk">mw_arm_cmplx_conj_q31</a>(<a id="55c31" class="tk">pSrc</a>, <a id="55c37" class="tk">pDst</a>, <a id="55c43" class="tk">numSamples</a>) <a id="55c55" class="tk">arm_cmplx_conj_q31</a>((<a id="55c75" class="tk">q31_t</a> *)<a id="55c83" class="tk">pSrc</a>, (<a id="55c90" class="tk">q31_t</a> *)<a id="55c98" class="tk">pDst</a>, <a id="55c104" class="tk">numSamples</a>)</td></tr>
+<tr name="56" id="56">
+<td>56</td><td><span class="pp">#define</span> <a id="56c9" class="tk">mw_arm_cmplx_conj_q15</a>(<a id="56c31" class="tk">pSrc</a>, <a id="56c37" class="tk">pDst</a>, <a id="56c43" class="tk">numSamples</a>) <a id="56c55" class="tk">arm_cmplx_conj_q15</a>((<a id="56c75" class="tk">q15_t</a> *)<a id="56c83" class="tk">pSrc</a>, (<a id="56c90" class="tk">q15_t</a> *)<a id="56c98" class="tk">pDst</a>, <a id="56c104" class="tk">numSamples</a>)</td></tr>
+<tr name="57" id="57">
+<td>57</td><td></td></tr>
+<tr name="58" id="58">
+<td>58</td><td><span class="pp">#define</span> <a id="58c9" class="tk">mw_arm_cmplx_mult_cmplx_f32</a>(<a id="58c37" class="tk">pSrcA</a>, <a id="58c44" class="tk">pSrcB</a>, <a id="58c51" class="tk">pDst</a>, <a id="58c57" class="tk">blockSize</a>) <a id="58c68" class="tk">arm_cmplx_mult_cmplx_f32</a>((<a id="58c94" class="tk">float32_t</a> *)<a id="58c106" class="tk">pSrcA</a>, (<a id="58c114" class="tk">float32_t</a> *)<a id="58c126" class="tk">pSrcB</a>, (<a id="58c134" class="tk">float32_t</a> *)<a id="58c146" class="tk">pDst</a>, <a id="58c152" class="tk">blockSize</a>)</td></tr>
+<tr name="59" id="59">
+<td>59</td><td><span class="pp">#define</span> <a id="59c9" class="tk">mw_arm_cmplx_mult_cmplx_q31</a>(<a id="59c37" class="tk">pSrcA</a>, <a id="59c44" class="tk">pSrcB</a>, <a id="59c51" class="tk">pDst</a>, <a id="59c57" class="tk">blockSize</a>) <a id="59c68" class="tk">arm_cmplx_mult_cmplx_q31</a>((<a id="59c94" class="tk">q31_t</a> *)<a id="59c102" class="tk">pSrcA</a>, (<a id="59c110" class="tk">q31_t</a> *)<a id="59c118" class="tk">pSrcB</a>, (<a id="59c126" class="tk">q31_t</a> *)<a id="59c134" class="tk">pDst</a>, <a id="59c140" class="tk">blockSize</a>)</td></tr>
+<tr name="60" id="60">
+<td>60</td><td><span class="pp">#define</span> <a id="60c9" class="tk">mw_arm_cmplx_mult_cmplx_q15</a>(<a id="60c37" class="tk">pSrcA</a>, <a id="60c44" class="tk">pSrcB</a>, <a id="60c51" class="tk">pDst</a>, <a id="60c57" class="tk">blockSize</a>) <a id="60c68" class="tk">arm_cmplx_mult_cmplx_q15</a>((<a id="60c94" class="tk">q15_t</a> *)<a id="60c102" class="tk">pSrcA</a>, (<a id="60c110" class="tk">q15_t</a> *)<a id="60c118" class="tk">pSrcB</a>, (<a id="60c126" class="tk">q15_t</a> *)<a id="60c134" class="tk">pDst</a>, <a id="60c140" class="tk">blockSize</a>)</td></tr>
+<tr name="61" id="61">
+<td>61</td><td></td></tr>
+<tr name="62" id="62">
+<td>62</td><td><span class="pp">#define</span> <a id="62c9" class="tk">mw_arm_cmplx_mult_real_f32</a>(<a id="62c36" class="tk">pSrcA</a>, <a id="62c43" class="tk">pSrcB</a>, <a id="62c50" class="tk">pDst</a>, <a id="62c56" class="tk">blockSize</a>) <a id="62c67" class="tk">arm_cmplx_mult_real_f32</a>((<a id="62c92" class="tk">float32_t</a> *)<a id="62c104" class="tk">pSrcA</a>, (<a id="62c112" class="tk">float32_t</a> *)<a id="62c124" class="tk">pSrcB</a>, (<a id="62c132" class="tk">float32_t</a> *)<a id="62c144" class="tk">pDst</a>, <a id="62c150" class="tk">blockSize</a>)</td></tr>
+<tr name="63" id="63">
+<td>63</td><td><span class="pp">#define</span> <a id="63c9" class="tk">mw_arm_cmplx_mult_real_q31</a>(<a id="63c36" class="tk">pSrcA</a>, <a id="63c43" class="tk">pSrcB</a>, <a id="63c50" class="tk">pDst</a>, <a id="63c56" class="tk">blockSize</a>) <a id="63c67" class="tk">arm_cmplx_mult_real_q31</a>((<a id="63c92" class="tk">q31_t</a> *)<a id="63c100" class="tk">pSrcA</a>, (<a id="63c108" class="tk">q31_t</a> *)<a id="63c116" class="tk">pSrcB</a>, (<a id="63c124" class="tk">q31_t</a> *)<a id="63c132" class="tk">pDst</a>, <a id="63c138" class="tk">blockSize</a>)</td></tr>
+<tr name="64" id="64">
+<td>64</td><td><span class="pp">#define</span> <a id="64c9" class="tk">mw_arm_cmplx_mult_real_q15</a>(<a id="64c36" class="tk">pSrcA</a>, <a id="64c43" class="tk">pSrcB</a>, <a id="64c50" class="tk">pDst</a>, <a id="64c56" class="tk">blockSize</a>) <a id="64c67" class="tk">arm_cmplx_mult_real_q15</a>((<a id="64c92" class="tk">q15_t</a> *)<a id="64c100" class="tk">pSrcA</a>, (<a id="64c108" class="tk">q15_t</a> *)<a id="64c116" class="tk">pSrcB</a>, (<a id="64c124" class="tk">q15_t</a> *)<a id="64c132" class="tk">pDst</a>, <a id="64c138" class="tk">blockSize</a>)</td></tr>
+<tr name="65" id="65">
+<td>65</td><td></td></tr>
+<tr name="66" id="66">
+<td>66</td><td><span class="pp">#define</span> <a id="66c9" class="tk">mw_arm_rshift_q15</a>(<a id="66c27" class="tk">pSrc</a>, <a id="66c33" class="tk">shiftBits</a>, <a id="66c44" class="tk">pDst</a>, <a id="66c50" class="tk">blockSize</a>) <a id="66c61" class="tk">arm_shift_q15</a> ((<a id="66c77" class="tk">q15_t</a> *)<a id="66c85" class="tk">pSrc</a>, -(<a id="66c93" class="tk">shiftBits</a>),(<a id="66c105" class="tk">q15_t</a> *)<a id="66c113" class="tk">pDst</a>, <a id="66c119" class="tk">blockSize</a>)</td></tr>
+<tr name="67" id="67">
+<td>67</td><td><span class="pp">#define</span> <a id="67c9" class="tk">mw_arm_rshift_q31</a>(<a id="67c27" class="tk">pSrc</a>, <a id="67c33" class="tk">shiftBits</a>, <a id="67c44" class="tk">pDst</a>, <a id="67c50" class="tk">blockSize</a>) <a id="67c61" class="tk">arm_shift_q31</a> ((<a id="67c77" class="tk">q31_t</a> *)<a id="67c85" class="tk">pSrc</a>, -(<a id="67c93" class="tk">shiftBits</a>), (<a id="67c106" class="tk">q31_t</a> *)<a id="67c114" class="tk">pDst</a>, <a id="67c120" class="tk">blockSize</a>)</td></tr>
+<tr name="68" id="68">
+<td>68</td><td><span class="pp">#define</span> <a id="68c9" class="tk">mw_arm_rshift_q7</a>(<a id="68c26" class="tk">pSrc</a>, <a id="68c32" class="tk">shiftBits</a>, <a id="68c43" class="tk">pDst</a>, <a id="68c49" class="tk">blockSize</a>) <a id="68c60" class="tk">arm_shift_q7</a> ((<a id="68c75" class="tk">q7_t</a> *)<a id="68c82" class="tk">pSrc</a>,  -(<a id="68c91" class="tk">shiftBits</a>), (<a id="68c104" class="tk">q7_t</a> *)<a id="68c111" class="tk">pDst</a>, <a id="68c117" class="tk">blockSize</a>)</td></tr>
+<tr name="69" id="69">
+<td>69</td><td></td></tr>
+<tr name="70" id="70">
+<td>70</td><td><span class="pp">#define</span> <a id="70c9" class="tk">mw_arm_shift_q15</a>(<a id="70c26" class="tk">pSrc</a>, <a id="70c32" class="tk">shiftBits</a>, <a id="70c43" class="tk">pDst</a>, <a id="70c49" class="tk">blockSize</a>) <a id="70c60" class="tk">arm_shift_q15</a> ((<a id="70c76" class="tk">q15_t</a> *)<a id="70c84" class="tk">pSrc</a>, <a id="70c90" class="tk">shiftBits</a>,(<a id="70c101" class="tk">q15_t</a> *)<a id="70c109" class="tk">pDst</a>, <a id="70c115" class="tk">blockSize</a>)</td></tr>
+<tr name="71" id="71">
+<td>71</td><td><span class="pp">#define</span> <a id="71c9" class="tk">mw_arm_shift_q31</a>(<a id="71c26" class="tk">pSrc</a>, <a id="71c32" class="tk">shiftBits</a>, <a id="71c43" class="tk">pDst</a>, <a id="71c49" class="tk">blockSize</a>) <a id="71c60" class="tk">arm_shift_q31</a> ((<a id="71c76" class="tk">q31_t</a> *)<a id="71c84" class="tk">pSrc</a>, <a id="71c90" class="tk">shiftBits</a>, (<a id="71c102" class="tk">q31_t</a> *)<a id="71c110" class="tk">pDst</a>, <a id="71c116" class="tk">blockSize</a>)</td></tr>
+<tr name="72" id="72">
+<td>72</td><td><span class="pp">#define</span> <a id="72c9" class="tk">mw_arm_shift_q7</a>(<a id="72c25" class="tk">pSrc</a>, <a id="72c31" class="tk">shiftBits</a>, <a id="72c42" class="tk">pDst</a>, <a id="72c48" class="tk">blockSize</a>) <a id="72c59" class="tk">arm_shift_q7</a> ((<a id="72c74" class="tk">q7_t</a> *)<a id="72c81" class="tk">pSrc</a>, <a id="72c87" class="tk">shiftBits</a>, (<a id="72c99" class="tk">q7_t</a> *)<a id="72c106" class="tk">pDst</a>, <a id="72c112" class="tk">blockSize</a>)</td></tr>
+<tr name="73" id="73">
+<td>73</td><td></td></tr>
+<tr name="74" id="74">
+<td>74</td><td><span class="pp">#endif</span></td></tr>
+<tr name="75" id="75">
+<td>75</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>

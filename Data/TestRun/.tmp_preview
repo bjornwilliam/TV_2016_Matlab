@@ -1,0 +1,33 @@
+#INFOFILE1.1 - Do not remove this line!
+TestRun.Name = Examples_FS/Hairpin
+Vehicle = Revolve2016/TV2016
+Trailer =
+Trailer2 =
+Tire.0 = Examples/FS_195_50R13
+Tire.1 = Examples/FS_195_50R13
+Tire.2 = Examples/FS_195_50R13
+Tire.3 = Examples/FS_195_50R13
+Road.VhclStartPos = 0
+Road.Lane = center
+Road.DigSmooth = 0.2 0 0
+Road.DigOptions =
+Road.Country = DEU
+Road.RouteId =
+Road.GCS.RefPos_0 = 0 0 0
+Road.GCS.Projection = FlatEarth
+Road.2Movie.MStrip = 0.1 2.0 2.0
+Road.2Movie.SStrip = 0.1 9.0 1.0 0.1
+Road.2Movie.GStrip = 1.5 100.0
+Road.2Movie.MaxErrXY = 0.02
+Road.2Movie.GeoStepSize = 0.20
+Road.2Movie.GenBridges = 1
+Road.2Movie.BgGeoFName =
+Road.2Movie.BgGeoOptions =
+Road.2Movie.TerrainFName =
+Road.Definition:
+	FileIdent IPGRoad 4.5
+	Origin    -2.3 0 0 0
+	Default 1.7 1.7 2 2 1 1 0.0 0 0 0.0 0 0
+	Straight  10 - - - -  0 0 0
+	TurnLeft  6 180 - - - -  0 0 0
+	Straight  10 - - - -  0 0 0

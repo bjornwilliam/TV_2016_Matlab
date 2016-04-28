@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="ct">/*</span></td></tr>
+<tr name="2" id="2">
+<td>2</td><td><span class="ct"> * Academic License - for use in teaching, academic research, and meeting</span></td></tr>
+<tr name="3" id="3">
+<td>3</td><td><span class="ct"> * course requirements at degree granting institutions only.  Not for</span></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="ct"> * government, commercial, or other organizational use.</span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="ct"> *</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="ct"> * File: Estimations.c</span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td><span class="ct"> *</span></td></tr>
+<tr name="8" id="8">
+<td>8</td><td><span class="ct"> * Code generated for Simulink model 'Estimations'.</span></td></tr>
+<tr name="9" id="9">
+<td>9</td><td><span class="ct"> *</span></td></tr>
+<tr name="10" id="10">
+<td>10</td><td><span class="ct"> * Model version                  : 1.1637</span></td></tr>
+<tr name="11" id="11">
+<td>11</td><td><span class="ct"> * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015</span></td></tr>
+<tr name="12" id="12">
+<td>12</td><td><span class="ct"> * C/C++ source code generated on : Tue Apr 19 20:35:27 2016</span></td></tr>
+<tr name="13" id="13">
+<td>13</td><td><span class="ct"> *</span></td></tr>
+<tr name="14" id="14">
+<td>14</td><td><span class="ct"> * Target selection: ert.tlc</span></td></tr>
+<tr name="15" id="15">
+<td>15</td><td><span class="ct"> * Embedded hardware selection: ARM Compatible-&gt;ARM Cortex</span></td></tr>
+<tr name="16" id="16">
+<td>16</td><td><span class="ct"> * Code generation objective: Execution efficiency</span></td></tr>
+<tr name="17" id="17">
+<td>17</td><td><span class="ct"> * Validation result: Not run</span></td></tr>
+<tr name="18" id="18">
+<td>18</td><td><span class="ct"> */</span></td></tr>
+<tr name="19" id="19">
+<td>19</td><td></td></tr>
+<tr name="20" id="20">
+<td>20</td><td><span class="pp">#include "Estimations.h"</span></td></tr>
+<tr name="21" id="21">
+<td>21</td><td><span class="pp">#include "Estimations_private.h"</span></td></tr>
+<tr name="22" id="22">
+<td>22</td><td></td></tr>
+<tr name="23" id="23">
+<td>23</td><td><span class="ct">/* Block signals (auto storage) */</span></td></tr>
+<tr name="24" id="24">
+<td>24</td><td><a id="24c1" class="tk">B_Estimations_T</a> <a id="24c17" class="tk">Estimations_B</a>;</td></tr>
+<tr name="25" id="25">
+<td>25</td><td></td></tr>
+<tr name="26" id="26">
+<td>26</td><td><span class="ct">/* Block states (auto storage) */</span></td></tr>
+<tr name="27" id="27">
+<td>27</td><td><a id="27c1" class="tk">DW_Estimations_T</a> <a id="27c18" class="tk">Estimations_DW</a>;</td></tr>
+<tr name="28" id="28">
+<td>28</td><td></td></tr>
+<tr name="29" id="29">
+<td>29</td><td><span class="ct">/* External inputs (root inport signals with auto storage) */</span></td></tr>
+<tr name="30" id="30">
+<td>30</td><td><a id="30c1" class="tk">ExtU_Estimations_T</a> <a id="30c20" class="tk">Estimations_U</a>;</td></tr>
+<tr name="31" id="31">
+<td>31</td><td></td></tr>
+<tr name="32" id="32">
+<td>32</td><td><span class="ct">/* External outputs (root outports fed by signals with auto storage) */</span></td></tr>
+<tr name="33" id="33">
+<td>33</td><td><a id="33c1" class="tk">ExtY_Estimations_T</a> <a id="33c20" class="tk">Estimations_Y</a>;</td></tr>
+<tr name="34" id="34">
+<td>34</td><td></td></tr>
+<tr name="35" id="35">
+<td>35</td><td><span class="ct">/* Real-time model */</span></td></tr>
+<tr name="36" id="36">
+<td>36</td><td><a id="36c1" class="tk">RT_MODEL_Estimations_T</a> <a id="36c24" class="tk">Estimations_M_</a>;</td></tr>
+<tr name="37" id="37">
+<td>37</td><td><a id="37c1" class="tk">RT_MODEL_Estimations_T</a> *<span class="kw">const</span> <a id="37c31" class="tk">Estimations_M</a> = &amp;<a id="37c48" class="tk">Estimations_M_</a>;</td></tr>
+<tr name="38" id="38">
+<td>38</td><td><a id="38c1" class="tk">real32_T</a> <a id="38c10" class="tk">look1_iflf_binlxpw</a>(<a id="38c29" class="tk">real32_T</a> <a id="38c38" class="tk">u0</a>, <span class="kw">const</span> <a id="38c48" class="tk">real32_T</a> <a id="38c57" class="tk">bp0</a>[], <span class="kw">const</span> <a id="38c70" class="tk">real32_T</a></td></tr>
+<tr name="39" id="39">
+<td>39</td><td>  <a id="39c3" class="tk">table</a>[], <a id="39c12" class="tk">uint32_T</a> <a id="39c21" class="tk">maxIndex</a>)</td></tr>
+<tr name="40" id="40">
+<td>40</td><td><span class="br">{</span></td></tr>
+<tr name="41" id="41">
+<td>41</td><td>  <a id="41c3" class="tk">real32_T</a> <a id="41c12" class="tk">frac</a>;</td></tr>
+<tr name="42" id="42">
+<td>42</td><td>  <a id="42c3" class="tk">uint32_T</a> <a id="42c12" class="tk">iRght</a>;</td></tr>
+<tr name="43" id="43">
+<td>43</td><td>  <a id="43c3" class="tk">uint32_T</a> <a id="43c12" class="tk">iLeft</a>;</td></tr>
+<tr name="44" id="44">
+<td>44</td><td>  <a id="44c3" class="tk">uint32_T</a> <a id="44c12" class="tk">bpIdx</a>;</td></tr>
+<tr name="45" id="45">
+<td>45</td><td></td></tr>
+<tr name="46" id="46">
+<td>46</td><td>  <span class="ct">/* Lookup 1-D</span></td></tr>
+<tr name="47" id="47">
+<td>47</td><td><span class="ct">     Search method: 'binary'</span></td></tr>
+<tr name="48" id="48">
+<td>48</td><td><span class="ct">     Use previous index: 'off'</span></td></tr>
+<tr name="49" id="49">
+<td>49</td><td><span class="ct">     Interpolation method: 'Linear'</span></td></tr>
+<tr name="50" id="50">
+<td>50</td><td><span class="ct">     Extrapolation method: 'Linear'</span></td></tr>
+<tr name="51" id="51">
+<td>51</td><td><span class="ct">     Use last breakpoint for index at or above upper limit: 'off'</span></td></tr>
+<tr name="52" id="52">
+<td>52</td><td><span class="ct">     Remove protection against out-of-range input in generated code: 'off'</span></td></tr>
+<tr name="53" id="53">
+<td>53</td><td><span class="ct">   */</span></td></tr>
+<tr name="54" id="54">
+<td>54</td><td>  <span class="ct">/* Prelookup - Index and Fraction</span></td></tr>
+<tr name="55" id="55">
+<td>55</td><td><span class="ct">     Index Search method: 'binary'</span></td></tr>
+<tr name="56" id="56">
+<td>56</td><td><span class="ct">     Extrapolation method: 'Linear'</span></td></tr>
+<tr name="57" id="57">
+<td>57</td><td><span class="ct">     Use previous index: 'off'</span></td></tr>
+<tr name="58" id="58">
+<td>58</td><td><span class="ct">     Use last breakpoint for index at or above upper limit: 'off'</span></td></tr>
+<tr name="59" id="59">
+<td>59</td><td><span class="ct">     Remove protection against out-of-range input in generated code: 'off'</span></td></tr>
+<tr name="60" id="60">
+<td>60</td><td><span class="ct">   */</span></td></tr>
+<tr name="61" id="61">
+<td>61</td><td>  <span class="kw">if</span> (<a id="61c7" class="tk">u0</a> &lt;= <a id="61c13" class="tk">bp0</a>[0U]) <span class="br">{</span></td></tr>
+<tr name="62" id="62">
+<td>62</td><td>    <a id="62c5" class="tk">iLeft</a> = 0U;</td></tr>
+<tr name="63" id="63">
+<td>63</td><td>    <a id="63c5" class="tk">frac</a> = (<a id="63c13" class="tk">u0</a> - <a id="63c18" class="tk">bp0</a>[0U]) / (<a id="63c30" class="tk">bp0</a>[1U] - <a id="63c40" class="tk">bp0</a>[0U]);</td></tr>
+<tr name="64" id="64">
+<td>64</td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="64c14" class="tk">u0</a> &lt; <a id="64c19" class="tk">bp0</a>[<a id="64c23" class="tk">maxIndex</a>]) <span class="br">{</span></td></tr>
+<tr name="65" id="65">
+<td>65</td><td>    <span class="ct">/* Binary Search */</span></td></tr>
+<tr name="66" id="66">
+<td>66</td><td>    <a id="66c5" class="tk">bpIdx</a> = <a id="66c13" class="tk">maxIndex</a> &gt;&gt; 1U;</td></tr>
+<tr name="67" id="67">
+<td>67</td><td>    <a id="67c5" class="tk">iLeft</a> = 0U;</td></tr>
+<tr name="68" id="68">
+<td>68</td><td>    <a id="68c5" class="tk">iRght</a> = <a id="68c13" class="tk">maxIndex</a>;</td></tr>
+<tr name="69" id="69">
+<td>69</td><td>    <span class="kw">while</span> (<a id="69c12" class="tk">iRght</a> - <a id="69c20" class="tk">iLeft</a> &gt; 1U) <span class="br">{</span></td></tr>
+<tr name="70" id="70">
+<td>70</td><td>      <span class="kw">if</span> (<a id="70c11" class="tk">u0</a> &lt; <a id="70c16" class="tk">bp0</a>[<a id="70c20" class="tk">bpIdx</a>]) <span class="br">{</span></td></tr>
+<tr name="71" id="71">
+<td>71</td><td>        <a id="71c9" class="tk">iRght</a> = <a id="71c17" class="tk">bpIdx</a>;</td></tr>
+<tr name="72" id="72">
+<td>72</td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<tr name="73" id="73">
+<td>73</td><td>        <a id="73c9" class="tk">iLeft</a> = <a id="73c17" class="tk">bpIdx</a>;</td></tr>
+<tr name="74" id="74">
+<td>74</td><td>      <span class="br">}</span></td></tr>
+<tr name="75" id="75">
+<td>75</td><td></td></tr>
+<tr name="76" id="76">
+<td>76</td><td>      <a id="76c7" class="tk">bpIdx</a> = (<a id="76c16" class="tk">iRght</a> + <a id="76c24" class="tk">iLeft</a>) &gt;&gt; 1U;</td></tr>
+<tr name="77" id="77">
+<td>77</td><td>    <span class="br">}</span></td></tr>
+<tr name="78" id="78">
+<td>78</td><td></td></tr>
+<tr name="79" id="79">
+<td>79</td><td>    <a id="79c5" class="tk">frac</a> = (<a id="79c13" class="tk">u0</a> - <a id="79c18" class="tk">bp0</a>[<a id="79c22" class="tk">iLeft</a>]) / (<a id="79c33" class="tk">bp0</a>[<a id="79c37" class="tk">iLeft</a> + 1U] - <a id="79c51" class="tk">bp0</a>[<a id="79c55" class="tk">iLeft</a>]);</td></tr>
+<tr name="80" id="80">
+<td>80</td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<tr name="81" id="81">
+<td>81</td><td>    <a id="81c5" class="tk">iLeft</a> = <a id="81c13" class="tk">maxIndex</a> - 1U;</td></tr>
+<tr name="82" id="82">
+<td>82</td><td>    <a id="82c5" class="tk">frac</a> = (<a id="82c13" class="tk">u0</a> - <a id="82c18" class="tk">bp0</a>[<a id="82c22" class="tk">maxIndex</a> - 1U]) / (<a id="82c41" class="tk">bp0</a>[<a id="82c45" class="tk">maxIndex</a>] - <a id="82c57" class="tk">bp0</a>[<a id="82c61" class="tk">maxIndex</a> - 1U]);</td></tr>
+<tr name="83" id="83">
+<td>83</td><td>  <span class="br">}</span></td></tr>
+<tr name="84" id="84">
+<td>84</td><td></td></tr>
+<tr name="85" id="85">
+<td>85</td><td>  <span class="ct">/* Interpolation 1-D</span></td></tr>
+<tr name="86" id="86">
+<td>86</td><td><span class="ct">     Interpolation method: 'Linear'</span></td></tr>
+<tr name="87" id="87">
+<td>87</td><td><span class="ct">     Use last breakpoint for index at or above upper limit: 'off'</span></td></tr>
+<tr name="88" id="88">
+<td>88</td><td><span class="ct">     Overflow mode: 'portable wrapping'</span></td></tr>
+<tr name="89" id="89">
+<td>89</td><td><span class="ct">   */</span></td></tr>
+<tr name="90" id="90">
+<td>90</td><td>  <span class="kw">return</span> (<a id="90c11" class="tk">table</a>[<a id="90c17" class="tk">iLeft</a> + 1U] - <a id="90c31" class="tk">table</a>[<a id="90c37" class="tk">iLeft</a>]) * <a id="90c47" class="tk">frac</a> + <a id="90c54" class="tk">table</a>[<a id="90c60" class="tk">iLeft</a>];</td></tr>
+<tr name="91" id="91">
+<td>91</td><td><span class="br">}</span></td></tr>
+<tr name="92" id="92">
+<td>92</td><td></td></tr>
+<tr name="93" id="93">
+<td>93</td><td><span class="ct">/* Model step function */</span></td></tr>
+<tr name="94" id="94">
+<td>94</td><td><span class="kw">void</span> <a id="94c6" class="tk">Estimations_step</a>(<span class="kw">void</span>)</td></tr>
+<tr name="95" id="95">
+<td>95</td><td><span class="br">{</span></td></tr>
+<tr name="96" id="96">
+<td>96</td><td>  <a id="96c3" class="tk">real32_T</a> <a id="96c12" class="tk">rtb_IndexVector_RL</a>;</td></tr>
+<tr name="97" id="97">
+<td>97</td><td>  <a id="97c3" class="tk">real32_T</a> <a id="97c12" class="tk">rtb_IndexVector_RR</a>;</td></tr>
+<tr name="98" id="98">
+<td>98</td><td>  <a id="98c3" class="tk">real32_T</a> <a id="98c12" class="tk">rtb_mean_wheel_angle</a>;</td></tr>
+<tr name="99" id="99">
+<td>99</td><td>  <a id="99c3" class="tk">real32_T</a> <a id="99c12" class="tk">rtb_Fz_damper_est_FL</a>;</td></tr>
+<tr name="100" id="100">
+<td>100</td><td>  <a id="100c3" class="tk">real32_T</a> <a id="100c12" class="tk">rtb_Fz_damper_est_FR</a>;</td></tr>
+<tr name="101" id="101">
+<td>101</td><td>  <a id="101c3" class="tk">real32_T</a> <a id="101c12" class="tk">rtb_Fz_damper_est_RL</a>;</td></tr>
+<tr name="102" id="102">
+<td>102</td><td>  <a id="102c3" class="tk">real32_T</a> <a id="102c12" class="tk">rtb_Fz_damper_est_RR</a>;</td></tr>
+<tr name="103" id="103">
+<td>103</td><td>  <a id="103c3" class="tk">real32_T</a> <a id="103c12" class="tk">rtb_Fz_loadTransfer_est_FL</a>;</td></tr>
+<tr name="104" id="104">
+<td>104</td><td>  <a id="104c3" class="tk">real32_T</a> <a id="104c12" class="tk">rtb_Fz_loadTransfer_est_FR</a>;</td></tr>
+<tr name="105" id="105">
+<td>105</td><td>  <a id="105c3" class="tk">real32_T</a> <a id="105c12" class="tk">rtb_Fz_loadTransfer_est_RL</a>;</td></tr>
+<tr name="106" id="106">
+<td>106</td><td>  <a id="106c3" class="tk">real32_T</a> <a id="106c12" class="tk">rtb_Fz_loadTransfer_est_RR</a>;</td></tr>
+<tr name="107" id="107">
+<td>107</td><td>  <a id="107c3" class="tk">real32_T</a> <a id="107c12" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="108" id="108">
+<td>108</td><td>  <a id="108c3" class="tk">real32_T</a> <a id="108c12" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="109" id="109">
+<td>109</td><td>  <a id="109c3" class="tk">real32_T</a> <a id="109c12" class="tk">rtb_DamperRateLookup3</a>;</td></tr>
+<tr name="110" id="110">
+<td>110</td><td>  <a id="110c3" class="tk">real32_T</a> <a id="110c12" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="111" id="111">
+<td>111</td><td>  <a id="111c3" class="tk">real32_T</a> <a id="111c12" class="tk">u0</a>;</td></tr>
+<tr name="112" id="112">
+<td>112</td><td></td></tr>
+<tr name="113" id="113">
+<td>113</td><td>  <span class="ct">/* Outputs for Atomic SubSystem: '<a class="ct blk" blk_line="113">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="114" id="114">
+<td>114</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="114">&lt;S3&gt;/EstimateFx</a>' incorporates:</span></td></tr>
+<tr name="115" id="115">
+<td>115</td><td><span class="ct">   *  BusCreator: '<a class="ct blk" blk_line="115">&lt;S3&gt;/BusConversion_InsertedFor_EstimateFx_at_inport_1</a>'</span></td></tr>
+<tr name="116" id="116">
+<td>116</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="116">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="117" id="117">
+<td>117</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="117">&lt;Root&gt;/T_CM</a>'</span></td></tr>
+<tr name="118" id="118">
+<td>118</td><td><span class="ct">   */</span></td></tr>
+<tr name="119" id="119">
+<td>119</td><td>  <span class="ct">/* MATLAB Function 'Estimations/Fx_Estimation/EstimateFx': '<a class="ct blk" blk_line="119">&lt;S12&gt;:1</a>' */</span></td></tr>
+<tr name="120" id="120">
+<td>120</td><td>  <span class="ct">/*  Torque constant */</span></td></tr>
+<tr name="121" id="121">
+<td>121</td><td>  <span class="ct">/*  Quadrature axis inductance  */</span></td></tr>
+<tr name="122" id="122">
+<td>122</td><td>  <span class="ct">/*  Direct access inductance */</span></td></tr>
+<tr name="123" id="123">
+<td>123</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="123">&lt;S12&gt;:1:16</a>' */</span></td></tr>
+<tr name="124" id="124">
+<td>124</td><td>  <span class="ct">/*  Motor inertia */</span></td></tr>
+<tr name="125" id="125">
+<td>125</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="125">&lt;S12&gt;:1:17</a>' */</span></td></tr>
+<tr name="126" id="126">
+<td>126</td><td>  <span class="ct">/*  Radius center of rim to tire contact */</span></td></tr>
+<tr name="127" id="127">
+<td>127</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="127">&lt;S12&gt;:1:18</a>' */</span></td></tr>
+<tr name="128" id="128">
+<td>128</td><td>  <span class="ct">/*  Gear ratio */</span></td></tr>
+<tr name="129" id="129">
+<td>129</td><td>  <span class="ct">/*  Convert RPM Derivative to angular acceleration */</span></td></tr>
+<tr name="130" id="130">
+<td>130</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="130">&lt;S12&gt;:1:20</a>' */</span></td></tr>
+<tr name="131" id="131">
+<td>131</td><td>  <a id="131c3" class="tk">Estimations_B</a>.<a id="131c17" class="tk">c</a> = 6.28318548F / (<a id="131c36" class="tk">car_params</a>.<a id="131c47" class="tk">GR</a> * 60.0F);</td></tr>
+<tr name="132" id="132">
+<td>132</td><td></td></tr>
+<tr name="133" id="133">
+<td>133</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="133">&lt;S12&gt;:1:21</a>' */</span></td></tr>
+<tr name="134" id="134">
+<td>134</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="134">&lt;S12&gt;:1:22</a>' */</span></td></tr>
+<tr name="135" id="135">
+<td>135</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="135">&lt;S12&gt;:1:23</a>' */</span></td></tr>
+<tr name="136" id="136">
+<td>136</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="136">&lt;S12&gt;:1:24</a>' */</span></td></tr>
+<tr name="137" id="137">
+<td>137</td><td>  <span class="ct">/* T_FL = (Iq_FL*Kt*sqrt(2)-(Lq-Ld)*Id_FL)*GR; */</span></td></tr>
+<tr name="138" id="138">
+<td>138</td><td>  <span class="ct">/* T_FR = (Iq_FR*Kt*sqrt(2)-(Lq-Ld)*Id_FR)*GR; */</span></td></tr>
+<tr name="139" id="139">
+<td>139</td><td>  <span class="ct">/* T_RL = (Iq_RL*Kt*sqrt(2)-(Lq-Ld)*Id_RL)*GR; */</span></td></tr>
+<tr name="140" id="140">
+<td>140</td><td>  <span class="ct">/* T_RR = (Iq_RR*Kt*sqrt(2)-(Lq-Ld)*Id_RR)*GR; */</span></td></tr>
+<tr name="141" id="141">
+<td>141</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="141">&lt;S12&gt;:1:30</a>' */</span></td></tr>
+<tr name="142" id="142">
+<td>142</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="142">&lt;S12&gt;:1:31</a>' */</span></td></tr>
+<tr name="143" id="143">
+<td>143</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="143">&lt;S12&gt;:1:32</a>' */</span></td></tr>
+<tr name="144" id="144">
+<td>144</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="144">&lt;S12&gt;:1:33</a>' */</span></td></tr>
+<tr name="145" id="145">
+<td>145</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="145">&lt;S12&gt;:1:37</a>' */</span></td></tr>
+<tr name="146" id="146">
+<td>146</td><td>  <a id="146c3" class="tk">Estimations_B</a>.<a id="146c17" class="tk">rtb_Fx_FL</a> = (<a id="146c30" class="tk">Estimations_U</a>.<a id="146c44" class="tk">T_CM</a>.<a id="146c49" class="tk">FL</a> - <a id="146c54" class="tk">Estimations_B</a>.<a id="146c68" class="tk">c</a> *</td></tr>
+<tr name="147" id="147">
+<td>147</td><td>    <a id="147c5" class="tk">Estimations_U</a>.<a id="147c19" class="tk">Sensors_in</a>.<a id="147c30" class="tk">RPM_der_FL</a> * <a id="147c43" class="tk">car_params</a>.<a id="147c54" class="tk">Jw</a>) / <a id="147c60" class="tk">car_params</a>.<a id="147c71" class="tk">r_eff</a>;</td></tr>
+<tr name="148" id="148">
+<td>148</td><td></td></tr>
+<tr name="149" id="149">
+<td>149</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="149">&lt;S12&gt;:1:38</a>' */</span></td></tr>
+<tr name="150" id="150">
+<td>150</td><td>  <a id="150c3" class="tk">Estimations_B</a>.<a id="150c17" class="tk">rtb_Fx_FR</a> = (<a id="150c30" class="tk">Estimations_U</a>.<a id="150c44" class="tk">T_CM</a>.<a id="150c49" class="tk">FR</a> - <a id="150c54" class="tk">Estimations_B</a>.<a id="150c68" class="tk">c</a> *</td></tr>
+<tr name="151" id="151">
+<td>151</td><td>    <a id="151c5" class="tk">Estimations_U</a>.<a id="151c19" class="tk">Sensors_in</a>.<a id="151c30" class="tk">RPM_der_FR</a> * <a id="151c43" class="tk">car_params</a>.<a id="151c54" class="tk">Jw</a>) / <a id="151c60" class="tk">car_params</a>.<a id="151c71" class="tk">r_eff</a>;</td></tr>
+<tr name="152" id="152">
+<td>152</td><td></td></tr>
+<tr name="153" id="153">
+<td>153</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="153">&lt;S12&gt;:1:39</a>' */</span></td></tr>
+<tr name="154" id="154">
+<td>154</td><td>  <a id="154c3" class="tk">Estimations_B</a>.<a id="154c17" class="tk">rtb_Fx_RL</a> = (<a id="154c30" class="tk">Estimations_U</a>.<a id="154c44" class="tk">T_CM</a>.<a id="154c49" class="tk">RL</a> - <a id="154c54" class="tk">Estimations_B</a>.<a id="154c68" class="tk">c</a> *</td></tr>
+<tr name="155" id="155">
+<td>155</td><td>    <a id="155c5" class="tk">Estimations_U</a>.<a id="155c19" class="tk">Sensors_in</a>.<a id="155c30" class="tk">RPM_der_RL</a> * <a id="155c43" class="tk">car_params</a>.<a id="155c54" class="tk">Jw</a>) / <a id="155c60" class="tk">car_params</a>.<a id="155c71" class="tk">r_eff</a>;</td></tr>
+<tr name="156" id="156">
+<td>156</td><td></td></tr>
+<tr name="157" id="157">
+<td>157</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="157">&lt;S12&gt;:1:40</a>' */</span></td></tr>
+<tr name="158" id="158">
+<td>158</td><td>  <a id="158c3" class="tk">Estimations_B</a>.<a id="158c17" class="tk">rtb_Fx_RR</a> = (<a id="158c30" class="tk">Estimations_U</a>.<a id="158c44" class="tk">T_CM</a>.<a id="158c49" class="tk">RR</a> - <a id="158c54" class="tk">Estimations_B</a>.<a id="158c68" class="tk">c</a> *</td></tr>
+<tr name="159" id="159">
+<td>159</td><td>    <a id="159c5" class="tk">Estimations_U</a>.<a id="159c19" class="tk">Sensors_in</a>.<a id="159c30" class="tk">RPM_der_RR</a> * <a id="159c43" class="tk">car_params</a>.<a id="159c54" class="tk">Jw</a>) / <a id="159c60" class="tk">car_params</a>.<a id="159c71" class="tk">r_eff</a>;</td></tr>
+<tr name="160" id="160">
+<td>160</td><td></td></tr>
+<tr name="161" id="161">
+<td>161</td><td>  <span class="ct">/* Outputs for Atomic SubSystem: '<a class="ct blk" blk_line="161">&lt;S1&gt;/Fz_Estimation</a>' */</span></td></tr>
+<tr name="162" id="162">
+<td>162</td><td>  <span class="ct">/* Lookup_n-D: '<a class="ct blk" blk_line="162">&lt;S4&gt;/DamperRateLookup</a>' incorporates:</span></td></tr>
+<tr name="163" id="163">
+<td>163</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="163">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="164" id="164">
+<td>164</td><td><span class="ct">   */</span></td></tr>
+<tr name="165" id="165">
+<td>165</td><td>  <a id="165c3" class="tk">Estimations_B</a>.<a id="165c17" class="tk">c</a> = <a id="165c21" class="tk">look1_iflf_binlxpw</a>(<a id="165c40" class="tk">Estimations_U</a>.<a id="165c54" class="tk">Sensors_in</a>.<a id="165c65" class="tk">damper_rate_FL</a>,</td></tr>
+<tr name="166" id="166">
+<td>166</td><td>    <a id="166c5" class="tk">Estimations_P</a>.<a id="166c19" class="tk">DamperRateLookup_bp01Data</a>,</td></tr>
+<tr name="167" id="167">
+<td>167</td><td>    <a id="167c5" class="tk">Estimations_P</a>.<a id="167c19" class="tk">DamperRateLookup_tableData</a>, 2U);</td></tr>
+<tr name="168" id="168">
+<td>168</td><td></td></tr>
+<tr name="169" id="169">
+<td>169</td><td>  <span class="ct">/* Lookup_n-D: '<a class="ct blk" blk_line="169">&lt;S4&gt;/DamperRateLookup1</a>' incorporates:</span></td></tr>
+<tr name="170" id="170">
+<td>170</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="170">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="171" id="171">
+<td>171</td><td><span class="ct">   */</span></td></tr>
+<tr name="172" id="172">
+<td>172</td><td>  <a id="172c3" class="tk">rtb_DamperRateLookup1</a> = <a id="172c27" class="tk">look1_iflf_binlxpw</a></td></tr>
+<tr name="173" id="173">
+<td>173</td><td>    (<a id="173c6" class="tk">Estimations_U</a>.<a id="173c20" class="tk">Sensors_in</a>.<a id="173c31" class="tk">damper_rate_FR</a>,</td></tr>
+<tr name="174" id="174">
+<td>174</td><td>     <a id="174c6" class="tk">Estimations_P</a>.<a id="174c20" class="tk">DamperRateLookup1_bp01Data</a>,</td></tr>
+<tr name="175" id="175">
+<td>175</td><td>     <a id="175c6" class="tk">Estimations_P</a>.<a id="175c20" class="tk">DamperRateLookup1_tableData</a>, 2U);</td></tr>
+<tr name="176" id="176">
+<td>176</td><td></td></tr>
+<tr name="177" id="177">
+<td>177</td><td>  <span class="ct">/* Lookup_n-D: '<a class="ct blk" blk_line="177">&lt;S4&gt;/DamperRateLookup2</a>' incorporates:</span></td></tr>
+<tr name="178" id="178">
+<td>178</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="178">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="179" id="179">
+<td>179</td><td><span class="ct">   */</span></td></tr>
+<tr name="180" id="180">
+<td>180</td><td>  <a id="180c3" class="tk">rtb_DamperRateLookup2</a> = <a id="180c27" class="tk">look1_iflf_binlxpw</a></td></tr>
+<tr name="181" id="181">
+<td>181</td><td>    (<a id="181c6" class="tk">Estimations_U</a>.<a id="181c20" class="tk">Sensors_in</a>.<a id="181c31" class="tk">damper_rate_RL</a>,</td></tr>
+<tr name="182" id="182">
+<td>182</td><td>     <a id="182c6" class="tk">Estimations_P</a>.<a id="182c20" class="tk">DamperRateLookup2_bp01Data</a>,</td></tr>
+<tr name="183" id="183">
+<td>183</td><td>     <a id="183c6" class="tk">Estimations_P</a>.<a id="183c20" class="tk">DamperRateLookup2_tableData</a>, 2U);</td></tr>
+<tr name="184" id="184">
+<td>184</td><td></td></tr>
+<tr name="185" id="185">
+<td>185</td><td>  <span class="ct">/* Lookup_n-D: '<a class="ct blk" blk_line="185">&lt;S4&gt;/DamperRateLookup3</a>' incorporates:</span></td></tr>
+<tr name="186" id="186">
+<td>186</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="186">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="187" id="187">
+<td>187</td><td><span class="ct">   */</span></td></tr>
+<tr name="188" id="188">
+<td>188</td><td>  <a id="188c3" class="tk">rtb_DamperRateLookup3</a> = <a id="188c27" class="tk">look1_iflf_binlxpw</a></td></tr>
+<tr name="189" id="189">
+<td>189</td><td>    (<a id="189c6" class="tk">Estimations_U</a>.<a id="189c20" class="tk">Sensors_in</a>.<a id="189c31" class="tk">damper_rate_RR</a>,</td></tr>
+<tr name="190" id="190">
+<td>190</td><td>     <a id="190c6" class="tk">Estimations_P</a>.<a id="190c20" class="tk">DamperRateLookup3_bp01Data</a>,</td></tr>
+<tr name="191" id="191">
+<td>191</td><td>     <a id="191c6" class="tk">Estimations_P</a>.<a id="191c20" class="tk">DamperRateLookup3_tableData</a>, 2U);</td></tr>
+<tr name="192" id="192">
+<td>192</td><td></td></tr>
+<tr name="193" id="193">
+<td>193</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="193">&lt;S4&gt;/FzEstDamper</a>' incorporates:</span></td></tr>
+<tr name="194" id="194">
+<td>194</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="194">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="195" id="195">
+<td>195</td><td><span class="ct">   */</span></td></tr>
+<tr name="196" id="196">
+<td>196</td><td>  <span class="ct">/* MATLAB Function 'Estimations/Fz_Estimation/FzEstDamper': '<a class="ct blk" blk_line="196">&lt;S13&gt;:1</a>' */</span></td></tr>
+<tr name="197" id="197">
+<td>197</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="197">&lt;S13&gt;:1:4</a>' */</span></td></tr>
+<tr name="198" id="198">
+<td>198</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="198">&lt;S13&gt;:1:5</a>' */</span></td></tr>
+<tr name="199" id="199">
+<td>199</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="199">&lt;S13&gt;:1:7</a>' */</span></td></tr>
+<tr name="200" id="200">
+<td>200</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="200">&lt;S13&gt;:1:8</a>' */</span></td></tr>
+<tr name="201" id="201">
+<td>201</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="201">&lt;S13&gt;:1:11</a>' */</span></td></tr>
+<tr name="202" id="202">
+<td>202</td><td>  <a id="202c3" class="tk">rtb_Fz_damper_est_FL</a> = (<a id="202c27" class="tk">car_params</a>.<a id="202c38" class="tk">spring_constant_front</a> *</td></tr>
+<tr name="203" id="203">
+<td>203</td><td>    <a id="203c5" class="tk">Estimations_U</a>.<a id="203c19" class="tk">Sensors_in</a>.<a id="203c30" class="tk">damper_pos_FL</a> + <a id="203c46" class="tk">Estimations_B</a>.<a id="203c60" class="tk">c</a>) *</td></tr>
+<tr name="204" id="204">
+<td>204</td><td>    <a id="204c5" class="tk">car_params</a>.<a id="204c16" class="tk">motion_ratio_front</a>;</td></tr>
+<tr name="205" id="205">
+<td>205</td><td></td></tr>
+<tr name="206" id="206">
+<td>206</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="206">&lt;S13&gt;:1:12</a>' */</span></td></tr>
+<tr name="207" id="207">
+<td>207</td><td>  <a id="207c3" class="tk">rtb_Fz_damper_est_FR</a> = (<a id="207c27" class="tk">car_params</a>.<a id="207c38" class="tk">spring_constant_front</a> *</td></tr>
+<tr name="208" id="208">
+<td>208</td><td>    <a id="208c5" class="tk">Estimations_U</a>.<a id="208c19" class="tk">Sensors_in</a>.<a id="208c30" class="tk">damper_pos_FR</a> + <a id="208c46" class="tk">rtb_DamperRateLookup1</a>) *</td></tr>
+<tr name="209" id="209">
+<td>209</td><td>    <a id="209c5" class="tk">car_params</a>.<a id="209c16" class="tk">motion_ratio_front</a>;</td></tr>
+<tr name="210" id="210">
+<td>210</td><td></td></tr>
+<tr name="211" id="211">
+<td>211</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="211">&lt;S13&gt;:1:13</a>' */</span></td></tr>
+<tr name="212" id="212">
+<td>212</td><td>  <a id="212c3" class="tk">rtb_Fz_damper_est_RL</a> = (<a id="212c27" class="tk">car_params</a>.<a id="212c38" class="tk">spring_constant_rear</a> *</td></tr>
+<tr name="213" id="213">
+<td>213</td><td>    <a id="213c5" class="tk">Estimations_U</a>.<a id="213c19" class="tk">Sensors_in</a>.<a id="213c30" class="tk">damper_pos_RL</a> + <a id="213c46" class="tk">rtb_DamperRateLookup2</a>) *</td></tr>
+<tr name="214" id="214">
+<td>214</td><td>    <a id="214c5" class="tk">car_params</a>.<a id="214c16" class="tk">motion_ratio_rear</a>;</td></tr>
+<tr name="215" id="215">
+<td>215</td><td></td></tr>
+<tr name="216" id="216">
+<td>216</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="216">&lt;S13&gt;:1:14</a>' */</span></td></tr>
+<tr name="217" id="217">
+<td>217</td><td>  <a id="217c3" class="tk">rtb_Fz_damper_est_RR</a> = (<a id="217c27" class="tk">car_params</a>.<a id="217c38" class="tk">spring_constant_rear</a> *</td></tr>
+<tr name="218" id="218">
+<td>218</td><td>    <a id="218c5" class="tk">Estimations_U</a>.<a id="218c19" class="tk">Sensors_in</a>.<a id="218c30" class="tk">damper_pos_RR</a> + <a id="218c46" class="tk">rtb_DamperRateLookup3</a>) *</td></tr>
+<tr name="219" id="219">
+<td>219</td><td>    <a id="219c5" class="tk">car_params</a>.<a id="219c16" class="tk">motion_ratio_rear</a>;</td></tr>
+<tr name="220" id="220">
+<td>220</td><td></td></tr>
+<tr name="221" id="221">
+<td>221</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="221">&lt;S4&gt;/FzEstLoadTransfer</a>' incorporates:</span></td></tr>
+<tr name="222" id="222">
+<td>222</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="222">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="223" id="223">
+<td>223</td><td><span class="ct">   */</span></td></tr>
+<tr name="224" id="224">
+<td>224</td><td>  <span class="ct">/* MATLAB Function 'Estimations/Fz_Estimation/FzEstLoadTransfer': '<a class="ct blk" blk_line="224">&lt;S14&gt;:1</a>' */</span></td></tr>
+<tr name="225" id="225">
+<td>225</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="225">&lt;S14&gt;:1:7</a>' */</span></td></tr>
+<tr name="226" id="226">
+<td>226</td><td>  <a id="226c3" class="tk">rtb_DamperRateLookup1</a> = <a id="226c27" class="tk">car_params</a>.<a id="226c38" class="tk">car_mass</a> + <a id="226c49" class="tk">car_params</a>.<a id="226c60" class="tk">driver_mass</a>;</td></tr>
+<tr name="227" id="227">
+<td>227</td><td></td></tr>
+<tr name="228" id="228">
+<td>228</td><td>  <span class="ct">/*  Total mass( driver + car) X */</span></td></tr>
+<tr name="229" id="229">
+<td>229</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="229">&lt;S14&gt;:1:8</a>' */</span></td></tr>
+<tr name="230" id="230">
+<td>230</td><td>  <span class="ct">/* Wheel base X */</span></td></tr>
+<tr name="231" id="231">
+<td>231</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="231">&lt;S14&gt;:1:9</a>' */</span></td></tr>
+<tr name="232" id="232">
+<td>232</td><td>  <span class="ct">/*  X */</span></td></tr>
+<tr name="233" id="233">
+<td>233</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="233">&lt;S14&gt;:1:10</a>' */</span></td></tr>
+<tr name="234" id="234">
+<td>234</td><td>  <span class="ct">/*  X */</span></td></tr>
+<tr name="235" id="235">
+<td>235</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="235">&lt;S14&gt;:1:12</a>' */</span></td></tr>
+<tr name="236" id="236">
+<td>236</td><td>  <a id="236c3" class="tk">Estimations_B</a>.<a id="236c17" class="tk">c</a> = <a id="236c21" class="tk">car_params</a>.<a id="236c32" class="tk">t_f</a> * 2.0F;</td></tr>
+<tr name="237" id="237">
+<td>237</td><td></td></tr>
+<tr name="238" id="238">
+<td>238</td><td>  <span class="ct">/*  Front track X */</span></td></tr>
+<tr name="239" id="239">
+<td>239</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="239">&lt;S14&gt;:1:13</a>' */</span></td></tr>
+<tr name="240" id="240">
+<td>240</td><td>  <a id="240c3" class="tk">rtb_DamperRateLookup2</a> = <a id="240c27" class="tk">car_params</a>.<a id="240c38" class="tk">t_r</a> * 2.0F;</td></tr>
+<tr name="241" id="241">
+<td>241</td><td></td></tr>
+<tr name="242" id="242">
+<td>242</td><td>  <span class="ct">/*  Rear track X */</span></td></tr>
+<tr name="243" id="243">
+<td>243</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="243">&lt;S14&gt;:1:16</a>' */</span></td></tr>
+<tr name="244" id="244">
+<td>244</td><td>  <span class="ct">/*  X */</span></td></tr>
+<tr name="245" id="245">
+<td>245</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="245">&lt;S14&gt;:1:19</a>' */</span></td></tr>
+<tr name="246" id="246">
+<td>246</td><td>  <a id="246c3" class="tk">rtb_Fz_loadTransfer_est_FL</a> = (<a id="246c33" class="tk">car_params</a>.<a id="246c44" class="tk">l_r</a> * 9.81F / <a id="246c58" class="tk">car_params</a>.<a id="246c69" class="tk">l</a> -</td></tr>
+<tr name="247" id="247">
+<td>247</td><td>    <a id="247c5" class="tk">car_params</a>.<a id="247c16" class="tk">CoG_height</a> * <a id="247c29" class="tk">Estimations_U</a>.<a id="247c43" class="tk">Sensors_in</a>.<a id="247c54" class="tk">ax</a> / <a id="247c59" class="tk">car_params</a>.<a id="247c70" class="tk">l</a>) * (0.5F *</td></tr>
+<tr name="248" id="248">
+<td>248</td><td>    <a id="248c5" class="tk">rtb_DamperRateLookup1</a>) - (<a id="248c31" class="tk">car_params</a>.<a id="248c42" class="tk">l_r</a> * 9.81F / <a id="248c56" class="tk">car_params</a>.<a id="248c67" class="tk">l</a> -</td></tr>
+<tr name="249" id="249">
+<td>249</td><td>    <a id="249c5" class="tk">car_params</a>.<a id="249c16" class="tk">CoG_height</a> * <a id="249c29" class="tk">Estimations_U</a>.<a id="249c43" class="tk">Sensors_in</a>.<a id="249c54" class="tk">ax</a> / <a id="249c59" class="tk">car_params</a>.<a id="249c70" class="tk">l</a>) *</td></tr>
+<tr name="250" id="250">
+<td>250</td><td>    <a id="250c5" class="tk">rtb_DamperRateLookup1</a> * <a id="250c29" class="tk">car_params</a>.<a id="250c40" class="tk">CoG_height</a> * <a id="250c53" class="tk">Estimations_U</a>.<a id="250c67" class="tk">Sensors_in</a>.<a id="250c78" class="tk">ay</a> /</td></tr>
+<tr name="251" id="251">
+<td>251</td><td>    (<a id="251c6" class="tk">Estimations_B</a>.<a id="251c20" class="tk">c</a> * 9.81F);</td></tr>
+<tr name="252" id="252">
+<td>252</td><td></td></tr>
+<tr name="253" id="253">
+<td>253</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="253">&lt;S14&gt;:1:20</a>' */</span></td></tr>
+<tr name="254" id="254">
+<td>254</td><td>  <a id="254c3" class="tk">rtb_Fz_loadTransfer_est_FR</a> = (<a id="254c33" class="tk">car_params</a>.<a id="254c44" class="tk">l_r</a> * 9.81F / <a id="254c58" class="tk">car_params</a>.<a id="254c69" class="tk">l</a> -</td></tr>
+<tr name="255" id="255">
+<td>255</td><td>    <a id="255c5" class="tk">car_params</a>.<a id="255c16" class="tk">CoG_height</a> * <a id="255c29" class="tk">Estimations_U</a>.<a id="255c43" class="tk">Sensors_in</a>.<a id="255c54" class="tk">ax</a> / <a id="255c59" class="tk">car_params</a>.<a id="255c70" class="tk">l</a>) *</td></tr>
+<tr name="256" id="256">
+<td>256</td><td>    <a id="256c5" class="tk">rtb_DamperRateLookup1</a> * <a id="256c29" class="tk">car_params</a>.<a id="256c40" class="tk">CoG_height</a> * <a id="256c53" class="tk">Estimations_U</a>.<a id="256c67" class="tk">Sensors_in</a>.<a id="256c78" class="tk">ay</a> /</td></tr>
+<tr name="257" id="257">
+<td>257</td><td>    (<a id="257c6" class="tk">Estimations_B</a>.<a id="257c20" class="tk">c</a> * 9.81F) + (<a id="257c34" class="tk">car_params</a>.<a id="257c45" class="tk">l_r</a> * 9.81F / <a id="257c59" class="tk">car_params</a>.<a id="257c70" class="tk">l</a> -</td></tr>
+<tr name="258" id="258">
+<td>258</td><td>    <a id="258c5" class="tk">car_params</a>.<a id="258c16" class="tk">CoG_height</a> * <a id="258c29" class="tk">Estimations_U</a>.<a id="258c43" class="tk">Sensors_in</a>.<a id="258c54" class="tk">ax</a> / <a id="258c59" class="tk">car_params</a>.<a id="258c70" class="tk">l</a>) * (0.5F *</td></tr>
+<tr name="259" id="259">
+<td>259</td><td>    <a id="259c5" class="tk">rtb_DamperRateLookup1</a>);</td></tr>
+<tr name="260" id="260">
+<td>260</td><td></td></tr>
+<tr name="261" id="261">
+<td>261</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="261">&lt;S14&gt;:1:21</a>' */</span></td></tr>
+<tr name="262" id="262">
+<td>262</td><td>  <a id="262c3" class="tk">rtb_Fz_loadTransfer_est_RL</a> = (<a id="262c33" class="tk">car_params</a>.<a id="262c44" class="tk">l_f</a> * 9.81F / <a id="262c58" class="tk">car_params</a>.<a id="262c69" class="tk">l</a> +</td></tr>
+<tr name="263" id="263">
+<td>263</td><td>    <a id="263c5" class="tk">car_params</a>.<a id="263c16" class="tk">CoG_height</a> * <a id="263c29" class="tk">Estimations_U</a>.<a id="263c43" class="tk">Sensors_in</a>.<a id="263c54" class="tk">ax</a> / <a id="263c59" class="tk">car_params</a>.<a id="263c70" class="tk">l</a>) * (0.5F *</td></tr>
+<tr name="264" id="264">
+<td>264</td><td>    <a id="264c5" class="tk">rtb_DamperRateLookup1</a>) - (<a id="264c31" class="tk">car_params</a>.<a id="264c42" class="tk">l_f</a> * 9.81F / <a id="264c56" class="tk">car_params</a>.<a id="264c67" class="tk">l</a> +</td></tr>
+<tr name="265" id="265">
+<td>265</td><td>    <a id="265c5" class="tk">car_params</a>.<a id="265c16" class="tk">CoG_height</a> * <a id="265c29" class="tk">Estimations_U</a>.<a id="265c43" class="tk">Sensors_in</a>.<a id="265c54" class="tk">ax</a> / <a id="265c59" class="tk">car_params</a>.<a id="265c70" class="tk">l</a>) *</td></tr>
+<tr name="266" id="266">
+<td>266</td><td>    <a id="266c5" class="tk">rtb_DamperRateLookup1</a> * <a id="266c29" class="tk">car_params</a>.<a id="266c40" class="tk">CoG_height</a> * <a id="266c53" class="tk">Estimations_U</a>.<a id="266c67" class="tk">Sensors_in</a>.<a id="266c78" class="tk">ay</a> /</td></tr>
+<tr name="267" id="267">
+<td>267</td><td>    (<a id="267c6" class="tk">rtb_DamperRateLookup2</a> * 9.81F);</td></tr>
+<tr name="268" id="268">
+<td>268</td><td></td></tr>
+<tr name="269" id="269">
+<td>269</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="269">&lt;S14&gt;:1:22</a>' */</span></td></tr>
+<tr name="270" id="270">
+<td>270</td><td>  <a id="270c3" class="tk">rtb_Fz_loadTransfer_est_RR</a> = (<a id="270c33" class="tk">car_params</a>.<a id="270c44" class="tk">l_f</a> * 9.81F / <a id="270c58" class="tk">car_params</a>.<a id="270c69" class="tk">l</a> +</td></tr>
+<tr name="271" id="271">
+<td>271</td><td>    <a id="271c5" class="tk">car_params</a>.<a id="271c16" class="tk">CoG_height</a> * <a id="271c29" class="tk">Estimations_U</a>.<a id="271c43" class="tk">Sensors_in</a>.<a id="271c54" class="tk">ax</a> / <a id="271c59" class="tk">car_params</a>.<a id="271c70" class="tk">l</a>) *</td></tr>
+<tr name="272" id="272">
+<td>272</td><td>    <a id="272c5" class="tk">rtb_DamperRateLookup1</a> * <a id="272c29" class="tk">car_params</a>.<a id="272c40" class="tk">CoG_height</a> * <a id="272c53" class="tk">Estimations_U</a>.<a id="272c67" class="tk">Sensors_in</a>.<a id="272c78" class="tk">ay</a> /</td></tr>
+<tr name="273" id="273">
+<td>273</td><td>    (<a id="273c6" class="tk">rtb_DamperRateLookup2</a> * 9.81F) + (<a id="273c40" class="tk">car_params</a>.<a id="273c51" class="tk">l_f</a> * 9.81F / <a id="273c65" class="tk">car_params</a>.<a id="273c76" class="tk">l</a> +</td></tr>
+<tr name="274" id="274">
+<td>274</td><td>    <a id="274c5" class="tk">car_params</a>.<a id="274c16" class="tk">CoG_height</a> * <a id="274c29" class="tk">Estimations_U</a>.<a id="274c43" class="tk">Sensors_in</a>.<a id="274c54" class="tk">ax</a> / <a id="274c59" class="tk">car_params</a>.<a id="274c70" class="tk">l</a>) * (0.5F *</td></tr>
+<tr name="275" id="275">
+<td>275</td><td>    <a id="275c5" class="tk">rtb_DamperRateLookup1</a>);</td></tr>
+<tr name="276" id="276">
+<td>276</td><td></td></tr>
+<tr name="277" id="277">
+<td>277</td><td>  <span class="ct">/* MultiPortSwitch: '<a class="ct blk" blk_line="277">&lt;S4&gt;/Index Vector</a>' incorporates:</span></td></tr>
+<tr name="278" id="278">
+<td>278</td><td><span class="ct">   *  Constant: '<a class="ct blk" blk_line="278">&lt;S4&gt;/Constant</a>'</span></td></tr>
+<tr name="279" id="279">
+<td>279</td><td><span class="ct">   */</span></td></tr>
+<tr name="280" id="280">
+<td>280</td><td>  <span class="kw">if</span> (<a id="280c7" class="tk">settings</a>.<a id="280c16" class="tk">select_Fz_est_method</a> == 1U) <span class="br">{</span></td></tr>
+<tr name="281" id="281">
+<td>281</td><td>    <a id="281c5" class="tk">Estimations_B</a>.<a id="281c19" class="tk">rtb_IndexVector_FL</a> = <a id="281c40" class="tk">rtb_Fz_loadTransfer_est_FL</a>;</td></tr>
+<tr name="282" id="282">
+<td>282</td><td>    <a id="282c5" class="tk">Estimations_B</a>.<a id="282c19" class="tk">rtb_IndexVector_FR</a> = <a id="282c40" class="tk">rtb_Fz_loadTransfer_est_FR</a>;</td></tr>
+<tr name="283" id="283">
+<td>283</td><td>    <a id="283c5" class="tk">rtb_IndexVector_RL</a> = <a id="283c26" class="tk">rtb_Fz_loadTransfer_est_RL</a>;</td></tr>
+<tr name="284" id="284">
+<td>284</td><td>    <a id="284c5" class="tk">rtb_IndexVector_RR</a> = <a id="284c26" class="tk">rtb_Fz_loadTransfer_est_RR</a>;</td></tr>
+<tr name="285" id="285">
+<td>285</td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<tr name="286" id="286">
+<td>286</td><td>    <a id="286c5" class="tk">Estimations_B</a>.<a id="286c19" class="tk">rtb_IndexVector_FL</a> = <a id="286c40" class="tk">rtb_Fz_damper_est_FL</a>;</td></tr>
+<tr name="287" id="287">
+<td>287</td><td>    <a id="287c5" class="tk">Estimations_B</a>.<a id="287c19" class="tk">rtb_IndexVector_FR</a> = <a id="287c40" class="tk">rtb_Fz_damper_est_FR</a>;</td></tr>
+<tr name="288" id="288">
+<td>288</td><td>    <a id="288c5" class="tk">rtb_IndexVector_RL</a> = <a id="288c26" class="tk">rtb_Fz_damper_est_RL</a>;</td></tr>
+<tr name="289" id="289">
+<td>289</td><td>    <a id="289c5" class="tk">rtb_IndexVector_RR</a> = <a id="289c26" class="tk">rtb_Fz_damper_est_RR</a>;</td></tr>
+<tr name="290" id="290">
+<td>290</td><td>  <span class="br">}</span></td></tr>
+<tr name="291" id="291">
+<td>291</td><td></td></tr>
+<tr name="292" id="292">
+<td>292</td><td>  <span class="ct">/* End of MultiPortSwitch: '<a class="ct blk" blk_line="292">&lt;S4&gt;/Index Vector</a>' */</span></td></tr>
+<tr name="293" id="293">
+<td>293</td><td>  <span class="ct">/* End of Outputs for SubSystem: '<a class="ct blk" blk_line="293">&lt;S1&gt;/Fz_Estimation</a>' */</span></td></tr>
+<tr name="294" id="294">
+<td>294</td><td></td></tr>
+<tr name="295" id="295">
+<td>295</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="295">&lt;S7&gt;/calculateWheelangleandSpeed</a>' incorporates:</span></td></tr>
+<tr name="296" id="296">
+<td>296</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="296">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="297" id="297">
+<td>297</td><td><span class="ct">   */</span></td></tr>
+<tr name="298" id="298">
+<td>298</td><td>  <span class="ct">/* MATLAB Function 'Estimations/calculateMeanWheelAngle/calculateWheelangleandSpeed': '<a class="ct blk" blk_line="298">&lt;S17&gt;:1</a>' */</span></td></tr>
+<tr name="299" id="299">
+<td>299</td><td>  <span class="ct">/*  Right now assumes rad for angle, and rad/s for speed */</span></td></tr>
+<tr name="300" id="300">
+<td>300</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="300">&lt;S17&gt;:1:5</a>' */</span></td></tr>
+<tr name="301" id="301">
+<td>301</td><td>  <a id="301c3" class="tk">rtb_mean_wheel_angle</a> = 0.2536F * <a id="301c36" class="tk">Estimations_U</a>.<a id="301c50" class="tk">Sensors_in</a>.<a id="301c61" class="tk">steering_wheel_angle</a>;</td></tr>
+<tr name="302" id="302">
+<td>302</td><td></td></tr>
+<tr name="303" id="303">
+<td>303</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="303">&lt;S5&gt;/whl_v_calculation</a>' incorporates:</span></td></tr>
+<tr name="304" id="304">
+<td>304</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="304">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="305" id="305">
+<td>305</td><td><span class="ct">   */</span></td></tr>
+<tr name="306" id="306">
+<td>306</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="306">&lt;S17&gt;:1:6</a>' */</span></td></tr>
+<tr name="307" id="307">
+<td>307</td><td>  <span class="ct">/* MATLAB Function 'Estimations/RPM_to_linearVelocity/whl_v_calculation': '<a class="ct blk" blk_line="307">&lt;S15&gt;:1</a>' */</span></td></tr>
+<tr name="308" id="308">
+<td>308</td><td>  <span class="ct">/*  Steering angle in rad( Mean of front wheels) */</span></td></tr>
+<tr name="309" id="309">
+<td>309</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="309">&lt;S15&gt;:1:6</a>' */</span></td></tr>
+<tr name="310" id="310">
+<td>310</td><td>  <a id="310c3" class="tk">Estimations_B</a>.<a id="310c17" class="tk">c</a> = 6.28318548F / (<a id="310c36" class="tk">car_params</a>.<a id="310c47" class="tk">GR</a> * 60.0F);</td></tr>
+<tr name="311" id="311">
+<td>311</td><td></td></tr>
+<tr name="312" id="312">
+<td>312</td><td>  <span class="ct">/*  Determine CoG Vx from motor RPM. Simple atm. Not considering vy. */</span></td></tr>
+<tr name="313" id="313">
+<td>313</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="313">&lt;S15&gt;:1:9</a>' */</span></td></tr>
+<tr name="314" id="314">
+<td>314</td><td>  <a id="314c3" class="tk">Estimations_B</a>.<a id="314c17" class="tk">rtb_whl_speed_FL</a> = <a id="314c36" class="tk">Estimations_U</a>.<a id="314c50" class="tk">Sensors_in</a>.<a id="314c61" class="tk">RPM_FL</a> *</td></tr>
+<tr name="315" id="315">
+<td>315</td><td>    <a id="315c5" class="tk">Estimations_B</a>.<a id="315c19" class="tk">c</a> * <a id="315c23" class="tk">car_params</a>.<a id="315c34" class="tk">r_eff</a> * <a id="315c42" class="tk">arm_cos_f32</a>(<a id="315c54" class="tk">rtb_mean_wheel_angle</a>) +</td></tr>
+<tr name="316" id="316">
+<td>316</td><td>    <a id="316c5" class="tk">Estimations_U</a>.<a id="316c19" class="tk">Sensors_in</a>.<a id="316c30" class="tk">yawRate</a> * <a id="316c40" class="tk">car_params</a>.<a id="316c51" class="tk">t_f</a>;</td></tr>
+<tr name="317" id="317">
+<td>317</td><td></td></tr>
+<tr name="318" id="318">
+<td>318</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="318">&lt;S15&gt;:1:10</a>' */</span></td></tr>
+<tr name="319" id="319">
+<td>319</td><td>  <a id="319c3" class="tk">Estimations_B</a>.<a id="319c17" class="tk">rtb_whl_speed_FR</a> = <a id="319c36" class="tk">Estimations_U</a>.<a id="319c50" class="tk">Sensors_in</a>.<a id="319c61" class="tk">RPM_FR</a> *</td></tr>
+<tr name="320" id="320">
+<td>320</td><td>    <a id="320c5" class="tk">Estimations_B</a>.<a id="320c19" class="tk">c</a> * <a id="320c23" class="tk">car_params</a>.<a id="320c34" class="tk">r_eff</a> * <a id="320c42" class="tk">arm_cos_f32</a>(<a id="320c54" class="tk">rtb_mean_wheel_angle</a>) -</td></tr>
+<tr name="321" id="321">
+<td>321</td><td>    <a id="321c5" class="tk">Estimations_U</a>.<a id="321c19" class="tk">Sensors_in</a>.<a id="321c30" class="tk">yawRate</a> * <a id="321c40" class="tk">car_params</a>.<a id="321c51" class="tk">t_f</a>;</td></tr>
+<tr name="322" id="322">
+<td>322</td><td></td></tr>
+<tr name="323" id="323">
+<td>323</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="323">&lt;S15&gt;:1:11</a>' */</span></td></tr>
+<tr name="324" id="324">
+<td>324</td><td>  <a id="324c3" class="tk">Estimations_B</a>.<a id="324c17" class="tk">rtb_whl_speed_RL</a> = <a id="324c36" class="tk">Estimations_U</a>.<a id="324c50" class="tk">Sensors_in</a>.<a id="324c61" class="tk">RPM_RL</a> *</td></tr>
+<tr name="325" id="325">
+<td>325</td><td>    <a id="325c5" class="tk">Estimations_B</a>.<a id="325c19" class="tk">c</a> * <a id="325c23" class="tk">car_params</a>.<a id="325c34" class="tk">r_eff</a> + <a id="325c42" class="tk">Estimations_U</a>.<a id="325c56" class="tk">Sensors_in</a>.<a id="325c67" class="tk">yawRate</a> *</td></tr>
+<tr name="326" id="326">
+<td>326</td><td>    <a id="326c5" class="tk">car_params</a>.<a id="326c16" class="tk">t_r</a>;</td></tr>
+<tr name="327" id="327">
+<td>327</td><td></td></tr>
+<tr name="328" id="328">
+<td>328</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="328">&lt;S15&gt;:1:12</a>' */</span></td></tr>
+<tr name="329" id="329">
+<td>329</td><td>  <a id="329c3" class="tk">Estimations_B</a>.<a id="329c17" class="tk">rtb_whl_speed_RR</a> = <a id="329c36" class="tk">Estimations_U</a>.<a id="329c50" class="tk">Sensors_in</a>.<a id="329c61" class="tk">RPM_RR</a> *</td></tr>
+<tr name="330" id="330">
+<td>330</td><td>    <a id="330c5" class="tk">Estimations_B</a>.<a id="330c19" class="tk">c</a> * <a id="330c23" class="tk">car_params</a>.<a id="330c34" class="tk">r_eff</a> - <a id="330c42" class="tk">Estimations_U</a>.<a id="330c56" class="tk">Sensors_in</a>.<a id="330c67" class="tk">yawRate</a> *</td></tr>
+<tr name="331" id="331">
+<td>331</td><td>    <a id="331c5" class="tk">car_params</a>.<a id="331c16" class="tk">t_r</a>;</td></tr>
+<tr name="332" id="332">
+<td>332</td><td></td></tr>
+<tr name="333" id="333">
+<td>333</td><td>  <span class="ct">/* MultiPortSwitch: '<a class="ct blk" blk_line="333">&lt;S10&gt;/Index Vector</a>' incorporates:</span></td></tr>
+<tr name="334" id="334">
+<td>334</td><td><span class="ct">   *  Constant: '<a class="ct blk" blk_line="334">&lt;S10&gt;/Constant1</a>'</span></td></tr>
+<tr name="335" id="335">
+<td>335</td><td><span class="ct">   *  Constant: '<a class="ct blk" blk_line="335">&lt;S1&gt;/Constant</a>'</span></td></tr>
+<tr name="336" id="336">
+<td>336</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="336">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="337" id="337">
+<td>337</td><td><span class="ct">   */</span></td></tr>
+<tr name="338" id="338">
+<td>338</td><td>  <span class="kw">switch</span> (<a id="338c11" class="tk">settings</a>.<a id="338c20" class="tk">select_velocity_vx</a>) <span class="br">{</span></td></tr>
+<tr name="339" id="339">
+<td>339</td><td>   <span class="kw">case</span> 1:</td></tr>
+<tr name="340" id="340">
+<td>340</td><td>    <a id="340c5" class="tk">Estimations_B</a>.<a id="340c19" class="tk">IndexVector_b</a> = <a id="340c35" class="tk">Estimations_P</a>.<a id="340c49" class="tk">Constant_Value</a>;</td></tr>
+<tr name="341" id="341">
+<td>341</td><td>    <span class="kw">break</span>;</td></tr>
+<tr name="342" id="342">
+<td>342</td><td></td></tr>
+<tr name="343" id="343">
+<td>343</td><td>   <span class="kw">case</span> 2:</td></tr>
+<tr name="344" id="344">
+<td>344</td><td>    <a id="344c5" class="tk">Estimations_B</a>.<a id="344c19" class="tk">IndexVector_b</a> = <a id="344c35" class="tk">Estimations_U</a>.<a id="344c49" class="tk">Sensors_in</a>.<a id="344c60" class="tk">V_x_INS</a>;</td></tr>
+<tr name="345" id="345">
+<td>345</td><td>    <span class="kw">break</span>;</td></tr>
+<tr name="346" id="346">
+<td>346</td><td></td></tr>
+<tr name="347" id="347">
+<td>347</td><td>   <span class="kw">default</span>:</td></tr>
+<tr name="348" id="348">
+<td>348</td><td>    <a id="348c5" class="tk">Estimations_B</a>.<a id="348c19" class="tk">IndexVector_b</a> = <a id="348c35" class="tk">Estimations_U</a>.<a id="348c49" class="tk">Sensors_in</a>.<a id="348c60" class="tk">V_x_optical</a>;</td></tr>
+<tr name="349" id="349">
+<td>349</td><td>    <span class="kw">break</span>;</td></tr>
+<tr name="350" id="350">
+<td>350</td><td>  <span class="br">}</span></td></tr>
+<tr name="351" id="351">
+<td>351</td><td></td></tr>
+<tr name="352" id="352">
+<td>352</td><td>  <span class="ct">/* End of MultiPortSwitch: '<a class="ct blk" blk_line="352">&lt;S10&gt;/Index Vector</a>' */</span></td></tr>
+<tr name="353" id="353">
+<td>353</td><td></td></tr>
+<tr name="354" id="354">
+<td>354</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="354">&lt;S6&gt;/Slip ratio</a>' */</span></td></tr>
+<tr name="355" id="355">
+<td>355</td><td>  <span class="ct">/* MATLAB Function 'Estimations/SR_Calculation/Slip ratio': '<a class="ct blk" blk_line="355">&lt;S16&gt;:1</a>' */</span></td></tr>
+<tr name="356" id="356">
+<td>356</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="356">&lt;S16&gt;:1:10</a>' */</span></td></tr>
+<tr name="357" id="357">
+<td>357</td><td>  <a id="357c3" class="tk">rtb_DamperRateLookup2</a> = (<a id="357c28" class="tk">real32_T</a>)<a id="357c37" class="tk">fabs</a>(<a id="357c42" class="tk">Estimations_B</a>.<a id="357c56" class="tk">rtb_whl_speed_FL</a>);</td></tr>
+<tr name="358" id="358">
+<td>358</td><td>  <a id="358c3" class="tk">varargin_1_idx_2</a> = (<a id="358c23" class="tk">real32_T</a>)<a id="358c32" class="tk">fabs</a>(<a id="358c37" class="tk">Estimations_B</a>.<a id="358c51" class="tk">IndexVector_b</a>);</td></tr>
+<tr name="359" id="359">
+<td>359</td><td>  <a id="359c3" class="tk">rtb_DamperRateLookup1</a> = 0.01F;</td></tr>
+<tr name="360" id="360">
+<td>360</td><td>  <span class="kw">if</span> (<a id="360c7" class="tk">rtb_DamperRateLookup2</a> &gt; 0.01F) <span class="br">{</span></td></tr>
+<tr name="361" id="361">
+<td>361</td><td>    <a id="361c5" class="tk">rtb_DamperRateLookup1</a> = <a id="361c29" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="362" id="362">
+<td>362</td><td>  <span class="br">}</span></td></tr>
+<tr name="363" id="363">
+<td>363</td><td></td></tr>
+<tr name="364" id="364">
+<td>364</td><td>  <span class="kw">if</span> (<a id="364c7" class="tk">varargin_1_idx_2</a> &gt; <a id="364c26" class="tk">rtb_DamperRateLookup1</a>) <span class="br">{</span></td></tr>
+<tr name="365" id="365">
+<td>365</td><td>    <a id="365c5" class="tk">rtb_DamperRateLookup1</a> = <a id="365c29" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="366" id="366">
+<td>366</td><td>  <span class="br">}</span></td></tr>
+<tr name="367" id="367">
+<td>367</td><td></td></tr>
+<tr name="368" id="368">
+<td>368</td><td>  <a id="368c3" class="tk">Estimations_B</a>.<a id="368c17" class="tk">rtb_SR_n_FL</a> = (<a id="368c32" class="tk">Estimations_B</a>.<a id="368c46" class="tk">rtb_whl_speed_FL</a> -</td></tr>
+<tr name="369" id="369">
+<td>369</td><td>    <a id="369c5" class="tk">Estimations_B</a>.<a id="369c19" class="tk">IndexVector_b</a>) / <a id="369c36" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="370" id="370">
+<td>370</td><td></td></tr>
+<tr name="371" id="371">
+<td>371</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="371">&lt;S16&gt;:1:11</a>' */</span></td></tr>
+<tr name="372" id="372">
+<td>372</td><td>  <a id="372c3" class="tk">rtb_DamperRateLookup2</a> = (<a id="372c28" class="tk">real32_T</a>)<a id="372c37" class="tk">fabs</a>(<a id="372c42" class="tk">Estimations_B</a>.<a id="372c56" class="tk">rtb_whl_speed_FR</a>);</td></tr>
+<tr name="373" id="373">
+<td>373</td><td>  <a id="373c3" class="tk">varargin_1_idx_2</a> = (<a id="373c23" class="tk">real32_T</a>)<a id="373c32" class="tk">fabs</a>(<a id="373c37" class="tk">Estimations_B</a>.<a id="373c51" class="tk">IndexVector_b</a>);</td></tr>
+<tr name="374" id="374">
+<td>374</td><td>  <a id="374c3" class="tk">rtb_DamperRateLookup1</a> = 0.01F;</td></tr>
+<tr name="375" id="375">
+<td>375</td><td>  <span class="kw">if</span> (<a id="375c7" class="tk">rtb_DamperRateLookup2</a> &gt; 0.01F) <span class="br">{</span></td></tr>
+<tr name="376" id="376">
+<td>376</td><td>    <a id="376c5" class="tk">rtb_DamperRateLookup1</a> = <a id="376c29" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="377" id="377">
+<td>377</td><td>  <span class="br">}</span></td></tr>
+<tr name="378" id="378">
+<td>378</td><td></td></tr>
+<tr name="379" id="379">
+<td>379</td><td>  <span class="kw">if</span> (<a id="379c7" class="tk">varargin_1_idx_2</a> &gt; <a id="379c26" class="tk">rtb_DamperRateLookup1</a>) <span class="br">{</span></td></tr>
+<tr name="380" id="380">
+<td>380</td><td>    <a id="380c5" class="tk">rtb_DamperRateLookup1</a> = <a id="380c29" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="381" id="381">
+<td>381</td><td>  <span class="br">}</span></td></tr>
+<tr name="382" id="382">
+<td>382</td><td></td></tr>
+<tr name="383" id="383">
+<td>383</td><td>  <a id="383c3" class="tk">Estimations_B</a>.<a id="383c17" class="tk">rtb_SR_n_FR</a> = (<a id="383c32" class="tk">Estimations_B</a>.<a id="383c46" class="tk">rtb_whl_speed_FR</a> -</td></tr>
+<tr name="384" id="384">
+<td>384</td><td>    <a id="384c5" class="tk">Estimations_B</a>.<a id="384c19" class="tk">IndexVector_b</a>) / <a id="384c36" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="385" id="385">
+<td>385</td><td></td></tr>
+<tr name="386" id="386">
+<td>386</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="386">&lt;S16&gt;:1:12</a>' */</span></td></tr>
+<tr name="387" id="387">
+<td>387</td><td>  <a id="387c3" class="tk">rtb_DamperRateLookup2</a> = (<a id="387c28" class="tk">real32_T</a>)<a id="387c37" class="tk">fabs</a>(<a id="387c42" class="tk">Estimations_B</a>.<a id="387c56" class="tk">rtb_whl_speed_RL</a>);</td></tr>
+<tr name="388" id="388">
+<td>388</td><td>  <a id="388c3" class="tk">varargin_1_idx_2</a> = (<a id="388c23" class="tk">real32_T</a>)<a id="388c32" class="tk">fabs</a>(<a id="388c37" class="tk">Estimations_B</a>.<a id="388c51" class="tk">IndexVector_b</a>);</td></tr>
+<tr name="389" id="389">
+<td>389</td><td>  <a id="389c3" class="tk">rtb_DamperRateLookup1</a> = 0.01F;</td></tr>
+<tr name="390" id="390">
+<td>390</td><td>  <span class="kw">if</span> (<a id="390c7" class="tk">rtb_DamperRateLookup2</a> &gt; 0.01F) <span class="br">{</span></td></tr>
+<tr name="391" id="391">
+<td>391</td><td>    <a id="391c5" class="tk">rtb_DamperRateLookup1</a> = <a id="391c29" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="392" id="392">
+<td>392</td><td>  <span class="br">}</span></td></tr>
+<tr name="393" id="393">
+<td>393</td><td></td></tr>
+<tr name="394" id="394">
+<td>394</td><td>  <span class="kw">if</span> (<a id="394c7" class="tk">varargin_1_idx_2</a> &gt; <a id="394c26" class="tk">rtb_DamperRateLookup1</a>) <span class="br">{</span></td></tr>
+<tr name="395" id="395">
+<td>395</td><td>    <a id="395c5" class="tk">rtb_DamperRateLookup1</a> = <a id="395c29" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="396" id="396">
+<td>396</td><td>  <span class="br">}</span></td></tr>
+<tr name="397" id="397">
+<td>397</td><td></td></tr>
+<tr name="398" id="398">
+<td>398</td><td>  <a id="398c3" class="tk">Estimations_B</a>.<a id="398c17" class="tk">rtb_SR_n_RL</a> = (<a id="398c32" class="tk">Estimations_B</a>.<a id="398c46" class="tk">rtb_whl_speed_RL</a> -</td></tr>
+<tr name="399" id="399">
+<td>399</td><td>    <a id="399c5" class="tk">Estimations_B</a>.<a id="399c19" class="tk">IndexVector_b</a>) / <a id="399c36" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="400" id="400">
+<td>400</td><td></td></tr>
+<tr name="401" id="401">
+<td>401</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="401">&lt;S16&gt;:1:13</a>' */</span></td></tr>
+<tr name="402" id="402">
+<td>402</td><td>  <a id="402c3" class="tk">rtb_DamperRateLookup2</a> = (<a id="402c28" class="tk">real32_T</a>)<a id="402c37" class="tk">fabs</a>(<a id="402c42" class="tk">Estimations_B</a>.<a id="402c56" class="tk">rtb_whl_speed_RR</a>);</td></tr>
+<tr name="403" id="403">
+<td>403</td><td>  <a id="403c3" class="tk">varargin_1_idx_2</a> = (<a id="403c23" class="tk">real32_T</a>)<a id="403c32" class="tk">fabs</a>(<a id="403c37" class="tk">Estimations_B</a>.<a id="403c51" class="tk">IndexVector_b</a>);</td></tr>
+<tr name="404" id="404">
+<td>404</td><td>  <a id="404c3" class="tk">rtb_DamperRateLookup1</a> = 0.01F;</td></tr>
+<tr name="405" id="405">
+<td>405</td><td>  <span class="kw">if</span> (<a id="405c7" class="tk">rtb_DamperRateLookup2</a> &gt; 0.01F) <span class="br">{</span></td></tr>
+<tr name="406" id="406">
+<td>406</td><td>    <a id="406c5" class="tk">rtb_DamperRateLookup1</a> = <a id="406c29" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="407" id="407">
+<td>407</td><td>  <span class="br">}</span></td></tr>
+<tr name="408" id="408">
+<td>408</td><td></td></tr>
+<tr name="409" id="409">
+<td>409</td><td>  <span class="kw">if</span> (<a id="409c7" class="tk">varargin_1_idx_2</a> &gt; <a id="409c26" class="tk">rtb_DamperRateLookup1</a>) <span class="br">{</span></td></tr>
+<tr name="410" id="410">
+<td>410</td><td>    <a id="410c5" class="tk">rtb_DamperRateLookup1</a> = <a id="410c29" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="411" id="411">
+<td>411</td><td>  <span class="br">}</span></td></tr>
+<tr name="412" id="412">
+<td>412</td><td></td></tr>
+<tr name="413" id="413">
+<td>413</td><td>  <a id="413c3" class="tk">rtb_DamperRateLookup1</a> = (<a id="413c28" class="tk">Estimations_B</a>.<a id="413c42" class="tk">rtb_whl_speed_RR</a> -</td></tr>
+<tr name="414" id="414">
+<td>414</td><td>    <a id="414c5" class="tk">Estimations_B</a>.<a id="414c19" class="tk">IndexVector_b</a>) / <a id="414c36" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="415" id="415">
+<td>415</td><td></td></tr>
+<tr name="416" id="416">
+<td>416</td><td>  <span class="ct">/* End of MATLAB Function: '<a class="ct blk" blk_line="416">&lt;S6&gt;/Slip ratio</a>' */</span></td></tr>
+<tr name="417" id="417">
+<td>417</td><td></td></tr>
+<tr name="418" id="418">
+<td>418</td><td>  <span class="ct">/* MultiPortSwitch: '<a class="ct blk" blk_line="418">&lt;S8&gt;/Index Vector</a>' incorporates:</span></td></tr>
+<tr name="419" id="419">
+<td>419</td><td><span class="ct">   *  Constant: '<a class="ct blk" blk_line="419">&lt;S8&gt;/Constant</a>'</span></td></tr>
+<tr name="420" id="420">
+<td>420</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="420">&lt;Root&gt;/Fz_CM</a>'</span></td></tr>
+<tr name="421" id="421">
+<td>421</td><td><span class="ct">   */</span></td></tr>
+<tr name="422" id="422">
+<td>422</td><td>  <span class="ct">/*  if (abs(whl_v.FL) &gt;= abs(V_x)) */</span></td></tr>
+<tr name="423" id="423">
+<td>423</td><td>  <span class="ct">/*      SR_der.FL = (-ax*omega_FL + omega_der_FL*V_x)/(car_params.r_eff*omega_FL^2); */</span></td></tr>
+<tr name="424" id="424">
+<td>424</td><td>  <span class="ct">/*  else */</span></td></tr>
+<tr name="425" id="425">
+<td>425</td><td>  <span class="ct">/*      SR_der.FL = single(0); */</span></td></tr>
+<tr name="426" id="426">
+<td>426</td><td>  <span class="ct">/*  end */</span></td></tr>
+<tr name="427" id="427">
+<td>427</td><td>  <span class="ct">/* SR_Kp = tractionControl.Kp; */</span></td></tr>
+<tr name="428" id="428">
+<td>428</td><td>  <span class="ct">/* SR_Ki = tractionControl.Ki; */</span></td></tr>
+<tr name="429" id="429">
+<td>429</td><td>  <span class="ct">/* speed = states.V_x; */</span></td></tr>
+<tr name="430" id="430">
+<td>430</td><td>  <span class="ct">/*  if (states.V_x &lt; 1)  */</span></td></tr>
+<tr name="431" id="431">
+<td>431</td><td>  <span class="ct">/*      SR_Kp = single(5); */</span></td></tr>
+<tr name="432" id="432">
+<td>432</td><td>  <span class="ct">/*      SR_Ki = single(0); */</span></td></tr>
+<tr name="433" id="433">
+<td>433</td><td>  <span class="ct">/*  else */</span></td></tr>
+<tr name="434" id="434">
+<td>434</td><td>  <span class="ct">/*      SR_Kp = single(5); */</span></td></tr>
+<tr name="435" id="435">
+<td>435</td><td>  <span class="ct">/*      SR_Ki = single(200); */</span></td></tr>
+<tr name="436" id="436">
+<td>436</td><td>  <span class="ct">/*  end */</span></td></tr>
+<tr name="437" id="437">
+<td>437</td><td>  <span class="kw">if</span> (<a id="437c7" class="tk">settings</a>.<a id="437c16" class="tk">use_estimated_Fz</a> == 0U) <span class="br">{</span></td></tr>
+<tr name="438" id="438">
+<td>438</td><td>    <a id="438c5" class="tk">Estimations_B</a>.<a id="438c19" class="tk">rtb_IndexVector_FL</a> = <a id="438c40" class="tk">Estimations_U</a>.<a id="438c54" class="tk">Fz_CM</a>.<a id="438c60" class="tk">FL</a>;</td></tr>
+<tr name="439" id="439">
+<td>439</td><td>    <a id="439c5" class="tk">Estimations_B</a>.<a id="439c19" class="tk">rtb_IndexVector_FR</a> = <a id="439c40" class="tk">Estimations_U</a>.<a id="439c54" class="tk">Fz_CM</a>.<a id="439c60" class="tk">FR</a>;</td></tr>
+<tr name="440" id="440">
+<td>440</td><td>    <a id="440c5" class="tk">rtb_IndexVector_RL</a> = <a id="440c26" class="tk">Estimations_U</a>.<a id="440c40" class="tk">Fz_CM</a>.<a id="440c46" class="tk">RL</a>;</td></tr>
+<tr name="441" id="441">
+<td>441</td><td>    <a id="441c5" class="tk">rtb_IndexVector_RR</a> = <a id="441c26" class="tk">Estimations_U</a>.<a id="441c40" class="tk">Fz_CM</a>.<a id="441c46" class="tk">RR</a>;</td></tr>
+<tr name="442" id="442">
+<td>442</td><td>  <span class="br">}</span></td></tr>
+<tr name="443" id="443">
+<td>443</td><td></td></tr>
+<tr name="444" id="444">
+<td>444</td><td>  <span class="ct">/* End of MultiPortSwitch: '<a class="ct blk" blk_line="444">&lt;S8&gt;/Index Vector</a>' */</span></td></tr>
+<tr name="445" id="445">
+<td>445</td><td></td></tr>
+<tr name="446" id="446">
+<td>446</td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="446">&lt;S9&gt;/estimateFrictionCoefficient</a>' incorporates:</span></td></tr>
+<tr name="447" id="447">
+<td>447</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="447">&lt;Root&gt;/Fz_CM</a>'</span></td></tr>
+<tr name="448" id="448">
+<td>448</td><td><span class="ct">   */</span></td></tr>
+<tr name="449" id="449">
+<td>449</td><td>  <span class="ct">/* MATLAB Function 'Estimations/friction_estimation/estimateFrictionCoefficient': '<a class="ct blk" blk_line="449">&lt;S18&gt;:1</a>' */</span></td></tr>
+<tr name="450" id="450">
+<td>450</td><td>  <span class="kw">if</span> (!<a id="450c8" class="tk">Estimations_DW</a>.<a id="450c23" class="tk">firstIteration_not_empty</a>) <span class="br">{</span></td></tr>
+<tr name="451" id="451">
+<td>451</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="451">&lt;S18&gt;:1:10</a>' */</span></td></tr>
+<tr name="452" id="452">
+<td>452</td><td>    <a id="452c5" class="tk">Estimations_DW</a>.<a id="452c20" class="tk">firstIteration_not_empty</a> = true;</td></tr>
+<tr name="453" id="453">
+<td>453</td><td></td></tr>
+<tr name="454" id="454">
+<td>454</td><td>    <span class="ct">/*  */</span></td></tr>
+<tr name="455" id="455">
+<td>455</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="455">&lt;S18&gt;:1:12</a>' */</span></td></tr>
+<tr name="456" id="456">
+<td>456</td><td>    <a id="456c5" class="tk">Estimations_DW</a>.<a id="456c20" class="tk">mu_FL</a> = <a id="456c28" class="tk">settings</a>.<a id="456c37" class="tk">mu</a>;</td></tr>
+<tr name="457" id="457">
+<td>457</td><td></td></tr>
+<tr name="458" id="458">
+<td>458</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="458">&lt;S18&gt;:1:13</a>' */</span></td></tr>
+<tr name="459" id="459">
+<td>459</td><td>    <a id="459c5" class="tk">Estimations_DW</a>.<a id="459c20" class="tk">mu_FR</a> = <a id="459c28" class="tk">settings</a>.<a id="459c37" class="tk">mu</a>;</td></tr>
+<tr name="460" id="460">
+<td>460</td><td></td></tr>
+<tr name="461" id="461">
+<td>461</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="461">&lt;S18&gt;:1:14</a>' */</span></td></tr>
+<tr name="462" id="462">
+<td>462</td><td>    <a id="462c5" class="tk">Estimations_DW</a>.<a id="462c20" class="tk">mu_RL</a> = <a id="462c28" class="tk">settings</a>.<a id="462c37" class="tk">mu</a>;</td></tr>
+<tr name="463" id="463">
+<td>463</td><td></td></tr>
+<tr name="464" id="464">
+<td>464</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="464">&lt;S18&gt;:1:15</a>' */</span></td></tr>
+<tr name="465" id="465">
+<td>465</td><td>    <a id="465c5" class="tk">Estimations_DW</a>.<a id="465c20" class="tk">mu_RR</a> = <a id="465c28" class="tk">settings</a>.<a id="465c37" class="tk">mu</a>;</td></tr>
+<tr name="466" id="466">
+<td>466</td><td></td></tr>
+<tr name="467" id="467">
+<td>467</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="467">&lt;S18&gt;:1:16</a>' */</span></td></tr>
+<tr name="468" id="468">
+<td>468</td><td>    <a id="468c5" class="tk">rtb_DamperRateLookup3</a> = 0.0F;</td></tr>
+<tr name="469" id="469">
+<td>469</td><td></td></tr>
+<tr name="470" id="470">
+<td>470</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="470">&lt;S18&gt;:1:17</a>' */</span></td></tr>
+<tr name="471" id="471">
+<td>471</td><td>    <a id="471c5" class="tk">Estimations_B</a>.<a id="471c19" class="tk">c</a> = 0.0F;</td></tr>
+<tr name="472" id="472">
+<td>472</td><td></td></tr>
+<tr name="473" id="473">
+<td>473</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="473">&lt;S18&gt;:1:18</a>' */</span></td></tr>
+<tr name="474" id="474">
+<td>474</td><td>    <a id="474c5" class="tk">rtb_DamperRateLookup2</a> = 0.0F;</td></tr>
+<tr name="475" id="475">
+<td>475</td><td></td></tr>
+<tr name="476" id="476">
+<td>476</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="476">&lt;S18&gt;:1:19</a>' */</span></td></tr>
+<tr name="477" id="477">
+<td>477</td><td>    <a id="477c5" class="tk">varargin_1_idx_2</a> = 0.0F;</td></tr>
+<tr name="478" id="478">
+<td>478</td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<tr name="479" id="479">
+<td>479</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="479">&lt;S18&gt;:1:21</a>' */</span></td></tr>
+<tr name="480" id="480">
+<td>480</td><td>    <a id="480c5" class="tk">rtb_DamperRateLookup3</a> = <a id="480c29" class="tk">Estimations_B</a>.<a id="480c43" class="tk">rtb_Fx_FL</a> / <a id="480c55" class="tk">Estimations_U</a>.<a id="480c69" class="tk">Fz_CM</a>.<a id="480c75" class="tk">FL</a>;</td></tr>
+<tr name="481" id="481">
+<td>481</td><td></td></tr>
+<tr name="482" id="482">
+<td>482</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="482">&lt;S18&gt;:1:22</a>' */</span></td></tr>
+<tr name="483" id="483">
+<td>483</td><td>    <a id="483c5" class="tk">Estimations_B</a>.<a id="483c19" class="tk">c</a> = <a id="483c23" class="tk">Estimations_B</a>.<a id="483c37" class="tk">rtb_Fx_FR</a> / <a id="483c49" class="tk">Estimations_U</a>.<a id="483c63" class="tk">Fz_CM</a>.<a id="483c69" class="tk">FR</a>;</td></tr>
+<tr name="484" id="484">
+<td>484</td><td></td></tr>
+<tr name="485" id="485">
+<td>485</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="485">&lt;S18&gt;:1:23</a>' */</span></td></tr>
+<tr name="486" id="486">
+<td>486</td><td>    <a id="486c5" class="tk">rtb_DamperRateLookup2</a> = <a id="486c29" class="tk">Estimations_B</a>.<a id="486c43" class="tk">rtb_Fx_RL</a> / <a id="486c55" class="tk">Estimations_U</a>.<a id="486c69" class="tk">Fz_CM</a>.<a id="486c75" class="tk">RL</a>;</td></tr>
+<tr name="487" id="487">
+<td>487</td><td></td></tr>
+<tr name="488" id="488">
+<td>488</td><td>    <span class="ct">/* '<a class="ct blk" blk_line="488">&lt;S18&gt;:1:24</a>' */</span></td></tr>
+<tr name="489" id="489">
+<td>489</td><td>    <a id="489c5" class="tk">varargin_1_idx_2</a> = <a id="489c24" class="tk">Estimations_B</a>.<a id="489c38" class="tk">rtb_Fx_RR</a> / <a id="489c50" class="tk">Estimations_U</a>.<a id="489c64" class="tk">Fz_CM</a>.<a id="489c70" class="tk">RR</a>;</td></tr>
+<tr name="490" id="490">
+<td>490</td><td>    <span class="kw">if</span> ((<a id="490c10" class="tk">Estimations_B</a>.<a id="490c24" class="tk">rtb_SR_n_FL</a> &gt; 0.09) &amp;&amp; (<a id="490c48" class="tk">Estimations_B</a>.<a id="490c62" class="tk">rtb_SR_n_FL</a> &lt; 0.13))</td></tr>
+<tr name="491" id="491">
+<td>491</td><td>    <span class="br">{</span></td></tr>
+<tr name="492" id="492">
+<td>492</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="492">&lt;S18&gt;:1:26</a>' */</span></td></tr>
+<tr name="493" id="493">
+<td>493</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="493">&lt;S18&gt;:1:27</a>' */</span></td></tr>
+<tr name="494" id="494">
+<td>494</td><td>      <a id="494c7" class="tk">u0</a> = <a id="494c12" class="tk">Estimations_B</a>.<a id="494c26" class="tk">rtb_Fx_FL</a> / <a id="494c38" class="tk">Estimations_U</a>.<a id="494c52" class="tk">Fz_CM</a>.<a id="494c58" class="tk">FL</a>;</td></tr>
+<tr name="495" id="495">
+<td>495</td><td>      <span class="kw">if</span> (<a id="495c11" class="tk">u0</a> &gt;= <a id="495c17" class="tk">Estimations_DW</a>.<a id="495c32" class="tk">mu_FL</a>) <span class="br">{</span></td></tr>
+<tr name="496" id="496">
+<td>496</td><td>        <a id="496c9" class="tk">Estimations_DW</a>.<a id="496c24" class="tk">mu_FL</a> = <a id="496c32" class="tk">u0</a>;</td></tr>
+<tr name="497" id="497">
+<td>497</td><td>      <span class="br">}</span></td></tr>
+<tr name="498" id="498">
+<td>498</td><td>    <span class="br">}</span></td></tr>
+<tr name="499" id="499">
+<td>499</td><td></td></tr>
+<tr name="500" id="500">
+<td>500</td><td>    <span class="kw">if</span> ((<a id="500c10" class="tk">Estimations_B</a>.<a id="500c24" class="tk">rtb_SR_n_FR</a> &gt; 0.09) &amp;&amp; (<a id="500c48" class="tk">Estimations_B</a>.<a id="500c62" class="tk">rtb_SR_n_FR</a> &lt; 0.15))</td></tr>
+<tr name="501" id="501">
+<td>501</td><td>    <span class="br">{</span></td></tr>
+<tr name="502" id="502">
+<td>502</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="502">&lt;S18&gt;:1:29</a>' */</span></td></tr>
+<tr name="503" id="503">
+<td>503</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="503">&lt;S18&gt;:1:30</a>' */</span></td></tr>
+<tr name="504" id="504">
+<td>504</td><td>      <a id="504c7" class="tk">u0</a> = <a id="504c12" class="tk">Estimations_B</a>.<a id="504c26" class="tk">rtb_Fx_FR</a> / <a id="504c38" class="tk">Estimations_U</a>.<a id="504c52" class="tk">Fz_CM</a>.<a id="504c58" class="tk">FR</a>;</td></tr>
+<tr name="505" id="505">
+<td>505</td><td>      <span class="kw">if</span> (<a id="505c11" class="tk">u0</a> &gt;= <a id="505c17" class="tk">Estimations_DW</a>.<a id="505c32" class="tk">mu_FR</a>) <span class="br">{</span></td></tr>
+<tr name="506" id="506">
+<td>506</td><td>        <a id="506c9" class="tk">Estimations_DW</a>.<a id="506c24" class="tk">mu_FR</a> = <a id="506c32" class="tk">u0</a>;</td></tr>
+<tr name="507" id="507">
+<td>507</td><td>      <span class="br">}</span></td></tr>
+<tr name="508" id="508">
+<td>508</td><td>    <span class="br">}</span></td></tr>
+<tr name="509" id="509">
+<td>509</td><td></td></tr>
+<tr name="510" id="510">
+<td>510</td><td>    <span class="kw">if</span> ((<a id="510c10" class="tk">Estimations_B</a>.<a id="510c24" class="tk">rtb_SR_n_RL</a> &gt; 0.09) &amp;&amp; (<a id="510c48" class="tk">Estimations_B</a>.<a id="510c62" class="tk">rtb_SR_n_RL</a> &lt; 0.15))</td></tr>
+<tr name="511" id="511">
+<td>511</td><td>    <span class="br">{</span></td></tr>
+<tr name="512" id="512">
+<td>512</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="512">&lt;S18&gt;:1:33</a>' */</span></td></tr>
+<tr name="513" id="513">
+<td>513</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="513">&lt;S18&gt;:1:34</a>' */</span></td></tr>
+<tr name="514" id="514">
+<td>514</td><td>      <a id="514c7" class="tk">u0</a> = <a id="514c12" class="tk">Estimations_B</a>.<a id="514c26" class="tk">rtb_Fx_RL</a> / <a id="514c38" class="tk">Estimations_U</a>.<a id="514c52" class="tk">Fz_CM</a>.<a id="514c58" class="tk">RL</a>;</td></tr>
+<tr name="515" id="515">
+<td>515</td><td>      <span class="kw">if</span> (<a id="515c11" class="tk">u0</a> &gt;= <a id="515c17" class="tk">Estimations_DW</a>.<a id="515c32" class="tk">mu_RL</a>) <span class="br">{</span></td></tr>
+<tr name="516" id="516">
+<td>516</td><td>        <a id="516c9" class="tk">Estimations_DW</a>.<a id="516c24" class="tk">mu_RL</a> = <a id="516c32" class="tk">u0</a>;</td></tr>
+<tr name="517" id="517">
+<td>517</td><td>      <span class="br">}</span></td></tr>
+<tr name="518" id="518">
+<td>518</td><td>    <span class="br">}</span></td></tr>
+<tr name="519" id="519">
+<td>519</td><td></td></tr>
+<tr name="520" id="520">
+<td>520</td><td>    <span class="kw">if</span> ((<a id="520c10" class="tk">rtb_DamperRateLookup1</a> &gt; 0.09) &amp;&amp; (<a id="520c44" class="tk">rtb_DamperRateLookup1</a> &lt; 0.15)) <span class="br">{</span></td></tr>
+<tr name="521" id="521">
+<td>521</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="521">&lt;S18&gt;:1:37</a>' */</span></td></tr>
+<tr name="522" id="522">
+<td>522</td><td>      <span class="ct">/* '<a class="ct blk" blk_line="522">&lt;S18&gt;:1:38</a>' */</span></td></tr>
+<tr name="523" id="523">
+<td>523</td><td>      <a id="523c7" class="tk">u0</a> = <a id="523c12" class="tk">Estimations_B</a>.<a id="523c26" class="tk">rtb_Fx_RR</a> / <a id="523c38" class="tk">Estimations_U</a>.<a id="523c52" class="tk">Fz_CM</a>.<a id="523c58" class="tk">RR</a>;</td></tr>
+<tr name="524" id="524">
+<td>524</td><td>      <span class="kw">if</span> (<a id="524c11" class="tk">u0</a> &gt;= <a id="524c17" class="tk">Estimations_DW</a>.<a id="524c32" class="tk">mu_RR</a>) <span class="br">{</span></td></tr>
+<tr name="525" id="525">
+<td>525</td><td>        <a id="525c9" class="tk">Estimations_DW</a>.<a id="525c24" class="tk">mu_RR</a> = <a id="525c32" class="tk">u0</a>;</td></tr>
+<tr name="526" id="526">
+<td>526</td><td>      <span class="br">}</span></td></tr>
+<tr name="527" id="527">
+<td>527</td><td>    <span class="br">}</span></td></tr>
+<tr name="528" id="528">
+<td>528</td><td>  <span class="br">}</span></td></tr>
+<tr name="529" id="529">
+<td>529</td><td></td></tr>
+<tr name="530" id="530">
+<td>530</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="530">&lt;Root&gt;/States</a>' incorporates:</span></td></tr>
+<tr name="531" id="531">
+<td>531</td><td><span class="ct">   *  BusCreator: '<a class="ct blk" blk_line="531">&lt;S8&gt;/Bus Creator1</a>'</span></td></tr>
+<tr name="532" id="532">
+<td>532</td><td><span class="ct">   *  Inport: '<a class="ct blk" blk_line="532">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="533" id="533">
+<td>533</td><td><span class="ct">   *  MATLAB Function: '<a class="ct blk" blk_line="533">&lt;S7&gt;/calculateWheelangleandSpeed</a>'</span></td></tr>
+<tr name="534" id="534">
+<td>534</td><td><span class="ct">   */</span></td></tr>
+<tr name="535" id="535">
+<td>535</td><td>  <span class="ct">/* '<a class="ct blk" blk_line="535">&lt;S18&gt;:1:43</a>' */</span></td></tr>
+<tr name="536" id="536">
+<td>536</td><td>  <a id="536c3" class="tk">Estimations_Y</a>.<a id="536c17" class="tk">States_a</a>.<a id="536c26" class="tk">Input_throttle</a> =</td></tr>
+<tr name="537" id="537">
+<td>537</td><td>    <a id="537c5" class="tk">Estimations_U</a>.<a id="537c19" class="tk">Sensors_in</a>.<a id="537c30" class="tk">Input_throttle</a>;</td></tr>
+<tr name="538" id="538">
+<td>538</td><td>  <a id="538c3" class="tk">Estimations_Y</a>.<a id="538c17" class="tk">States_a</a>.<a id="538c26" class="tk">Input_brake</a> = <a id="538c40" class="tk">Estimations_U</a>.<a id="538c54" class="tk">Sensors_in</a>.<a id="538c65" class="tk">Input_brake</a>;</td></tr>
+<tr name="539" id="539">
+<td>539</td><td>  <a id="539c3" class="tk">Estimations_Y</a>.<a id="539c17" class="tk">States_a</a>.<a id="539c26" class="tk">KERS_pos</a> = <a id="539c37" class="tk">Estimations_U</a>.<a id="539c51" class="tk">Sensors_in</a>.<a id="539c62" class="tk">KERS_pos</a>;</td></tr>
+<tr name="540" id="540">
+<td>540</td><td>  <a id="540c3" class="tk">Estimations_Y</a>.<a id="540c17" class="tk">States_a</a>.<a id="540c26" class="tk">sideSlipAngle</a> =</td></tr>
+<tr name="541" id="541">
+<td>541</td><td>    <a id="541c5" class="tk">Estimations_U</a>.<a id="541c19" class="tk">Sensors_in</a>.<a id="541c30" class="tk">sideSlipAngle_optical</a>;</td></tr>
+<tr name="542" id="542">
+<td>542</td><td>  <a id="542c3" class="tk">Estimations_Y</a>.<a id="542c17" class="tk">States_a</a>.<a id="542c26" class="tk">r</a> = <a id="542c30" class="tk">Estimations_U</a>.<a id="542c44" class="tk">Sensors_in</a>.<a id="542c55" class="tk">yawRate</a>;</td></tr>
+<tr name="543" id="543">
+<td>543</td><td>  <a id="543c3" class="tk">Estimations_Y</a>.<a id="543c17" class="tk">States_a</a>.<a id="543c26" class="tk">r_der</a> = <a id="543c34" class="tk">Estimations_U</a>.<a id="543c48" class="tk">Sensors_in</a>.<a id="543c59" class="tk">yawRate_der</a>;</td></tr>
+<tr name="544" id="544">
+<td>544</td><td>  <a id="544c3" class="tk">Estimations_Y</a>.<a id="544c17" class="tk">States_a</a>.<a id="544c26" class="tk">ax</a> = <a id="544c31" class="tk">Estimations_U</a>.<a id="544c45" class="tk">Sensors_in</a>.<a id="544c56" class="tk">ax</a>;</td></tr>
+<tr name="545" id="545">
+<td>545</td><td>  <a id="545c3" class="tk">Estimations_Y</a>.<a id="545c17" class="tk">States_a</a>.<a id="545c26" class="tk">ay</a> = <a id="545c31" class="tk">Estimations_U</a>.<a id="545c45" class="tk">Sensors_in</a>.<a id="545c56" class="tk">ay</a>;</td></tr>
+<tr name="546" id="546">
+<td>546</td><td>  <a id="546c3" class="tk">Estimations_Y</a>.<a id="546c17" class="tk">States_a</a>.<a id="546c26" class="tk">RPM_FL</a> = <a id="546c35" class="tk">Estimations_U</a>.<a id="546c49" class="tk">Sensors_in</a>.<a id="546c60" class="tk">RPM_FL</a>;</td></tr>
+<tr name="547" id="547">
+<td>547</td><td>  <a id="547c3" class="tk">Estimations_Y</a>.<a id="547c17" class="tk">States_a</a>.<a id="547c26" class="tk">RPM_FR</a> = <a id="547c35" class="tk">Estimations_U</a>.<a id="547c49" class="tk">Sensors_in</a>.<a id="547c60" class="tk">RPM_FR</a>;</td></tr>
+<tr name="548" id="548">
+<td>548</td><td>  <a id="548c3" class="tk">Estimations_Y</a>.<a id="548c17" class="tk">States_a</a>.<a id="548c26" class="tk">RPM_RL</a> = <a id="548c35" class="tk">Estimations_U</a>.<a id="548c49" class="tk">Sensors_in</a>.<a id="548c60" class="tk">RPM_RL</a>;</td></tr>
+<tr name="549" id="549">
+<td>549</td><td>  <a id="549c3" class="tk">Estimations_Y</a>.<a id="549c17" class="tk">States_a</a>.<a id="549c26" class="tk">RPM_RR</a> = <a id="549c35" class="tk">Estimations_U</a>.<a id="549c49" class="tk">Sensors_in</a>.<a id="549c60" class="tk">RPM_RR</a>;</td></tr>
+<tr name="550" id="550">
+<td>550</td><td>  <a id="550c3" class="tk">Estimations_Y</a>.<a id="550c17" class="tk">States_a</a>.<a id="550c26" class="tk">power</a> = <a id="550c34" class="tk">Estimations_U</a>.<a id="550c48" class="tk">Sensors_in</a>.<a id="550c59" class="tk">power</a>;</td></tr>
+<tr name="551" id="551">
+<td>551</td><td>  <a id="551c3" class="tk">Estimations_Y</a>.<a id="551c17" class="tk">States_a</a>.<a id="551c26" class="tk">DC_voltage</a> = <a id="551c39" class="tk">Estimations_U</a>.<a id="551c53" class="tk">Sensors_in</a>.<a id="551c64" class="tk">DC_voltage</a>;</td></tr>
+<tr name="552" id="552">
+<td>552</td><td>  <a id="552c3" class="tk">Estimations_Y</a>.<a id="552c17" class="tk">States_a</a>.<a id="552c26" class="tk">wheel_angle</a> = <a id="552c40" class="tk">rtb_mean_wheel_angle</a>;</td></tr>
+<tr name="553" id="553">
+<td>553</td><td>  <a id="553c3" class="tk">Estimations_Y</a>.<a id="553c17" class="tk">States_a</a>.<a id="553c26" class="tk">wheel_speed</a> = 0.2536F *</td></tr>
+<tr name="554" id="554">
+<td>554</td><td>    <a id="554c5" class="tk">Estimations_U</a>.<a id="554c19" class="tk">Sensors_in</a>.<a id="554c30" class="tk">steering_wheel_speed</a>;</td></tr>
+<tr name="555" id="555">
+<td>555</td><td>  <a id="555c3" class="tk">Estimations_Y</a>.<a id="555c17" class="tk">States_a</a>.<a id="555c26" class="tk">V_x</a> = <a id="555c32" class="tk">Estimations_B</a>.<a id="555c46" class="tk">IndexVector_b</a>;</td></tr>
+<tr name="556" id="556">
+<td>556</td><td></td></tr>
+<tr name="557" id="557">
+<td>557</td><td>  <span class="ct">/* MultiPortSwitch: '<a class="ct blk" blk_line="557">&lt;S10&gt;/Index Vector1</a>' incorporates:</span></td></tr>
+<tr name="558" id="558">
+<td>558</td><td><span class="ct">   *  Constant: '<a class="ct blk" blk_line="558">&lt;S10&gt;/Constant2</a>'</span></td></tr>
+<tr name="559" id="559">
+<td>559</td><td><span class="ct">   */</span></td></tr>
+<tr name="560" id="560">
+<td>560</td><td>  <span class="kw">if</span> (<a id="560c7" class="tk">settings</a>.<a id="560c16" class="tk">select_velocity_vy</a> == 2U) <span class="br">{</span></td></tr>
+<tr name="561" id="561">
+<td>561</td><td>    <span class="ct">/* Outport: '<a class="ct blk" blk_line="561">&lt;Root&gt;/States</a>' incorporates:</span></td></tr>
+<tr name="562" id="562">
+<td>562</td><td><span class="ct">     *  Inport: '<a class="ct blk" blk_line="562">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="563" id="563">
+<td>563</td><td><span class="ct">     */</span></td></tr>
+<tr name="564" id="564">
+<td>564</td><td>    <a id="564c5" class="tk">Estimations_Y</a>.<a id="564c19" class="tk">States_a</a>.<a id="564c28" class="tk">V_y</a> = <a id="564c34" class="tk">Estimations_U</a>.<a id="564c48" class="tk">Sensors_in</a>.<a id="564c59" class="tk">V_y_INS</a>;</td></tr>
+<tr name="565" id="565">
+<td>565</td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<tr name="566" id="566">
+<td>566</td><td>    <span class="ct">/* Outport: '<a class="ct blk" blk_line="566">&lt;Root&gt;/States</a>' incorporates:</span></td></tr>
+<tr name="567" id="567">
+<td>567</td><td><span class="ct">     *  Inport: '<a class="ct blk" blk_line="567">&lt;Root&gt;/Sensors_in</a>'</span></td></tr>
+<tr name="568" id="568">
+<td>568</td><td><span class="ct">     */</span></td></tr>
+<tr name="569" id="569">
+<td>569</td><td>    <a id="569c5" class="tk">Estimations_Y</a>.<a id="569c19" class="tk">States_a</a>.<a id="569c28" class="tk">V_y</a> = <a id="569c34" class="tk">Estimations_U</a>.<a id="569c48" class="tk">Sensors_in</a>.<a id="569c59" class="tk">V_y_optical</a>;</td></tr>
+<tr name="570" id="570">
+<td>570</td><td>  <span class="br">}</span></td></tr>
+<tr name="571" id="571">
+<td>571</td><td></td></tr>
+<tr name="572" id="572">
+<td>572</td><td>  <span class="ct">/* End of MultiPortSwitch: '<a class="ct blk" blk_line="572">&lt;S10&gt;/Index Vector1</a>' */</span></td></tr>
+<tr name="573" id="573">
+<td>573</td><td>  <span class="ct">/* End of Outputs for SubSystem: '<a class="ct blk" blk_line="573">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="574" id="574">
+<td>574</td><td></td></tr>
+<tr name="575" id="575">
+<td>575</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="575">&lt;Root&gt;/States</a>' incorporates:</span></td></tr>
+<tr name="576" id="576">
+<td>576</td><td><span class="ct">   *  MATLAB Function: '<a class="ct blk" blk_line="576">&lt;S9&gt;/estimateFrictionCoefficient</a>'</span></td></tr>
+<tr name="577" id="577">
+<td>577</td><td><span class="ct">   */</span></td></tr>
+<tr name="578" id="578">
+<td>578</td><td>  <a id="578c3" class="tk">Estimations_Y</a>.<a id="578c17" class="tk">States_a</a>.<a id="578c26" class="tk">Fx_FL</a> = <a id="578c34" class="tk">Estimations_B</a>.<a id="578c48" class="tk">rtb_Fx_FL</a>;</td></tr>
+<tr name="579" id="579">
+<td>579</td><td>  <a id="579c3" class="tk">Estimations_Y</a>.<a id="579c17" class="tk">States_a</a>.<a id="579c26" class="tk">Fx_FR</a> = <a id="579c34" class="tk">Estimations_B</a>.<a id="579c48" class="tk">rtb_Fx_FR</a>;</td></tr>
+<tr name="580" id="580">
+<td>580</td><td>  <a id="580c3" class="tk">Estimations_Y</a>.<a id="580c17" class="tk">States_a</a>.<a id="580c26" class="tk">Fx_RL</a> = <a id="580c34" class="tk">Estimations_B</a>.<a id="580c48" class="tk">rtb_Fx_RL</a>;</td></tr>
+<tr name="581" id="581">
+<td>581</td><td>  <a id="581c3" class="tk">Estimations_Y</a>.<a id="581c17" class="tk">States_a</a>.<a id="581c26" class="tk">Fx_RR</a> = <a id="581c34" class="tk">Estimations_B</a>.<a id="581c48" class="tk">rtb_Fx_RR</a>;</td></tr>
+<tr name="582" id="582">
+<td>582</td><td>  <a id="582c3" class="tk">Estimations_Y</a>.<a id="582c17" class="tk">States_a</a>.<a id="582c26" class="tk">Fz_FL</a> = <a id="582c34" class="tk">Estimations_B</a>.<a id="582c48" class="tk">rtb_IndexVector_FL</a>;</td></tr>
+<tr name="583" id="583">
+<td>583</td><td>  <a id="583c3" class="tk">Estimations_Y</a>.<a id="583c17" class="tk">States_a</a>.<a id="583c26" class="tk">Fz_FR</a> = <a id="583c34" class="tk">Estimations_B</a>.<a id="583c48" class="tk">rtb_IndexVector_FR</a>;</td></tr>
+<tr name="584" id="584">
+<td>584</td><td>  <a id="584c3" class="tk">Estimations_Y</a>.<a id="584c17" class="tk">States_a</a>.<a id="584c26" class="tk">Fz_RL</a> = <a id="584c34" class="tk">rtb_IndexVector_RL</a>;</td></tr>
+<tr name="585" id="585">
+<td>585</td><td>  <a id="585c3" class="tk">Estimations_Y</a>.<a id="585c17" class="tk">States_a</a>.<a id="585c26" class="tk">Fz_RR</a> = <a id="585c34" class="tk">rtb_IndexVector_RR</a>;</td></tr>
+<tr name="586" id="586">
+<td>586</td><td>  <a id="586c3" class="tk">Estimations_Y</a>.<a id="586c17" class="tk">States_a</a>.<a id="586c26" class="tk">whl_v_FL</a> = <a id="586c37" class="tk">Estimations_B</a>.<a id="586c51" class="tk">rtb_whl_speed_FL</a>;</td></tr>
+<tr name="587" id="587">
+<td>587</td><td>  <a id="587c3" class="tk">Estimations_Y</a>.<a id="587c17" class="tk">States_a</a>.<a id="587c26" class="tk">whl_v_FR</a> = <a id="587c37" class="tk">Estimations_B</a>.<a id="587c51" class="tk">rtb_whl_speed_FR</a>;</td></tr>
+<tr name="588" id="588">
+<td>588</td><td>  <a id="588c3" class="tk">Estimations_Y</a>.<a id="588c17" class="tk">States_a</a>.<a id="588c26" class="tk">whl_v_RL</a> = <a id="588c37" class="tk">Estimations_B</a>.<a id="588c51" class="tk">rtb_whl_speed_RL</a>;</td></tr>
+<tr name="589" id="589">
+<td>589</td><td>  <a id="589c3" class="tk">Estimations_Y</a>.<a id="589c17" class="tk">States_a</a>.<a id="589c26" class="tk">whl_v_RR</a> = <a id="589c37" class="tk">Estimations_B</a>.<a id="589c51" class="tk">rtb_whl_speed_RR</a>;</td></tr>
+<tr name="590" id="590">
+<td>590</td><td>  <a id="590c3" class="tk">Estimations_Y</a>.<a id="590c17" class="tk">States_a</a>.<a id="590c26" class="tk">SR_FL</a> = <a id="590c34" class="tk">Estimations_B</a>.<a id="590c48" class="tk">rtb_SR_n_FL</a>;</td></tr>
+<tr name="591" id="591">
+<td>591</td><td>  <a id="591c3" class="tk">Estimations_Y</a>.<a id="591c17" class="tk">States_a</a>.<a id="591c26" class="tk">SR_FR</a> = <a id="591c34" class="tk">Estimations_B</a>.<a id="591c48" class="tk">rtb_SR_n_FR</a>;</td></tr>
+<tr name="592" id="592">
+<td>592</td><td>  <a id="592c3" class="tk">Estimations_Y</a>.<a id="592c17" class="tk">States_a</a>.<a id="592c26" class="tk">SR_RL</a> = <a id="592c34" class="tk">Estimations_B</a>.<a id="592c48" class="tk">rtb_SR_n_RL</a>;</td></tr>
+<tr name="593" id="593">
+<td>593</td><td>  <a id="593c3" class="tk">Estimations_Y</a>.<a id="593c17" class="tk">States_a</a>.<a id="593c26" class="tk">SR_RR</a> = <a id="593c34" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="594" id="594">
+<td>594</td><td></td></tr>
+<tr name="595" id="595">
+<td>595</td><td>  <span class="ct">/* Outputs for Atomic SubSystem: '<a class="ct blk" blk_line="595">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="596" id="596">
+<td>596</td><td>  <a id="596c3" class="tk">Estimations_Y</a>.<a id="596c17" class="tk">States_a</a>.<a id="596c26" class="tk">mu</a> = (((<a id="596c34" class="tk">Estimations_DW</a>.<a id="596c49" class="tk">mu_FL</a> + <a id="596c57" class="tk">Estimations_DW</a>.<a id="596c72" class="tk">mu_FR</a>) +</td></tr>
+<tr name="597" id="597">
+<td>597</td><td>    <a id="597c5" class="tk">Estimations_DW</a>.<a id="597c20" class="tk">mu_RL</a>) + <a id="597c29" class="tk">Estimations_DW</a>.<a id="597c44" class="tk">mu_RR</a>) / 4.0F;</td></tr>
+<tr name="598" id="598">
+<td>598</td><td></td></tr>
+<tr name="599" id="599">
+<td>599</td><td>  <span class="ct">/* End of Outputs for SubSystem: '<a class="ct blk" blk_line="599">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="600" id="600">
+<td>600</td><td></td></tr>
+<tr name="601" id="601">
+<td>601</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="601">&lt;Root&gt;/whl_v</a>' */</span></td></tr>
+<tr name="602" id="602">
+<td>602</td><td>  <a id="602c3" class="tk">Estimations_Y</a>.<a id="602c17" class="tk">whl_v</a>.<a id="602c23" class="tk">FL</a> = <a id="602c28" class="tk">Estimations_B</a>.<a id="602c42" class="tk">rtb_whl_speed_FL</a>;</td></tr>
+<tr name="603" id="603">
+<td>603</td><td>  <a id="603c3" class="tk">Estimations_Y</a>.<a id="603c17" class="tk">whl_v</a>.<a id="603c23" class="tk">FR</a> = <a id="603c28" class="tk">Estimations_B</a>.<a id="603c42" class="tk">rtb_whl_speed_FR</a>;</td></tr>
+<tr name="604" id="604">
+<td>604</td><td>  <a id="604c3" class="tk">Estimations_Y</a>.<a id="604c17" class="tk">whl_v</a>.<a id="604c23" class="tk">RL</a> = <a id="604c28" class="tk">Estimations_B</a>.<a id="604c42" class="tk">rtb_whl_speed_RL</a>;</td></tr>
+<tr name="605" id="605">
+<td>605</td><td>  <a id="605c3" class="tk">Estimations_Y</a>.<a id="605c17" class="tk">whl_v</a>.<a id="605c23" class="tk">RR</a> = <a id="605c28" class="tk">Estimations_B</a>.<a id="605c42" class="tk">rtb_whl_speed_RR</a>;</td></tr>
+<tr name="606" id="606">
+<td>606</td><td></td></tr>
+<tr name="607" id="607">
+<td>607</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="607">&lt;Root&gt;/Fx</a>' */</span></td></tr>
+<tr name="608" id="608">
+<td>608</td><td>  <a id="608c3" class="tk">Estimations_Y</a>.<a id="608c17" class="tk">Fx_o</a>.<a id="608c22" class="tk">FL</a> = <a id="608c27" class="tk">Estimations_B</a>.<a id="608c41" class="tk">rtb_Fx_FL</a>;</td></tr>
+<tr name="609" id="609">
+<td>609</td><td>  <a id="609c3" class="tk">Estimations_Y</a>.<a id="609c17" class="tk">Fx_o</a>.<a id="609c22" class="tk">FR</a> = <a id="609c27" class="tk">Estimations_B</a>.<a id="609c41" class="tk">rtb_Fx_FR</a>;</td></tr>
+<tr name="610" id="610">
+<td>610</td><td>  <a id="610c3" class="tk">Estimations_Y</a>.<a id="610c17" class="tk">Fx_o</a>.<a id="610c22" class="tk">RL</a> = <a id="610c27" class="tk">Estimations_B</a>.<a id="610c41" class="tk">rtb_Fx_RL</a>;</td></tr>
+<tr name="611" id="611">
+<td>611</td><td>  <a id="611c3" class="tk">Estimations_Y</a>.<a id="611c17" class="tk">Fx_o</a>.<a id="611c22" class="tk">RR</a> = <a id="611c27" class="tk">Estimations_B</a>.<a id="611c41" class="tk">rtb_Fx_RR</a>;</td></tr>
+<tr name="612" id="612">
+<td>612</td><td></td></tr>
+<tr name="613" id="613">
+<td>613</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="613">&lt;Root&gt;/SR</a>' */</span></td></tr>
+<tr name="614" id="614">
+<td>614</td><td>  <a id="614c3" class="tk">Estimations_Y</a>.<a id="614c17" class="tk">SR_i</a>.<a id="614c22" class="tk">FL</a> = <a id="614c27" class="tk">Estimations_B</a>.<a id="614c41" class="tk">rtb_SR_n_FL</a>;</td></tr>
+<tr name="615" id="615">
+<td>615</td><td>  <a id="615c3" class="tk">Estimations_Y</a>.<a id="615c17" class="tk">SR_i</a>.<a id="615c22" class="tk">FR</a> = <a id="615c27" class="tk">Estimations_B</a>.<a id="615c41" class="tk">rtb_SR_n_FR</a>;</td></tr>
+<tr name="616" id="616">
+<td>616</td><td>  <a id="616c3" class="tk">Estimations_Y</a>.<a id="616c17" class="tk">SR_i</a>.<a id="616c22" class="tk">RL</a> = <a id="616c27" class="tk">Estimations_B</a>.<a id="616c41" class="tk">rtb_SR_n_RL</a>;</td></tr>
+<tr name="617" id="617">
+<td>617</td><td>  <a id="617c3" class="tk">Estimations_Y</a>.<a id="617c17" class="tk">SR_i</a>.<a id="617c22" class="tk">RR</a> = <a id="617c27" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="618" id="618">
+<td>618</td><td></td></tr>
+<tr name="619" id="619">
+<td>619</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="619">&lt;Root&gt;/normLongTireForce</a>' */</span></td></tr>
+<tr name="620" id="620">
+<td>620</td><td>  <a id="620c3" class="tk">Estimations_Y</a>.<a id="620c17" class="tk">normLongTireForce_d</a>.<a id="620c37" class="tk">FL</a> = <a id="620c42" class="tk">rtb_DamperRateLookup3</a>;</td></tr>
+<tr name="621" id="621">
+<td>621</td><td>  <a id="621c3" class="tk">Estimations_Y</a>.<a id="621c17" class="tk">normLongTireForce_d</a>.<a id="621c37" class="tk">FR</a> = <a id="621c42" class="tk">Estimations_B</a>.<a id="621c56" class="tk">c</a>;</td></tr>
+<tr name="622" id="622">
+<td>622</td><td>  <a id="622c3" class="tk">Estimations_Y</a>.<a id="622c17" class="tk">normLongTireForce_d</a>.<a id="622c37" class="tk">RL</a> = <a id="622c42" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="623" id="623">
+<td>623</td><td>  <a id="623c3" class="tk">Estimations_Y</a>.<a id="623c17" class="tk">normLongTireForce_d</a>.<a id="623c37" class="tk">RR</a> = <a id="623c42" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="624" id="624">
+<td>624</td><td></td></tr>
+<tr name="625" id="625">
+<td>625</td><td>  <span class="ct">/* Outport: '<a class="ct blk" blk_line="625">&lt;Root&gt;/OutputTelemetri_est</a>' */</span></td></tr>
+<tr name="626" id="626">
+<td>626</td><td>  <a id="626c3" class="tk">Estimations_Y</a>.<a id="626c17" class="tk">OutputTelemetri_est_l</a>.<a id="626c39" class="tk">normLongTireForce</a>.<a id="626c57" class="tk">FL</a> =</td></tr>
+<tr name="627" id="627">
+<td>627</td><td>    <a id="627c5" class="tk">rtb_DamperRateLookup3</a>;</td></tr>
+<tr name="628" id="628">
+<td>628</td><td>  <a id="628c3" class="tk">Estimations_Y</a>.<a id="628c17" class="tk">OutputTelemetri_est_l</a>.<a id="628c39" class="tk">normLongTireForce</a>.<a id="628c57" class="tk">FR</a> = <a id="628c62" class="tk">Estimations_B</a>.<a id="628c76" class="tk">c</a>;</td></tr>
+<tr name="629" id="629">
+<td>629</td><td>  <a id="629c3" class="tk">Estimations_Y</a>.<a id="629c17" class="tk">OutputTelemetri_est_l</a>.<a id="629c39" class="tk">normLongTireForce</a>.<a id="629c57" class="tk">RL</a> =</td></tr>
+<tr name="630" id="630">
+<td>630</td><td>    <a id="630c5" class="tk">rtb_DamperRateLookup2</a>;</td></tr>
+<tr name="631" id="631">
+<td>631</td><td>  <a id="631c3" class="tk">Estimations_Y</a>.<a id="631c17" class="tk">OutputTelemetri_est_l</a>.<a id="631c39" class="tk">normLongTireForce</a>.<a id="631c57" class="tk">RR</a> = <a id="631c62" class="tk">varargin_1_idx_2</a>;</td></tr>
+<tr name="632" id="632">
+<td>632</td><td>  <a id="632c3" class="tk">Estimations_Y</a>.<a id="632c17" class="tk">OutputTelemetri_est_l</a>.<a id="632c39" class="tk">SR</a>.<a id="632c42" class="tk">FL</a> = <a id="632c47" class="tk">Estimations_B</a>.<a id="632c61" class="tk">rtb_SR_n_FL</a>;</td></tr>
+<tr name="633" id="633">
+<td>633</td><td>  <a id="633c3" class="tk">Estimations_Y</a>.<a id="633c17" class="tk">OutputTelemetri_est_l</a>.<a id="633c39" class="tk">SR</a>.<a id="633c42" class="tk">FR</a> = <a id="633c47" class="tk">Estimations_B</a>.<a id="633c61" class="tk">rtb_SR_n_FR</a>;</td></tr>
+<tr name="634" id="634">
+<td>634</td><td>  <a id="634c3" class="tk">Estimations_Y</a>.<a id="634c17" class="tk">OutputTelemetri_est_l</a>.<a id="634c39" class="tk">SR</a>.<a id="634c42" class="tk">RL</a> = <a id="634c47" class="tk">Estimations_B</a>.<a id="634c61" class="tk">rtb_SR_n_RL</a>;</td></tr>
+<tr name="635" id="635">
+<td>635</td><td>  <a id="635c3" class="tk">Estimations_Y</a>.<a id="635c17" class="tk">OutputTelemetri_est_l</a>.<a id="635c39" class="tk">SR</a>.<a id="635c42" class="tk">RR</a> = <a id="635c47" class="tk">rtb_DamperRateLookup1</a>;</td></tr>
+<tr name="636" id="636">
+<td>636</td><td>  <a id="636c3" class="tk">Estimations_Y</a>.<a id="636c17" class="tk">OutputTelemetri_est_l</a>.<a id="636c39" class="tk">Fz_loadTransfer</a>.<a id="636c55" class="tk">FL</a> =</td></tr>
+<tr name="637" id="637">
+<td>637</td><td>    <a id="637c5" class="tk">rtb_Fz_loadTransfer_est_FL</a>;</td></tr>
+<tr name="638" id="638">
+<td>638</td><td>  <a id="638c3" class="tk">Estimations_Y</a>.<a id="638c17" class="tk">OutputTelemetri_est_l</a>.<a id="638c39" class="tk">Fz_loadTransfer</a>.<a id="638c55" class="tk">FR</a> =</td></tr>
+<tr name="639" id="639">
+<td>639</td><td>    <a id="639c5" class="tk">rtb_Fz_loadTransfer_est_FR</a>;</td></tr>
+<tr name="640" id="640">
+<td>640</td><td>  <a id="640c3" class="tk">Estimations_Y</a>.<a id="640c17" class="tk">OutputTelemetri_est_l</a>.<a id="640c39" class="tk">Fz_loadTransfer</a>.<a id="640c55" class="tk">RL</a> =</td></tr>
+<tr name="641" id="641">
+<td>641</td><td>    <a id="641c5" class="tk">rtb_Fz_loadTransfer_est_RL</a>;</td></tr>
+<tr name="642" id="642">
+<td>642</td><td>  <a id="642c3" class="tk">Estimations_Y</a>.<a id="642c17" class="tk">OutputTelemetri_est_l</a>.<a id="642c39" class="tk">Fz_loadTransfer</a>.<a id="642c55" class="tk">RR</a> =</td></tr>
+<tr name="643" id="643">
+<td>643</td><td>    <a id="643c5" class="tk">rtb_Fz_loadTransfer_est_RR</a>;</td></tr>
+<tr name="644" id="644">
+<td>644</td><td>  <a id="644c3" class="tk">Estimations_Y</a>.<a id="644c17" class="tk">OutputTelemetri_est_l</a>.<a id="644c39" class="tk">Fz_Damper</a>.<a id="644c49" class="tk">FL</a> = <a id="644c54" class="tk">rtb_Fz_damper_est_FL</a>;</td></tr>
+<tr name="645" id="645">
+<td>645</td><td>  <a id="645c3" class="tk">Estimations_Y</a>.<a id="645c17" class="tk">OutputTelemetri_est_l</a>.<a id="645c39" class="tk">Fz_Damper</a>.<a id="645c49" class="tk">FR</a> = <a id="645c54" class="tk">rtb_Fz_damper_est_FR</a>;</td></tr>
+<tr name="646" id="646">
+<td>646</td><td>  <a id="646c3" class="tk">Estimations_Y</a>.<a id="646c17" class="tk">OutputTelemetri_est_l</a>.<a id="646c39" class="tk">Fz_Damper</a>.<a id="646c49" class="tk">RL</a> = <a id="646c54" class="tk">rtb_Fz_damper_est_RL</a>;</td></tr>
+<tr name="647" id="647">
+<td>647</td><td>  <a id="647c3" class="tk">Estimations_Y</a>.<a id="647c17" class="tk">OutputTelemetri_est_l</a>.<a id="647c39" class="tk">Fz_Damper</a>.<a id="647c49" class="tk">RR</a> = <a id="647c54" class="tk">rtb_Fz_damper_est_RR</a>;</td></tr>
+<tr name="648" id="648">
+<td>648</td><td><span class="br">}</span></td></tr>
+<tr name="649" id="649">
+<td>649</td><td></td></tr>
+<tr name="650" id="650">
+<td>650</td><td><span class="ct">/* Model initialize function */</span></td></tr>
+<tr name="651" id="651">
+<td>651</td><td><span class="kw">void</span> <a id="651c6" class="tk">Estimations_initialize</a>(<span class="kw">void</span>)</td></tr>
+<tr name="652" id="652">
+<td>652</td><td><span class="br">{</span></td></tr>
+<tr name="653" id="653">
+<td>653</td><td>  <span class="ct">/* Registration code */</span></td></tr>
+<tr name="654" id="654">
+<td>654</td><td></td></tr>
+<tr name="655" id="655">
+<td>655</td><td>  <span class="ct">/* initialize error status */</span></td></tr>
+<tr name="656" id="656">
+<td>656</td><td>  <a id="656c3" class="tk">rtmSetErrorStatus</a>(<a id="656c21" class="tk">Estimations_M</a>, (<a id="656c37" class="tk">NULL</a>));</td></tr>
+<tr name="657" id="657">
+<td>657</td><td></td></tr>
+<tr name="658" id="658">
+<td>658</td><td>  <span class="ct">/* states (dwork) */</span></td></tr>
+<tr name="659" id="659">
+<td>659</td><td>  (<span class="kw">void</span>) <a id="659c10" class="tk">memset</a>((<span class="kw">void</span> *)&amp;<a id="659c26" class="tk">Estimations_DW</a>, 0,</td></tr>
+<tr name="660" id="660">
+<td>660</td><td>                <span class="kw">sizeof</span>(<a id="660c24" class="tk">DW_Estimations_T</a>));</td></tr>
+<tr name="661" id="661">
+<td>661</td><td></td></tr>
+<tr name="662" id="662">
+<td>662</td><td>  <span class="ct">/* external inputs */</span></td></tr>
+<tr name="663" id="663">
+<td>663</td><td>  (<span class="kw">void</span>) <a id="663c10" class="tk">memset</a>((<span class="kw">void</span> *)&amp;<a id="663c26" class="tk">Estimations_U</a>, 0,</td></tr>
+<tr name="664" id="664">
+<td>664</td><td>                <span class="kw">sizeof</span>(<a id="664c24" class="tk">ExtU_Estimations_T</a>));</td></tr>
+<tr name="665" id="665">
+<td>665</td><td></td></tr>
+<tr name="666" id="666">
+<td>666</td><td>  <span class="ct">/* external outputs */</span></td></tr>
+<tr name="667" id="667">
+<td>667</td><td>  (<span class="kw">void</span>) <a id="667c10" class="tk">memset</a>((<span class="kw">void</span> *)&amp;<a id="667c26" class="tk">Estimations_Y</a>, 0,</td></tr>
+<tr name="668" id="668">
+<td>668</td><td>                <span class="kw">sizeof</span>(<a id="668c24" class="tk">ExtY_Estimations_T</a>));</td></tr>
+<tr name="669" id="669">
+<td>669</td><td></td></tr>
+<tr name="670" id="670">
+<td>670</td><td>  <span class="ct">/* InitializeConditions for Atomic SubSystem: '<a class="ct blk" blk_line="670">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="671" id="671">
+<td>671</td><td>  <span class="ct">/* InitializeConditions for MATLAB Function: '<a class="ct blk" blk_line="671">&lt;S9&gt;/estimateFrictionCoefficient</a>' */</span></td></tr>
+<tr name="672" id="672">
+<td>672</td><td>  <a id="672c3" class="tk">Estimations_DW</a>.<a id="672c18" class="tk">firstIteration_not_empty</a> = false;</td></tr>
+<tr name="673" id="673">
+<td>673</td><td></td></tr>
+<tr name="674" id="674">
+<td>674</td><td>  <span class="ct">/* End of InitializeConditions for SubSystem: '<a class="ct blk" blk_line="674">&lt;Root&gt;/Estimations</a>' */</span></td></tr>
+<tr name="675" id="675">
+<td>675</td><td><span class="br">}</span></td></tr>
+<tr name="676" id="676">
+<td>676</td><td></td></tr>
+<tr name="677" id="677">
+<td>677</td><td><span class="ct">/*</span></td></tr>
+<tr name="678" id="678">
+<td>678</td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
+<tr name="679" id="679">
+<td>679</td><td><span class="ct"> *</span></td></tr>
+<tr name="680" id="680">
+<td>680</td><td><span class="ct"> * [EOF]</span></td></tr>
+<tr name="681" id="681">
+<td>681</td><td><span class="ct"> */</span></td></tr>
+<tr name="682" id="682">
+<td>682</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>
