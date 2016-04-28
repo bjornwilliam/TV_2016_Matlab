@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1653"
+    ComputedModelVersion    "1.1654"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [96.0, 86.0, 1300.0, 1055.0]
+      Location		      [745.0, 121.0, 1300.0, 1055.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -57,7 +57,7 @@ Model {
 	  LoadSaveID		  "1110"
 	  Extents		  [1250.0, 878.0]
 	  ZoomFactor		  [0.6]
-	  Offset		  [-153.97346140084824, 559.78749519250869]
+	  Offset		  [-153.97346140084824, 559.78749519250857]
 	}
 	Object {
 	  $ObjectID		  6
@@ -102,16 +102,16 @@ Model {
 	  LoadSaveID		  "1642"
 	  Extents		  [1250.0, 878.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [2068.2310524054278, 1823.1491683223248]
+	  Offset		  [2077.9097243886117, 2002.9945192079367]
 	}
 	Object {
 	  $ObjectID		  11
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "579"
 	  Extents		  [1250.0, 878.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [64.333333333333712, -202.3691433513427]
+	  ZoomFactor		  [0.8]
+	  Offset		  [551.25, 290.24999999999989]
 	}
 	Object {
 	  $ObjectID		  12
@@ -154,9 +154,9 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1520"
-	  Extents		  [1107.0, 767.0]
-	  ZoomFactor		  [0.4]
-	  Offset		  [124.33333333333326, 72.0]
+	  Extents		  [1250.0, 878.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [433.09999999999968, 23.95238095238085]
 	}
 	Object {
 	  $ObjectID		  17
@@ -177,9 +177,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 28 14:46:29 2016"
-  RTWModifiedTimeStamp	  383755556
-  ModelVersionFormat	  "1.%<AutoIncrement:1653>"
+  LastModifiedDate	  "Thu Apr 28 19:31:36 2016"
+  RTWModifiedTimeStamp	  383759000
+  ModelVersionFormat	  "1.%<AutoIncrement:1654>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2442,7 +2442,7 @@ Model {
   }
   System {
     Name		    "TV2016"
-    Location		    [96, 86, 1161, 1141]
+    Location		    [96, 86, 1396, 1141]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -2475,8 +2475,8 @@ Model {
       }
       System {
 	Name			"CarMaker"
-	Location		[96, 86, 1396, 1141]
-	Open			on
+	Location		[745, 121, 2045, 1176]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2487,7 +2487,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"30"
+	ZoomFactor		"50"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3884,7 +3884,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Control_System\n"
-	    Location		    [96, 86, 1396, 1141]
+	    Location		    [745, 121, 2045, 1176]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -4685,7 +4685,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Slip Rate Control\n"
-		    Location		    [96, 86, 1161, 1141]
+		    Location		    [96, 86, 1396, 1141]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7085,7 +7085,7 @@ Model {
 		    RequestExecContextInheritance off
 		    System {
 		    Name		    "Traction Controllers"
-		    Location		    [96, 86, 1161, 1141]
+		    Location		    [96, 86, 1396, 1141]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7901,7 +7901,7 @@ Model {
 		    }
 		    System {
 		    Name		    "Slip Rate FL"
-		    Location		    [96, 86, 1161, 1141]
+		    Location		    [96, 86, 1396, 1141]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -11745,7 +11745,7 @@ Model {
 		    RequestExecContextInheritance off
 		    System {
 		    Name		    "Torque Allocation"
-		    Location		    [96, 86, 1396, 1141]
+		    Location		    [745, 121, 2045, 1176]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -14588,7 +14588,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Debug Information\n"
-	    Location		    [96, 86, 1396, 1141]
+	    Location		    [745, 121, 2045, 1176]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -15332,7 +15332,7 @@ Model {
 	      ZOrder		      212
 	      Floating		      off
 	      Location		      [268, 325, 1280, 1068]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -15349,7 +15349,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.89906     0.87546    0.071146    0.090624"
 	      TimeRange		      "0.2288752670319332"
 	      YMin		      "662.5986225332764"
 	      YMax		      "670.9673826275828"
@@ -15555,7 +15554,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Motor Rpm log\n\n"
-		Location		[96, 86, 1161, 1141]
+		Location		[745, 121, 2045, 1176]
 		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -15567,7 +15566,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"40"
+		ZoomFactor		"80"
 		Block {
 		  BlockType		  Abs
 		  Name			  "Abs"
@@ -15835,7 +15834,7 @@ Model {
 		  Ports			  [1]
 		  Position		  [1230, 387, 1355, 423]
 		  ZOrder		  205
-		  Filename		  "MotorRPMS.mat"
+		  Filename		  "MAT_files\\MotorRPMS.mat"
 		  MatrixName		  "MotorRpms"
 		  SaveFormat		  "Timeseries"
 		}
@@ -17475,7 +17474,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Simulation Results Logging"
-		Location		[96, 86, 1396, 1141]
+		Location		[745, 121, 2045, 1176]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -17487,7 +17486,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"20"
+		ZoomFactor		"25"
 		Block {
 		  BlockType		  Inport
 		  Name			  "r_ref"
@@ -18216,7 +18215,7 @@ Model {
 		  Ports			  [1]
 		  Position		  [1275, 1112, 1400, 1148]
 		  ZOrder		  343
-		  Filename		  "SimResult.mat"
+		  Filename		  "MAT_files\\SimResult.mat"
 		  MatrixName		  "sim"
 		  SaveFormat		  "Timeseries"
 		}
@@ -18782,7 +18781,7 @@ Model {
 	      ZOrder		      196
 	      Floating		      off
 	      Location		      [1375, 272, 1951, 678]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -18843,7 +18842,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [2370, 2417, 2495, 2453]
 	      ZOrder		      286
-	      Filename		      "MotorTorques.mat"
+	      Filename		      "MAT_files\\MotorTorques.mat"
 	      MatrixName	      "MotorTorques"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18854,7 +18853,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [2740, 2612, 2865, 2648]
 	      ZOrder		      287
-	      Filename		      "TorqueRequest"
+	      Filename		      "MAT_files\\TorqueRequest"
 	      MatrixName	      "TorqueRequest"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18865,7 +18864,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1515, 1667, 1640, 1703]
 	      ZOrder		      392
-	      Filename		      "Speed.mat"
+	      Filename		      "MAT_files\\Speed.mat"
 	      MatrixName	      "VehicleSpeed"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18876,7 +18875,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [2820, 2942, 2945, 2978]
 	      ZOrder		      307
-	      Filename		      "MechanicalEffect.mat"
+	      Filename		      "MAT_files\\MechanicalEffect.mat"
 	      MatrixName	      "MechEffect"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18887,7 +18886,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1160, 212, 1270, 248]
 	      ZOrder		      320
-	      Filename		      "PmPe_FL.mat"
+	      Filename		      "MAT_files\\PmPe_FL.mat"
 	      MatrixName	      "PmPe_FL"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18898,7 +18897,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1110, 282, 1220, 318]
 	      ZOrder		      322
-	      Filename		      "PmPe_FR.mat"
+	      Filename		      "MAT_files\\PmPe_FR.mat"
 	      MatrixName	      "PmPe_FR"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18909,7 +18908,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1095, 377, 1205, 413]
 	      ZOrder		      324
-	      Filename		      "PmPe_RL.mat"
+	      Filename		      "MAT_files\\PmPe_RL.mat"
 	      MatrixName	      "PmPe_RL"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18920,7 +18919,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1095, 447, 1205, 483]
 	      ZOrder		      326
-	      Filename		      "PmPe_RR.mat"
+	      Filename		      "MAT_files\\PmPe_RR.mat"
 	      MatrixName	      "PmPe_RR"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18931,7 +18930,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [2195, 172, 2320, 208]
 	      ZOrder		      369
-	      Filename		      "SR.mat"
+	      Filename		      "MAT_files\\SR.mat"
 	      MatrixName	      "SR"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -18940,9 +18939,9 @@ Model {
 	      Name		      "To File9"
 	      SID		      "4953"
 	      Ports		      [1]
-	      Position		      [510, 75, 570, 105]
+	      Position		      [510, 75, 620, 105]
 	      ZOrder		      410
-	      Filename		      "currentDraw.mat"
+	      Filename		      "MAT_files\\currentDraw.mat"
 	      SaveFormat	      "Timeseries"
 	    }
 	    Block {
@@ -18953,7 +18952,7 @@ Model {
 	      Position		      [2545, 2259, 2575, 2291]
 	      ZOrder		      180
 	      Floating		      off
-	      Location		      [1991, 434, 2589, 778]
+	      Location		      [1953, 434, 2551, 778]
 	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
@@ -19114,7 +19113,7 @@ Model {
 	      ZOrder		      356
 	      Floating		      off
 	      Location		      [1542, 60, 2013, 354]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -19134,39 +19133,6 @@ Model {
 	      YMin		      "-0.00025"
 	      YMax		      "0.0004"
 	      SaveName		      "ScopeData12"
-	      LimitDataPoints	      off
-	    }
-	    Block {
-	      BlockType		      Scope
-	      Name		      "current_fl"
-	      SID		      "4951"
-	      Ports		      [1]
-	      Position		      [630, 74, 660, 106]
-	      ZOrder		      408
-	      Floating		      off
-	      Location		      [821, 870, 1744, 1362]
-	      Open		      off
-	      NumInputPorts	      "1"
-	      List {
-		ListType		AxesTitles
-		axes1			"%<SignalLabel>"
-	      }
-	      List {
-		ListType		ScopeGraphics
-		FigureColor		"[0.5 0.5 0.5]"
-		AxesColor		"[0 0 0]"
-		AxesTickColor		"[1 1 1]"
-		LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-		LineStyles		"-|-|-|-|-|-"
-		LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-		MarkerStyles		"none|none|none|none|none|none"
-	      }
-	      ShowLegends	      on
-	      LegendLocations	      "0.84855     0.67295     0.11593    0.041328"
-	      TimeRange		      "51.98675496688742"
-	      YMin		      "0"
-	      YMax		      "40"
-	      SaveName		      "ScopeData48"
 	      LimitDataPoints	      off
 	    }
 	    Block {
@@ -21966,7 +21932,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Fz_Estimation"
-		Location		[96, 86, 1161, 1141]
+		Location		[96, 86, 1396, 1141]
 		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -25131,7 +25097,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "IPG Vehicle"
-	    Location		    [323, 205, 1480, 1149]
+	    Location		    [745, 121, 2045, 1176]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -25143,7 +25109,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Sync_In"
@@ -36454,7 +36420,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"PowerTrain"
-		Location		[323, 205, 1480, 1149]
+		Location		[745, 121, 2045, 1176]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -36466,7 +36432,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"60"
+		ZoomFactor		"175"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sync_In"
@@ -36765,8 +36731,8 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Electric Powertrain"
-		    Location		    [6, 24, 1707, 1068]
-		    Open		    off
+		    Location		    [745, 121, 2045, 1176]
+		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -36777,7 +36743,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "50"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    SubSystem
 		    Name		    "AMK FL"
@@ -39336,7 +39302,7 @@ Model {
 		    Ports		    [1]
 		    Position		    [1470, 675, 1575, 705]
 		    ZOrder		    224
-		    Filename		    "eng_torque.mat"
+		    Filename		    "MAT_files\\eng_torque.mat"
 		    MatrixName		    "torques"
 		    SaveFormat		    "Timeseries"
 		    }
@@ -41183,7 +41149,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Sensors\n"
-	    Location		    [308, 57, 2009, 1101]
+	    Location		    [745, 121, 2045, 1176]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -41195,7 +41161,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "150"
+	    ZoomFactor		    "30"
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "\"Measured Power\""
@@ -45705,7 +45671,7 @@ Model {
 	  Ports			  [1]
 	  Position		  [995, 2175, 1130, 2215]
 	  ZOrder		  473
-	  Filename		  "Power_Sindre.mat"
+	  Filename		  "MAT_files\\Power_Sindre.mat"
 	  MatrixName		  "Power"
 	  SaveFormat		  "Timeseries"
 	}
@@ -50168,10 +50134,7 @@ Stateflow {
     firstTransition	    23
     firstJunction	    22
     viewObj		    10
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    27
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53062,10 +53025,7 @@ Stateflow {
     firstTransition	    157
     firstJunction	    156
     viewObj		    150
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53239,10 +53199,7 @@ Stateflow {
     firstTransition	    168
     firstJunction	    167
     viewObj		    159
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55945,10 +55902,7 @@ Stateflow {
     firstTransition	    311
     firstJunction	    310
     viewObj		    297
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
