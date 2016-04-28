@@ -155,16 +155,6 @@ settings.KERS_motor_RPM_setpoint = single(500);
 % This is max RPM derivative without slipping NOT USED ATM
 settings.max_RPM_rate_of_change = single(7480); 
 
-% ------------------------------
-% SPEED ESTIMATION
-% ------------------------------
-%Limits (Speed Estimation)
-speedEstimation.variance_limit = single(0.05);
-speedEstimation.RPM_derivative_limit = single(10000);
-speedEstimation.velocity_deviation_limit = single(3);
-% Gains
-speedEstimation.High_gain = single(2);
-speedEstimation.Low_gain = single(0);
 
 % ------------------------------
 % Misc Parameters
@@ -184,6 +174,16 @@ settings.coasting_KERS_percent = single(0.01);
 settings.max_battery_discharge =single(190); % Ampere
 settings.battery_voltage = single(530); 
 
+% ------------------------------
+% SPEED ESTIMATION
+% ------------------------------
+%Limits (Speed Estimation)
+speedEstimation.variance_limit = single(0.05);
+speedEstimation.RPM_derivative_limit = single(10000);
+speedEstimation.velocity_deviation_limit = single(3);
+% Gains
+speedEstimation.High_gain = single(2);
+speedEstimation.Low_gain = single(0);
 
 % ------------------------------
 % DYNAMIC EVENT SPECIFIC SETTINGS/PARAMETERS
@@ -239,52 +239,6 @@ Speed_Neg_sat = -21;%-(21/Mn)*1000;
 
 
 neg_t_limit = 0;
-
-% ------------------------------
-% CAN IDS
-% ------------------------------
-
-CAN_ID_GAS      = 1;
-CAN_ID_BRAKE = 2;
-CAN_ID_STEERING = 3;
-CAN_ID_VX = 4;
-CAN_ID_VY = 5;
-CAN_ID_FZ_FL = 6;
-CAN_ID_FZ_FR = 7;
-CAN_ID_FZ_RL = 8;
-CAN_ID_FZ_RR = 9;
-CAN_ID_YAW_RATE = 10;
-CAN_ID_AY = 11;
-CAN_ID_AX = 12;
-CAN_ID_ROLL_ANGLE = 13;
-CAN_ID_ROLL_RATE = 14;
-CAN_ID_RPM_FL = 15;
-CAN_ID_RPM_FR = 16;
-CAN_ID_RPM_RL = 17;
-CAN_ID_RPM_RR = 18;
-CAN_ID_KERS_POS = 19;
-
-CAN_ID_FZ = 20;
-CAN_ID_SENSORS = 21;
-
-% Receive IDS
-CAN_ID_INV_FL = 387;
-CAN_ID_INV_FR = 388;
-CAN_ID_INV_RL = 389;
-CAN_ID_INV_RR = 390;
-
-CAN_ID_RPMS = 502;
-
-CAN_ID_INV_SPEED	=35
-CAN_ID_INV_TRQ_POS	=36
-CAN_ID_INV_TRQ_NEG	=37
-%Setpoints:
-% 1 melding for speed, torquepos og torque neg
-%Byte 0 og 1 = speed
-%Byte 2 og 3 = trq_pos
-%Byte 4 og 5 = trq_neg
-%Scaling factor = 100;
-settings.scaling_factor = 1000;
 
 %Name the structures for Embedded Coder
 
