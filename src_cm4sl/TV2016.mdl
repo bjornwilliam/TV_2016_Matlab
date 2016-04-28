@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1654"
+    ComputedModelVersion    "1.1659"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [745.0, 121.0, 1300.0, 1055.0]
+      Location		      [1319.0, 476.0, 1139.0, 870.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -49,7 +49,7 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		13
+	Dimension		9
 	Object {
 	  $ObjectID		  5
 	  IsActive		  [0]
@@ -63,67 +63,58 @@ Model {
 	  $ObjectID		  6
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "909"
+	  LoadSaveID		  "1016"
 	  Extents		  [1250.0, 878.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [661.7, 174.86666666666656]
+	  Offset		  [0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "985"
-	  Extents		  [1015.0, 878.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [338.8, 535.8]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1089.0, 693.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [6.0, 25.5]
 	}
 	Object {
 	  $ObjectID		  8
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1107.0, 767.0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1192"
+	  Extents		  [1250.0, 878.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [6.0, 25.5]
+	  Offset		  [0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  9
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1034"
-	  Extents		  [1250.0, 878.0]
+	  Extents		  [1089.0, 693.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [90.056410224427736, 290.86617120132183]
 	}
 	Object {
 	  $ObjectID		  10
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1642"
-	  Extents		  [1250.0, 878.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [2077.9097243886117, 2002.9945192079367]
+	  LoadSaveID		  "1727"
+	  Extents		  [1089.0, 693.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [814.90471473058233, 1526.9615481625124]
 	}
 	Object {
 	  $ObjectID		  11
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "579"
-	  Extents		  [1250.0, 878.0]
+	  LoadSaveID		  "4151"
+	  Extents		  [1089.0, 693.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [551.25, 290.24999999999989]
+	  Offset		  [-48.346616754399633, 1261.2149636217291]
 	}
 	Object {
 	  $ObjectID		  12
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "934"
-	  Extents		  [1250.0, 878.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-194.48809523809553, 532.66536979791658]
-	}
-	Object {
-	  $ObjectID		  13
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4989"
@@ -132,40 +123,13 @@ Model {
 	  Offset		  [396.83333333333508, 29.150000000000034]
 	}
 	Object {
-	  $ObjectID		  14
+	  $ObjectID		  13
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1727"
-	  Extents		  [1107.0, 767.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [-955.33403872849067, 990.83796067267508]
-	}
-	Object {
-	  $ObjectID		  15
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "3165"
-	  Extents		  [1107.0, 767.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [225.9500000000001, 74.5]
-	}
-	Object {
-	  $ObjectID		  16
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1520"
-	  Extents		  [1250.0, 878.0]
+	  LoadSaveID		  "1"
+	  Extents		  [1089.0, 693.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [433.09999999999968, 23.95238095238085]
-	}
-	Object {
-	  $ObjectID		  17
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "2821"
-	  Extents		  [1107.0, 767.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [239.625, 250.74159568857328]
+	  Offset		  [2998.6904265174421, 954.42138908586617]
 	}
 	PropName		"EditorsInfo"
       }
@@ -177,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 28 19:31:36 2016"
-  RTWModifiedTimeStamp	  383759000
-  ModelVersionFormat	  "1.%<AutoIncrement:1654>"
+  LastModifiedDate	  "Thu Apr 28 21:59:12 2016"
+  RTWModifiedTimeStamp	  383781537
+  ModelVersionFormat	  "1.%<AutoIncrement:1659>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -220,7 +184,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    18
+    $ObjectID		    14
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "TV2016"
     Array {
@@ -284,13 +248,13 @@ Model {
     Type		    "Handle"
     Dimension		    3
     Simulink.ConfigSet {
-      $ObjectID		      19
+      $ObjectID		      15
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  20
+	  $ObjectID		  16
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -325,7 +289,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  21
+	  $ObjectID		  17
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -358,7 +322,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  22
+	  $ObjectID		  18
 	  Version		  "1.15.0"
 	  BlockReduction	  on
 	  BooleanDataType	  on
@@ -402,7 +366,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  23
+	  $ObjectID		  19
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -491,7 +455,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  24
+	  $ObjectID		  20
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -531,7 +495,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  25
+	  $ObjectID		  21
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -546,7 +510,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  26
+	  $ObjectID		  22
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -559,7 +523,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  27
+	  $ObjectID		  23
 	  Version		  "1.15.0"
 	  SystemTargetFile	  "ert.tlc"
 	  TLCOptions		  ""
@@ -624,7 +588,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      28
+	      $ObjectID		      24
 	      Version		      "1.15.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
@@ -667,7 +631,7 @@ Model {
 	    }
 	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      29
+	      $ObjectID		      25
 	      Version		      "1.15.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
@@ -803,13 +767,13 @@ Model {
       ConfigPrmDlgPosition     [ 984, 75, 2208, 1356 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      30
+      $ObjectID		      26
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  31
+	  $ObjectID		  27
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -844,7 +808,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  32
+	  $ObjectID		  28
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -877,7 +841,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  33
+	  $ObjectID		  29
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -934,7 +898,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  34
+	  $ObjectID		  30
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1023,7 +987,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  35
+	  $ObjectID		  31
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1063,7 +1027,7 @@ Model {
 	  ProdEqTarget		  off
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  36
+	  $ObjectID		  32
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1078,7 +1042,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  37
+	  $ObjectID		  33
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1091,7 +1055,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  38
+	  $ObjectID		  34
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1171,7 +1135,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      39
+	      $ObjectID		      35
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1246,7 +1210,7 @@ Model {
 	    }
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      40
+	      $ObjectID		      36
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1340,13 +1304,13 @@ Model {
       ConfigPrmDlgPosition     [ 1313, 199, 2457, 1291 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      41
+      $ObjectID		      37
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  42
+	  $ObjectID		  38
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -1381,7 +1345,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  43
+	  $ObjectID		  39
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1414,7 +1378,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  44
+	  $ObjectID		  40
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1471,7 +1435,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  45
+	  $ObjectID		  41
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1560,7 +1524,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  46
+	  $ObjectID		  42
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1600,7 +1564,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  47
+	  $ObjectID		  43
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1615,7 +1579,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  48
+	  $ObjectID		  44
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1628,7 +1592,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  49
+	  $ObjectID		  45
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1708,7 +1672,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      50
+	      $ObjectID		      46
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1783,7 +1747,7 @@ Model {
 	    }
 	    RTWinTarget.RTWinTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      51
+	      $ObjectID		      47
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1874,11 +1838,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    19
+    $ObjectID		    15
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    52
+    $ObjectID		    48
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -2442,7 +2406,7 @@ Model {
   }
   System {
     Name		    "TV2016"
-    Location		    [96, 86, 1396, 1141]
+    Location		    [1319, 476, 2458, 1346]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -2456,7 +2420,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5507"
+    SIDHighWatermark	    "5512"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -2469,14 +2433,14 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		53
+	$ObjectID		49
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMaker4SLss.bmp'));"
       }
       System {
 	Name			"CarMaker"
-	Location		[745, 121, 2045, 1176]
-	Open			off
+	Location		[1319, 476, 2458, 1346]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2487,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"50"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3884,8 +3848,8 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Control_System\n"
-	    Location		    [745, 121, 2045, 1176]
-	    Open		    on
+	    Location		    [1200, 463, 2500, 1518]
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3915,8 +3879,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Control\n"
-		Location		[96, 86, 1396, 1141]
-		Open			on
+		Location		[1200, 463, 2500, 1518]
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3927,7 +3891,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"80"
+		ZoomFactor		"50"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -4685,8 +4649,8 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Slip Rate Control\n"
-		    Location		    [96, 86, 1396, 1141]
-		    Open		    on
+		    Location		    [1319, 476, 2458, 1346]
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -4697,7 +4661,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "60"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Ti_ref"
@@ -4725,6 +4689,40 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    SID			    "5508"
+		    Ports		    [1, 4]
+		    Position		    [1110, 961, 1130, 1144]
+		    ZOrder		    364
+		    ShowName		    off
+		    OutputSignals	    "FL,FR,RL,RR"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<FL>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<FR>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<RL>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    4
+		    Name		    "<RR>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
 		    BlockType		    Constant
 		    Name		    "Constant"
 		    SID			    "2009"
@@ -4744,6 +4742,16 @@ Model {
 		    zeroidx		    on
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux18"
+		    SID			    "5509"
+		    Ports		    [4, 1]
+		    Position		    [1200, 958, 1215, 1147]
+		    ZOrder		    363
+		    ShowName		    off
+		    DisplayOption	    "bar"
 		    }
 		    Block {
 		    BlockType		    SubSystem
@@ -7085,7 +7093,7 @@ Model {
 		    RequestExecContextInheritance off
 		    System {
 		    Name		    "Traction Controllers"
-		    Location		    [96, 86, 1396, 1141]
+		    Location		    [1319, 476, 2458, 1346]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -7097,7 +7105,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "30"
+		    ZoomFactor		    "150"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -7602,7 +7610,7 @@ Model {
 		    Name		    "MATLAB Function1"
 		    SID			    "4223"
 		    Ports		    [3, 7]
-		    Position		    [805, 1480, 975, 1720]
+		    Position		    [805, 1488, 975, 1732]
 		    ZOrder		    443
 		    LibraryVersion	    "1.32"
 		    ErrorFcn		    "Stateflow.Translate.translate"
@@ -7625,7 +7633,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "29"
+		    SIDHighWatermark	    "35"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -7786,21 +7794,21 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    124
+		    ZOrder		    304
 		    SrcBlock		    "states"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    125
+		    ZOrder		    305
 		    SrcBlock		    "T_req"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    126
+		    ZOrder		    306
 		    SrcBlock		    "T_tv"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -7808,7 +7816,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "SR_FL"
-		    ZOrder		    127
+		    ZOrder		    307
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -7817,7 +7825,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "SR_FR"
-		    ZOrder		    128
+		    ZOrder		    308
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    3
@@ -7826,7 +7834,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "SR_RL"
-		    ZOrder		    129
+		    ZOrder		    309
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    4
@@ -7835,7 +7843,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "SR_RR"
-		    ZOrder		    130
+		    ZOrder		    310
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    5
@@ -7844,7 +7852,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "vx"
-		    ZOrder		    131
+		    ZOrder		    311
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    6
@@ -7853,7 +7861,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "Kp"
-		    ZOrder		    132
+		    ZOrder		    312
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    7
@@ -7862,7 +7870,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "Ki"
-		    ZOrder		    133
+		    ZOrder		    313
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    8
@@ -7870,20 +7878,30 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    134
+		    ZOrder		    314
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    135
+		    ZOrder		    315
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
 		    DstPort		    1
 		    }
 		    }
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux18"
+		    SID			    "5511"
+		    Ports		    [4, 1]
+		    Position		    [2720, 538, 2735, 727]
+		    ZOrder		    463
+		    ShowName		    off
+		    DisplayOption	    "bar"
 		    }
 		    Block {
 		    BlockType		    SubSystem
@@ -7901,8 +7919,8 @@ Model {
 		    }
 		    System {
 		    Name		    "Slip Rate FL"
-		    Location		    [96, 86, 1396, 1141]
-		    Open		    on
+		    Location		    [745, 121, 2045, 1176]
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -10763,6 +10781,38 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    Scope
+		    Name		    "tcOutput"
+		    SID			    "5512"
+		    Ports		    [1]
+		    Position		    [2770, 619, 2800, 651]
+		    ZOrder		    462
+		    Floating		    off
+		    Location		    [1988, 270, 2502, 644]
+		    Open		    on
+		    NumInputPorts	    "1"
+		    List {
+		    ListType		    AxesTitles
+		    axes1		    "%<SignalLabel>"
+		    }
+		    List {
+		    ListType		    ScopeGraphics
+		    FigureColor		    "[0.501960784313725 0.501960784313725 0.501960784313725]"
+		    AxesColor		    "[0 0 0]"
+		    AxesTickColor	    "[1 1 1]"
+		    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+		    LineStyles		    "-|-|-|-|-|-"
+		    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+		    MarkerStyles	    "none|none|none|none|none|none"
+		    }
+		    ShowLegends		    on
+		    LegendLocations	    "0.80285     0.35383     0.14008     0.18004"
+		    YMin		    "0.1998305084745763"
+		    YMax		    "0.2840677966101695"
+		    SaveName		    "ScopeData43"
+		    LimitDataPoints	    off
+		    }
+		    Block {
 		    BlockType		    Outport
 		    Name		    "Ti_SR"
 		    SID			    "1729"
@@ -10783,6 +10833,7 @@ Model {
 		    }
 		    Branch {
 		    ZOrder		    1092
+		    Points		    [7, 0]
 		    DstBlock		    "MATLAB Function1"
 		    DstPort		    1
 		    }
@@ -10794,7 +10845,7 @@ Model {
 		    Points		    [22, 0]
 		    Branch {
 		    ZOrder		    1154
-		    Points		    [0, 420]
+		    Points		    [0, 430]
 		    DstBlock		    "MATLAB Function1"
 		    DstPort		    3
 		    }
@@ -10932,9 +10983,20 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Slip Rate FL"
 		    SrcPort		    1
-		    Points		    [166, 0; 0, 480]
+		    Points		    [161, 0]
+		    Branch {
+		    ZOrder		    1200
+		    Labels		    [2, 1]
+		    Points		    [0, -195]
+		    DstBlock		    "Mux18"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    1199
+		    Points		    [5, 0; 0, 480]
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    5
+		    }
 		    }
 		    Line {
 		    Name		    "FR"
@@ -10942,9 +11004,19 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Slip Rate FR"
 		    SrcPort		    1
-		    Points		    [49, 0; 0, 170]
+		    Points		    [49, 0; 0, 170; 165, 0]
+		    Branch {
+		    ZOrder		    1202
+		    Labels		    [2, 1]
+		    Points		    [0, -725]
+		    DstBlock		    "Mux18"
+		    DstPort		    2
+		    }
+		    Branch {
+		    ZOrder		    1201
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    6
+		    }
 		    }
 		    Line {
 		    Name		    "RR"
@@ -10952,9 +11024,19 @@ Model {
 		    Labels		    [0, 1]
 		    SrcBlock		    "Slip Rate RR"
 		    SrcPort		    1
-		    Points		    [100, 0; 0, -410]
+		    Points		    [100, 0; 0, -410; 248, 0]
+		    Branch {
+		    ZOrder		    1206
+		    Labels		    [2, 1]
+		    Points		    [0, -825]
+		    DstBlock		    "Mux18"
+		    DstPort		    4
+		    }
+		    Branch {
+		    ZOrder		    1205
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    8
+		    }
 		    }
 		    Line {
 		    Name		    "RL"
@@ -10962,9 +11044,19 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Slip Rate RL"
 		    SrcPort		    1
-		    Points		    [64, 0; 0, -105]
+		    Points		    [64, 0; 0, -105; 220, 0]
+		    Branch {
+		    ZOrder		    1204
+		    Labels		    [2, 1]
+		    Points		    [0, -775]
+		    DstBlock		    "Mux18"
+		    DstPort		    3
+		    }
+		    Branch {
+		    ZOrder		    1203
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    7
+		    }
 		    }
 		    Line {
 		    ZOrder		    758
@@ -11014,6 +11106,7 @@ Model {
 		    }
 		    Branch {
 		    ZOrder		    1094
+		    Points		    [71, 0]
 		    DstBlock		    "MATLAB Function1"
 		    DstPort		    2
 		    }
@@ -11022,7 +11115,7 @@ Model {
 		    ZOrder		    1106
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    2
-		    Points		    [493, 0; 0, -300]
+		    Points		    [493, 0; 0, -310]
 		    DstBlock		    "Slip Rate FR"
 		    DstPort		    4
 		    }
@@ -11030,7 +11123,7 @@ Model {
 		    ZOrder		    1108
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    3
-		    Points		    [383, 0; 0, 47; 556, 0; 0, -12]
+		    Points		    [383, 0; 0, 37; 556, 0; 0, -12]
 		    DstBlock		    "Slip Rate RL"
 		    DstPort		    4
 		    }
@@ -11075,13 +11168,13 @@ Model {
 		    ZOrder		    1096
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    5
-		    Points		    [-5, 0; 99, 0]
+		    Points		    [-5, -10; 99, 0]
 		    }
 		    Line {
 		    ZOrder		    1118
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    4
-		    Points		    [860, 0; 0, 400]
+		    Points		    [860, 0; 0, 390]
 		    DstBlock		    "Slip Rate RR"
 		    DstPort		    4
 		    }
@@ -11089,7 +11182,7 @@ Model {
 		    ZOrder		    1019
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    1
-		    Points		    [440, 0; 0, -670]
+		    Points		    [440, 0; 0, -680]
 		    DstBlock		    "Slip Rate FL"
 		    DstPort		    4
 		    }
@@ -11097,6 +11190,7 @@ Model {
 		    ZOrder		    1097
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    6
+		    Points		    [0, -10]
 		    DstBlock		    "Goto1"
 		    DstPort		    1
 		    }
@@ -11104,10 +11198,49 @@ Model {
 		    ZOrder		    1098
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    7
+		    Points		    [0, -10]
 		    DstBlock		    "Goto3"
 		    DstPort		    1
 		    }
+		    Line {
+		    ZOrder		    1198
+		    SrcBlock		    "Mux18"
+		    SrcPort		    1
+		    DstBlock		    "tcOutput"
+		    DstPort		    1
 		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Scope
+		    Name		    "tcOutput"
+		    SID			    "5510"
+		    Ports		    [1]
+		    Position		    [1250, 1039, 1280, 1071]
+		    ZOrder		    362
+		    Floating		    off
+		    Location		    [1214, 267, 1728, 641]
+		    Open		    off
+		    NumInputPorts	    "1"
+		    List {
+		    ListType		    AxesTitles
+		    axes1		    "%<SignalLabel>"
+		    }
+		    List {
+		    ListType		    ScopeGraphics
+		    FigureColor		    "[0.501960784313725 0.501960784313725 0.501960784313725]"
+		    AxesColor		    "[0 0 0]"
+		    AxesTickColor	    "[1 1 1]"
+		    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+		    LineStyles		    "-|-|-|-|-|-"
+		    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+		    MarkerStyles	    "none|none|none|none|none|none"
+		    }
+		    ShowLegends		    on
+		    YMin		    "0.1998305084745763"
+		    YMax		    "0.2840677966101695"
+		    SaveName		    "ScopeData31"
+		    LimitDataPoints	    off
 		    }
 		    Block {
 		    BlockType		    Outport
@@ -11142,14 +11275,6 @@ Model {
 		    }
 		    }
 		    Line {
-		    ZOrder		    82
-		    SrcBlock		    "Traction Controllers"
-		    SrcPort		    1
-		    Points		    [380, 0]
-		    DstBlock		    "Index\nVector"
-		    DstPort		    3
-		    }
-		    Line {
 		    ZOrder		    84
 		    SrcBlock		    "Index\nVector"
 		    SrcPort		    1
@@ -11171,6 +11296,67 @@ Model {
 		    DstBlock		    "Traction Controllers"
 		    DstPort		    3
 		    }
+		    Line {
+		    ZOrder		    82
+		    SrcBlock		    "Traction Controllers"
+		    SrcPort		    1
+		    Points		    [332, 0]
+		    Branch {
+		    ZOrder		    108
+		    Points		    [0, 295]
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    107
+		    Points		    [48, 0]
+		    DstBlock		    "Index\nVector"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    ZOrder		    97
+		    SrcBlock		    "Mux18"
+		    SrcPort		    1
+		    DstBlock		    "tcOutput"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<FL>"
+		    ZOrder		    98
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    DstBlock		    "Mux18"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<FR>"
+		    ZOrder		    99
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    DstBlock		    "Mux18"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<RL>"
+		    ZOrder		    100
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    DstBlock		    "Mux18"
+		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "<RR>"
+		    ZOrder		    101
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    4
+		    DstBlock		    "Mux18"
+		    DstPort		    4
+		    }
 		  }
 		}
 		Block {
@@ -11183,8 +11369,8 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Throttle / Brake Mapping"
-		    Location		    [96, 86, 1396, 1141]
-		    Open		    off
+		    Location		    [1200, 463, 2500, 1518]
+		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -11350,7 +11536,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Torque allocation\n"
-		    Location		    [96, 86, 1396, 1141]
+		    Location		    [1319, 476, 2458, 1346]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -12239,9 +12425,10 @@ Model {
 		    Position		    [690, 929, 720, 961]
 		    ZOrder		    359
 		    Floating		    off
-		    Location		    [1214, 267, 1728, 641]
-		    Open		    off
+		    Location		    [1313, 187, 1827, 561]
+		    Open		    on
 		    NumInputPorts	    "1"
+		    ZoomMode		    "yonly"
 		    List {
 		    ListType		    AxesTitles
 		    axes1		    "%<SignalLabel>"
@@ -12257,6 +12444,7 @@ Model {
 		    MarkerStyles	    "none|none|none|none|none|none"
 		    }
 		    ShowLegends		    on
+		    LegendLocations	    "0.72114     0.13993     0.21984     0.18004"
 		    YMin		    "0.1998305084745763"
 		    YMax		    "0.2840677966101695"
 		    SaveName		    "ScopeData44"
@@ -12450,7 +12638,7 @@ Model {
 		  }
 		  System {
 		    Name		    "Yaw Rate Controller\n"
-		    Location		    [96, 86, 1396, 1141]
+		    Location		    [745, 121, 2045, 1176]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -13744,8 +13932,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Output Interface\n"
-		Location		[359, 212, 1516, 1156]
-		Open			off
+		Location		[1178, 457, 2478, 1512]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -14588,8 +14776,8 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Debug Information\n"
-	    Location		    [745, 121, 2045, 1176]
-	    Open		    on
+	    Location		    [1319, 476, 2458, 1346]
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -14600,7 +14788,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Ti_lim"
@@ -15236,8 +15424,8 @@ Model {
 	      Position		      [1775, 804, 1805, 836]
 	      ZOrder		      357
 	      Floating		      off
-	      Location		      [1788, 156, 2302, 530]
-	      Open		      off
+	      Location		      [1788, 60, 2302, 434]
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -15267,8 +15455,8 @@ Model {
 	      Position		      [2275, 814, 2305, 846]
 	      ZOrder		      350
 	      Floating		      off
-	      Location		      [1581, 1063, 2094, 1482]
-	      Open		      off
+	      Location		      [1985, 908, 2498, 1327]
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -15285,6 +15473,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
+	      LegendLocations	      "0.74789     0.73588     0.17739      0.1607"
 	      TimeRange		      "0.6853153553299491"
 	      YMin		      "-663.9784946236555"
 	      YMax		      "427.41935483871"
@@ -15331,7 +15520,7 @@ Model {
 	      Position		      [2425, 1919, 2455, 1951]
 	      ZOrder		      212
 	      Floating		      off
-	      Location		      [268, 325, 1280, 1068]
+	      Location		      [1893, 990, 2541, 1433]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -15349,6 +15538,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
+	      LegendLocations	      "0.87099     0.82046     0.11111     0.15199"
 	      TimeRange		      "0.2288752670319332"
 	      YMin		      "662.5986225332764"
 	      YMax		      "670.9673826275828"
@@ -15554,8 +15744,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Motor Rpm log\n\n"
-		Location		[745, 121, 2045, 1176]
-		Open			on
+		Location		[1200, 463, 2500, 1518]
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -15566,7 +15756,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"80"
+		ZoomFactor		"175"
 		Block {
 		  BlockType		  Abs
 		  Name			  "Abs"
@@ -15846,8 +16036,8 @@ Model {
 		  Position		  [1360, 469, 1390, 501]
 		  ZOrder		  207
 		  Floating		  off
-		  Location		  [1971, 485, 2551, 896]
-		  Open			  off
+		  Location		  [1811, 546, 2391, 957]
+		  Open			  on
 		  NumInputPorts		  "1"
 		  List {
 		    ListType		    AxesTitles
@@ -16035,8 +16225,8 @@ Model {
 	      Position		      [2405, 2479, 2435, 2511]
 	      ZOrder		      272
 	      Floating		      off
-	      Location		      [348, 1023, 1617, 1486]
-	      Open		      off
+	      Location		      [1677, 1043, 2266, 1506]
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -16053,10 +16243,10 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.87687     0.79664     0.07959     0.14543"
-	      TimeRange		      "1.149568036611242"
-	      YMin		      "-7.908600237634445"
-	      YMax		      "4.996776911947464"
+	      LegendLocations	      "0.87687     0.79664     0.17148     0.14543"
+	      TimeRange		      "0.8900909181942964"
+	      YMin		      "-0.9798622131347656"
+	      YMax		      "10.36951065063476"
 	      SaveName		      "ScopeData8"
 	      LimitDataPoints	      off
 	    }
@@ -16308,7 +16498,7 @@ Model {
 	      ZOrder		      277
 	      Floating		      off
 	      Location		      [1696, 1003, 2461, 1518]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -16325,7 +16515,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.84532     0.84595     0.10458    0.069903"
 	      TimeRange		      "0.2840334656596802"
 	      YMin		      "0.1753574950690338"
 	      YMax		      "0.1968071992110455"
@@ -17439,7 +17628,7 @@ Model {
 	      Position		      [2240, 244, 2270, 276]
 	      ZOrder		      367
 	      Floating		      off
-	      Location		      [1031, 1123, 1838, 1518]
+	      Location		      [1242, 585, 2049, 980]
 	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
@@ -17474,8 +17663,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Simulation Results Logging"
-		Location		[745, 121, 2045, 1176]
-		Open			off
+		Location		[1319, 476, 2458, 1346]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -17486,7 +17675,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"25"
+		ZoomFactor		"80"
 		Block {
 		  BlockType		  Inport
 		  Name			  "r_ref"
@@ -17664,7 +17853,7 @@ Model {
 		  BlockType		  Gain
 		  Name			  "Gain1"
 		  SID			  "4688"
-		  Position		  [180, 1728, 245, 1782]
+		  Position		  [225, 1728, 290, 1782]
 		  ZOrder		  407
 		  Gain			  "3.6"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -17959,7 +18148,7 @@ Model {
 		  Name			  "Read CM Dict10"
 		  SID			  "4687"
 		  Ports			  [0, 1]
-		  Position		  [20, 1745, 100, 1765]
+		  Position		  [55, 1745, 135, 1765]
 		  ZOrder		  406
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.469"
@@ -18711,7 +18900,7 @@ Model {
 		  ZOrder		  162
 		  SrcBlock		  "Gain1"
 		  SrcPort		  1
-		  Points		  [550, 0; 0, -30]
+		  Points		  [505, 0; 0, -30]
 		  DstBlock		  "Mux2"
 		  DstPort		  19
 		}
@@ -18781,7 +18970,7 @@ Model {
 	      ZOrder		      196
 	      Floating		      off
 	      Location		      [1375, 272, 1951, 678]
-	      Open		      off
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -18953,7 +19142,7 @@ Model {
 	      ZOrder		      180
 	      Floating		      off
 	      Location		      [1953, 434, 2551, 778]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -18970,7 +19159,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.81266       0.147     0.14214     0.19574"
+	      LegendLocations	      "0.79376     0.67829     0.14214     0.19574"
 	      TimeRange		      "0.2680017457586128"
 	      YMin		      "16.90148163817127"
 	      YMax		      "16.97570150187159"
@@ -19050,7 +19239,7 @@ Model {
 	      ZOrder		      316
 	      Floating		      off
 	      Location		      [1966, 60, 2534, 365]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -19067,7 +19256,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.79343     0.73989     0.13908     0.11803"
 	      TimeRange		      "10"
 	      YMin		      "-2"
 	      YMax		      "2"
@@ -19393,7 +19581,7 @@ Model {
 	      ZOrder		      360
 	      Floating		      off
 	      Location		      [1944, 589, 2502, 939]
-	      Open		      off
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -21932,8 +22120,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Fz_Estimation"
-		Location		[96, 86, 1396, 1141]
-		Open			on
+		Location		[745, 121, 2045, 1176]
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -36731,8 +36919,8 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Electric Powertrain"
-		    Location		    [745, 121, 2045, 1176]
-		    Open		    on
+		    Location		    [1178, 457, 2478, 1512]
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -49898,7 +50086,7 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		54
+	$ObjectID		50
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMakerGUI.bmp'));"
       }
@@ -50449,8 +50637,11 @@ Stateflow {
     firstTransition	    40
     firstJunction	    39
     viewObj		    25
+    visible		    1
     machine		    1
-    ssIdHighWaterMark	    15
+    subviewS {
+    }
+    ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    27
@@ -50476,15 +50667,38 @@ Stateflow {
       isEML		      1
       script		      "function [SR_FL,SR_FR,SR_RL,SR_RR,vx, Kp, Ki] = slipRatioAndGains(states, T_req, tractionControl,"
       "settings,T_tv)\n%#codegen\n\n\nSR_FL = states.SR_FL;\nSR_FR = states.SR_FR;\nSR_RL = states.SR_RL;\nSR_RR = stat"
-      "es.SR_RR;\n\nvx = states.V_x;\nvx_kmh = states.V_x*3.6;\n\n% GAINS\n\n% If requested torque is larger than zero,"
-      " use linear function \n% If negative, use constant ? \n\n\n\na_kp = single((tractionControl.Kp_end - tractionCon"
-      "trol.Kp_start) / tractionControl.lookup_speed_end_kmh);\na_ki = single((tractionControl.Ki_end - tractionControl"
-      ".Ki_start) / tractionControl.lookup_speed_end_kmh);\nif ( (T_req + 0.0001) > 0)  \n    Kp = min( (a_kp*max(0,vx_"
-      "kmh) + tractionControl.Kp_start), tractionControl.Kp_end)*abs(T_req)/(settings.max_motor_torque*4);\n    Ki = mi"
-      "n( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)*abs(T_req)/(settings.max_motor_torqu"
-      "e*4);\nelse\n    Kp = tractionControl.Kp_braking;\n    Ki = tractionControl.Ki_braking;\nend\n\nif ( (T_tv.FL < "
-      "0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) )\n    Kp = tractionControl.Kp_braking;\n    Ki = traction"
-      "Control.Ki_braking;\nend\n\n\n\n\n"
+      "es.SR_RR;\n\nvx = states.V_x;\nvx_kmh = states.V_x*3.6;\n\n\n\na_kp = single((tractionControl.Kp_end - tractionC"
+      "ontrol.Kp_start) / tractionControl.lookup_speed_end_kmh);\na_ki = single((tractionControl.Ki_end - tractionContr"
+      "ol.Ki_start) / tractionControl.lookup_speed_end_kmh);\n\n\nif ( ( (T_req + 0.0001) > 0) && (vx_kmh < tractionCon"
+      "trol.full_gain_limit_kmh) )   \n    Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.K"
+      "p_end)  * abs(T_req)/(settings.max_motor_torque*4);\n    Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_star"
+      "t), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4);\nelse\n    Kp = min( (a_kp*max(0,vx_kmh"
+      ") + tractionControl.Kp_start), tractionControl.Kp_end);\n    Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_"
+      "start), tractionControl.Ki_end);\nend\n\n\n\n\n\n\n% This one solves starting from 0 kmh with the driver control"
+      "ling the\n% throttle. This statement reduces the gains according to the requested\n% torque, to avoid oscillatin"
+      "g torque output\n\n\n% if ( ( (T_req + 0.0001) > 0) && (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n%   "
+      "  Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(sett"
+      "ings.max_motor_torque*4);\n%     Ki_driving = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionCont"
+      "rol.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n"
+      "%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_drivin"
+      "g;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;\n%     %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl"
+      ".Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     %Ki = min( (a_ki*max(0,v"
+      "x_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4);\n% \n% "
+      "% T_req positive and speed over full gain limit\n% elseif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl"
+      ".full_gain_limit_kmh))\n%     Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl"
+      ".Kp_end);\n%     Ki_driving = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n% "
+      "    Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     "
+      "\n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;    "
+      "\n% else   \n%     Kp_FL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%    "
+      " Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_RL = min( (a_k"
+      "p*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_RR = min( (a_kp*max(0,vx_kmh) + "
+      "tractionControl.Kp_start), tractionControl.Kp_end);\n%     \n%     Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionCo"
+      "ntrol.Ki_start), tractionControl.Ki_end);\n%     Ki_FR = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), t"
+      "ractionControl.Ki_end);\n%     Ki_RL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_"
+      "end);\n%     Ki_RR = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     \n%  "
+      "   %Kp = tractionControl.Kp_braking;\n%     %Ki = tractionControl.Ki_braking;\n% end\n% \n% if ( (T_tv.FL < 0) |"
+      "| (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) )\n%     Kp = tractionControl.Kp_braking;\n%     Ki = traction"
+      "Control.Ki_braking;\n% end\n\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -50799,7 +51013,10 @@ Stateflow {
     firstTransition	    52
     firstJunction	    51
     viewObj		    42
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51888,7 +52105,10 @@ Stateflow {
     firstTransition	    101
     firstJunction	    100
     viewObj		    95
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51920,11 +52140,17 @@ Stateflow {
       " (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 3 % static 25 %\n        alfa_r = single(0.5"
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
       "gle(0.5);\nend\n\n        \n        \n\n\nDC_voltage = states.DC_voltage;\nmax_discharge = settings.max_battery_"
-      "discharge;\n\n\nmaxMotorTorque.mmt_FL = min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*m"
-      "ax(1,states.RPM_FL)*2*pi/60));\nmaxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_discharge*"
-      "(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60));\nmaxMotorTorque.mmt_RL = min(settings.max_motor_torque,(DC_voltag"
-      "e*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60));\nmaxMotorTorque.mmt_RR = min(settings.max_motor_tor"
-      "que,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60));"
+      "discharge;\n\n\nmax_torque_front = min(min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*ma"
+      "x(1,states.RPM_FL)*2*pi/60)) , ...\n                           (min(settings.max_motor_torque,(DC_voltage*max_di"
+      "scharge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60))));\n                       \nmax_torque_rear = min(min(set"
+      "tings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60)) , ...\n          "
+      "                 (min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RR)*2*"
+      "pi/60))));                     \n                       \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTor"
+      "que.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rea"
+      "r;\n\n                       \n%maxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_discharge*"
+      "(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60));\n%maxMotorTorque.mmt_RL = min(settings.max_motor_torque,(DC_volta"
+      "ge*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60));\n%maxMotorTorque.mmt_RR = min(settings.max_motor_t"
+      "orque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60));"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52326,7 +52552,10 @@ Stateflow {
     firstTransition	    121
     firstJunction	    120
     viewObj		    114
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53562,7 +53791,10 @@ Stateflow {
     firstTransition	    192
     firstJunction	    191
     viewObj		    178
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53594,14 +53826,14 @@ Stateflow {
       "\n\n% If driving ~ straightline then couple the outputs\n% Else, each TC works individually. \nif      ( (straig"
       "htline == 1) && (T_req > p_cmp) )\n    % Couple TC outputs to maintain stability on mu split surfaces \n    % un"
       "der acceleration and deceleration\n    Ti_lim.FL = max(0, (Ti_FL + min(TC_FL,TC_FR)));\n    Ti_lim.FR = max(0, ("
-      "Ti_FR + min(TC_FL,TC_FR)));  \n    Ti_lim.RL = max(0, (Ti_RL + min(TC_RL,TC_RR)));\n    Ti_lim.RR = max(0, (Ti_R"
-      "R + min(TC_RL,TC_RR)));\n \nelseif  ( (straightline == 1) && (T_req < n_cmp) )\n    % Couple TC outputs to maint"
-      "ain stability on mu split surfaces \n    % under acceleration and deceleration\n    Ti_lim.FL = min(0, (Ti_FL + "
-      "max(TC_FL,TC_FR) ) );   \n    Ti_lim.FR = min(0, (Ti_FR + max(TC_FL,TC_FR) ) );    \n    Ti_lim.RL = min(0, (Ti_"
-      "RL + max(TC_RL,TC_RR) ) );\n    Ti_lim.RR = min(0, (Ti_RR + max(TC_RL,TC_RR) ) );   \nelse\n    % Decouple TC ou"
-      "tputs to avoid interferring too much with the stability\n    % of the vehicle while cornering. This is the DYC s"
-      "ystems job. \n    Ti_lim.FL = Ti_FL + TC_FL;\n    Ti_lim.FR = Ti_FR + TC_FR;\n    Ti_lim.RL = Ti_RL + TC_RL;\n  "
-      "  Ti_lim.RR = Ti_RR + TC_RR;\nend\n\nend"
+      "Ti_FR + min(TC_FL,TC_FR)));  \n    \n    Ti_lim.RL = max(0, (Ti_RL + min(TC_RL,TC_RR)));\n    Ti_lim.RR = max(0,"
+      " (Ti_RR + min(TC_RL,TC_RR)));\n \nelseif  ( (straightline == 1) && (T_req < n_cmp) )\n    % Couple TC outputs to"
+      " maintain stability on mu split surfaces \n    % under acceleration and deceleration\n    Ti_lim.FL = min(0, (Ti"
+      "_FL + max(TC_FL,TC_FR) ) );   \n    Ti_lim.FR = min(0, (Ti_FR + max(TC_FL,TC_FR) ) );    \n    Ti_lim.RL = min(0"
+      ", (Ti_RL + max(TC_RL,TC_RR) ) );\n    Ti_lim.RR = min(0, (Ti_RR + max(TC_RL,TC_RR) ) );   \nelse\n    % Decouple"
+      " TC outputs to avoid interferring too much with the stability\n    % of the vehicle while cornering. This is the"
+      " DYC systems job. \n    Ti_lim.FL = Ti_FL + TC_FL;\n    Ti_lim.FR = Ti_FR + TC_FR;\n    Ti_lim.RL = Ti_RL + TC_R"
+      "L;\n    Ti_lim.RR = Ti_RR + TC_RR;\nend\n\nend"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }

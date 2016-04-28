@@ -32,23 +32,31 @@ DrivMan.Init.LaneOffset = 0
 DrivMan.Init.OperatorActive = 1
 DrivMan.Init.OperatorState = drive
 DrivMan.VhclOperator.Kind = IPGOperator 1
-DrivMan.nDMan = 2
-DrivMan.0.TimeLimit = 10
-DrivMan.0.DistLimit = 400
-DrivMan.0.EndCondition = Car.v >=80/3.6
-DrivMan.0.Gas = 1 0 0 abs
+DrivMan.nDMan = 3
+DrivMan.0.TimeLimit = 5
+DrivMan.0.Clutch = 0 0 0.2 abs
+DrivMan.0.Gas = 0 0 0.2 abs
+DrivMan.0.Brake = 0 0 0.2 abs
+DrivMan.0.BrakePark = 0 0 0.2 abs
 DrivMan.0.LongDyn = Manual
-DrivMan.0.LatDyn = Step 0 0.0 3 abs 0
+DrivMan.0.LatDyn = Step 0 0.0 5 abs 1
 DrivMan.0.SteerMode = Angle
-DrivMan.1.TimeLimit = 6
-DrivMan.1.EndCondition = Car.v <= 0.5
-DrivMan.1.Clutch = 0 0 0.2 abs
-DrivMan.1.Gas = 0.0 0.0 0.2 abs
-DrivMan.1.Brake = 0.5 0 0.2 abs
-DrivMan.1.BrakePark = 0.0 0.0 0.2 abs
+DrivMan.1.TimeLimit = 10
+DrivMan.1.DistLimit = 400
+DrivMan.1.EndCondition = Car.v >=80/3.6
+DrivMan.1.Gas = 1 0 0 abs
 DrivMan.1.LongDyn = Manual
-DrivMan.1.LatDyn = Sinus 0 5.0 0.0 0.5 abs 1
+DrivMan.1.LatDyn = Step 0 0.0 3 abs 0
 DrivMan.1.SteerMode = Angle
+DrivMan.2.TimeLimit = 6
+DrivMan.2.EndCondition = Car.v <= 0.5
+DrivMan.2.Clutch = 0 0 0.2 abs
+DrivMan.2.Gas = 0.0 0.0 0.2 abs
+DrivMan.2.Brake = 0.5 0 0.2 abs
+DrivMan.2.BrakePark = 0.0 0.0 0.2 abs
+DrivMan.2.LongDyn = Manual
+DrivMan.2.LatDyn = Sinus 0 5.0 0.0 0.5 abs 1
+DrivMan.2.SteerMode = Angle
 Traffic.N = 0
 Traffic.SpeedUnit = ms
 DrivMan.OW.Active = 0

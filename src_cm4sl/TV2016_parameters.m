@@ -21,7 +21,7 @@ settings.select_velocity_vx = uint32(2);    % 1 = estimated, 2 = INS, 3 = Optica
 settings.select_velocity_vy = uint32(2);    %                2 = INS, 3 = Optical
 % 1 = Engineering (No negative torque), 2 = with negative torque , 
 % 3 = static 25  , 4 = with negative, does not use Fz
-settings.TV_Method = uint32(4); 
+settings.TV_Method = uint32(2); 
 settings.use_estimated_Fz = uint32(0); % 1 = yes, 0 = no
 
 
@@ -86,7 +86,7 @@ yawRateControl.meas_weight = single(0.5);
 yawRateControl.enable_r_ref_limit = uint32(1);
 yawRateControl.mu_scaling_r_ref_limit = single(1);
 
-yawRateControl.enable = uint32(1);
+yawRateControl.enable = uint32(0);
 
 % ------------------------------
 % Traction ontrol Parameters
@@ -100,17 +100,22 @@ tractionControl.Slip_ratio_ref = single(0.15);
 tractionControl.Kd = single(0);
 tractionControl.Kb = single(5); % 5 % Anti wind up gain
 
-tractionControl.Kp_start = single(8); % 7
-tractionControl.Kp_end = single(150); % 150
+% While v_x is lower than full gain limit, Kp and Ki are multiplied 
+% with a number between 0-1 which depends on how much torque the driver
+% is requesting. 
+tractionControl.full_gain_limit_kmh = single(10);
+
+tractionControl.Kp_start = single(8);   % 7
+tractionControl.Kp_end = single(150);   % 150
 tractionControl.Kp_scaling = single(1); % OOOOBSBSS
 
 tractionControl.Ki_start = single(120); % 120
-tractionControl.Ki_end = single(450); % 250
+tractionControl.Ki_end = single(450);   % 250
 tractionControl.Ki_scaling = single(1);
 
 
-tractionControl.Kp_braking = single(150);
-tractionControl.Ki_braking = single(450);
+tractionControl.Kp_braking = single(150); % 150
+tractionControl.Ki_braking = single(450); % 450
 tractionControl.lookup_speed_end_kmh = single(20);
 tractionControl.enable = uint32(1);
 
@@ -126,7 +131,7 @@ powerLimitControl.Kb = single(0.1); % Anti wind up
 
 powerLimitControl.upper_sat_limit = single(0);
 powerLimitControl.lower_sat_limit = single(-0.7); % Based on Max effect = 120KW, 8/12 = 0.6
-powerLimitControl.enable = uint32(1); % 1 == enabled , 0 = disabled
+powerLimitControl.enable = uint32(0); % 1 == enabled , 0 = disabled
 % ------------------------------
 % LIMITS AND TRESHOLDS
 % ------------------------------
@@ -141,7 +146,7 @@ settings.max_RPM = single(23000);
 
 
 % The speed at which KERS will be allowed again
-settings.KERS_speed_limit_hyst_high = single(3); % Can not KERS under 5 Km/h = 1.4 m/s
+settings.KERS_speed_limit_hyst_high = single(5); % Can not KERS under 5 Km/h = 1.4 m/s
 % The speed at which KERS will be turned off
 settings.KERS_speed_limit_hyst_low = single(1.8);
 
