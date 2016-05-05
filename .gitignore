@@ -1,7 +1,7 @@
-src_cm4sl/Estimations_ert_rtw
-src_cm4sl/Control_System_ert_rtw
-src_cm4sl/slprj
-src_cm4sl/Mat_files
+src_cm4sl/Estimations_ert_rtw/
+src_cm4sl/Control_System_ert_rtw/
+src_cm4sl/slprj/
+src_cm4sl/Mat_files/
 *.autosave
 *.asv
 

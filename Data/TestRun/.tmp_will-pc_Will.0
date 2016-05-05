@@ -41,7 +41,7 @@ DrivMan.0.LatDyn = Driver 0
 DrivMan.1.TimeLimit = 500
 DrivMan.1.DistLimit = 40
 DrivMan.1.Clutch = 0 0 0.2 abs
-DrivMan.1.Gas = 1 0 0 abs
+DrivMan.1.Gas = 1 0 0.2 abs
 DrivMan.1.Brake = 0 0 0.2 abs
 DrivMan.1.BrakePark = 0 0 0.2 abs
 DrivMan.1.LongDyn = Manual
@@ -50,7 +50,7 @@ DrivMan.1.SteerMode = Angle
 DrivMan.2.TimeLimit = 3
 DrivMan.2.Clutch = 0 0 0.2 abs
 DrivMan.2.Gas = 0 0 0.2 abs
-DrivMan.2.Brake = 0.5 0 0.2 abs
+DrivMan.2.Brake = 0.89 0 0.2 abs
 DrivMan.2.BrakePark = 0 0 0.2 abs
 DrivMan.2.LongDyn = Manual
 DrivMan.2.LatDyn = Step 0 0.0 5 abs 1
@@ -109,7 +109,7 @@ Road.2Movie.TerrainFName =
 Road.Definition:
 	FileIdent IPGRoad 4.5
 	Origin    -2.3 0 0 0
-	Default 2.50 2.50 0.50 0.50 0.8 0.8 0.0 0 0 0.0 0 0
+	Default 2.50 2.50 0.50 0.50 1 1 0.0 0 0 0.0 0 0
 	Straight  1000 - - - -  0.0 0.0 0
 	+Marker TriggerPoint 75 0 2 1
 Env.StartTime.Year = 2014
