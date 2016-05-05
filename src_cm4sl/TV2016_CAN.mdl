@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1071"
+    ComputedModelVersion    "1.1072"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -52,12 +52,12 @@ Model {
 	Dimension		6
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4259"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-162.7653274779729, 1395.1931727724773]
+	  ZoomFactor		  [0.3]
+	  Offset		  [272.42200566154037, 228.88960538802658]
 	}
 	Object {
 	  $ObjectID		  6
@@ -65,8 +65,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [2015.85397904203, 589.24292433011624]
+	  ZoomFactor		  [0.8]
+	  Offset		  [1611.4857669970538, 447.52835802826087]
 	}
 	Object {
 	  $ObjectID		  7
@@ -74,8 +74,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "2804"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [0.4]
-	  Offset		  [-388.079565117162, -293.17382403624504]
+	  ZoomFactor		  [0.5]
+	  Offset		  [162.84555250454932, -158.17382403624515]
 	}
 	Object {
 	  $ObjectID		  8
@@ -97,12 +97,12 @@ Model {
 	}
 	Object {
 	  $ObjectID		  10
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4448"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [28.329918777061948, 1617.3397486311387]
+	  ZoomFactor		  [0.5]
+	  Offset		  [-175.70485257542009, 192.56207330352902]
 	}
 	PropName		"EditorsInfo"
       }
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 28 23:36:41 2016"
-  RTWModifiedTimeStamp	  383786771
-  ModelVersionFormat	  "1.%<AutoIncrement:1071>"
+  LastModifiedDate	  "Thu May 05 09:46:28 2016"
+  RTWModifiedTimeStamp	  384342385
+  ModelVersionFormat	  "1.%<AutoIncrement:1072>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2368,7 +2368,7 @@ Model {
   }
   System {
     Name		    "TV2016_CAN"
-    Location		    [988, 302, 2102, 1502]
+    Location		    [-1856, 278, -742, 1478]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -2413,7 +2413,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator1"
@@ -2451,7 +2451,7 @@ Model {
 	  LibraryVersion	  "1.19"
 	  SourceBlock		  "canlib/CAN Configuration"
 	  SourceType		  "CAN Configuration"
-	  BlockHandle		  "4619.0087"
+	  BlockHandle		  "4562.0006"
 	  DeviceMenu		  "(none)"
 	  Device		  "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	  ObjConstructor	  "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -2879,7 +2879,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "30"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "effetDebug"
@@ -4961,7 +4961,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [745, 1507, 870, 1543]
 	      ZOrder		      286
-	      Filename		      "MotorTorques.mat"
+	      Filename		      "Mat_files_CAN\\MotorTorques.mat"
 	      MatrixName	      "MotorTorques"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -4972,7 +4972,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [970, 1832, 1095, 1868]
 	      ZOrder		      288
-	      Filename		      "Speed.mat"
+	      Filename		      "Mat_files_CAN\\Speed.mat"
 	      MatrixName	      "VehicleSpeed"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -4983,7 +4983,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1020, 1987, 1145, 2023]
 	      ZOrder		      307
-	      Filename		      "MechanicalEffect.mat"
+	      Filename		      "Mat_files_CAN\\MechanicalEffect.mat"
 	      MatrixName	      "MechEffect"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -4994,7 +4994,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [545, 137, 655, 173]
 	      ZOrder		      320
-	      Filename		      "PmPe_FL.mat"
+	      Filename		      "Mat_files_CAN\\PmPe_FL.mat"
 	      MatrixName	      "PmPe_FL"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -5005,7 +5005,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [495, 207, 605, 243]
 	      ZOrder		      322
-	      Filename		      "PmPe_FR.mat"
+	      Filename		      "Mat_files_CAN\\PmPe_FR.mat"
 	      MatrixName	      "PmPe_FR"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -5016,7 +5016,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [480, 302, 590, 338]
 	      ZOrder		      324
-	      Filename		      "PmPe_RL.mat"
+	      Filename		      "Mat_files_CAN\\PmPe_RL.mat"
 	      MatrixName	      "PmPe_RL"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -5027,7 +5027,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [480, 372, 590, 408]
 	      ZOrder		      326
-	      Filename		      "PmPe_RR.mat"
+	      Filename		      "Mat_files_CAN\\PmPe_RR.mat"
 	      MatrixName	      "PmPe_RR"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -5089,7 +5089,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.91253     0.87565    0.075887    0.056426"
 	      TimeRange		      "0.02126907879490897"
 	      YMin		      "0"
 	      YMax		      "35"
@@ -6685,7 +6684,7 @@ Model {
 	  }
 	  System {
 	    Name		    "Function-Call\nSubsystem4"
-	    Location		    [-1470, 383, -356, 1583]
+	    Location		    [-1856, 278, -742, 1478]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -6697,7 +6696,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "50"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "CAN_MSG"
@@ -8328,7 +8327,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1625, 1292, 1735, 1328]
 	      ZOrder		      226
-	      Filename		      "Can_timestamps.mat"
+	      Filename		      "Mat_files_CAN\\Can_timestamps.mat"
 	      MatrixName	      "ts"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -8339,7 +8338,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [780, 1825, 840, 1855]
 	      ZOrder		      235
-	      Filename		      "testTs.mat"
+	      Filename		      "Mat_files_CAN\\testTs.mat"
 	      MatrixName	      "testTs"
 	    }
 	    Block {
@@ -8349,7 +8348,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [1060, 2382, 1170, 2418]
 	      ZOrder		      243
-	      Filename		      "Can_SR"
+	      Filename		      "Mat_files_CAN\\Can_SR"
 	      MatrixName	      "sr"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -8360,7 +8359,7 @@ Model {
 	      Ports		      [1]
 	      Position		      [715, 1930, 800, 1960]
 	      ZOrder		      249
-	      Filename		      "yawRateRef.mat"
+	      Filename		      "Mat_files_CAN\\yawRateRef.mat"
 	      MatrixName	      "rRef"
 	      SaveFormat	      "Timeseries"
 	    }
@@ -27258,7 +27257,7 @@ Model {
 	  LibraryVersion	  "1.19"
 	  SourceBlock		  "canlib/CAN Receive"
 	  SourceType		  "CAN Receive"
-	  BlockHandle		  "12566.0002"
+	  BlockHandle		  "12537.0004"
 	  DeviceMenu		  "(none)"
 	  Device		  "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	  ObjConstructor	  "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27475,7 +27474,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Send sensor data and driver input\n to microcontroller\n"
-	    Location		    [-1470, 383, -356, 1583]
+	    Location		    [-1856, 278, -742, 1478]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -27487,7 +27486,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "40"
+	    ZoomFactor		    "50"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -27743,7 +27742,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "12586.0002"
+	      BlockHandle	      "12552.0004"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27760,7 +27759,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "12587.0002"
+	      BlockHandle	      "12553.0004"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27777,7 +27776,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "12588.0002"
+	      BlockHandle	      "12554.0004"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -28442,7 +28441,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Sensors\n1"
-	    Location		    [-1926, 169, -812, 1369]
+	    Location		    [-1856, 278, -742, 1478]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200

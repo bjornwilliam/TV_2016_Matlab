@@ -16,7 +16,7 @@ Use_Joystick = 1; % 1 means no, < 0 means yes
 
 
 settings.KERS_active = uint32(1);           % 1 = Kers can be used, 0 = Kers is not used
-settings.select_Fz_est_method = uint32(2)   % 1 = LoadTransfer, 2 = DamperBased
+settings.select_Fz_est_method = uint32(2);   % 1 = LoadTransfer, 2 = DamperBased
 settings.select_velocity_vx = uint32(2);    % 1 = estimated, 2 = INS, 3 = Optical
 settings.select_velocity_vy = uint32(2);    %                2 = INS, 3 = Optical
 % 1 = Engineering (No negative torque), 2 = with negative torque , 
