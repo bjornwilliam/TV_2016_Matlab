@@ -7,14 +7,14 @@
  *
  * Code generated for Simulink model 'Control_System'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:32:19 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:15 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objective: Execution efficiency
- * Validation result: Passed (5), Warnings (5), Errors (2)
+ * Validation result: Not run
  */
 
 #ifndef RTW_HEADER_Control_System_h_
@@ -43,7 +43,8 @@
 typedef struct {
   real32_T T_F[2];
   real32_T T_R[2];
-  real32_T alfa_r;
+  real32_T max_torque_front;
+  real32_T max_torque_rear;
   real32_T r_ref;
   real32_T tf;
   real32_T tr;
@@ -58,11 +59,12 @@ typedef struct {
   real32_T IndexVector_j;              /* '<S5>/Index Vector' */
   real32_T Product10;                  /* '<S9>/Product10' */
   real32_T r_error;                    /* '<S9>/yawRateReference' */
+  real32_T Sum;                        /* '<S27>/Sum' */
   real32_T Switch2_n;                  /* '<S31>/Switch2' */
+  real32_T Switch2_c;                  /* '<S33>/Switch2' */
+  real32_T Switch2_ck;                 /* '<S37>/Switch2' */
+  real32_T Ki;                         /* '<S14>/MATLAB Function1' */
   real32_T Fzi_idx_0;
-  real32_T Fzi_idx_2;
-  real32_T Fzi_idx_3;
-  real32_T Ti_max_motor_idx_0;
   int32_T ix;
   uint32_T sat_F;
   uint32_T sat_R;
@@ -96,16 +98,16 @@ typedef struct {
 
 /* External outputs (root outports fed by signals with auto storage) */
 typedef struct {
-  Ti_pos Ti_pos_e;                     /* '<Root>/Ti_pos ' */
-  Ti_neg Ti_neg_n;                     /* '<Root>/Ti_neg' */
+  Ti_pos Ti_pos_l;                     /* '<Root>/Ti_pos ' */
+  Ti_neg Ti_neg_a;                     /* '<Root>/Ti_neg' */
   wi_set wi_sp;                        /* '<Root>/wi_sp' */
-  States States_b;                     /* '<Root>/States' */
-  Ti_lim Ti_lim_o;                     /* '<Root>/Ti_lim ' */
+  States States_m;                     /* '<Root>/States' */
+  Ti_lim Ti_lim_n;                     /* '<Root>/Ti_lim ' */
   real32_T r_ref;                      /* '<Root>/r_ref' */
   real32_T T_req;                      /* '<Root>/T_req' */
   real32_T Mz_error;                   /* '<Root>/Mz_error' */
   real32_T Mz_ref;                     /* '<Root>/Mz_ref' */
-  OutputTelemetri_Control OutputTelemetri_Control_h;/* '<Root>/OutputTelemetri_Control' */
+  OutputTelemetri_Control OutputTelemetri_Control_j;/* '<Root>/OutputTelemetri_Control' */
 } ExtY_Control_System_T;
 
 /* Parameters (auto storage) */

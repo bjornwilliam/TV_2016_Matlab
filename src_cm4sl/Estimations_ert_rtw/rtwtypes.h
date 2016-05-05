@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Estimations'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:35:27 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:41 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

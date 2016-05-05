@@ -135,6 +135,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["TV2016:3971"] = {rtwname: "<S3>/Fx"};
 	this.rtwnameHashMap["<S4>/sensors"] = {sid: "TV2016:2822"};
 	this.sidHashMap["TV2016:2822"] = {rtwname: "<S4>/sensors"};
+	this.rtwnameHashMap["<S4>/v_x"] = {sid: "TV2016:5497"};
+	this.sidHashMap["TV2016:5497"] = {rtwname: "<S4>/v_x"};
 	this.rtwnameHashMap["<S4>/Bus Selector"] = {sid: "TV2016:4878"};
 	this.sidHashMap["TV2016:4878"] = {rtwname: "<S4>/Bus Selector"};
 	this.rtwnameHashMap["<S4>/Constant"] = {sid: "TV2016:4881"};
@@ -327,14 +329,14 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["TV2016:2824:1:13"] = {rtwname: "<S14>:1:13"};
 	this.rtwnameHashMap["<S14>:1:16"] = {sid: "TV2016:2824:1:16"};
 	this.sidHashMap["TV2016:2824:1:16"] = {rtwname: "<S14>:1:16"};
-	this.rtwnameHashMap["<S14>:1:19"] = {sid: "TV2016:2824:1:19"};
-	this.sidHashMap["TV2016:2824:1:19"] = {rtwname: "<S14>:1:19"};
 	this.rtwnameHashMap["<S14>:1:20"] = {sid: "TV2016:2824:1:20"};
 	this.sidHashMap["TV2016:2824:1:20"] = {rtwname: "<S14>:1:20"};
 	this.rtwnameHashMap["<S14>:1:21"] = {sid: "TV2016:2824:1:21"};
 	this.sidHashMap["TV2016:2824:1:21"] = {rtwname: "<S14>:1:21"};
 	this.rtwnameHashMap["<S14>:1:22"] = {sid: "TV2016:2824:1:22"};
 	this.sidHashMap["TV2016:2824:1:22"] = {rtwname: "<S14>:1:22"};
+	this.rtwnameHashMap["<S14>:1:23"] = {sid: "TV2016:2824:1:23"};
+	this.sidHashMap["TV2016:2824:1:23"] = {rtwname: "<S14>:1:23"};
 	this.rtwnameHashMap["<S15>:1"] = {sid: "TV2016:3986:1"};
 	this.sidHashMap["TV2016:3986:1"] = {rtwname: "<S15>:1"};
 	this.rtwnameHashMap["<S15>:1:6"] = {sid: "TV2016:3986:1:6"};

@@ -7,14 +7,14 @@
  *
  * Code generated for Simulink model 'Control_System'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:32:19 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:15 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objective: Execution efficiency
- * Validation result: Passed (5), Warnings (5), Errors (2)
+ * Validation result: Not run
  */
 
 #include <stddef.h>

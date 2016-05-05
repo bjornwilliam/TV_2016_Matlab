@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1069"
+    ComputedModelVersion    "1.1071"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [988.0, 302.0, 1114.0, 1200.0]
+      Location		      [-1856.0, 278.0, 1114.0, 1200.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -49,24 +49,24 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		5
+	Dimension		6
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4259"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [0.5]
-	  Offset		  [193.77977082142274, 286.45881031524004]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-162.7653274779729, 1395.1931727724773]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [0.25]
-	  Offset		  [-210.04582945018319, -621.38333333333514]
+	  ZoomFactor		  [1.0]
+	  Offset		  [2015.85397904203, 589.24292433011624]
 	}
 	Object {
 	  $ObjectID		  7
@@ -74,8 +74,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "2804"
 	  Extents		  [1064.0, 1023.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [1193.7762765704815, 91.114956651533433]
+	  ZoomFactor		  [0.4]
+	  Offset		  [-388.079565117162, -293.17382403624504]
 	}
 	Object {
 	  $ObjectID		  8
@@ -95,6 +95,15 @@ Model {
 	  ZoomFactor		  [0.059999999999999977]
 	  Offset		  [-7873.5429137688, -3266.85961248057]
 	}
+	Object {
+	  $ObjectID		  10
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "4448"
+	  Extents		  [1064.0, 1023.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [28.329918777061948, 1617.3397486311387]
+	}
 	PropName		"EditorsInfo"
       }
     }
@@ -105,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 21 13:18:05 2016"
-  RTWModifiedTimeStamp	  383135940
-  ModelVersionFormat	  "1.%<AutoIncrement:1069>"
+  LastModifiedDate	  "Thu Apr 28 23:36:41 2016"
+  RTWModifiedTimeStamp	  383786771
+  ModelVersionFormat	  "1.%<AutoIncrement:1071>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -141,7 +150,7 @@ Model {
   NumberOfLastSnapshots	  0
   RTW.FcnDefault {
     $PropName		    "RTWFcnClass"
-    $ObjectID		    10
+    $ObjectID		    11
     Name		    "Auto"
     FunctionName	    "TV2016_CAN_step"
     InitFunctionName	    "TV2016_CAN_initialize"
@@ -155,7 +164,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    11
+    $ObjectID		    12
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "TV2016_CAN"
     Array {
@@ -219,13 +228,13 @@ Model {
     Type		    "Handle"
     Dimension		    3
     Simulink.ConfigSet {
-      $ObjectID		      12
+      $ObjectID		      13
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -260,7 +269,7 @@ Model {
 	  InsertRTBMode		  "Always"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -293,7 +302,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -350,7 +359,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -439,7 +448,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  17
+	  $ObjectID		  18
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -479,7 +488,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  18
+	  $ObjectID		  19
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -494,7 +503,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  19
+	  $ObjectID		  20
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -507,7 +516,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  20
+	  $ObjectID		  21
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -593,7 +602,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      21
+	      $ObjectID		      22
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -665,7 +674,7 @@ Model {
 	    }
 	    RTWinTarget.RTWinTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      22
+	      $ObjectID		      23
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -752,13 +761,13 @@ Model {
       ConfigPrmDlgPosition     [ 63, 323, 1493, 1077 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      23
+      $ObjectID		      24
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  24
+	  $ObjectID		  25
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -793,7 +802,7 @@ Model {
 	  InsertRTBMode		  "Always"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  25
+	  $ObjectID		  26
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -826,7 +835,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  26
+	  $ObjectID		  27
 	  Version		  "1.15.0"
 	  BlockReduction	  off
 	  BooleanDataType	  on
@@ -870,7 +879,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  27
+	  $ObjectID		  28
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -959,7 +968,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  28
+	  $ObjectID		  29
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -999,7 +1008,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  29
+	  $ObjectID		  30
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1014,7 +1023,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  30
+	  $ObjectID		  31
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1027,7 +1036,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  31
+	  $ObjectID		  32
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1092,7 +1101,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      32
+	      $ObjectID		      33
 	      Version		      "1.15.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
@@ -1135,7 +1144,7 @@ Model {
 	    }
 	    SimulinkRealTime.SimulinkRealTimeERTCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      33
+	      $ObjectID		      34
 	      Version		      "1.15.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
@@ -1291,13 +1300,13 @@ Model {
       ConfigPrmDlgPosition     [ -1839, 229, -79, 1274 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      34
+      $ObjectID		      35
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  35
+	  $ObjectID		  36
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -1332,7 +1341,7 @@ Model {
 	  InsertRTBMode		  "Always"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  36
+	  $ObjectID		  37
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1365,7 +1374,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  37
+	  $ObjectID		  38
 	  Version		  "1.15.0"
 	  BlockReduction	  off
 	  BooleanDataType	  on
@@ -1409,7 +1418,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  38
+	  $ObjectID		  39
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1498,7 +1507,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  39
+	  $ObjectID		  40
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1538,7 +1547,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  40
+	  $ObjectID		  41
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1553,7 +1562,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  41
+	  $ObjectID		  42
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1566,7 +1575,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  42
+	  $ObjectID		  43
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1631,7 +1640,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      43
+	      $ObjectID		      44
 	      Version		      "1.15.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
@@ -1674,7 +1683,7 @@ Model {
 	    }
 	    SimulinkRealTime.SimulinkRealTimeERTCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      44
+	      $ObjectID		      45
 	      Version		      "1.15.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
@@ -1833,11 +1842,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    12
+    $ObjectID		    13
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    45
+    $ObjectID		    46
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -2359,7 +2368,7 @@ Model {
   }
   System {
     Name		    "TV2016_CAN"
-    Location		    [721, 149, 1835, 1349]
+    Location		    [988, 302, 2102, 1502]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -2373,7 +2382,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5566"
+    SIDHighWatermark	    "5567"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -2386,13 +2395,13 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		46
+	$ObjectID		47
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMaker4SLss.bmp'));"
       }
       System {
 	Name			"CarMaker"
-	Location		[988, 302, 2102, 1502]
+	Location		[-1856, 278, -742, 1478]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -2404,7 +2413,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"25"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator1"
@@ -2442,7 +2451,7 @@ Model {
 	  LibraryVersion	  "1.19"
 	  SourceBlock		  "canlib/CAN Configuration"
 	  SourceType		  "CAN Configuration"
-	  BlockHandle		  "220.0006"
+	  BlockHandle		  "4619.0087"
 	  DeviceMenu		  "(none)"
 	  Device		  "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	  ObjConstructor	  "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -2858,7 +2867,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Debug Information\n"
-	    Location		    [375, 146, 1489, 1346]
+	    Location		    [-1856, 278, -742, 1478]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -2870,7 +2879,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "50"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "effetDebug"
@@ -3150,6 +3159,17 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Gain
+	      Name		      "Gain10"
+	      SID		      "5567"
+	      Position		      [500, 1547, 570, 1583]
+	      ZOrder		      337
+	      Gain		      "1/i_Diff"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
 	      Name		      "Gain2"
 	      SID		      "4285"
 	      Position		      [480, 1957, 550, 1993]
@@ -3246,7 +3266,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Motor Rpm log\n\n"
-		Location		[997, 425, 2111, 1625]
+		Location		[-1856, 278, -742, 1478]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -3538,7 +3558,7 @@ Model {
 		  Position		  [1360, 469, 1390, 501]
 		  ZOrder		  207
 		  Floating		  off
-		  Location		  [85, 638, 993, 1125]
+		  Location		  [85, 700, 993, 1125]
 		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
@@ -3723,10 +3743,10 @@ Model {
 	      Name		      "Motor Torques\n"
 	      SID		      "4314"
 	      Ports		      [1]
-	      Position		      [505, 1509, 535, 1541]
+	      Position		      [645, 1549, 675, 1581]
 	      ZOrder		      272
 	      Floating		      off
-	      Location		      [1515, 390, 2518, 851]
+	      Location		      [777, 609, 1608, 1205]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -3744,10 +3764,10 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.86707     0.76428     0.09671     0.14606"
-	      TimeRange		      "2.714177505510704"
-	      YMin		      "190.9219011266139"
-	      YMax		      "350"
+	      LegendLocations	      "0.85706     0.78082     0.12154     0.11298"
+	      TimeRange		      "0.2362659824329911"
+	      YMin		      "0.3167539267015711"
+	      YMax		      "0.6151832460732987"
 	      SaveName		      "ScopeData8"
 	      LimitDataPoints	      off
 	    }
@@ -4302,7 +4322,7 @@ Model {
 	      Name		      "Read CM Dict2"
 	      SID		      "4356"
 	      Ports		      [0, 1]
-	      Position		      [255, 685, 325, 705]
+	      Position		      [235, 685, 305, 705]
 	      ZOrder		      184
 	      BackgroundColor	      "orange"
 	      LibraryVersion	      "1.469"
@@ -4704,7 +4724,7 @@ Model {
 	      Name		      "Read CM Dict41"
 	      SID		      "4380"
 	      Ports		      [0, 1]
-	      Position		      [205, 1405, 275, 1425]
+	      Position		      [205, 1405, 295, 1425]
 	      ZOrder		      267
 	      BackgroundColor	      "orange"
 	      LibraryVersion	      "1.469"
@@ -4724,7 +4744,7 @@ Model {
 	      Name		      "Read CM Dict42"
 	      SID		      "4381"
 	      Ports		      [0, 1]
-	      Position		      [205, 1457, 275, 1483]
+	      Position		      [205, 1457, 290, 1483]
 	      ZOrder		      269
 	      BackgroundColor	      "orange"
 	      LibraryVersion	      "1.469"
@@ -4744,7 +4764,7 @@ Model {
 	      Name		      "Read CM Dict43"
 	      SID		      "4382"
 	      Ports		      [0, 1]
-	      Position		      [175, 1500, 285, 1520]
+	      Position		      [205, 1500, 285, 1520]
 	      ZOrder		      270
 	      BackgroundColor	      "orange"
 	      LibraryVersion	      "1.469"
@@ -5052,7 +5072,7 @@ Model {
 	      ZOrder		      140
 	      Floating		      off
 	      Location		      [663, 913, 2073, 1551]
-	      Open		      off
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -5069,7 +5089,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.91253     0.87565    0.060284    0.056426"
+	      LegendLocations	      "0.91253     0.87565    0.075887    0.056426"
 	      TimeRange		      "0.02126907879490897"
 	      YMin		      "0"
 	      YMax		      "35"
@@ -5194,7 +5214,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.84494     0.87709     0.11271    0.039254"
 	      TimeRange		      "51.98675496688742"
 	      YMin		      "-1.5"
 	      YMax		      "1.5"
@@ -5865,7 +5884,7 @@ Model {
 	      Labels		      [3, 1]
 	      SrcBlock		      "Read CM Dict41"
 	      SrcPort		      1
-	      Points		      [48, 0; 0, 35]
+	      Points		      [28, 0; 0, 35]
 	      DstBlock		      "Mux8"
 	      DstPort		      1
 	    }
@@ -5892,8 +5911,8 @@ Model {
 	      }
 	      Branch {
 		ZOrder			76
-		Points			[0, 45]
-		DstBlock		"Motor Torques\n"
+		Points			[0, 85]
+		DstBlock		"Gain10"
 		DstPort			1
 	      }
 	    }
@@ -6247,6 +6266,13 @@ Model {
 	      Points		      [125, 0; 0, 80]
 	      DstBlock		      "Mux13"
 	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      132
+	      SrcBlock		      "Gain10"
+	      SrcPort		      1
+	      DstBlock		      "Motor Torques\n"
+	      DstPort		      1
 	    }
 	  }
 	}
@@ -6659,8 +6685,8 @@ Model {
 	  }
 	  System {
 	    Name		    "Function-Call\nSubsystem4"
-	    Location		    [375, 146, 1489, 1346]
-	    Open		    off
+	    Location		    [-1470, 383, -356, 1583]
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -6671,7 +6697,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "40"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "CAN_MSG"
@@ -6704,7 +6730,7 @@ Model {
 	      MsgList		      "(none)"
 	      MsgName		      "INV_FL"
 	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_INV_FL"
+	      MsgIdentifier	      "387"
 	      MsgLength		      "6"
 	      SignalInfo	      "trq_pos$0$16$1$1$1$0$1$0$-Inf$Inf$#trq_neg$16$16$1$1$1$0$1$0$-Inf$Inf$#w_set$32$16$1$1$1$0$1$"
 	      "0$-Inf$Inf$#"
@@ -6746,7 +6772,7 @@ Model {
 	      MsgList		      "(none)"
 	      MsgName		      "INV_FR"
 	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_INV_FR"
+	      MsgIdentifier	      "388"
 	      MsgLength		      "6"
 	      SignalInfo	      "trq_pos$0$16$1$1$1$0$1$0$-Inf$Inf$#trq_neg$16$16$1$1$1$0$1$0$-Inf$Inf$#w_set$32$16$1$1$1$0$1$"
 	      "0$-Inf$Inf$#"
@@ -6788,7 +6814,7 @@ Model {
 	      MsgList		      "(none)"
 	      MsgName		      "INV_RL"
 	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_INV_RL"
+	      MsgIdentifier	      "389"
 	      MsgLength		      "6"
 	      SignalInfo	      "trq_pos$0$16$1$1$1$0$1$0$-Inf$Inf$#trq_neg$16$16$1$1$1$0$1$0$-Inf$Inf$#w_set$32$16$1$1$1$0$1$"
 	      "0$-Inf$Inf$#"
@@ -6830,7 +6856,7 @@ Model {
 	      MsgList		      "(none)"
 	      MsgName		      "INV_RR"
 	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_INV_RR"
+	      MsgIdentifier	      "390"
 	      MsgLength		      "6"
 	      SignalInfo	      "trq_pos$0$16$1$1$1$0$1$0$-Inf$Inf$#trq_neg$16$16$1$1$1$0$1$0$-Inf$Inf$#w_set$32$16$1$1$1$0$1$"
 	      "0$-Inf$Inf$#"
@@ -27232,7 +27258,7 @@ Model {
 	  LibraryVersion	  "1.19"
 	  SourceBlock		  "canlib/CAN Receive"
 	  SourceType		  "CAN Receive"
-	  BlockHandle		  "5705.0002"
+	  BlockHandle		  "12566.0002"
 	  DeviceMenu		  "(none)"
 	  Device		  "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	  ObjConstructor	  "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27449,7 +27475,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Send sensor data and driver input\n to microcontroller\n"
-	    Location		    [375, 146, 1489, 1346]
+	    Location		    [-1470, 383, -356, 1583]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -27461,7 +27487,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "40"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -27616,66 +27642,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "CAN Pack10"
-	      SID		      "2823"
-	      Ports		      [1, 1]
-	      Position		      [570, 695, 805, 725]
-	      ZOrder		      422
-	      LibraryVersion	      "1.4"
-	      SourceBlock	      "canmsglib/CAN Pack"
-	      SourceType	      "CAN Pack"
-	      DataFormat	      "manually specified signals"
-	      MsgList		      "(none)"
-	      MsgName		      "ax"
-	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_AX"
-	      MsgLength		      "4"
-	      SignalInfo	      "ax$0$32$1$3$1$0$1$0$-Inf$Inf$#"
-	      NSignals		      "1"
-	      StartBits		      "str2num('[int32(0)]')"
-	      SignalSizes	      "str2num('[int32(32)]')"
-	      ByteOrders	      "str2num('[int32(1)]')"
-	      DataTypes		      "str2num('[int32(3)]')"
-	      MultiplexTypes	      "str2num('[int32(1)]')"
-	      MultiplexValues	      "str2num('[double(0)]')"
-	      Factors		      "str2num('[double(1)]')"
-	      Offsets		      "str2num('[double(0)]')"
-	      Minimums		      "str2num('[double(-Inf)]')"
-	      Maximums		      "str2num('[double(Inf)]')"
-	      Remote		      off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "CAN Pack11"
-	      SID		      "2827"
-	      Ports		      [1, 1]
-	      Position		      [570, 795, 805, 825]
-	      ZOrder		      426
-	      LibraryVersion	      "1.4"
-	      SourceBlock	      "canmsglib/CAN Pack"
-	      SourceType	      "CAN Pack"
-	      DataFormat	      "manually specified signals"
-	      MsgList		      "(none)"
-	      MsgName		      "roll_rate"
-	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_ROLL_RATE"
-	      MsgLength		      "4"
-	      SignalInfo	      "roll_rate$0$32$1$3$1$0$1$0$-Inf$Inf$#"
-	      NSignals		      "1"
-	      StartBits		      "str2num('[int32(0)]')"
-	      SignalSizes	      "str2num('[int32(32)]')"
-	      ByteOrders	      "str2num('[int32(1)]')"
-	      DataTypes		      "str2num('[int32(3)]')"
-	      MultiplexTypes	      "str2num('[int32(1)]')"
-	      MultiplexValues	      "str2num('[double(0)]')"
-	      Factors		      "str2num('[double(1)]')"
-	      Offsets		      "str2num('[double(0)]')"
-	      Minimums		      "str2num('[double(-Inf)]')"
-	      Maximums		      "str2num('[double(Inf)]')"
-	      Remote		      off
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "CAN Pack12"
 	      SID		      "2829"
 	      Ports		      [4, 1]
@@ -27738,36 +27704,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "CAN Pack5"
-	      SID		      "2817"
-	      Ports		      [1, 1]
-	      Position		      [570, 545, 805, 575]
-	      ZOrder		      416
-	      LibraryVersion	      "1.4"
-	      SourceBlock	      "canmsglib/CAN Pack"
-	      SourceType	      "CAN Pack"
-	      DataFormat	      "manually specified signals"
-	      MsgList		      "(none)"
-	      MsgName		      "vy"
-	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_VY"
-	      MsgLength		      "4"
-	      SignalInfo	      "vy$0$32$1$3$1$0$1$0$-Inf$Inf$#"
-	      NSignals		      "1"
-	      StartBits		      "str2num('[int32(0)]')"
-	      SignalSizes	      "str2num('[int32(32)]')"
-	      ByteOrders	      "str2num('[int32(1)]')"
-	      DataTypes		      "str2num('[int32(3)]')"
-	      MultiplexTypes	      "str2num('[int32(1)]')"
-	      MultiplexValues	      "str2num('[double(0)]')"
-	      Factors		      "str2num('[double(1)]')"
-	      Offsets		      "str2num('[double(0)]')"
-	      Minimums		      "str2num('[double(-Inf)]')"
-	      Maximums		      "str2num('[double(Inf)]')"
-	      Remote		      off
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "CAN Pack6"
 	      SID		      "4490"
 	      Ports		      [5, 1]
@@ -27799,66 +27735,6 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "CAN Pack8"
-	      SID		      "2821"
-	      Ports		      [1, 1]
-	      Position		      [570, 645, 805, 675]
-	      ZOrder		      420
-	      LibraryVersion	      "1.4"
-	      SourceBlock	      "canmsglib/CAN Pack"
-	      SourceType	      "CAN Pack"
-	      DataFormat	      "manually specified signals"
-	      MsgList		      "(none)"
-	      MsgName		      "ay"
-	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_AY"
-	      MsgLength		      "4"
-	      SignalInfo	      "ay$0$32$1$3$1$0$1$0$-Inf$Inf$#"
-	      NSignals		      "1"
-	      StartBits		      "str2num('[int32(0)]')"
-	      SignalSizes	      "str2num('[int32(32)]')"
-	      ByteOrders	      "str2num('[int32(1)]')"
-	      DataTypes		      "str2num('[int32(3)]')"
-	      MultiplexTypes	      "str2num('[int32(1)]')"
-	      MultiplexValues	      "str2num('[double(0)]')"
-	      Factors		      "str2num('[double(1)]')"
-	      Offsets		      "str2num('[double(0)]')"
-	      Minimums		      "str2num('[double(-Inf)]')"
-	      Maximums		      "str2num('[double(Inf)]')"
-	      Remote		      off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "CAN Pack9"
-	      SID		      "2825"
-	      Ports		      [1, 1]
-	      Position		      [570, 745, 805, 775]
-	      ZOrder		      424
-	      LibraryVersion	      "1.4"
-	      SourceBlock	      "canmsglib/CAN Pack"
-	      SourceType	      "CAN Pack"
-	      DataFormat	      "manually specified signals"
-	      MsgList		      "(none)"
-	      MsgName		      "roll_angle"
-	      MsgIDType		      "Standard (11-bit identifier)"
-	      MsgIdentifier	      "CAN_ID_ROLL_ANGLE"
-	      MsgLength		      "4"
-	      SignalInfo	      "roll_angle$0$32$1$3$1$0$1$0$-Inf$Inf$#"
-	      NSignals		      "1"
-	      StartBits		      "str2num('[int32(0)]')"
-	      SignalSizes	      "str2num('[int32(32)]')"
-	      ByteOrders	      "str2num('[int32(1)]')"
-	      DataTypes		      "str2num('[int32(3)]')"
-	      MultiplexTypes	      "str2num('[int32(1)]')"
-	      MultiplexValues	      "str2num('[double(0)]')"
-	      Factors		      "str2num('[double(1)]')"
-	      Offsets		      "str2num('[double(0)]')"
-	      Minimums		      "str2num('[double(-Inf)]')"
-	      Maximums		      "str2num('[double(Inf)]')"
-	      Remote		      off
-	    }
-	    Block {
-	      BlockType		      Reference
 	      Name		      "CAN Transmit1"
 	      SID		      "4491"
 	      Ports		      [1]
@@ -27867,7 +27743,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "5725.0002"
+	      BlockHandle	      "12586.0002"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27884,7 +27760,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "5726.0002"
+	      BlockHandle	      "12587.0002"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27901,7 +27777,7 @@ Model {
 	      LibraryVersion	      "1.19"
 	      SourceBlock	      "canlib/CAN Transmit"
 	      SourceType	      "CAN Transmit"
-	      BlockHandle	      "5727.0002"
+	      BlockHandle	      "12588.0002"
 	      DeviceMenu	      "(none)"
 	      Device		      "PEAK-System PCAN-USB (PCAN_USBBUS1)"
 	      ObjConstructor	      "canChannel('PEAK-System', 'PCAN_USBBUS1')"
@@ -27920,9 +27796,9 @@ Model {
 	      BlockType		      Constant
 	      Name		      "Constant1"
 	      SID		      "4500"
-	      Position		      [530, 435, 655, 455]
+	      Position		      [515, 420, 640, 440]
 	      ZOrder		      534
-	      Value		      "settings.scaling_factor"
+	      Value		      "1000"
 	    }
 	    Block {
 	      BlockType		      Constant
@@ -28200,8 +28076,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector"
 	      SrcPort		      5
-	      DstBlock		      "CAN Pack5"
-	      DstPort		      1
+	      Points		      [115, 0]
 	    }
 	    Line {
 	      Name		      "<yawRate>"
@@ -28219,8 +28094,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector"
 	      SrcPort		      7
-	      DstBlock		      "CAN Pack8"
-	      DstPort		      1
+	      Points		      [115, 0]
 	    }
 	    Line {
 	      Name		      "<ax>"
@@ -28228,8 +28102,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector"
 	      SrcPort		      8
-	      DstBlock		      "CAN Pack10"
-	      DstPort		      1
+	      Points		      [115, 0]
 	    }
 	    Line {
 	      Name		      "<roll_angle>"
@@ -28237,8 +28110,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector"
 	      SrcPort		      9
-	      DstBlock		      "CAN Pack9"
-	      DstPort		      1
+	      Points		      [115, 0]
 	    }
 	    Line {
 	      Name		      "<roll_rate>"
@@ -28246,8 +28118,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector"
 	      SrcPort		      10
-	      DstBlock		      "CAN Pack11"
-	      DstPort		      1
+	      Points		      [115, 0]
 	    }
 	    Line {
 	      Name		      "<RPM_FL>"
@@ -28409,6 +28280,7 @@ Model {
 	      ZOrder		      203
 	      SrcBlock		      "Constant1"
 	      SrcPort		      1
+	      Points		      [25, 0; 0, 15]
 	      DstBlock		      "Product1"
 	      DstPort		      1
 	    }
@@ -28570,7 +28442,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Sensors\n1"
-	    Location		    [721, 149, 1835, 1349]
+	    Location		    [-1926, 169, -812, 1369]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -36882,7 +36754,7 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		47
+	$ObjectID		48
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMakerGUI.bmp'));"
       }

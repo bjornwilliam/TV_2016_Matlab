@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Estimations'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:35:27 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:41 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -76,12 +76,12 @@ typedef struct {
 
 /* External outputs (root outports fed by signals with auto storage) */
 typedef struct {
-  States States_a;                     /* '<Root>/States' */
+  States States_g;                     /* '<Root>/States' */
   Whl_speed whl_v;                     /* '<Root>/whl_v' */
-  Fx Fx_o;                             /* '<Root>/Fx' */
-  SR SR_i;                             /* '<Root>/SR' */
-  normLongTireForce normLongTireForce_d;/* '<Root>/normLongTireForce' */
-  OutputTelemetri_est OutputTelemetri_est_l;/* '<Root>/OutputTelemetri_est' */
+  Fx Fx_n;                             /* '<Root>/Fx' */
+  SR SR_l;                             /* '<Root>/SR' */
+  normLongTireForce normLongTireForce_f;/* '<Root>/normLongTireForce' */
+  OutputTelemetri_est OutputTelemetri_est_k;/* '<Root>/OutputTelemetri_est' */
 } ExtY_Estimations_T;
 
 /* Parameters (auto storage) */
@@ -110,9 +110,6 @@ struct P_Estimations_T_ {
   real32_T DamperRateLookup3_bp01Data[3];/* Expression: single([-250,0,250]);
                                           * Referenced by: '<S4>/DamperRateLookup3'
                                           */
-  real32_T Constant_Value;             /* Expression: single(1)
-                                        * Referenced by: '<S1>/Constant'
-                                        */
 };
 
 /* Real-time Model Data Structure */

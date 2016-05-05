@@ -7,14 +7,14 @@
  *
  * Code generated for Simulink model 'Control_System'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:32:19 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:15 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objective: Execution efficiency
- * Validation result: Passed (5), Warnings (5), Errors (2)
+ * Validation result: Not run
  */
 
 #include "Control_System.h"
@@ -63,8 +63,8 @@ YawRateControl yawRateControl = {
   0.0F,
   10.0,
   2000.0F,
-  1500.0F,
-  1500.0F,
+  4500.0F,
+  4500.0F,
   1.0F,
   2000.0F,
   2000.0F,
@@ -75,7 +75,7 @@ YawRateControl yawRateControl = {
   1.0F,
   50.0F,
   1.0F,
-  1.0F,
+  0.5F,
   1U,
   1.0F,
   0U
@@ -91,15 +91,16 @@ TractionControl tractionControl = {
   0.15F,
   0.0F,
   5.0F,
-  7.0F,
+  10.0F,
+  8.0F,
   150.0F,
   1.0F,
   120.0F,
-  250.0F,
+  450.0F,
   1.0F,
   150.0F,
   450.0F,
-  50.0F,
+  20.0F,
   1U
 } ;                                    /* Variable: tractionControl
                                         * Referenced by:
@@ -120,7 +121,7 @@ PowerLimitControl powerLimitControl = {
   0.1F,
   0.0F,
   -0.7F,
-  1U
+  0U
 } ;                                    /* Variable: powerLimitControl
                                         * Referenced by:
                                         *   '<S5>/extractPower'
@@ -241,22 +242,22 @@ static void Control_Syst_allocateKersTorque(real32_T L_max, real32_T R_max,
   real32_T max_t_add;
   real32_T mtmp;
 
-  /* '<S45>:1:225' */
+  /* '<S45>:1:277' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:227' */
+  /* '<S45>:1:279' */
   TV_des = (real32_T)fabs(alfa * Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs
     (alfa * Mz_ref * R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:229' */
+  /* '<S45>:1:281' */
   T_driver = (real32_T)fabs(alfa * T_req);
   if (Mz_ref + 0.0001F >= 0.0F) {
-    /* '<S45>:1:231' */
+    /* '<S45>:1:283' */
     /*  Positive Mz_ref requires left side (inner wheels) */
     /*  to brake more than the outer wheels. */
-    /* '<S45>:1:234' */
+    /* '<S45>:1:286' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -268,11 +269,11 @@ static void Control_Syst_allocateKersTorque(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (L_max < TV_des) {
-      /* '<S45>:1:236' */
-      /* '<S45>:1:237' */
+      /* '<S45>:1:288' */
+      /* '<S45>:1:289' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:239' */
+      /* '<S45>:1:291' */
       max_t_add = L_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (R_max < max_t_add) {
@@ -284,23 +285,23 @@ static void Control_Syst_allocateKersTorque(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:241' */
+    /* '<S45>:1:293' */
     TV_des = -(mtmp + max_t_add);
 
-    /* '<S45>:1:242' */
-    /* '<S45>:1:243' */
+    /* '<S45>:1:294' */
+    /* '<S45>:1:295' */
     T[0] = TV_des;
     T[1] = -max_t_add;
 
     /*  Floats comparison */
     if (((real32_T)fabs(TV_des) + (real32_T)fabs(-max_t_add)) + 0.001F <
         T_driver) {
-      /* '<S45>:1:245' */
-      /* '<S45>:1:246' */
+      /* '<S45>:1:297' */
+      /* '<S45>:1:298' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:250' */
+    /* '<S45>:1:302' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -312,11 +313,11 @@ static void Control_Syst_allocateKersTorque(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (R_max < TV_des) {
-      /* '<S45>:1:252' */
-      /* '<S45>:1:253' */
+      /* '<S45>:1:304' */
+      /* '<S45>:1:305' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:255' */
+      /* '<S45>:1:307' */
       max_t_add = R_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (L_max < max_t_add) {
@@ -328,19 +329,19 @@ static void Control_Syst_allocateKersTorque(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:257' */
+    /* '<S45>:1:309' */
     TV_des = -(mtmp + max_t_add);
 
-    /* '<S45>:1:258' */
-    /* '<S45>:1:259' */
+    /* '<S45>:1:310' */
+    /* '<S45>:1:311' */
     T[0] = -max_t_add;
     T[1] = TV_des;
 
     /*  Floats comparison */
     if (((real32_T)fabs(-max_t_add) + (real32_T)fabs(TV_des)) + 0.001F <
         T_driver) {
-      /* '<S45>:1:261' */
-      /* '<S45>:1:262' */
+      /* '<S45>:1:313' */
+      /* '<S45>:1:314' */
       *sat = 1U;
     }
   }
@@ -356,22 +357,22 @@ static void Control_Sy_allocateKersTorque_a(real32_T L_max, real32_T R_max,
   real32_T max_t_add;
   real32_T mtmp;
 
-  /* '<S45>:1:225' */
+  /* '<S45>:1:277' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:227' */
+  /* '<S45>:1:279' */
   TV_des = (real32_T)fabs(Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs(Mz_ref *
     R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:229' */
+  /* '<S45>:1:281' */
   T_driver = (real32_T)fabs(T_req);
   if (Mz_ref + 0.0001F >= 0.0F) {
-    /* '<S45>:1:231' */
+    /* '<S45>:1:283' */
     /*  Positive Mz_ref requires left side (inner wheels) */
     /*  to brake more than the outer wheels. */
-    /* '<S45>:1:234' */
+    /* '<S45>:1:286' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -383,11 +384,11 @@ static void Control_Sy_allocateKersTorque_a(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (L_max < TV_des) {
-      /* '<S45>:1:236' */
-      /* '<S45>:1:237' */
+      /* '<S45>:1:288' */
+      /* '<S45>:1:289' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:239' */
+      /* '<S45>:1:291' */
       max_t_add = L_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (R_max < max_t_add) {
@@ -399,23 +400,23 @@ static void Control_Sy_allocateKersTorque_a(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:241' */
+    /* '<S45>:1:293' */
     TV_des = -(mtmp + max_t_add);
 
-    /* '<S45>:1:242' */
-    /* '<S45>:1:243' */
+    /* '<S45>:1:294' */
+    /* '<S45>:1:295' */
     T[0] = TV_des;
     T[1] = -max_t_add;
 
     /*  Floats comparison */
     if (((real32_T)fabs(TV_des) + (real32_T)fabs(-max_t_add)) + 0.001F <
         T_driver) {
-      /* '<S45>:1:245' */
-      /* '<S45>:1:246' */
+      /* '<S45>:1:297' */
+      /* '<S45>:1:298' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:250' */
+    /* '<S45>:1:302' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -427,11 +428,11 @@ static void Control_Sy_allocateKersTorque_a(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (R_max < TV_des) {
-      /* '<S45>:1:252' */
-      /* '<S45>:1:253' */
+      /* '<S45>:1:304' */
+      /* '<S45>:1:305' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:255' */
+      /* '<S45>:1:307' */
       max_t_add = R_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (L_max < max_t_add) {
@@ -443,19 +444,19 @@ static void Control_Sy_allocateKersTorque_a(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:257' */
+    /* '<S45>:1:309' */
     TV_des = -(mtmp + max_t_add);
 
-    /* '<S45>:1:258' */
-    /* '<S45>:1:259' */
+    /* '<S45>:1:310' */
+    /* '<S45>:1:311' */
     T[0] = -max_t_add;
     T[1] = TV_des;
 
     /*  Floats comparison */
     if (((real32_T)fabs(-max_t_add) + (real32_T)fabs(TV_des)) + 0.001F <
         T_driver) {
-      /* '<S45>:1:261' */
-      /* '<S45>:1:262' */
+      /* '<S45>:1:313' */
+      /* '<S45>:1:314' */
       *sat = 1U;
     }
   }
@@ -471,23 +472,23 @@ static void Control__allocatePositiveTorque(real32_T L_max, real32_T R_max,
   real32_T max_t_add;
   real32_T mtmp;
 
-  /* '<S45>:1:271' */
+  /* '<S45>:1:323' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:273' */
+  /* '<S45>:1:325' */
   TV_des = (real32_T)fabs(alfa * Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs
     (alfa * Mz_ref * R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:275' */
+  /* '<S45>:1:327' */
   T_driver = alfa * T_req;
   if (Mz_ref <= 0.0F) {
-    /* '<S45>:1:277' */
+    /* '<S45>:1:329' */
     /*  Implies that left side should realize the TV torque, */
     /*  since only torque >= 0 is used here. */
     /*  Mz is defined positive counter clockwise */
-    /* '<S45>:1:281' */
+    /* '<S45>:1:333' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -500,11 +501,11 @@ static void Control__allocatePositiveTorque(real32_T L_max, real32_T R_max,
     /* Max torque that can be added to both */
     /* Skal det ikke være L < TV_des */
     if (L_max < TV_des) {
-      /* '<S45>:1:284' */
-      /* '<S45>:1:285' */
+      /* '<S45>:1:336' */
+      /* '<S45>:1:337' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:287' */
+      /* '<S45>:1:339' */
       max_t_add = L_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (R_max < max_t_add) {
@@ -516,21 +517,21 @@ static void Control__allocatePositiveTorque(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:289' */
+    /* '<S45>:1:341' */
     TV_des = mtmp + max_t_add;
 
-    /* '<S45>:1:291' */
+    /* '<S45>:1:343' */
     T[0] = TV_des;
     T[1] = max_t_add;
 
     /*  Floats comparison */
     if ((TV_des + max_t_add) + 0.001F < T_driver) {
-      /* '<S45>:1:293' */
-      /* '<S45>:1:294' */
+      /* '<S45>:1:345' */
+      /* '<S45>:1:346' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:298' */
+    /* '<S45>:1:350' */
     mtmp = TV_des;
     if (T_driver < TV_des) {
       mtmp = T_driver;
@@ -542,11 +543,11 @@ static void Control__allocatePositiveTorque(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (R_max < TV_des) {
-      /* '<S45>:1:300' */
-      /* '<S45>:1:301' */
+      /* '<S45>:1:352' */
+      /* '<S45>:1:353' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:303' */
+      /* '<S45>:1:355' */
       max_t_add = R_max - TV_des;
       TV_des = (T_driver - mtmp) / 2.0F;
       if (L_max < max_t_add) {
@@ -558,17 +559,17 @@ static void Control__allocatePositiveTorque(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:305' */
+    /* '<S45>:1:357' */
     TV_des = mtmp + max_t_add;
 
-    /* '<S45>:1:307' */
+    /* '<S45>:1:359' */
     T[0] = max_t_add;
     T[1] = TV_des;
 
     /*  Floats comparison */
     if ((max_t_add + TV_des) + 0.001F < T_driver) {
-      /* '<S45>:1:309' */
-      /* '<S45>:1:310' */
+      /* '<S45>:1:361' */
+      /* '<S45>:1:362' */
       *sat = 1U;
     }
   }
@@ -585,23 +586,23 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
   real32_T R;
   real32_T varargin_1_idx_2;
 
-  /* '<S45>:1:177' */
+  /* '<S45>:1:229' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:179' */
+  /* '<S45>:1:231' */
   TV_des = (real32_T)fabs(alfa * Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs
     (alfa * Mz_ref * R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:181' */
+  /* '<S45>:1:233' */
   T_driver = alfa * T_req;
   if (Mz_ref <= 0.0F) {
-    /* '<S45>:1:183' */
+    /* '<S45>:1:235' */
     /*  Implies that left side should realize the TV torque, */
     /*  since only torque >= 0 is used here. */
     /*  Mz is defined positive counter clockwise */
-    /* '<S45>:1:187' */
+    /* '<S45>:1:239' */
     R = TV_des;
     if (T_driver < TV_des) {
       R = T_driver;
@@ -612,10 +613,10 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
     }
 
     if (R < TV_des) {
-      /* '<S45>:1:188' */
+      /* '<S45>:1:240' */
       /* && (T_driver > 0)) */
       /*  Not fulfilled desired yaw moment */
-      /* '<S45>:1:190' */
+      /* '<S45>:1:242' */
       TV_des -= R;
       if (R_max < TV_des) {
         TV_des = R_max;
@@ -625,11 +626,11 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
         TV_des = (real32_T)negative_torque_limit;
       }
 
-      /* '<S45>:1:191' */
+      /* '<S45>:1:243' */
       T[0] = R;
       T[1] = -TV_des;
     } else {
-      /* '<S45>:1:193' */
+      /* '<S45>:1:245' */
       TV_des = L_max - TV_des;
       varargin_1_idx_2 = (T_driver - R) / 2.0F;
       if (R_max < TV_des) {
@@ -640,22 +641,22 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
         TV_des = varargin_1_idx_2;
       }
 
-      /* '<S45>:1:194' */
+      /* '<S45>:1:246' */
       R += TV_des;
 
-      /* '<S45>:1:196' */
+      /* '<S45>:1:248' */
       T[0] = R;
       T[1] = TV_des;
     }
 
     /*  Floats comparison */
     if (R + 0.001F < T_driver) {
-      /* '<S45>:1:199' */
-      /* '<S45>:1:200' */
+      /* '<S45>:1:251' */
+      /* '<S45>:1:252' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:204' */
+    /* '<S45>:1:256' */
     R = TV_des;
     if (T_driver < TV_des) {
       R = T_driver;
@@ -667,9 +668,9 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both   */
     if (R < TV_des) {
-      /* '<S45>:1:206' */
+      /* '<S45>:1:258' */
       /*  && (T_driver > 0) ) */
-      /* '<S45>:1:207' */
+      /* '<S45>:1:259' */
       TV_des -= R;
       if (L_max < TV_des) {
         TV_des = L_max;
@@ -679,11 +680,11 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
         TV_des = (real32_T)negative_torque_limit;
       }
 
-      /* '<S45>:1:208' */
+      /* '<S45>:1:260' */
       T[0] = -TV_des;
       T[1] = R;
     } else {
-      /* '<S45>:1:210' */
+      /* '<S45>:1:262' */
       TV_des = R_max - TV_des;
       varargin_1_idx_2 = (T_driver - R) / 2.0F;
       if (L_max < TV_des) {
@@ -694,17 +695,17 @@ static void Control_System_allocateTorque(real32_T L_max, real32_T R_max,
         TV_des = varargin_1_idx_2;
       }
 
-      /* '<S45>:1:211' */
+      /* '<S45>:1:263' */
       R += TV_des;
 
-      /* '<S45>:1:213' */
+      /* '<S45>:1:265' */
       T[0] = TV_des;
       T[1] = R;
     }
 
     if (R + 0.001F < T_driver) {
-      /* '<S45>:1:216' */
-      /* '<S45>:1:217' */
+      /* '<S45>:1:268' */
+      /* '<S45>:1:269' */
       *sat = 1U;
     }
   }
@@ -719,22 +720,22 @@ static void Contro_allocatePositiveTorque_p(real32_T L_max, real32_T R_max,
   real32_T max_t_add;
   real32_T mtmp;
 
-  /* '<S45>:1:271' */
+  /* '<S45>:1:323' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:273' */
+  /* '<S45>:1:325' */
   TV_des = (real32_T)fabs(Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs(Mz_ref *
     R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:275' */
+  /* '<S45>:1:327' */
   if (Mz_ref <= 0.0F) {
-    /* '<S45>:1:277' */
+    /* '<S45>:1:329' */
     /*  Implies that left side should realize the TV torque, */
     /*  since only torque >= 0 is used here. */
     /*  Mz is defined positive counter clockwise */
-    /* '<S45>:1:281' */
+    /* '<S45>:1:333' */
     mtmp = TV_des;
     if (T_req < TV_des) {
       mtmp = T_req;
@@ -747,11 +748,11 @@ static void Contro_allocatePositiveTorque_p(real32_T L_max, real32_T R_max,
     /* Max torque that can be added to both */
     /* Skal det ikke være L < TV_des */
     if (L_max < TV_des) {
-      /* '<S45>:1:284' */
-      /* '<S45>:1:285' */
+      /* '<S45>:1:336' */
+      /* '<S45>:1:337' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:287' */
+      /* '<S45>:1:339' */
       max_t_add = L_max - TV_des;
       TV_des = (T_req - mtmp) / 2.0F;
       if (R_max < max_t_add) {
@@ -763,21 +764,21 @@ static void Contro_allocatePositiveTorque_p(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:289' */
+    /* '<S45>:1:341' */
     TV_des = mtmp + max_t_add;
 
-    /* '<S45>:1:291' */
+    /* '<S45>:1:343' */
     T[0] = TV_des;
     T[1] = max_t_add;
 
     /*  Floats comparison */
     if ((TV_des + max_t_add) + 0.001F < T_req) {
-      /* '<S45>:1:293' */
-      /* '<S45>:1:294' */
+      /* '<S45>:1:345' */
+      /* '<S45>:1:346' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:298' */
+    /* '<S45>:1:350' */
     mtmp = TV_des;
     if (T_req < TV_des) {
       mtmp = T_req;
@@ -789,11 +790,11 @@ static void Contro_allocatePositiveTorque_p(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both */
     if (R_max < TV_des) {
-      /* '<S45>:1:300' */
-      /* '<S45>:1:301' */
+      /* '<S45>:1:352' */
+      /* '<S45>:1:353' */
       max_t_add = 0.0F;
     } else {
-      /* '<S45>:1:303' */
+      /* '<S45>:1:355' */
       max_t_add = R_max - TV_des;
       TV_des = (T_req - mtmp) / 2.0F;
       if (L_max < max_t_add) {
@@ -805,17 +806,17 @@ static void Contro_allocatePositiveTorque_p(real32_T L_max, real32_T R_max,
       }
     }
 
-    /* '<S45>:1:305' */
+    /* '<S45>:1:357' */
     TV_des = mtmp + max_t_add;
 
-    /* '<S45>:1:307' */
+    /* '<S45>:1:359' */
     T[0] = max_t_add;
     T[1] = TV_des;
 
     /*  Floats comparison */
     if ((max_t_add + TV_des) + 0.001F < T_req) {
-      /* '<S45>:1:309' */
-      /* '<S45>:1:310' */
+      /* '<S45>:1:361' */
+      /* '<S45>:1:362' */
       *sat = 1U;
     }
   }
@@ -830,22 +831,22 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
   real32_T R;
   real32_T varargin_1_idx_2;
 
-  /* '<S45>:1:177' */
+  /* '<S45>:1:229' */
   *sat = 0U;
 
   /*  Desired torque vectoring torque */
-  /* '<S45>:1:179' */
+  /* '<S45>:1:231' */
   TV_des = (real32_T)fabs(Mz_ref * R_eff_L / (GR * t)) + (real32_T)fabs(Mz_ref *
     R_eff_R / (GR * t));
 
   /*  Take absolute value since T_req can be negative in case of KERS */
-  /* '<S45>:1:181' */
+  /* '<S45>:1:233' */
   if (Mz_ref <= 0.0F) {
-    /* '<S45>:1:183' */
+    /* '<S45>:1:235' */
     /*  Implies that left side should realize the TV torque, */
     /*  since only torque >= 0 is used here. */
     /*  Mz is defined positive counter clockwise */
-    /* '<S45>:1:187' */
+    /* '<S45>:1:239' */
     R = TV_des;
     if (T_req < TV_des) {
       R = T_req;
@@ -856,10 +857,10 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
     }
 
     if (R < TV_des) {
-      /* '<S45>:1:188' */
+      /* '<S45>:1:240' */
       /* && (T_driver > 0)) */
       /*  Not fulfilled desired yaw moment */
-      /* '<S45>:1:190' */
+      /* '<S45>:1:242' */
       TV_des -= R;
       if (R_max < TV_des) {
         TV_des = R_max;
@@ -869,11 +870,11 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
         TV_des = (real32_T)negative_torque_limit;
       }
 
-      /* '<S45>:1:191' */
+      /* '<S45>:1:243' */
       T[0] = R;
       T[1] = -TV_des;
     } else {
-      /* '<S45>:1:193' */
+      /* '<S45>:1:245' */
       TV_des = L_max - TV_des;
       varargin_1_idx_2 = (T_req - R) / 2.0F;
       if (R_max < TV_des) {
@@ -884,22 +885,22 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
         TV_des = varargin_1_idx_2;
       }
 
-      /* '<S45>:1:194' */
+      /* '<S45>:1:246' */
       R += TV_des;
 
-      /* '<S45>:1:196' */
+      /* '<S45>:1:248' */
       T[0] = R;
       T[1] = TV_des;
     }
 
     /*  Floats comparison */
     if (R + 0.001F < T_req) {
-      /* '<S45>:1:199' */
-      /* '<S45>:1:200' */
+      /* '<S45>:1:251' */
+      /* '<S45>:1:252' */
       *sat = 1U;
     }
   } else {
-    /* '<S45>:1:204' */
+    /* '<S45>:1:256' */
     R = TV_des;
     if (T_req < TV_des) {
       R = T_req;
@@ -911,9 +912,9 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
 
     /* Max torque that can be added to both   */
     if (R < TV_des) {
-      /* '<S45>:1:206' */
+      /* '<S45>:1:258' */
       /*  && (T_driver > 0) ) */
-      /* '<S45>:1:207' */
+      /* '<S45>:1:259' */
       TV_des -= R;
       if (L_max < TV_des) {
         TV_des = L_max;
@@ -923,11 +924,11 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
         TV_des = (real32_T)negative_torque_limit;
       }
 
-      /* '<S45>:1:208' */
+      /* '<S45>:1:260' */
       T[0] = -TV_des;
       T[1] = R;
     } else {
-      /* '<S45>:1:210' */
+      /* '<S45>:1:262' */
       TV_des = R_max - TV_des;
       varargin_1_idx_2 = (T_req - R) / 2.0F;
       if (L_max < TV_des) {
@@ -938,17 +939,17 @@ static void Control_System_allocateTorque_f(real32_T L_max, real32_T R_max,
         TV_des = varargin_1_idx_2;
       }
 
-      /* '<S45>:1:211' */
+      /* '<S45>:1:263' */
       R += TV_des;
 
-      /* '<S45>:1:213' */
+      /* '<S45>:1:265' */
       T[0] = TV_des;
       T[1] = R;
     }
 
     if (R + 0.001F < T_req) {
-      /* '<S45>:1:216' */
-      /* '<S45>:1:217' */
+      /* '<S45>:1:268' */
+      /* '<S45>:1:269' */
       *sat = 1U;
     }
   }
@@ -988,9 +989,9 @@ void Control_System_step(void)
   int16_T rtb_wi_setpoints_RL;
   int16_T rtb_wi_setpoints_RR;
   boolean_T rtb_NotEqual;
-  real32_T Ti_max_motor_idx_1;
-  real32_T Ti_max_motor_idx_2;
-  real32_T Ti_max_motor_idx_3;
+  real32_T Fzi_idx_1;
+  real32_T Fzi_idx_2;
+  real32_T Fzi_idx_3;
   real32_T Ti_max_tire_idx_0;
   real32_T Ti_max_tire_idx_1;
   int8_T rtb_SignDeltaU_0;
@@ -1143,45 +1144,138 @@ void Control_System_step(void)
   /*  Max allowable current draw in total */
   /*  Load distribution */
   /* '<S40>:1:8' */
-  if (1.0F < Control_System_U.states.Fz_RL) {
-    Control_System_B.Fzi_idx_2 = Control_System_U.states.Fz_RL;
-  } else {
-    Control_System_B.Fzi_idx_2 = 1.0F;
-  }
-
-  if (1.0F < Control_System_U.states.Fz_RR) {
-    Control_System_B.Fzi_idx_3 = Control_System_U.states.Fz_RR;
-  } else {
-    Control_System_B.Fzi_idx_3 = 1.0F;
-  }
-
-  /* '<S40>:1:9' */
   if (1.0F < Control_System_U.states.Fz_FL) {
-    Ti_max_tire_idx_1 = Control_System_U.states.Fz_FL;
-  } else {
-    Ti_max_tire_idx_1 = 1.0F;
-  }
-
-  if (1.0F < Control_System_U.states.Fz_FR) {
-    Control_System_B.Fzi_idx_0 = Control_System_U.states.Fz_FR;
+    Control_System_B.Fzi_idx_0 = Control_System_U.states.Fz_FL;
   } else {
     Control_System_B.Fzi_idx_0 = 1.0F;
   }
 
-  Control_System_B.alfa_r = (Control_System_B.Fzi_idx_2 +
-    Control_System_B.Fzi_idx_3) / (((Ti_max_tire_idx_1 +
-    Control_System_B.Fzi_idx_0) + Control_System_B.Fzi_idx_2) +
-    Control_System_B.Fzi_idx_3);
+  if (1.0F < Control_System_U.states.Fz_FR) {
+    Fzi_idx_1 = Control_System_U.states.Fz_FR;
+  } else {
+    Fzi_idx_1 = 1.0F;
+  }
+
+  if (1.0F < Control_System_U.states.Fz_RL) {
+    Fzi_idx_2 = Control_System_U.states.Fz_RL;
+  } else {
+    Fzi_idx_2 = 1.0F;
+  }
+
+  if (1.0F < Control_System_U.states.Fz_RR) {
+    Fzi_idx_3 = Control_System_U.states.Fz_RR;
+  } else {
+    Fzi_idx_3 = 1.0F;
+  }
+
+  /* '<S40>:1:10' */
+  switch (settings.TV_Method) {
+   case 1U:
+    /*  No negative torque */
+    /* '<S40>:1:12' */
+    Control_System_B.power = (Fzi_idx_2 + Fzi_idx_3) /
+      (((Control_System_B.Fzi_idx_0 + Fzi_idx_1) + Fzi_idx_2) + Fzi_idx_3);
+    break;
+
+   case 2U:
+    /*  with negative torque */
+    /* '<S40>:1:14' */
+    Control_System_B.power = (Fzi_idx_2 + Fzi_idx_3) /
+      (((Control_System_B.Fzi_idx_0 + Fzi_idx_1) + Fzi_idx_2) + Fzi_idx_3);
+    break;
+
+   case 3U:
+    /*  static 25 % */
+    /* '<S40>:1:16' */
+    Control_System_B.power = 0.5F;
+    break;
+
+   case 4U:
+    /*  with negative torque, no Fz */
+    /* '<S40>:1:18' */
+    Control_System_B.power = 0.5F;
+    break;
+
+   default:
+    /* '<S40>:1:20' */
+    Control_System_B.power = 0.5F;
+    break;
+  }
+
+  /* '<S40>:1:27' */
+  /* '<S40>:1:28' */
+  /* '<S40>:1:31' */
+  if (1.0F < Control_System_U.states.RPM_FL) {
+    Fzi_idx_1 = Control_System_U.states.RPM_FL;
+  } else {
+    Fzi_idx_1 = 1.0F;
+  }
+
+  Control_System_B.Fzi_idx_0 = Control_System_U.states.DC_voltage *
+    settings.max_battery_discharge * (1.0F - Control_System_B.power) / (2.0F *
+    Fzi_idx_1 * 2.0F * 3.14159274F / 60.0F);
+  if (settings.max_motor_torque <= Control_System_B.Fzi_idx_0) {
+    Control_System_B.Fzi_idx_0 = settings.max_motor_torque;
+  }
+
+  if (1.0F < Control_System_U.states.RPM_FR) {
+    Fzi_idx_1 = Control_System_U.states.RPM_FR;
+  } else {
+    Fzi_idx_1 = 1.0F;
+  }
+
+  Control_System_B.max_torque_front = Control_System_U.states.DC_voltage *
+    settings.max_battery_discharge * (1.0F - Control_System_B.power) / (2.0F *
+    Fzi_idx_1 * 2.0F * 3.14159274F / 60.0F);
+  if (settings.max_motor_torque <= Control_System_B.max_torque_front) {
+    Control_System_B.max_torque_front = settings.max_motor_torque;
+  }
+
+  if (Control_System_B.Fzi_idx_0 <= Control_System_B.max_torque_front) {
+    Control_System_B.max_torque_front = Control_System_B.Fzi_idx_0;
+  }
+
+  /* '<S40>:1:34' */
+  if (1.0F < Control_System_U.states.RPM_RL) {
+    Fzi_idx_1 = Control_System_U.states.RPM_RL;
+  } else {
+    Fzi_idx_1 = 1.0F;
+  }
+
+  Control_System_B.Fzi_idx_0 = Control_System_U.states.DC_voltage *
+    settings.max_battery_discharge * (1.0F - Control_System_B.power) / (2.0F *
+    Fzi_idx_1 * 2.0F * 3.14159274F / 60.0F);
+  if (settings.max_motor_torque <= Control_System_B.Fzi_idx_0) {
+    Control_System_B.Fzi_idx_0 = settings.max_motor_torque;
+  }
+
+  if (1.0F < Control_System_U.states.RPM_RR) {
+    Fzi_idx_1 = Control_System_U.states.RPM_RR;
+  } else {
+    Fzi_idx_1 = 1.0F;
+  }
+
+  Control_System_B.max_torque_rear = Control_System_U.states.DC_voltage *
+    settings.max_battery_discharge * (1.0F - Control_System_B.power) / (2.0F *
+    Fzi_idx_1 * 2.0F * 3.14159274F / 60.0F);
+  if (settings.max_motor_torque <= Control_System_B.max_torque_rear) {
+    Control_System_B.max_torque_rear = settings.max_motor_torque;
+  }
+
+  if (Control_System_B.Fzi_idx_0 <= Control_System_B.max_torque_rear) {
+    Control_System_B.max_torque_rear = Control_System_B.Fzi_idx_0;
+  }
 
   /* MATLAB Function: '<S9>/yawRateReference' incorporates:
    *  Inport: '<Root>/states'
    */
-  /* '<S40>:1:11' */
-  /* '<S40>:1:12' */
-  /* '<S40>:1:15' */
-  /* '<S40>:1:16' */
-  /* '<S40>:1:17' */
-  /* '<S40>:1:18' */
+  /* '<S40>:1:37' */
+  /* '<S40>:1:38' */
+  /* '<S40>:1:39' */
+  /* '<S40>:1:40' */
+  /* maxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60)); */
+  /* maxMotorTorque.mmt_RL = min(settings.max_motor_torque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60)); */
+  /* maxMotorTorque.mmt_RR = min(settings.max_motor_torque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60)); */
   /* MATLAB Function 'Control_System /Control /Yaw Rate Controller /yawRateReference': '<S46>:1' */
   /* '<S46>:1:6' */
   /* '<S46>:1:8' */
@@ -1262,8 +1356,8 @@ void Control_System_step(void)
    */
   Control_System_B.Product10 = ((Control_System_U.states.ax *
     Control_System_U.states.wheel_angle + Control_System_U.states.V_x *
-    Control_System_U.states.wheel_speed) / 1.5F - Control_System_U.states.r_der)
-    * Control_System_B.power;
+    Control_System_U.states.wheel_speed) / 1.5F - Control_System_U.states.r_der *
+    0.5F) * Control_System_B.power;
 
   /* Lookup_n-D: '<S9>/Kp Lookup' incorporates:
    *  Gain: '<S9>/Gain'
@@ -1298,6 +1392,7 @@ void Control_System_step(void)
 
   /* MATLAB Function: '<S44>/TorqueAllocation' incorporates:
    *  Inport: '<Root>/states'
+   *  MATLAB Function: '<S8>/MATLAB Function'
    */
   /* MATLAB Function 'Control_System /Control /Torque allocation /Torque Allocation/TorqueAllocation': '<S45>:1' */
   /* STATES */
@@ -1323,28 +1418,26 @@ void Control_System_step(void)
   }
 
   if (1.0F < Control_System_U.states.Fz_FR) {
-    Control_System_B.Product10 = Control_System_U.states.Fz_FR;
+    Fzi_idx_1 = Control_System_U.states.Fz_FR;
   } else {
-    Control_System_B.Product10 = 1.0F;
+    Fzi_idx_1 = 1.0F;
   }
 
   if (1.0F < Control_System_U.states.Fz_RL) {
-    Control_System_B.Fzi_idx_2 = Control_System_U.states.Fz_RL;
+    Fzi_idx_2 = Control_System_U.states.Fz_RL;
   } else {
-    Control_System_B.Fzi_idx_2 = 1.0F;
+    Fzi_idx_2 = 1.0F;
   }
 
   if (1.0F < Control_System_U.states.Fz_RR) {
-    Control_System_B.Fzi_idx_3 = Control_System_U.states.Fz_RR;
+    Fzi_idx_3 = Control_System_U.states.Fz_RR;
   } else {
-    Control_System_B.Fzi_idx_3 = 1.0F;
+    Fzi_idx_3 = 1.0F;
   }
 
   /* '<S45>:1:17' */
-  Control_System_B.power = (Control_System_B.Fzi_idx_2 +
-    Control_System_B.Fzi_idx_3) / (((Control_System_B.Fzi_idx_0 +
-    Control_System_B.Product10) + Control_System_B.Fzi_idx_2) +
-    Control_System_B.Fzi_idx_3);
+  Control_System_B.power = (Fzi_idx_2 + Fzi_idx_3) /
+    (((Control_System_B.Fzi_idx_0 + Fzi_idx_1) + Fzi_idx_2) + Fzi_idx_3);
 
   /* MZ */
   /* '<S45>:1:19' */
@@ -1356,9 +1449,6 @@ void Control_System_step(void)
   Control_System_B.l2 = car_params.t_f * arm_cos_f32
     (Control_System_U.states.wheel_angle);
 
-  /* MATLAB Function: '<S8>/MATLAB Function' incorporates:
-   *  Inport: '<Root>/states'
-   */
   /* '<S45>:1:23' */
   /* '<S45>:1:24' */
   /* '<S45>:1:25' */
@@ -1366,63 +1456,6 @@ void Control_System_step(void)
   /* '<S45>:1:30' */
   /* '<S45>:1:31' */
   /* '<S45>:1:34' */
-  if (1.0F < Control_System_U.states.RPM_FL) {
-    Ti_max_tire_idx_1 = Control_System_U.states.RPM_FL;
-  } else {
-    Ti_max_tire_idx_1 = 1.0F;
-  }
-
-  Control_System_B.Ti_max_motor_idx_0 = Control_System_U.states.DC_voltage *
-    settings.max_battery_discharge * (1.0F - Control_System_B.alfa_r) / (2.0F *
-    Ti_max_tire_idx_1 * 2.0F * 3.14159274F / 60.0F);
-  if (settings.max_motor_torque <= Control_System_B.Ti_max_motor_idx_0) {
-    /* MATLAB Function: '<S44>/TorqueAllocation' */
-    Control_System_B.Ti_max_motor_idx_0 = settings.max_motor_torque;
-  }
-
-  if (1.0F < Control_System_U.states.RPM_FR) {
-    Ti_max_tire_idx_1 = Control_System_U.states.RPM_FR;
-  } else {
-    Ti_max_tire_idx_1 = 1.0F;
-  }
-
-  Ti_max_motor_idx_1 = Control_System_U.states.DC_voltage *
-    settings.max_battery_discharge * (1.0F - Control_System_B.alfa_r) / (2.0F *
-    Ti_max_tire_idx_1 * 2.0F * 3.14159274F / 60.0F);
-  if (settings.max_motor_torque <= Ti_max_motor_idx_1) {
-    /* MATLAB Function: '<S44>/TorqueAllocation' */
-    Ti_max_motor_idx_1 = settings.max_motor_torque;
-  }
-
-  if (1.0F < Control_System_U.states.RPM_RL) {
-    Ti_max_tire_idx_1 = Control_System_U.states.RPM_RL;
-  } else {
-    Ti_max_tire_idx_1 = 1.0F;
-  }
-
-  Ti_max_motor_idx_2 = Control_System_U.states.DC_voltage *
-    settings.max_battery_discharge * Control_System_B.alfa_r / (2.0F *
-    Ti_max_tire_idx_1 * 2.0F * 3.14159274F / 60.0F);
-  if (settings.max_motor_torque <= Ti_max_motor_idx_2) {
-    /* MATLAB Function: '<S44>/TorqueAllocation' */
-    Ti_max_motor_idx_2 = settings.max_motor_torque;
-  }
-
-  if (1.0F < Control_System_U.states.RPM_RR) {
-    Ti_max_tire_idx_1 = Control_System_U.states.RPM_RR;
-  } else {
-    Ti_max_tire_idx_1 = 1.0F;
-  }
-
-  Ti_max_motor_idx_3 = Control_System_U.states.DC_voltage *
-    settings.max_battery_discharge * Control_System_B.alfa_r / (2.0F *
-    Ti_max_tire_idx_1 * 2.0F * 3.14159274F / 60.0F);
-  if (settings.max_motor_torque <= Ti_max_motor_idx_3) {
-    /* MATLAB Function: '<S44>/TorqueAllocation' */
-    Ti_max_motor_idx_3 = settings.max_motor_torque;
-  }
-
-  /* MATLAB Function: '<S44>/TorqueAllocation' */
   /* Tire saturation based on mu and Fz */
   /* '<S45>:1:37' */
   /* '<S45>:1:38' */
@@ -1431,221 +1464,259 @@ void Control_System_step(void)
 
   /* '<S45>:1:37' */
   /* '<S45>:1:38' */
-  Ti_max_tire_idx_1 = Control_System_B.Product10 * settings.mu *
-    car_params.r_eff / car_params.GR;
+  Ti_max_tire_idx_1 = Fzi_idx_1 * settings.mu * car_params.r_eff / car_params.GR;
 
   /* '<S45>:1:37' */
   /* '<S45>:1:38' */
-  Control_System_B.Product10 = Control_System_B.Fzi_idx_2 * settings.mu *
-    car_params.r_eff / car_params.GR;
+  Fzi_idx_1 = Fzi_idx_2 * settings.mu * car_params.r_eff / car_params.GR;
 
   /* '<S45>:1:37' */
   /* '<S45>:1:38' */
-  Control_System_B.Fzi_idx_0 = Control_System_B.Fzi_idx_3 * settings.mu *
-    car_params.r_eff / car_params.GR;
+  Control_System_B.Fzi_idx_0 = Fzi_idx_3 * settings.mu * car_params.r_eff /
+    car_params.GR;
 
   /* '<S45>:1:37' */
   /*  Find minimum of tire saturation Torque and motor */
-  /* '<S45>:1:42' */
   /* '<S45>:1:43' */
-  if (Ti_max_tire_idx_0 <= Control_System_B.Ti_max_motor_idx_0) {
-    Control_System_B.Ti_max_motor_idx_0 = Ti_max_tire_idx_0;
+  /* '<S45>:1:44' */
+  if (!(Ti_max_tire_idx_0 <= Control_System_B.max_torque_front)) {
+    Ti_max_tire_idx_0 = Control_System_B.max_torque_front;
   }
 
-  /* '<S45>:1:42' */
   /* '<S45>:1:43' */
-  if (Ti_max_tire_idx_1 <= Ti_max_motor_idx_1) {
-    Ti_max_motor_idx_1 = Ti_max_tire_idx_1;
+  /* '<S45>:1:44' */
+  if (!(Ti_max_tire_idx_1 <= Control_System_B.max_torque_front)) {
+    Ti_max_tire_idx_1 = Control_System_B.max_torque_front;
   }
 
-  /* '<S45>:1:42' */
   /* '<S45>:1:43' */
-  if (Control_System_B.Product10 <= Ti_max_motor_idx_2) {
-    Ti_max_motor_idx_2 = Control_System_B.Product10;
+  /* '<S45>:1:44' */
+  if (!(Fzi_idx_1 <= Control_System_B.max_torque_rear)) {
+    Fzi_idx_1 = Control_System_B.max_torque_rear;
   }
 
-  /* '<S45>:1:42' */
   /* '<S45>:1:43' */
-  if (Control_System_B.Fzi_idx_0 <= Ti_max_motor_idx_3) {
-    Ti_max_motor_idx_3 = Control_System_B.Fzi_idx_0;
+  /* '<S45>:1:44' */
+  if (!(Control_System_B.Fzi_idx_0 <= Control_System_B.max_torque_rear)) {
+    Control_System_B.Fzi_idx_0 = Control_System_B.max_torque_rear;
   }
 
-  /* '<S45>:1:42' */
+  /* '<S45>:1:43' */
   /* **********************************************% */
-  /* '<S45>:1:47' */
+  /* '<S45>:1:48' */
   Control_System_B.T_F[0] = 0.0F;
   Control_System_B.T_F[1] = 0.0F;
 
-  /* '<S45>:1:48' */
+  /* '<S45>:1:49' */
   Control_System_B.T_R[0] = 0.0F;
   Control_System_B.T_R[1] = 0.0F;
 
-  /* '<S45>:1:49' */
+  /* '<S45>:1:50' */
   Control_System_B.sat_F = 0U;
 
-  /* '<S45>:1:50' */
+  /* '<S45>:1:51' */
   Control_System_B.sat_R = 0U;
   if (Control_System_B.T_req >= 0.0F) {
-    /* '<S45>:1:52' */
     /* '<S45>:1:53' */
+    /* '<S45>:1:54' */
     switch (settings.TV_Method) {
      case 1U:
       /*  Only positive Torque */
-      Control__allocatePositiveTorque(Control_System_B.Ti_max_motor_idx_0,
-        Ti_max_motor_idx_1, Control_System_B.T_req, car_params.r_eff,
-        car_params.r_eff, 1.0F - Control_System_B.power,
-        Control_System_B.Saturation, car_params.GR, Control_System_B.tf,
-        Control_System_B.T_F, &Control_System_B.sat_F);
+      Control__allocatePositiveTorque(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff, 1.0F -
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tf, Control_System_B.T_F, &Control_System_B.sat_F);
 
-      /* '<S45>:1:56' */
-      Control__allocatePositiveTorque(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
+      /* '<S45>:1:57' */
+      Control__allocatePositiveTorque(Fzi_idx_1, Control_System_B.Fzi_idx_0,
         Control_System_B.T_req, car_params.r_eff, car_params.r_eff,
         Control_System_B.power, Control_System_B.Saturation, car_params.GR,
         Control_System_B.tr, Control_System_B.T_R, &Control_System_B.sat_R);
 
-      /* '<S45>:1:57' */
+      /* '<S45>:1:58' */
       break;
 
      case 2U:
       /*  Can also allocate negative torque */
-      Control_System_allocateTorque(Control_System_B.Ti_max_motor_idx_0,
-        Ti_max_motor_idx_1, Control_System_B.T_req, car_params.r_eff,
-        car_params.r_eff, 1.0F - Control_System_B.power,
-        Control_System_B.Saturation, car_params.GR, Control_System_B.tf,
-        yawRateControl.negative_torque_limit, Control_System_B.T_F,
-        &Control_System_B.sat_F);
+      Control_System_allocateTorque(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff, 1.0F -
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tf, yawRateControl.negative_torque_limit,
+        Control_System_B.T_F, &Control_System_B.sat_F);
 
-      /* '<S45>:1:60' */
-      Control_System_allocateTorque(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
+      /* '<S45>:1:61' */
+      Control_System_allocateTorque(Fzi_idx_1, Control_System_B.Fzi_idx_0,
         Control_System_B.T_req, car_params.r_eff, car_params.r_eff,
         Control_System_B.power, Control_System_B.Saturation, car_params.GR,
         Control_System_B.tr, yawRateControl.negative_torque_limit,
         Control_System_B.T_R, &Control_System_B.sat_R);
 
-      /* '<S45>:1:61' */
+      /* '<S45>:1:62' */
       break;
 
      case 3U:
       /*  Static 25 percent to each wheel */
-      /* '<S45>:1:64' */
+      /* '<S45>:1:65' */
       Control_System_B.T_F[0] = 0.25F * Control_System_B.T_req;
       Control_System_B.T_F[1] = 0.25F * Control_System_B.T_req;
 
-      /* '<S45>:1:65' */
+      /* '<S45>:1:66' */
       Control_System_B.T_R[0] = 0.25F * Control_System_B.T_req;
       Control_System_B.T_R[1] = 0.25F * Control_System_B.T_req;
+      break;
+
+     case 4U:
+      /*  Allocation with negative torque, but does not use Fz */
+      Control_System_allocateTorque(Control_System_B.max_torque_front,
+        Control_System_B.max_torque_front, Control_System_B.T_req,
+        car_params.r_eff, car_params.r_eff, 1.0F - Control_System_B.power,
+        Control_System_B.Saturation, car_params.GR, Control_System_B.tf,
+        yawRateControl.negative_torque_limit, Control_System_B.T_F,
+        &Control_System_B.sat_F);
+
+      /* '<S45>:1:69' */
+      Control_System_allocateTorque(Control_System_B.max_torque_rear,
+        Control_System_B.max_torque_rear, Control_System_B.T_req,
+        car_params.r_eff, car_params.r_eff, Control_System_B.power,
+        Control_System_B.Saturation, car_params.GR, Control_System_B.tr,
+        yawRateControl.negative_torque_limit, Control_System_B.T_R,
+        &Control_System_B.sat_R);
+
+      /* '<S45>:1:70' */
       break;
     }
 
     if (!((Control_System_B.sat_F == 1U) && (Control_System_B.sat_R == 1U))) {
       if ((Control_System_B.sat_F == 1U) && (Control_System_B.sat_R == 0U)) {
-        /* '<S45>:1:70' */
+        /* '<S45>:1:75' */
         if (Control_System_B.T_F[0] < 0.0F) {
-          /* '<S45>:1:71' */
-          /* '<S45>:1:72' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:76' */
+          /* '<S45>:1:77' */
+          Control_System_B.power = Control_System_B.T_req -
             Control_System_B.T_F[1];
         } else if (Control_System_B.T_F[1] < 0.0F) {
-          /* '<S45>:1:73' */
-          /* '<S45>:1:74' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:78' */
+          /* '<S45>:1:79' */
+          Control_System_B.power = Control_System_B.T_req -
             Control_System_B.T_F[0];
         } else {
-          /* '<S45>:1:76' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:81' */
+          Control_System_B.power = Control_System_B.T_req -
             (Control_System_B.T_F[0] + Control_System_B.T_F[1]);
         }
 
         if (yawRateControl.enable == 1U) {
-          /* '<S45>:1:79' */
-          /* '<S45>:1:80' */
-          Control_System_B.power = Control_System_B.Saturation -
+          /* '<S45>:1:84' */
+          /* '<S45>:1:85' */
+          Control_System_B.Product10 = Control_System_B.Saturation -
             (-Control_System_B.l1 * car_params.GR * Control_System_B.T_F[0] /
              car_params.r_eff + Control_System_B.l2 * car_params.GR *
              Control_System_B.T_F[1] / car_params.r_eff);
         } else {
-          /* '<S45>:1:82' */
-          Control_System_B.power = 0.0F;
+          /* '<S45>:1:87' */
+          Control_System_B.Product10 = 0.0F;
         }
 
-        /* '<S45>:1:85' */
+        /* '<S45>:1:90' */
         switch (settings.TV_Method) {
          case 1U:
           /*  Only positive Torque */
-          Contro_allocatePositiveTorque_p(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
-            Control_System_B.Product10, car_params.r_eff, car_params.r_eff,
-            Control_System_B.power, car_params.GR, Control_System_B.tr,
+          Contro_allocatePositiveTorque_p(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tr,
             Control_System_B.T_R, &Control_System_B.sat_F);
 
-          /* '<S45>:1:88' */
+          /* '<S45>:1:93' */
           break;
 
          case 2U:
           /*  Can also allocate negative torque */
-          Control_System_allocateTorque_f(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
-            Control_System_B.Product10, car_params.r_eff, car_params.r_eff,
-            Control_System_B.power, car_params.GR, Control_System_B.tr,
+          Control_System_allocateTorque_f(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tr,
             yawRateControl.negative_torque_limit, Control_System_B.T_R,
             &Control_System_B.sat_F);
 
-          /* '<S45>:1:91' */
+          /* '<S45>:1:96' */
+          break;
+
+         case 4U:
+          Control_System_allocateTorque_f(Control_System_B.max_torque_rear,
+            Control_System_B.max_torque_rear, Control_System_B.power,
+            car_params.r_eff, car_params.r_eff, Control_System_B.Product10,
+            car_params.GR, Control_System_B.tr,
+            yawRateControl.negative_torque_limit, Control_System_B.T_R,
+            &Control_System_B.sat_F);
+
+          /* '<S45>:1:98' */
           break;
         }
       } else if ((Control_System_B.sat_F == 0U) && (Control_System_B.sat_R == 1U))
       {
-        /* '<S45>:1:93' */
+        /* '<S45>:1:100' */
         if (Control_System_B.T_R[0] < 0.0F) {
-          /* '<S45>:1:94' */
-          /* '<S45>:1:95' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:101' */
+          /* '<S45>:1:102' */
+          Control_System_B.power = Control_System_B.T_req -
             Control_System_B.T_R[1];
         } else if (Control_System_B.T_R[1] < 0.0F) {
-          /* '<S45>:1:96' */
-          /* '<S45>:1:97' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:103' */
+          /* '<S45>:1:104' */
+          Control_System_B.power = Control_System_B.T_req -
             Control_System_B.T_R[0];
         } else {
-          /* '<S45>:1:99' */
-          Control_System_B.Product10 = Control_System_B.T_req -
+          /* '<S45>:1:106' */
+          Control_System_B.power = Control_System_B.T_req -
             (Control_System_B.T_R[0] + Control_System_B.T_R[1]);
         }
 
         /*  For example rear is saturated, and front can still use more torque */
         /* T_remaining = T_req - (T_R(1) + T_R(2)); */
         if (yawRateControl.enable == 1U) {
-          /* '<S45>:1:103' */
-          /* '<S45>:1:104' */
-          Control_System_B.power = Control_System_B.Saturation -
+          /* '<S45>:1:110' */
+          /* '<S45>:1:111' */
+          Control_System_B.Product10 = Control_System_B.Saturation -
             (-car_params.t_r * car_params.GR * Control_System_B.T_R[0] /
              car_params.r_eff + car_params.t_r * car_params.GR *
              Control_System_B.T_R[1] / car_params.r_eff);
         } else {
-          /* '<S45>:1:106' */
-          Control_System_B.power = 0.0F;
+          /* '<S45>:1:113' */
+          Control_System_B.Product10 = 0.0F;
         }
 
         /* Mz_remaining = Mz_ref*(1-alfa_r); */
-        /* '<S45>:1:109' */
+        /* '<S45>:1:116' */
         switch (settings.TV_Method) {
          case 1U:
           /*  Only positive Torque */
-          Contro_allocatePositiveTorque_p(Control_System_B.Ti_max_motor_idx_0,
-            Ti_max_motor_idx_1, Control_System_B.Product10, car_params.r_eff,
-            car_params.r_eff, Control_System_B.power, car_params.GR,
-            Control_System_B.tf, Control_System_B.T_F, &Control_System_B.sat_F);
+          Contro_allocatePositiveTorque_p(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tf,
+            Control_System_B.T_F, &Control_System_B.sat_F);
 
-          /* '<S45>:1:112' */
+          /* '<S45>:1:119' */
           break;
 
          case 2U:
           /*  Can also allocate negative torque */
-          Control_System_allocateTorque_f(Control_System_B.Ti_max_motor_idx_0,
-            Ti_max_motor_idx_1, Control_System_B.Product10, car_params.r_eff,
-            car_params.r_eff, Control_System_B.power, car_params.GR,
-            Control_System_B.tf, yawRateControl.negative_torque_limit,
-            Control_System_B.T_F, &Control_System_B.sat_F);
+          Control_System_allocateTorque_f(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tf,
+            yawRateControl.negative_torque_limit, Control_System_B.T_F,
+            &Control_System_B.sat_F);
 
-          /* '<S45>:1:115' */
+          /* '<S45>:1:122' */
+          break;
+
+         case 4U:
+          Control_System_allocateTorque_f(Control_System_B.max_torque_front,
+            Control_System_B.max_torque_front, Control_System_B.power,
+            car_params.r_eff, car_params.r_eff, Control_System_B.Product10,
+            car_params.GR, Control_System_B.tf,
+            yawRateControl.negative_torque_limit, Control_System_B.T_F,
+            &Control_System_B.sat_F);
+
+          /* '<S45>:1:124' */
           break;
         }
       } else {
@@ -1653,95 +1724,211 @@ void Control_System_step(void)
         /*  Nothing to do here either */
       }
     } else {
-      /* '<S45>:1:68' */
+      /* '<S45>:1:73' */
       /*  Nothing more to do */
     }
   } else {
-    /* Negative torque */
-    Control_Syst_allocateKersTorque(Control_System_B.Ti_max_motor_idx_0,
-      Ti_max_motor_idx_1, Control_System_B.T_req, car_params.r_eff,
-      car_params.r_eff, 1.0F - Control_System_B.power,
-      Control_System_B.Saturation, car_params.GR, Control_System_B.tf,
-      Control_System_B.T_F, &Control_System_B.sat_F);
+    /* REGENERATIVE BRAKE COMMAND ( T_DRIVER_REQ < 0 ) */
+    /* '<S45>:1:132' */
+    switch (settings.TV_Method) {
+     case 1U:
+      /*  Only positive Torque */
+      Control_Syst_allocateKersTorque(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff, 1.0F -
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tf, Control_System_B.T_F, &Control_System_B.sat_F);
 
-    /* '<S45>:1:123' */
-    Control_Syst_allocateKersTorque(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
-      Control_System_B.T_req, car_params.r_eff, car_params.r_eff,
-      Control_System_B.power, Control_System_B.Saturation, car_params.GR,
-      Control_System_B.tr, Control_System_B.T_R, &Control_System_B.sat_R);
+      /* '<S45>:1:135' */
+      Control_Syst_allocateKersTorque(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff,
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tr, Control_System_B.T_R, &Control_System_B.sat_R);
 
-    /* '<S45>:1:124' */
+      /* '<S45>:1:136' */
+      break;
+
+     case 2U:
+      /*  Can also allocate negative torque */
+      Control_Syst_allocateKersTorque(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff, 1.0F -
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tf, Control_System_B.T_F, &Control_System_B.sat_F);
+
+      /* '<S45>:1:140' */
+      Control_Syst_allocateKersTorque(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+        Control_System_B.T_req, car_params.r_eff, car_params.r_eff,
+        Control_System_B.power, Control_System_B.Saturation, car_params.GR,
+        Control_System_B.tr, Control_System_B.T_R, &Control_System_B.sat_R);
+
+      /* '<S45>:1:141' */
+      break;
+
+     case 3U:
+      /*  Static 25 percent to each wheel */
+      /* '<S45>:1:144' */
+      Control_System_B.T_F[0] = 0.25F * Control_System_B.T_req;
+      Control_System_B.T_F[1] = 0.25F * Control_System_B.T_req;
+
+      /* '<S45>:1:145' */
+      Control_System_B.T_R[0] = 0.25F * Control_System_B.T_req;
+      Control_System_B.T_R[1] = 0.25F * Control_System_B.T_req;
+      break;
+
+     case 4U:
+      /*  Allocation with negative torque, but does not use Fz */
+      Control_Syst_allocateKersTorque(Control_System_B.max_torque_front,
+        Control_System_B.max_torque_front, Control_System_B.T_req,
+        car_params.r_eff, car_params.r_eff, 1.0F - Control_System_B.power,
+        Control_System_B.Saturation, car_params.GR, Control_System_B.tf,
+        Control_System_B.T_F, &Control_System_B.sat_F);
+
+      /* '<S45>:1:148' */
+      Control_Syst_allocateKersTorque(Control_System_B.max_torque_rear,
+        Control_System_B.max_torque_rear, Control_System_B.T_req,
+        car_params.r_eff, car_params.r_eff, Control_System_B.power,
+        Control_System_B.Saturation, car_params.GR, Control_System_B.tr,
+        Control_System_B.T_R, &Control_System_B.sat_R);
+
+      /* '<S45>:1:149' */
+      break;
+    }
+
     if (!((Control_System_B.sat_F == 1U) && (Control_System_B.sat_R == 1U))) {
       if ((Control_System_B.sat_F == 1U) && (Control_System_B.sat_R == 0U)) {
-        /* '<S45>:1:127' */
-        /* '<S45>:1:128' */
+        /* '<S45>:1:154' */
+        /* '<S45>:1:155' */
+        Control_System_B.power = Control_System_B.T_req - (Control_System_B.T_F
+          [0] + Control_System_B.T_F[1]);
+
         /* Disable Mz_remaining if yaw control disabled? */
         if (yawRateControl.enable == 1U) {
-          /* '<S45>:1:130' */
-          /* '<S45>:1:131' */
-          Control_System_B.power = Control_System_B.Saturation -
+          /* '<S45>:1:157' */
+          /* '<S45>:1:158' */
+          Control_System_B.Product10 = Control_System_B.Saturation -
             (-Control_System_B.l1 * car_params.GR * Control_System_B.T_F[0] /
              car_params.r_eff + Control_System_B.l2 * car_params.GR *
              Control_System_B.T_F[1] / car_params.r_eff);
         } else {
-          /* '<S45>:1:133' */
-          Control_System_B.power = 0.0F;
+          /* '<S45>:1:160' */
+          Control_System_B.Product10 = 0.0F;
         }
 
-        /* Mz_remaining = Mz_ref*alfa_r; */
-        Control_Sy_allocateKersTorque_a(Ti_max_motor_idx_2, Ti_max_motor_idx_3,
-          Control_System_B.T_req - (Control_System_B.T_F[0] +
-          Control_System_B.T_F[1]), car_params.r_eff, car_params.r_eff,
-          Control_System_B.power, car_params.GR, Control_System_B.tr,
-          Control_System_B.T_R, &Control_System_B.sat_F);
+        /* '<S45>:1:162' */
+        switch (settings.TV_Method) {
+         case 1U:
+          /*  Only positive Torque */
+          Control_Sy_allocateKersTorque_a(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tr,
+            Control_System_B.T_R, &Control_System_B.sat_F);
 
-        /* '<S45>:1:136' */
+          /* '<S45>:1:165' */
+          break;
+
+         case 2U:
+          /*  Can also allocate negative torque */
+          Control_Sy_allocateKersTorque_a(Fzi_idx_1, Control_System_B.Fzi_idx_0,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tr,
+            Control_System_B.T_R, &Control_System_B.sat_F);
+
+          /* '<S45>:1:169' */
+          break;
+
+         case 3U:
+          /*  Static 25 % */
+          break;
+
+         case 4U:
+          /*  Allocation with negative torque, but does not use Fz */
+          Control_Sy_allocateKersTorque_a(Control_System_B.max_torque_rear,
+            Control_System_B.max_torque_rear, Control_System_B.power,
+            car_params.r_eff, car_params.r_eff, Control_System_B.Product10,
+            car_params.GR, Control_System_B.tr, Control_System_B.T_R,
+            &Control_System_B.sat_F);
+
+          /* '<S45>:1:174' */
+          break;
+        }
       } else if ((Control_System_B.sat_F == 0U) && (Control_System_B.sat_R == 1U))
       {
-        /* '<S45>:1:137' */
+        /* '<S45>:1:177' */
         /* For example rear is saturated, and front can still use more torque */
-        /* '<S45>:1:139' */
+        /* '<S45>:1:179' */
+        Control_System_B.power = Control_System_B.T_req - (Control_System_B.T_R
+          [0] + Control_System_B.T_R[1]);
+
         /* Mz_remaining = Mz_ref*(1-alfa_r); */
         if (yawRateControl.enable == 1U) {
-          /* '<S45>:1:142' */
-          /* '<S45>:1:143' */
-          Control_System_B.power = Control_System_B.Saturation -
+          /* '<S45>:1:182' */
+          /* '<S45>:1:183' */
+          Control_System_B.Product10 = Control_System_B.Saturation -
             (-car_params.t_r * car_params.GR * Control_System_B.T_R[0] /
              car_params.r_eff + car_params.t_r * car_params.GR *
              Control_System_B.T_R[1] / car_params.r_eff);
         } else {
-          /* '<S45>:1:145' */
-          Control_System_B.power = 0.0F;
+          /* '<S45>:1:185' */
+          Control_System_B.Product10 = 0.0F;
         }
 
-        Control_Sy_allocateKersTorque_a(Control_System_B.Ti_max_motor_idx_0,
-          Ti_max_motor_idx_1, Control_System_B.T_req - (Control_System_B.T_R[0]
-          + Control_System_B.T_R[1]), car_params.r_eff, car_params.r_eff,
-          Control_System_B.power, car_params.GR, Control_System_B.tf,
-          Control_System_B.T_F, &Control_System_B.sat_F);
+        /* '<S45>:1:187' */
+        switch (settings.TV_Method) {
+         case 1U:
+          /*  Only positive Torque */
+          Control_Sy_allocateKersTorque_a(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tf,
+            Control_System_B.T_F, &Control_System_B.sat_F);
 
-        /* '<S45>:1:147' */
+          /* '<S45>:1:190' */
+          break;
+
+         case 2U:
+          /*  Can also allocate negative torque */
+          Control_Sy_allocateKersTorque_a(Ti_max_tire_idx_0, Ti_max_tire_idx_1,
+            Control_System_B.power, car_params.r_eff, car_params.r_eff,
+            Control_System_B.Product10, car_params.GR, Control_System_B.tf,
+            Control_System_B.T_F, &Control_System_B.sat_F);
+
+          /* '<S45>:1:194' */
+          break;
+
+         case 3U:
+          /*  Static 25 % */
+          break;
+
+         case 4U:
+          /*  Allocation with negative torque, but does not use Fz */
+          Control_Sy_allocateKersTorque_a(Control_System_B.max_torque_front,
+            Control_System_B.max_torque_front, Control_System_B.power,
+            car_params.r_eff, car_params.r_eff, Control_System_B.Product10,
+            car_params.GR, Control_System_B.tf, Control_System_B.T_F,
+            &Control_System_B.sat_F);
+
+          /* '<S45>:1:199' */
+          break;
+        }
       } else {
         /* both false */
         /* Nothing to do here either */
       }
     } else {
-      /* '<S45>:1:125' */
+      /* '<S45>:1:151' */
       /* Nothing more to do */
     }
   }
 
-  /* '<S45>:1:154' */
-  /* '<S45>:1:157' */
-  /* '<S45>:1:158' */
-  /* '<S45>:1:159' */
-  /* '<S45>:1:160' */
-  /* '<S45>:1:162' */
+  /* '<S45>:1:207' */
+  /* '<S45>:1:210' */
+  /* '<S45>:1:211' */
+  /* '<S45>:1:212' */
+  /* '<S45>:1:213' */
+  /* '<S45>:1:215' */
   /*  Calculate what yaw moment that was achieved with the current  */
   /*  allocation */
-  /* '<S45>:1:167' */
-  /* '<S45>:1:168' */
-  /* '<S45>:1:169' */
+  /* '<S45>:1:219' */
+  /* '<S45>:1:220' */
+  /* '<S45>:1:221' */
   Control_System_B.Mz_error = Control_System_B.Saturation - (((1.0F /
     car_params.r_eff * Control_System_B.T_F[0] * car_params.GR *
     -Control_System_B.l1 + 1.0F / car_params.r_eff * Control_System_B.T_F[1] *
@@ -1755,9 +1942,10 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (Control_System_B.T_F[0] > Control_System_P.Switch_Threshold_c) {
-    Control_System_B.tr = Control_System_P.Constant_Value_h;
+    Control_System_B.max_torque_rear = Control_System_P.Constant_Value_h;
   } else {
-    Control_System_B.tr = Control_System_P.Gain_Gain * Control_System_B.T_F[0];
+    Control_System_B.max_torque_rear = Control_System_P.Gain_Gain *
+      Control_System_B.T_F[0];
   }
 
   /* End of Switch: '<S27>/Switch' */
@@ -1779,10 +1967,9 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (Control_System_B.T_F[0] > Control_System_P.Switch1_Threshold) {
-    Control_System_B.Product10 = Control_System_P.Gain1_Gain *
-      Control_System_B.T_F[0];
+    Control_System_B.tr = Control_System_P.Gain1_Gain * Control_System_B.T_F[0];
   } else {
-    Control_System_B.Product10 = Control_System_P.Constant1_Value;
+    Control_System_B.tr = Control_System_P.Constant1_Value;
   }
 
   /* End of Switch: '<S27>/Switch1' */
@@ -1793,12 +1980,13 @@ void Control_System_step(void)
    *  RelationalOperator: '<S31>/UpperRelop'
    *  Switch: '<S31>/Switch'
    */
-  if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n > Control_System_B.tr) {
-    Control_System_B.Switch2_n = Control_System_B.tr;
+  if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n >
+      Control_System_B.max_torque_rear) {
+    Control_System_B.Switch2_n = Control_System_B.max_torque_rear;
   } else if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n <
-             Control_System_B.Product10) {
+             Control_System_B.tr) {
     /* Switch: '<S31>/Switch' */
-    Control_System_B.Switch2_n = Control_System_B.Product10;
+    Control_System_B.Switch2_n = Control_System_B.tr;
   } else {
     Control_System_B.Switch2_n =
       Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n;
@@ -1816,52 +2004,71 @@ void Control_System_step(void)
   /* '<S26>:1:8' */
   /* '<S26>:1:10' */
   /* '<S26>:1:11' */
-  Control_System_B.power = Control_System_U.states.V_x * 3.6F;
+  Control_System_B.Product10 = Control_System_U.states.V_x * 3.6F;
 
-  /*  GAINS */
-  /*  If requested torque is larger than zero, use linear function  */
-  /*  If negative, use constant ?  */
-  /* '<S26>:1:20' */
-  /* '<S26>:1:21' */
-  if (Control_System_B.T_req + 0.0001F > 0.0F) {
-    /* '<S26>:1:22' */
-    /* '<S26>:1:23' */
-    if (0.0F < Control_System_B.power) {
-      Ti_max_tire_idx_1 = Control_System_B.power;
+  /* '<S26>:1:15' */
+  Control_System_B.power = (tractionControl.Kp_end - tractionControl.Kp_start) /
+    tractionControl.lookup_speed_end_kmh;
+
+  /* '<S26>:1:16' */
+  Control_System_B.tf = (tractionControl.Ki_end - tractionControl.Ki_start) /
+    tractionControl.lookup_speed_end_kmh;
+  if ((Control_System_B.T_req + 0.0001F > 0.0F) && (Control_System_B.Product10 <
+       tractionControl.full_gain_limit_kmh)) {
+    /* '<S26>:1:19' */
+    /* '<S26>:1:20' */
+    if (0.0F < Control_System_B.Product10) {
+      Fzi_idx_1 = Control_System_B.Product10;
     } else {
-      Ti_max_tire_idx_1 = 0.0F;
+      Fzi_idx_1 = 0.0F;
     }
 
-    Control_System_B.Fzi_idx_0 = (tractionControl.Kp_end -
-      tractionControl.Kp_start) / tractionControl.lookup_speed_end_kmh *
-      Ti_max_tire_idx_1 + tractionControl.Kp_start;
+    Control_System_B.Fzi_idx_0 = Control_System_B.power * Fzi_idx_1 +
+      tractionControl.Kp_start;
     if (!(Control_System_B.Fzi_idx_0 <= tractionControl.Kp_end)) {
       Control_System_B.Fzi_idx_0 = tractionControl.Kp_end;
     }
 
-    Control_System_B.tf = Control_System_B.Fzi_idx_0 * (real32_T)fabs
-      (Control_System_B.T_req) / (settings.max_motor_torque * 4.0F);
+    Control_System_B.max_torque_front = Control_System_B.Fzi_idx_0 * (real32_T)
+      fabs(Control_System_B.T_req) / (settings.max_motor_torque * 4.0F);
 
-    /* '<S26>:1:24' */
-    if (!(0.0F < Control_System_B.power)) {
-      Control_System_B.power = 0.0F;
+    /* '<S26>:1:21' */
+    if (!(0.0F < Control_System_B.Product10)) {
+      Control_System_B.Product10 = 0.0F;
     }
 
-    Control_System_B.Fzi_idx_0 = (tractionControl.Ki_end -
-      tractionControl.Ki_start) / tractionControl.lookup_speed_end_kmh *
-      Control_System_B.power + tractionControl.Ki_start;
+    Control_System_B.Fzi_idx_0 = Control_System_B.tf *
+      Control_System_B.Product10 + tractionControl.Ki_start;
     if (!(Control_System_B.Fzi_idx_0 <= tractionControl.Ki_end)) {
       Control_System_B.Fzi_idx_0 = tractionControl.Ki_end;
     }
 
-    Control_System_B.Ti_max_motor_idx_0 = Control_System_B.Fzi_idx_0 * (real32_T)
-      fabs(Control_System_B.T_req) / (settings.max_motor_torque * 4.0F);
+    Control_System_B.Ki = Control_System_B.Fzi_idx_0 * (real32_T)fabs
+      (Control_System_B.T_req) / (settings.max_motor_torque * 4.0F);
   } else {
-    /* '<S26>:1:26' */
-    Control_System_B.tf = tractionControl.Kp_braking;
+    /* '<S26>:1:23' */
+    if (0.0F < Control_System_B.Product10) {
+      Fzi_idx_1 = Control_System_B.Product10;
+    } else {
+      Fzi_idx_1 = 0.0F;
+    }
 
-    /* '<S26>:1:27' */
-    Control_System_B.Ti_max_motor_idx_0 = tractionControl.Ki_braking;
+    Control_System_B.max_torque_front = Control_System_B.power * Fzi_idx_1 +
+      tractionControl.Kp_start;
+    if (!(Control_System_B.max_torque_front <= tractionControl.Kp_end)) {
+      Control_System_B.max_torque_front = tractionControl.Kp_end;
+    }
+
+    /* '<S26>:1:24' */
+    if (!(0.0F < Control_System_B.Product10)) {
+      Control_System_B.Product10 = 0.0F;
+    }
+
+    Control_System_B.Ki = Control_System_B.tf * Control_System_B.Product10 +
+      tractionControl.Ki_start;
+    if (!(Control_System_B.Ki <= tractionControl.Ki_end)) {
+      Control_System_B.Ki = tractionControl.Ki_end;
+    }
   }
 
   /* Switch: '<S27>/Switch2' incorporates:
@@ -1869,6 +2076,56 @@ void Control_System_step(void)
    *  Gain: '<S27>/Gain7'
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
+  /*  This one solves starting from 0 kmh with the driver controlling the */
+  /*  throttle. This statement reduces the gains according to the requested */
+  /*  torque, to avoid oscillating torque output */
+  /*  if ( ( (T_req + 0.0001) > 0) && (vx_kmh < tractionControl.full_gain_limit_kmh) )    */
+  /*      Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4); */
+  /*      Ki_driving = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4); */
+  /*      Kp_FL = Kp_driving; */
+  /*      Kp_FR = Kp_driving; */
+  /*      Kp_RL = Kp_driving; */
+  /*      Kp_RR = Kp_driving; */
+  /*       */
+  /*      Ki_FL = Ki_driving; */
+  /*      Ki_FR = Ki_driving; */
+  /*      Ki_RL = Ki_driving; */
+  /*      Ki_RR = Ki_driving; */
+  /*      %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4); */
+  /*      %Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4); */
+  /*   */
+  /*  % T_req positive and speed over full gain limit */
+  /*  elseif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl.full_gain_limit_kmh)) */
+  /*      Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end); */
+  /*      Ki_driving = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end); */
+  /*      Kp_FL = Kp_driving; */
+  /*      Kp_FR = Kp_driving; */
+  /*      Kp_RL = Kp_driving; */
+  /*      Kp_RR = Kp_driving; */
+  /*       */
+  /*      Ki_FL = Ki_driving; */
+  /*      Ki_FR = Ki_driving; */
+  /*      Ki_RL = Ki_driving; */
+  /*      Ki_RR = Ki_driving;     */
+  /*  else    */
+  /*      Kp_FL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end); */
+  /*      Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end); */
+  /*      Kp_RL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end); */
+  /*      Kp_RR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end); */
+  /*       */
+  /*      Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end); */
+  /*      Ki_FR = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end); */
+  /*      Ki_RL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end); */
+  /*      Ki_RR = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end); */
+  /*       */
+  /*      %Kp = tractionControl.Kp_braking; */
+  /*      %Ki = tractionControl.Ki_braking; */
+  /*  end */
+  /*   */
+  /*  if ( (T_tv.FL < 0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) ) */
+  /*      Kp = tractionControl.Kp_braking; */
+  /*      Ki = tractionControl.Ki_braking; */
+  /*  end */
   if (Control_System_B.T_F[0] > Control_System_P.Switch2_Threshold) {
     Control_System_B.Fzi_idx_0 = tractionControl.Slip_ratio_ref;
   } else {
@@ -1882,20 +2139,20 @@ void Control_System_step(void)
    *  Inport: '<Root>/states'
    *  MATLAB Function: '<S14>/MATLAB Function1'
    */
-  Ti_max_motor_idx_1 = Control_System_B.Fzi_idx_0 -
+  Control_System_B.Sum = Control_System_B.Fzi_idx_0 -
     Control_System_U.states.SR_FL;
 
   /* Sum: '<S27>/Sum2' incorporates:
    *  Product: '<S27>/Product'
    */
-  Control_System_B.power = Control_System_B.tf * Ti_max_motor_idx_1 +
-    Control_System_B.Switch2_n;
+  Control_System_B.power = Control_System_B.max_torque_front *
+    Control_System_B.Sum + Control_System_B.Switch2_n;
 
   /* Switch: '<S32>/Switch' incorporates:
    *  RelationalOperator: '<S32>/UpperRelop'
    */
-  if (!(Control_System_B.power < Control_System_B.Product10)) {
-    Control_System_B.Product10 = Control_System_B.power;
+  if (!(Control_System_B.power < Control_System_B.tr)) {
+    Control_System_B.tr = Control_System_B.power;
   }
 
   /* End of Switch: '<S32>/Switch' */
@@ -1903,10 +2160,8 @@ void Control_System_step(void)
   /* Switch: '<S32>/Switch2' incorporates:
    *  RelationalOperator: '<S32>/LowerRelop1'
    */
-  if (Control_System_B.power > Control_System_B.tr) {
-    Control_System_B.l1 = Control_System_B.tr;
-  } else {
-    Control_System_B.l1 = Control_System_B.Product10;
+  if (Control_System_B.power > Control_System_B.max_torque_rear) {
+    Control_System_B.tr = Control_System_B.max_torque_rear;
   }
 
   /* End of Switch: '<S32>/Switch2' */
@@ -1942,9 +2197,10 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (Control_System_B.T_F[1] > Control_System_P.Switch1_Threshold_f) {
-    Control_System_B.tr = Control_System_P.Gain1_Gain_h * Control_System_B.T_F[1];
+    Control_System_B.max_torque_rear = Control_System_P.Gain1_Gain_h *
+      Control_System_B.T_F[1];
   } else {
-    Control_System_B.tr = Control_System_P.Constant1_Value_h;
+    Control_System_B.max_torque_rear = Control_System_P.Constant1_Value_h;
   }
 
   /* End of Switch: '<S28>/Switch1' */
@@ -1957,13 +2213,14 @@ void Control_System_step(void)
    */
   if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c > Control_System_B.power)
   {
-    Ti_max_motor_idx_2 = Control_System_B.power;
+    Control_System_B.Switch2_c = Control_System_B.power;
   } else if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c <
-             Control_System_B.tr) {
+             Control_System_B.max_torque_rear) {
     /* Switch: '<S33>/Switch' */
-    Ti_max_motor_idx_2 = Control_System_B.tr;
+    Control_System_B.Switch2_c = Control_System_B.max_torque_rear;
   } else {
-    Ti_max_motor_idx_2 = Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c;
+    Control_System_B.Switch2_c =
+      Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c;
   }
 
   /* End of Switch: '<S33>/Switch2' */
@@ -1986,19 +2243,19 @@ void Control_System_step(void)
    *  Inport: '<Root>/states'
    *  MATLAB Function: '<S14>/MATLAB Function1'
    */
-  Ti_max_tire_idx_0 = Control_System_B.Fzi_idx_0 - Control_System_U.states.SR_FR;
+  Fzi_idx_3 = Control_System_B.Fzi_idx_0 - Control_System_U.states.SR_FR;
 
   /* Sum: '<S28>/Sum2' incorporates:
    *  Product: '<S28>/Product'
    */
-  Control_System_B.Product10 = Control_System_B.tf * Ti_max_tire_idx_0 +
-    Ti_max_motor_idx_2;
+  Control_System_B.Product10 = Control_System_B.max_torque_front * Fzi_idx_3 +
+    Control_System_B.Switch2_c;
 
   /* Switch: '<S34>/Switch' incorporates:
    *  RelationalOperator: '<S34>/UpperRelop'
    */
-  if (!(Control_System_B.Product10 < Control_System_B.tr)) {
-    Control_System_B.tr = Control_System_B.Product10;
+  if (!(Control_System_B.Product10 < Control_System_B.max_torque_rear)) {
+    Control_System_B.max_torque_rear = Control_System_B.Product10;
   }
 
   /* End of Switch: '<S34>/Switch' */
@@ -2007,9 +2264,9 @@ void Control_System_step(void)
    *  RelationalOperator: '<S34>/LowerRelop1'
    */
   if (Control_System_B.Product10 > Control_System_B.power) {
-    Control_System_B.alfa_r = Control_System_B.power;
+    Control_System_B.tf = Control_System_B.power;
   } else {
-    Control_System_B.alfa_r = Control_System_B.tr;
+    Control_System_B.tf = Control_System_B.max_torque_rear;
   }
 
   /* End of Switch: '<S34>/Switch2' */
@@ -2045,9 +2302,10 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (Control_System_B.T_R[0] > Control_System_P.Switch1_Threshold_d) {
-    Control_System_B.tr = Control_System_P.Gain1_Gain_k * Control_System_B.T_R[0];
+    Control_System_B.max_torque_rear = Control_System_P.Gain1_Gain_k *
+      Control_System_B.T_R[0];
   } else {
-    Control_System_B.tr = Control_System_P.Constant1_Value_p;
+    Control_System_B.max_torque_rear = Control_System_P.Constant1_Value_p;
   }
 
   /* End of Switch: '<S29>/Switch1' */
@@ -2060,14 +2318,13 @@ void Control_System_step(void)
    */
   if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b >
       Control_System_B.Product10) {
-    Control_System_B.Fzi_idx_2 = Control_System_B.Product10;
+    Ti_max_tire_idx_1 = Control_System_B.Product10;
   } else if (Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b <
-             Control_System_B.tr) {
+             Control_System_B.max_torque_rear) {
     /* Switch: '<S35>/Switch' */
-    Control_System_B.Fzi_idx_2 = Control_System_B.tr;
+    Ti_max_tire_idx_1 = Control_System_B.max_torque_rear;
   } else {
-    Control_System_B.Fzi_idx_2 =
-      Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b;
+    Ti_max_tire_idx_1 = Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b;
   }
 
   /* End of Switch: '<S35>/Switch2' */
@@ -2090,20 +2347,19 @@ void Control_System_step(void)
    *  Inport: '<Root>/states'
    *  MATLAB Function: '<S14>/MATLAB Function1'
    */
-  Ti_max_motor_idx_3 = Control_System_B.Fzi_idx_0 -
-    Control_System_U.states.SR_RL;
+  Ti_max_tire_idx_0 = Control_System_B.Fzi_idx_0 - Control_System_U.states.SR_RL;
 
   /* Sum: '<S29>/Sum2' incorporates:
    *  Product: '<S29>/Product'
    */
-  Control_System_B.power = Control_System_B.tf * Ti_max_motor_idx_3 +
-    Control_System_B.Fzi_idx_2;
+  Control_System_B.power = Control_System_B.max_torque_front * Ti_max_tire_idx_0
+    + Ti_max_tire_idx_1;
 
   /* Switch: '<S36>/Switch' incorporates:
    *  RelationalOperator: '<S36>/UpperRelop'
    */
-  if (!(Control_System_B.power < Control_System_B.tr)) {
-    Control_System_B.tr = Control_System_B.power;
+  if (!(Control_System_B.power < Control_System_B.max_torque_rear)) {
+    Control_System_B.max_torque_rear = Control_System_B.power;
   }
 
   /* End of Switch: '<S36>/Switch' */
@@ -2112,9 +2368,9 @@ void Control_System_step(void)
    *  RelationalOperator: '<S36>/LowerRelop1'
    */
   if (Control_System_B.power > Control_System_B.Product10) {
-    Ti_max_tire_idx_1 = Control_System_B.Product10;
+    Control_System_B.l2 = Control_System_B.Product10;
   } else {
-    Ti_max_tire_idx_1 = Control_System_B.tr;
+    Control_System_B.l2 = Control_System_B.max_torque_rear;
   }
 
   /* End of Switch: '<S36>/Switch2' */
@@ -2150,9 +2406,10 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (Control_System_B.T_R[1] > Control_System_P.Switch1_Threshold_p) {
-    Control_System_B.tr = Control_System_P.Gain1_Gain_m * Control_System_B.T_R[1];
+    Control_System_B.max_torque_rear = Control_System_P.Gain1_Gain_m *
+      Control_System_B.T_R[1];
   } else {
-    Control_System_B.tr = Control_System_P.Constant1_Value_d;
+    Control_System_B.max_torque_rear = Control_System_P.Constant1_Value_d;
   }
 
   /* End of Switch: '<S30>/Switch1' */
@@ -2165,13 +2422,13 @@ void Control_System_step(void)
    */
   if (Control_System_DW.DiscreteTimeIntegrator2_DSTA_c2 > Control_System_B.power)
   {
-    Control_System_B.Fzi_idx_3 = Control_System_B.power;
+    Control_System_B.Switch2_ck = Control_System_B.power;
   } else if (Control_System_DW.DiscreteTimeIntegrator2_DSTA_c2 <
-             Control_System_B.tr) {
+             Control_System_B.max_torque_rear) {
     /* Switch: '<S37>/Switch' */
-    Control_System_B.Fzi_idx_3 = Control_System_B.tr;
+    Control_System_B.Switch2_ck = Control_System_B.max_torque_rear;
   } else {
-    Control_System_B.Fzi_idx_3 =
+    Control_System_B.Switch2_ck =
       Control_System_DW.DiscreteTimeIntegrator2_DSTA_c2;
   }
 
@@ -2195,19 +2452,19 @@ void Control_System_step(void)
    *  Inport: '<Root>/states'
    *  MATLAB Function: '<S14>/MATLAB Function1'
    */
-  Control_System_B.Fzi_idx_0 -= Control_System_U.states.SR_RR;
+  Fzi_idx_2 = Control_System_B.Fzi_idx_0 - Control_System_U.states.SR_RR;
 
   /* Sum: '<S30>/Sum2' incorporates:
    *  Product: '<S30>/Product'
    */
-  Control_System_B.l2 = Control_System_B.tf * Control_System_B.Fzi_idx_0 +
-    Control_System_B.Fzi_idx_3;
+  Control_System_B.l1 = Control_System_B.max_torque_front * Fzi_idx_2 +
+    Control_System_B.Switch2_ck;
 
   /* Switch: '<S38>/Switch' incorporates:
    *  RelationalOperator: '<S38>/UpperRelop'
    */
-  if (!(Control_System_B.l2 < Control_System_B.tr)) {
-    Control_System_B.tr = Control_System_B.l2;
+  if (!(Control_System_B.l1 < Control_System_B.max_torque_rear)) {
+    Control_System_B.max_torque_rear = Control_System_B.l1;
   }
 
   /* End of Switch: '<S38>/Switch' */
@@ -2215,8 +2472,10 @@ void Control_System_step(void)
   /* Switch: '<S38>/Switch2' incorporates:
    *  RelationalOperator: '<S38>/LowerRelop1'
    */
-  if (Control_System_B.l2 > Control_System_B.power) {
-    Control_System_B.tr = Control_System_B.power;
+  if (Control_System_B.l1 > Control_System_B.power) {
+    Control_System_B.max_torque_front = Control_System_B.power;
+  } else {
+    Control_System_B.max_torque_front = Control_System_B.max_torque_rear;
   }
 
   /* End of Switch: '<S38>/Switch2' */
@@ -2250,125 +2509,128 @@ void Control_System_step(void)
     /*  Couple TC outputs to maintain stability on mu split surfaces  */
     /*  under acceleration and deceleration */
     /* '<S25>:1:26' */
-    if (Control_System_B.l1 <= Control_System_B.alfa_r) {
-      Control_System_B.Product10 = Control_System_B.l1;
+    if (Control_System_B.tr <= Control_System_B.tf) {
+      Control_System_B.Fzi_idx_0 = Control_System_B.tr;
     } else {
-      Control_System_B.Product10 = Control_System_B.alfa_r;
+      Control_System_B.Fzi_idx_0 = Control_System_B.tf;
     }
 
     Control_System_B.power = Control_System_B.T_F[0] +
-      Control_System_B.Product10;
+      Control_System_B.Fzi_idx_0;
     if (0.0F < Control_System_B.power) {
-      Control_System_B.l2 = Control_System_B.power;
+      Control_System_B.l1 = Control_System_B.power;
     } else {
-      Control_System_B.l2 = 0.0F;
+      Control_System_B.l1 = 0.0F;
     }
 
     /* '<S25>:1:27' */
-    if (Control_System_B.l1 <= Control_System_B.alfa_r) {
-      Control_System_B.alfa_r = Control_System_B.l1;
+    if (Control_System_B.tr <= Control_System_B.tf) {
+      Control_System_B.tf = Control_System_B.tr;
     }
 
-    Control_System_B.power = Control_System_B.T_F[1] + Control_System_B.alfa_r;
+    Control_System_B.power = Control_System_B.T_F[1] + Control_System_B.tf;
     if (0.0F < Control_System_B.power) {
       Control_System_B.tf = Control_System_B.power;
     } else {
       Control_System_B.tf = 0.0F;
     }
 
-    /* '<S25>:1:28' */
-    if (Ti_max_tire_idx_1 <= Control_System_B.tr) {
-      Control_System_B.Product10 = Ti_max_tire_idx_1;
+    /* '<S25>:1:29' */
+    if (Control_System_B.l2 <= Control_System_B.max_torque_front) {
+      Control_System_B.Fzi_idx_0 = Control_System_B.l2;
     } else {
-      Control_System_B.Product10 = Control_System_B.tr;
+      Control_System_B.Fzi_idx_0 = Control_System_B.max_torque_front;
     }
 
     Control_System_B.power = Control_System_B.T_R[0] +
-      Control_System_B.Product10;
+      Control_System_B.Fzi_idx_0;
     if (0.0F < Control_System_B.power) {
       Control_System_B.Product10 = Control_System_B.power;
     } else {
       Control_System_B.Product10 = 0.0F;
     }
 
-    /* '<S25>:1:29' */
-    if (Ti_max_tire_idx_1 <= Control_System_B.tr) {
-      Control_System_B.tr = Ti_max_tire_idx_1;
+    /* '<S25>:1:30' */
+    if (Control_System_B.l2 <= Control_System_B.max_torque_front) {
+      Control_System_B.max_torque_front = Control_System_B.l2;
     }
 
-    Control_System_B.power = Control_System_B.T_R[1] + Control_System_B.tr;
+    Control_System_B.power = Control_System_B.T_R[1] +
+      Control_System_B.max_torque_front;
     if (!(0.0F < Control_System_B.power)) {
       Control_System_B.power = 0.0F;
     }
   } else if ((Control_System_B.ix == 1) && (Control_System_B.T_req < -0.03F)) {
-    /* '<S25>:1:31' */
+    /* '<S25>:1:32' */
     /*  Couple TC outputs to maintain stability on mu split surfaces  */
     /*  under acceleration and deceleration */
-    /* '<S25>:1:34' */
-    if (Control_System_B.l1 >= Control_System_B.alfa_r) {
-      Control_System_B.Product10 = Control_System_B.l1;
+    /* '<S25>:1:35' */
+    if (Control_System_B.tr >= Control_System_B.tf) {
+      Control_System_B.Fzi_idx_0 = Control_System_B.tr;
     } else {
-      Control_System_B.Product10 = Control_System_B.alfa_r;
+      Control_System_B.Fzi_idx_0 = Control_System_B.tf;
     }
 
     Control_System_B.power = Control_System_B.T_F[0] +
-      Control_System_B.Product10;
+      Control_System_B.Fzi_idx_0;
     if (0.0F > Control_System_B.power) {
-      Control_System_B.l2 = Control_System_B.power;
+      Control_System_B.l1 = Control_System_B.power;
     } else {
-      Control_System_B.l2 = 0.0F;
+      Control_System_B.l1 = 0.0F;
     }
 
-    /* '<S25>:1:35' */
-    if (Control_System_B.l1 >= Control_System_B.alfa_r) {
-      Control_System_B.alfa_r = Control_System_B.l1;
+    /* '<S25>:1:36' */
+    if (Control_System_B.tr >= Control_System_B.tf) {
+      Control_System_B.tf = Control_System_B.tr;
     }
 
-    Control_System_B.power = Control_System_B.T_F[1] + Control_System_B.alfa_r;
+    Control_System_B.power = Control_System_B.T_F[1] + Control_System_B.tf;
     if (0.0F > Control_System_B.power) {
       Control_System_B.tf = Control_System_B.power;
     } else {
       Control_System_B.tf = 0.0F;
     }
 
-    /* '<S25>:1:36' */
-    if (Ti_max_tire_idx_1 >= Control_System_B.tr) {
-      Control_System_B.Product10 = Ti_max_tire_idx_1;
+    /* '<S25>:1:37' */
+    if (Control_System_B.l2 >= Control_System_B.max_torque_front) {
+      Control_System_B.Fzi_idx_0 = Control_System_B.l2;
     } else {
-      Control_System_B.Product10 = Control_System_B.tr;
+      Control_System_B.Fzi_idx_0 = Control_System_B.max_torque_front;
     }
 
     Control_System_B.power = Control_System_B.T_R[0] +
-      Control_System_B.Product10;
+      Control_System_B.Fzi_idx_0;
     if (0.0F > Control_System_B.power) {
       Control_System_B.Product10 = Control_System_B.power;
     } else {
       Control_System_B.Product10 = 0.0F;
     }
 
-    /* '<S25>:1:37' */
-    if (Ti_max_tire_idx_1 >= Control_System_B.tr) {
-      Control_System_B.tr = Ti_max_tire_idx_1;
+    /* '<S25>:1:38' */
+    if (Control_System_B.l2 >= Control_System_B.max_torque_front) {
+      Control_System_B.max_torque_front = Control_System_B.l2;
     }
 
-    Control_System_B.power = Control_System_B.T_R[1] + Control_System_B.tr;
+    Control_System_B.power = Control_System_B.T_R[1] +
+      Control_System_B.max_torque_front;
     if (!(0.0F > Control_System_B.power)) {
       Control_System_B.power = 0.0F;
     }
   } else {
     /*  Decouple TC outputs to avoid interferring too much with the stability */
     /*  of the vehicle while cornering. This is the DYC systems job.  */
-    /* '<S25>:1:41' */
-    Control_System_B.l2 = Control_System_B.T_F[0] + Control_System_B.l1;
-
     /* '<S25>:1:42' */
-    Control_System_B.tf = Control_System_B.T_F[1] + Control_System_B.alfa_r;
+    Control_System_B.l1 = Control_System_B.T_F[0] + Control_System_B.tr;
 
     /* '<S25>:1:43' */
-    Control_System_B.Product10 = Control_System_B.T_R[0] + Ti_max_tire_idx_1;
+    Control_System_B.tf += Control_System_B.T_F[1];
 
     /* '<S25>:1:44' */
-    Control_System_B.power = Control_System_B.T_R[1] + Control_System_B.tr;
+    Control_System_B.Product10 = Control_System_B.T_R[0] + Control_System_B.l2;
+
+    /* '<S25>:1:45' */
+    Control_System_B.power = Control_System_B.T_R[1] +
+      Control_System_B.max_torque_front;
   }
 
   /* End of MATLAB Function: '<S14>/MATLAB Function' */
@@ -2378,7 +2640,7 @@ void Control_System_step(void)
    *  MATLAB Function: '<S44>/TorqueAllocation'
    */
   if (tractionControl.enable == 0U) {
-    Control_System_B.l2 = Control_System_B.T_F[0];
+    Control_System_B.l1 = Control_System_B.T_F[0];
     Control_System_B.tf = Control_System_B.T_F[1];
     Control_System_B.Product10 = Control_System_B.T_R[0];
     Control_System_B.power = Control_System_B.T_R[1];
@@ -2387,10 +2649,12 @@ void Control_System_step(void)
   /* End of MultiPortSwitch: '<S6>/Index Vector' */
 
   /* Product: '<S2>/Product3' */
-  Control_System_B.l1 = Control_System_B.IndexVector_j * Control_System_B.power;
+  Control_System_B.max_torque_rear = Control_System_B.IndexVector_j *
+    Control_System_B.power;
 
   /* Product: '<S2>/Product5' */
-  Control_System_B.alfa_r = Control_System_B.IndexVector_j * Control_System_B.l2;
+  Control_System_B.max_torque_front = Control_System_B.IndexVector_j *
+    Control_System_B.l1;
 
   /* Product: '<S2>/Product2' */
   Control_System_B.tr = Control_System_B.IndexVector_j * Control_System_B.tf;
@@ -2436,7 +2700,7 @@ void Control_System_step(void)
    *  Inport: '<Root>/states'
    *  MATLAB Function: '<S9>/yawRateReference'
    */
-  Control_System_B.l2 = look1_iflf_binlcapw(Control_System_P.Gain2_Gain *
+  Control_System_B.l1 = look1_iflf_binlcapw(Control_System_P.Gain2_Gain *
     Control_System_U.states.V_x, Control_System_P.Kilookup_bp01Data,
     Control_System_P.Kilookup_tableData, 1U);
 
@@ -2541,17 +2805,17 @@ void Control_System_step(void)
   }
 
   /* ***************** FL ************ */
-  if ((Control_System_B.alfa_r <= 0.0F) && (Control_System_DW.KERS_ALLOWED_FL ==
-       1U)) {
+  if ((Control_System_B.max_torque_front <= 0.0F) &&
+      (Control_System_DW.KERS_ALLOWED_FL == 1U)) {
     /* '<S47>:1:62' */
     /* '<S47>:1:63' */
     rtb_Ti_pos_FL = 0;
 
     /* '<S47>:1:64' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.alfa_r / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_neg_FL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.max_torque_front / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_neg_FL = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_neg_FL = MIN_int16_T;
       }
@@ -2560,17 +2824,17 @@ void Control_System_step(void)
     }
 
     /* '<S47>:1:65' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_FL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_FL = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_FL = MIN_int16_T;
       }
     } else {
       rtb_wi_setpoints_FL = MAX_int16_T;
     }
-  } else if ((Control_System_B.alfa_r <= 0.0F) &&
+  } else if ((Control_System_B.max_torque_front <= 0.0F) &&
              (Control_System_DW.KERS_ALLOWED_FL == 0U)) {
     /* '<S47>:1:66' */
     /* '<S47>:1:67' */
@@ -2581,13 +2845,13 @@ void Control_System_step(void)
 
     /* '<S47>:1:69' */
     rtb_wi_setpoints_FL = 0;
-  } else if (Control_System_B.alfa_r > 0.0F) {
+  } else if (Control_System_B.max_torque_front > 0.0F) {
     /* '<S47>:1:70' */
     /* '<S47>:1:71' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.alfa_r / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_pos_FL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.max_torque_front / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_pos_FL = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_pos_FL = MIN_int16_T;
       }
@@ -2599,10 +2863,10 @@ void Control_System_step(void)
     rtb_Ti_neg_FL = 0;
 
     /* '<S47>:1:73' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.max_RPM);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_FL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.max_RPM);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_FL = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_FL = MIN_int16_T;
       }
@@ -2628,10 +2892,10 @@ void Control_System_step(void)
     rtb_Ti_pos_FR = 0;
 
     /* '<S47>:1:84' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.tr / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_neg_FR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.tr / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_neg_FR = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_neg_FR = MIN_int16_T;
       }
@@ -2640,10 +2904,10 @@ void Control_System_step(void)
     }
 
     /* '<S47>:1:85' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_FR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_FR = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_FR = MIN_int16_T;
       }
@@ -2664,10 +2928,10 @@ void Control_System_step(void)
   } else if (Control_System_B.tr > 0.0F) {
     /* '<S47>:1:90' */
     /* '<S47>:1:91' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.tr / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_pos_FR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.tr / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_pos_FR = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_pos_FR = MIN_int16_T;
       }
@@ -2679,10 +2943,10 @@ void Control_System_step(void)
     rtb_Ti_neg_FR = 0;
 
     /* '<S47>:1:93' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.max_RPM);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_FR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.max_RPM);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_FR = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_FR = MIN_int16_T;
       }
@@ -2708,10 +2972,10 @@ void Control_System_step(void)
     rtb_Ti_pos_RL = 0;
 
     /* '<S47>:1:102' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.tf / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_neg_RL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.tf / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_neg_RL = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_neg_RL = MIN_int16_T;
       }
@@ -2720,10 +2984,10 @@ void Control_System_step(void)
     }
 
     /* '<S47>:1:103' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_RL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_RL = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_RL = MIN_int16_T;
       }
@@ -2744,10 +3008,10 @@ void Control_System_step(void)
   } else if (Control_System_B.tf > 0.0F) {
     /* '<S47>:1:108' */
     /* '<S47>:1:109' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.tf / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_pos_RL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.tf / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_pos_RL = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_pos_RL = MIN_int16_T;
       }
@@ -2759,10 +3023,10 @@ void Control_System_step(void)
     rtb_Ti_neg_RL = 0;
 
     /* '<S47>:1:111' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.max_RPM);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_RL = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.max_RPM);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_RL = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_RL = MIN_int16_T;
       }
@@ -2781,17 +3045,17 @@ void Control_System_step(void)
   }
 
   /* ***************** RR ************ */
-  if ((Control_System_B.l1 <= 0.0F) && (Control_System_DW.KERS_ALLOWED_RR == 1U))
-  {
+  if ((Control_System_B.max_torque_rear <= 0.0F) &&
+      (Control_System_DW.KERS_ALLOWED_RR == 1U)) {
     /* '<S47>:1:119' */
     /* '<S47>:1:120' */
     rtb_Ti_pos_RR = 0;
 
     /* '<S47>:1:121' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.l1 / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_neg_RR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.max_torque_rear / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_neg_RR = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_neg_RR = MIN_int16_T;
       }
@@ -2800,18 +3064,18 @@ void Control_System_step(void)
     }
 
     /* '<S47>:1:122' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_RR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.KERS_motor_RPM_setpoint);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_RR = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_RR = MIN_int16_T;
       }
     } else {
       rtb_wi_setpoints_RR = MAX_int16_T;
     }
-  } else if ((Control_System_B.l1 <= 0.0F) && (Control_System_DW.KERS_ALLOWED_RR
-              == 0U)) {
+  } else if ((Control_System_B.max_torque_rear <= 0.0F) &&
+             (Control_System_DW.KERS_ALLOWED_RR == 0U)) {
     /* '<S47>:1:123' */
     /* '<S47>:1:124' */
     rtb_Ti_pos_RR = 0;
@@ -2821,13 +3085,13 @@ void Control_System_step(void)
 
     /* '<S47>:1:126' */
     rtb_wi_setpoints_RR = 0;
-  } else if (Control_System_B.l1 > 0.0F) {
+  } else if (Control_System_B.max_torque_rear > 0.0F) {
     /* '<S47>:1:127' */
     /* '<S47>:1:128' */
-    Ti_max_tire_idx_1 = rt_roundf(Control_System_B.l1 / car_params.Mn);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_Ti_pos_RR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(Control_System_B.max_torque_rear / car_params.Mn);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_Ti_pos_RR = (int16_T)Fzi_idx_1;
       } else {
         rtb_Ti_pos_RR = MIN_int16_T;
       }
@@ -2839,10 +3103,10 @@ void Control_System_step(void)
     rtb_Ti_neg_RR = 0;
 
     /* '<S47>:1:130' */
-    Ti_max_tire_idx_1 = rt_roundf(settings.max_RPM);
-    if (Ti_max_tire_idx_1 < 32768.0F) {
-      if (Ti_max_tire_idx_1 >= -32768.0F) {
-        rtb_wi_setpoints_RR = (int16_T)Ti_max_tire_idx_1;
+    Fzi_idx_1 = rt_roundf(settings.max_RPM);
+    if (Fzi_idx_1 < 32768.0F) {
+      if (Fzi_idx_1 >= -32768.0F) {
+        rtb_wi_setpoints_RR = (int16_T)Fzi_idx_1;
       } else {
         rtb_wi_setpoints_RR = MIN_int16_T;
       }
@@ -2868,17 +3132,17 @@ void Control_System_step(void)
   /* '<S4>:1:5' */
   /* '<S4>:1:6' */
   if (Control_System_B.IntegralGain < 0.0F) {
-    Control_System_B.Product10 = -1.0F;
+    Control_System_B.Fzi_idx_0 = -1.0F;
   } else if (Control_System_B.IntegralGain > 0.0F) {
-    Control_System_B.Product10 = 1.0F;
+    Control_System_B.Fzi_idx_0 = 1.0F;
   } else {
-    Control_System_B.Product10 = Control_System_B.IntegralGain;
+    Control_System_B.Fzi_idx_0 = Control_System_B.IntegralGain;
   }
 
   /* DataTypeConversion: '<S12>/DataTypeConv2' incorporates:
    *  Signum: '<S12>/SignPreIntegrator'
    */
-  Ti_max_tire_idx_1 = (real32_T)fmod(Control_System_B.Product10, 256.0F);
+  Fzi_idx_1 = (real32_T)fmod(Control_System_B.Fzi_idx_0, 256.0F);
 
   /* DataTypeConversion: '<S12>/DataTypeConv1' */
   if (Control_System_B.SignDeltaU < 128.0F) {
@@ -2895,9 +3159,9 @@ void Control_System_step(void)
    *  Logic: '<S12>/AND'
    *  RelationalOperator: '<S12>/Equal'
    */
-  if (rtb_NotEqual && ((Ti_max_tire_idx_1 < 0.0F ? (int32_T)(int8_T)-(int8_T)
-                        (uint8_T)-Ti_max_tire_idx_1 : (int32_T)(int8_T)(uint8_T)
-                        Ti_max_tire_idx_1) == rtb_SignDeltaU_0)) {
+  if (rtb_NotEqual && ((Fzi_idx_1 < 0.0F ? (int32_T)(int8_T)-(int8_T)(uint8_T)
+                        -Fzi_idx_1 : (int32_T)(int8_T)(uint8_T)Fzi_idx_1) ==
+                       rtb_SignDeltaU_0)) {
     Control_System_B.IntegralGain = Control_System_P.Constant_Value;
   }
 
@@ -2914,7 +3178,7 @@ void Control_System_step(void)
    *  Sum: '<S9>/Sum3'
    */
   Control_System_DW.DiscreteTimeIntegrator2_DSTATE += (Control_System_B.r_error *
-    Control_System_B.l2 - yawRateControl.Ksat * Control_System_B.Mz_error) *
+    Control_System_B.l1 - yawRateControl.Ksat * Control_System_B.Mz_error) *
     Control_System_P.DiscreteTimeIntegrator2_gainval;
 
   /* Update for DiscreteIntegrator: '<S27>/Discrete-Time Integrator2' incorporates:
@@ -2928,7 +3192,7 @@ void Control_System_step(void)
   Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n +=
     ((Control_System_B.Switch2_n -
       Control_System_DW.DiscreteTimeIntegrator2_DSTAT_n) * tractionControl.Kb +
-     Control_System_B.Ti_max_motor_idx_0 * Ti_max_motor_idx_1) *
+     Control_System_B.Ki * Control_System_B.Sum) *
     Control_System_P.DiscreteTimeIntegrator2_gainv_i;
   if (Control_System_B.T_F[0] > 0.0F) {
     Control_System_DW.DiscreteTimeIntegrator2_PrevRes = 1;
@@ -2950,9 +3214,10 @@ void Control_System_step(void)
    *  Sum: '<S28>/Sum1'
    *  Sum: '<S28>/Sum3'
    */
-  Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c += ((Ti_max_motor_idx_2 -
-    Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c) * tractionControl.Kb +
-    Control_System_B.Ti_max_motor_idx_0 * Ti_max_tire_idx_0) *
+  Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c +=
+    ((Control_System_B.Switch2_c -
+      Control_System_DW.DiscreteTimeIntegrator2_DSTAT_c) * tractionControl.Kb +
+     Control_System_B.Ki * Fzi_idx_3) *
     Control_System_P.DiscreteTimeIntegrator2_gainv_n;
   if (Control_System_B.T_F[1] > 0.0F) {
     Control_System_DW.DiscreteTimeIntegrator2_PrevR_p = 1;
@@ -2974,10 +3239,9 @@ void Control_System_step(void)
    *  Sum: '<S29>/Sum1'
    *  Sum: '<S29>/Sum3'
    */
-  Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b +=
-    ((Control_System_B.Fzi_idx_2 -
-      Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b) * tractionControl.Kb +
-     Control_System_B.Ti_max_motor_idx_0 * Ti_max_motor_idx_3) *
+  Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b += ((Ti_max_tire_idx_1 -
+    Control_System_DW.DiscreteTimeIntegrator2_DSTAT_b) * tractionControl.Kb +
+    Control_System_B.Ki * Ti_max_tire_idx_0) *
     Control_System_P.DiscreteTimeIntegrator2_gainv_f;
   if (Control_System_B.T_R[0] > 0.0F) {
     Control_System_DW.DiscreteTimeIntegrator2_PrevR_g = 1;
@@ -3000,9 +3264,9 @@ void Control_System_step(void)
    *  Sum: '<S30>/Sum3'
    */
   Control_System_DW.DiscreteTimeIntegrator2_DSTA_c2 +=
-    ((Control_System_B.Fzi_idx_3 -
+    ((Control_System_B.Switch2_ck -
       Control_System_DW.DiscreteTimeIntegrator2_DSTA_c2) * tractionControl.Kb +
-     Control_System_B.Ti_max_motor_idx_0 * Control_System_B.Fzi_idx_0) *
+     Control_System_B.Ki * Fzi_idx_2) *
     Control_System_P.DiscreteTimeIntegrator2_gain_fb;
   if (Control_System_B.T_R[1] > 0.0F) {
     Control_System_DW.DiscreteTimeIntegrator2_Prev_pr = 1;
@@ -3018,16 +3282,16 @@ void Control_System_step(void)
   /* End of Outputs for SubSystem: '<Root>/Control_System ' */
 
   /* Outport: '<Root>/Ti_pos ' */
-  Control_System_Y.Ti_pos_e.FL = rtb_Ti_pos_FL;
-  Control_System_Y.Ti_pos_e.FR = rtb_Ti_pos_FR;
-  Control_System_Y.Ti_pos_e.RL = rtb_Ti_pos_RL;
-  Control_System_Y.Ti_pos_e.RR = rtb_Ti_pos_RR;
+  Control_System_Y.Ti_pos_l.FL = rtb_Ti_pos_FL;
+  Control_System_Y.Ti_pos_l.FR = rtb_Ti_pos_FR;
+  Control_System_Y.Ti_pos_l.RL = rtb_Ti_pos_RL;
+  Control_System_Y.Ti_pos_l.RR = rtb_Ti_pos_RR;
 
   /* Outport: '<Root>/Ti_neg' */
-  Control_System_Y.Ti_neg_n.FL = rtb_Ti_neg_FL;
-  Control_System_Y.Ti_neg_n.FR = rtb_Ti_neg_FR;
-  Control_System_Y.Ti_neg_n.RL = rtb_Ti_neg_RL;
-  Control_System_Y.Ti_neg_n.RR = rtb_Ti_neg_RR;
+  Control_System_Y.Ti_neg_a.FL = rtb_Ti_neg_FL;
+  Control_System_Y.Ti_neg_a.FR = rtb_Ti_neg_FR;
+  Control_System_Y.Ti_neg_a.RL = rtb_Ti_neg_RL;
+  Control_System_Y.Ti_neg_a.RR = rtb_Ti_neg_RR;
 
   /* Outport: '<Root>/wi_sp' */
   Control_System_Y.wi_sp.FL = rtb_wi_setpoints_FL;
@@ -3039,15 +3303,15 @@ void Control_System_step(void)
   /* Outport: '<Root>/States' incorporates:
    *  Inport: '<Root>/states'
    */
-  Control_System_Y.States_b = Control_System_U.states;
+  Control_System_Y.States_m = Control_System_U.states;
 
   /* Outport: '<Root>/Ti_lim ' incorporates:
    *  BusCreator: '<S2>/Bus Creator'
    */
-  Control_System_Y.Ti_lim_o.FL = Control_System_B.alfa_r;
-  Control_System_Y.Ti_lim_o.FR = Control_System_B.tr;
-  Control_System_Y.Ti_lim_o.RL = Control_System_B.tf;
-  Control_System_Y.Ti_lim_o.RR = Control_System_B.l1;
+  Control_System_Y.Ti_lim_n.FL = Control_System_B.max_torque_front;
+  Control_System_Y.Ti_lim_n.FR = Control_System_B.tr;
+  Control_System_Y.Ti_lim_n.RL = Control_System_B.tf;
+  Control_System_Y.Ti_lim_n.RR = Control_System_B.max_torque_rear;
 
   /* Outport: '<Root>/r_ref' incorporates:
    *  MATLAB Function: '<S9>/yawRateReference'
@@ -3070,10 +3334,10 @@ void Control_System_step(void)
    *  MATLAB Function: '<S1>/OutputTelemetri'
    *  MATLAB Function: '<S9>/yawRateReference'
    */
-  Control_System_Y.OutputTelemetri_Control_h.T_req = Control_System_B.T_req;
-  Control_System_Y.OutputTelemetri_Control_h.Mz_ref =
+  Control_System_Y.OutputTelemetri_Control_j.T_req = Control_System_B.T_req;
+  Control_System_Y.OutputTelemetri_Control_j.Mz_ref =
     Control_System_B.Saturation;
-  Control_System_Y.OutputTelemetri_Control_h.r_ref = Control_System_B.r_ref;
+  Control_System_Y.OutputTelemetri_Control_j.r_ref = Control_System_B.r_ref;
 
   /* End of Outputs for SubSystem: '<Root>/Control_System ' */
 }

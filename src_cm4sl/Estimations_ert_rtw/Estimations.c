@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Estimations'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:35:27 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:41 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -158,6 +158,26 @@ void Estimations_step(void)
   Estimations_B.rtb_Fx_RR = (Estimations_U.T_CM.RR - Estimations_B.c *
     Estimations_U.Sensors_in.RPM_der_RR * car_params.Jw) / car_params.r_eff;
 
+  /* MultiPortSwitch: '<S10>/Index Vector' incorporates:
+   *  Constant: '<S10>/Constant1'
+   *  Inport: '<Root>/Sensors_in'
+   */
+  switch (settings.select_velocity_vx) {
+   case 1:
+    Estimations_B.IndexVector_b = 0.0F;
+    break;
+
+   case 2:
+    Estimations_B.IndexVector_b = Estimations_U.Sensors_in.V_x_INS;
+    break;
+
+   default:
+    Estimations_B.IndexVector_b = Estimations_U.Sensors_in.V_x_optical;
+    break;
+  }
+
+  /* End of MultiPortSwitch: '<S10>/Index Vector' */
+
   /* Outputs for Atomic SubSystem: '<S1>/Fz_Estimation' */
   /* Lookup_n-D: '<S4>/DamperRateLookup' incorporates:
    *  Inport: '<Root>/Sensors_in'
@@ -242,37 +262,45 @@ void Estimations_step(void)
   /*  Rear track X */
   /* '<S14>:1:16' */
   /*  X */
-  /* '<S14>:1:19' */
-  rtb_Fz_loadTransfer_est_FL = (car_params.l_r * 9.81F / car_params.l -
+  /* '<S14>:1:20' */
+  rtb_Fz_loadTransfer_est_FL = ((car_params.l_r * 9.81F / car_params.l -
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) * (0.5F *
     rtb_DamperRateLookup1) - (car_params.l_r * 9.81F / car_params.l -
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) *
     rtb_DamperRateLookup1 * car_params.CoG_height * Estimations_U.Sensors_in.ay /
-    (Estimations_B.c * 9.81F);
+    (Estimations_B.c * 9.81F)) + Estimations_B.IndexVector_b *
+    Estimations_B.IndexVector_b * car_params.aero_ref_area *
+    car_params.aero_lift_coeff * 1.2F / 8.0F;
 
-  /* '<S14>:1:20' */
-  rtb_Fz_loadTransfer_est_FR = (car_params.l_r * 9.81F / car_params.l -
+  /* '<S14>:1:21' */
+  rtb_Fz_loadTransfer_est_FR = ((car_params.l_r * 9.81F / car_params.l -
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) *
     rtb_DamperRateLookup1 * car_params.CoG_height * Estimations_U.Sensors_in.ay /
     (Estimations_B.c * 9.81F) + (car_params.l_r * 9.81F / car_params.l -
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) * (0.5F *
-    rtb_DamperRateLookup1);
+    rtb_DamperRateLookup1)) + Estimations_B.IndexVector_b *
+    Estimations_B.IndexVector_b * car_params.aero_ref_area *
+    car_params.aero_lift_coeff * 1.2F / 8.0F;
 
-  /* '<S14>:1:21' */
-  rtb_Fz_loadTransfer_est_RL = (car_params.l_f * 9.81F / car_params.l +
+  /* '<S14>:1:22' */
+  rtb_Fz_loadTransfer_est_RL = ((car_params.l_f * 9.81F / car_params.l +
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) * (0.5F *
     rtb_DamperRateLookup1) - (car_params.l_f * 9.81F / car_params.l +
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) *
     rtb_DamperRateLookup1 * car_params.CoG_height * Estimations_U.Sensors_in.ay /
-    (rtb_DamperRateLookup2 * 9.81F);
+    (rtb_DamperRateLookup2 * 9.81F)) + Estimations_B.IndexVector_b *
+    Estimations_B.IndexVector_b * car_params.aero_ref_area *
+    car_params.aero_lift_coeff * 1.2F / 8.0F;
 
-  /* '<S14>:1:22' */
-  rtb_Fz_loadTransfer_est_RR = (car_params.l_f * 9.81F / car_params.l +
+  /* '<S14>:1:23' */
+  rtb_Fz_loadTransfer_est_RR = ((car_params.l_f * 9.81F / car_params.l +
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) *
     rtb_DamperRateLookup1 * car_params.CoG_height * Estimations_U.Sensors_in.ay /
     (rtb_DamperRateLookup2 * 9.81F) + (car_params.l_f * 9.81F / car_params.l +
     car_params.CoG_height * Estimations_U.Sensors_in.ax / car_params.l) * (0.5F *
-    rtb_DamperRateLookup1);
+    rtb_DamperRateLookup1)) + Estimations_B.IndexVector_b *
+    Estimations_B.IndexVector_b * car_params.aero_ref_area *
+    car_params.aero_lift_coeff * 1.2F / 8.0F;
 
   /* MultiPortSwitch: '<S4>/Index Vector' incorporates:
    *  Constant: '<S4>/Constant'
@@ -329,27 +357,6 @@ void Estimations_step(void)
   Estimations_B.rtb_whl_speed_RR = Estimations_U.Sensors_in.RPM_RR *
     Estimations_B.c * car_params.r_eff - Estimations_U.Sensors_in.yawRate *
     car_params.t_r;
-
-  /* MultiPortSwitch: '<S10>/Index Vector' incorporates:
-   *  Constant: '<S10>/Constant1'
-   *  Constant: '<S1>/Constant'
-   *  Inport: '<Root>/Sensors_in'
-   */
-  switch (settings.select_velocity_vx) {
-   case 1:
-    Estimations_B.IndexVector_b = Estimations_P.Constant_Value;
-    break;
-
-   case 2:
-    Estimations_B.IndexVector_b = Estimations_U.Sensors_in.V_x_INS;
-    break;
-
-   default:
-    Estimations_B.IndexVector_b = Estimations_U.Sensors_in.V_x_optical;
-    break;
-  }
-
-  /* End of MultiPortSwitch: '<S10>/Index Vector' */
 
   /* MATLAB Function: '<S6>/Slip ratio' */
   /* MATLAB Function 'Estimations/SR_Calculation/Slip ratio': '<S16>:1' */
@@ -533,26 +540,26 @@ void Estimations_step(void)
    *  MATLAB Function: '<S7>/calculateWheelangleandSpeed'
    */
   /* '<S18>:1:43' */
-  Estimations_Y.States_a.Input_throttle =
+  Estimations_Y.States_g.Input_throttle =
     Estimations_U.Sensors_in.Input_throttle;
-  Estimations_Y.States_a.Input_brake = Estimations_U.Sensors_in.Input_brake;
-  Estimations_Y.States_a.KERS_pos = Estimations_U.Sensors_in.KERS_pos;
-  Estimations_Y.States_a.sideSlipAngle =
+  Estimations_Y.States_g.Input_brake = Estimations_U.Sensors_in.Input_brake;
+  Estimations_Y.States_g.KERS_pos = Estimations_U.Sensors_in.KERS_pos;
+  Estimations_Y.States_g.sideSlipAngle =
     Estimations_U.Sensors_in.sideSlipAngle_optical;
-  Estimations_Y.States_a.r = Estimations_U.Sensors_in.yawRate;
-  Estimations_Y.States_a.r_der = Estimations_U.Sensors_in.yawRate_der;
-  Estimations_Y.States_a.ax = Estimations_U.Sensors_in.ax;
-  Estimations_Y.States_a.ay = Estimations_U.Sensors_in.ay;
-  Estimations_Y.States_a.RPM_FL = Estimations_U.Sensors_in.RPM_FL;
-  Estimations_Y.States_a.RPM_FR = Estimations_U.Sensors_in.RPM_FR;
-  Estimations_Y.States_a.RPM_RL = Estimations_U.Sensors_in.RPM_RL;
-  Estimations_Y.States_a.RPM_RR = Estimations_U.Sensors_in.RPM_RR;
-  Estimations_Y.States_a.power = Estimations_U.Sensors_in.power;
-  Estimations_Y.States_a.DC_voltage = Estimations_U.Sensors_in.DC_voltage;
-  Estimations_Y.States_a.wheel_angle = rtb_mean_wheel_angle;
-  Estimations_Y.States_a.wheel_speed = 0.2536F *
+  Estimations_Y.States_g.r = Estimations_U.Sensors_in.yawRate;
+  Estimations_Y.States_g.r_der = Estimations_U.Sensors_in.yawRate_der;
+  Estimations_Y.States_g.ax = Estimations_U.Sensors_in.ax;
+  Estimations_Y.States_g.ay = Estimations_U.Sensors_in.ay;
+  Estimations_Y.States_g.RPM_FL = Estimations_U.Sensors_in.RPM_FL;
+  Estimations_Y.States_g.RPM_FR = Estimations_U.Sensors_in.RPM_FR;
+  Estimations_Y.States_g.RPM_RL = Estimations_U.Sensors_in.RPM_RL;
+  Estimations_Y.States_g.RPM_RR = Estimations_U.Sensors_in.RPM_RR;
+  Estimations_Y.States_g.power = Estimations_U.Sensors_in.power;
+  Estimations_Y.States_g.DC_voltage = Estimations_U.Sensors_in.DC_voltage;
+  Estimations_Y.States_g.wheel_angle = rtb_mean_wheel_angle;
+  Estimations_Y.States_g.wheel_speed = 0.2536F *
     Estimations_U.Sensors_in.steering_wheel_speed;
-  Estimations_Y.States_a.V_x = Estimations_B.IndexVector_b;
+  Estimations_Y.States_g.V_x = Estimations_B.IndexVector_b;
 
   /* MultiPortSwitch: '<S10>/Index Vector1' incorporates:
    *  Constant: '<S10>/Constant2'
@@ -561,12 +568,12 @@ void Estimations_step(void)
     /* Outport: '<Root>/States' incorporates:
      *  Inport: '<Root>/Sensors_in'
      */
-    Estimations_Y.States_a.V_y = Estimations_U.Sensors_in.V_y_INS;
+    Estimations_Y.States_g.V_y = Estimations_U.Sensors_in.V_y_INS;
   } else {
     /* Outport: '<Root>/States' incorporates:
      *  Inport: '<Root>/Sensors_in'
      */
-    Estimations_Y.States_a.V_y = Estimations_U.Sensors_in.V_y_optical;
+    Estimations_Y.States_g.V_y = Estimations_U.Sensors_in.V_y_optical;
   }
 
   /* End of MultiPortSwitch: '<S10>/Index Vector1' */
@@ -575,25 +582,25 @@ void Estimations_step(void)
   /* Outport: '<Root>/States' incorporates:
    *  MATLAB Function: '<S9>/estimateFrictionCoefficient'
    */
-  Estimations_Y.States_a.Fx_FL = Estimations_B.rtb_Fx_FL;
-  Estimations_Y.States_a.Fx_FR = Estimations_B.rtb_Fx_FR;
-  Estimations_Y.States_a.Fx_RL = Estimations_B.rtb_Fx_RL;
-  Estimations_Y.States_a.Fx_RR = Estimations_B.rtb_Fx_RR;
-  Estimations_Y.States_a.Fz_FL = Estimations_B.rtb_IndexVector_FL;
-  Estimations_Y.States_a.Fz_FR = Estimations_B.rtb_IndexVector_FR;
-  Estimations_Y.States_a.Fz_RL = rtb_IndexVector_RL;
-  Estimations_Y.States_a.Fz_RR = rtb_IndexVector_RR;
-  Estimations_Y.States_a.whl_v_FL = Estimations_B.rtb_whl_speed_FL;
-  Estimations_Y.States_a.whl_v_FR = Estimations_B.rtb_whl_speed_FR;
-  Estimations_Y.States_a.whl_v_RL = Estimations_B.rtb_whl_speed_RL;
-  Estimations_Y.States_a.whl_v_RR = Estimations_B.rtb_whl_speed_RR;
-  Estimations_Y.States_a.SR_FL = Estimations_B.rtb_SR_n_FL;
-  Estimations_Y.States_a.SR_FR = Estimations_B.rtb_SR_n_FR;
-  Estimations_Y.States_a.SR_RL = Estimations_B.rtb_SR_n_RL;
-  Estimations_Y.States_a.SR_RR = rtb_DamperRateLookup1;
+  Estimations_Y.States_g.Fx_FL = Estimations_B.rtb_Fx_FL;
+  Estimations_Y.States_g.Fx_FR = Estimations_B.rtb_Fx_FR;
+  Estimations_Y.States_g.Fx_RL = Estimations_B.rtb_Fx_RL;
+  Estimations_Y.States_g.Fx_RR = Estimations_B.rtb_Fx_RR;
+  Estimations_Y.States_g.Fz_FL = Estimations_B.rtb_IndexVector_FL;
+  Estimations_Y.States_g.Fz_FR = Estimations_B.rtb_IndexVector_FR;
+  Estimations_Y.States_g.Fz_RL = rtb_IndexVector_RL;
+  Estimations_Y.States_g.Fz_RR = rtb_IndexVector_RR;
+  Estimations_Y.States_g.whl_v_FL = Estimations_B.rtb_whl_speed_FL;
+  Estimations_Y.States_g.whl_v_FR = Estimations_B.rtb_whl_speed_FR;
+  Estimations_Y.States_g.whl_v_RL = Estimations_B.rtb_whl_speed_RL;
+  Estimations_Y.States_g.whl_v_RR = Estimations_B.rtb_whl_speed_RR;
+  Estimations_Y.States_g.SR_FL = Estimations_B.rtb_SR_n_FL;
+  Estimations_Y.States_g.SR_FR = Estimations_B.rtb_SR_n_FR;
+  Estimations_Y.States_g.SR_RL = Estimations_B.rtb_SR_n_RL;
+  Estimations_Y.States_g.SR_RR = rtb_DamperRateLookup1;
 
   /* Outputs for Atomic SubSystem: '<Root>/Estimations' */
-  Estimations_Y.States_a.mu = (((Estimations_DW.mu_FL + Estimations_DW.mu_FR) +
+  Estimations_Y.States_g.mu = (((Estimations_DW.mu_FL + Estimations_DW.mu_FR) +
     Estimations_DW.mu_RL) + Estimations_DW.mu_RR) / 4.0F;
 
   /* End of Outputs for SubSystem: '<Root>/Estimations' */
@@ -605,46 +612,46 @@ void Estimations_step(void)
   Estimations_Y.whl_v.RR = Estimations_B.rtb_whl_speed_RR;
 
   /* Outport: '<Root>/Fx' */
-  Estimations_Y.Fx_o.FL = Estimations_B.rtb_Fx_FL;
-  Estimations_Y.Fx_o.FR = Estimations_B.rtb_Fx_FR;
-  Estimations_Y.Fx_o.RL = Estimations_B.rtb_Fx_RL;
-  Estimations_Y.Fx_o.RR = Estimations_B.rtb_Fx_RR;
+  Estimations_Y.Fx_n.FL = Estimations_B.rtb_Fx_FL;
+  Estimations_Y.Fx_n.FR = Estimations_B.rtb_Fx_FR;
+  Estimations_Y.Fx_n.RL = Estimations_B.rtb_Fx_RL;
+  Estimations_Y.Fx_n.RR = Estimations_B.rtb_Fx_RR;
 
   /* Outport: '<Root>/SR' */
-  Estimations_Y.SR_i.FL = Estimations_B.rtb_SR_n_FL;
-  Estimations_Y.SR_i.FR = Estimations_B.rtb_SR_n_FR;
-  Estimations_Y.SR_i.RL = Estimations_B.rtb_SR_n_RL;
-  Estimations_Y.SR_i.RR = rtb_DamperRateLookup1;
+  Estimations_Y.SR_l.FL = Estimations_B.rtb_SR_n_FL;
+  Estimations_Y.SR_l.FR = Estimations_B.rtb_SR_n_FR;
+  Estimations_Y.SR_l.RL = Estimations_B.rtb_SR_n_RL;
+  Estimations_Y.SR_l.RR = rtb_DamperRateLookup1;
 
   /* Outport: '<Root>/normLongTireForce' */
-  Estimations_Y.normLongTireForce_d.FL = rtb_DamperRateLookup3;
-  Estimations_Y.normLongTireForce_d.FR = Estimations_B.c;
-  Estimations_Y.normLongTireForce_d.RL = rtb_DamperRateLookup2;
-  Estimations_Y.normLongTireForce_d.RR = varargin_1_idx_2;
+  Estimations_Y.normLongTireForce_f.FL = rtb_DamperRateLookup3;
+  Estimations_Y.normLongTireForce_f.FR = Estimations_B.c;
+  Estimations_Y.normLongTireForce_f.RL = rtb_DamperRateLookup2;
+  Estimations_Y.normLongTireForce_f.RR = varargin_1_idx_2;
 
   /* Outport: '<Root>/OutputTelemetri_est' */
-  Estimations_Y.OutputTelemetri_est_l.normLongTireForce.FL =
+  Estimations_Y.OutputTelemetri_est_k.normLongTireForce.FL =
     rtb_DamperRateLookup3;
-  Estimations_Y.OutputTelemetri_est_l.normLongTireForce.FR = Estimations_B.c;
-  Estimations_Y.OutputTelemetri_est_l.normLongTireForce.RL =
+  Estimations_Y.OutputTelemetri_est_k.normLongTireForce.FR = Estimations_B.c;
+  Estimations_Y.OutputTelemetri_est_k.normLongTireForce.RL =
     rtb_DamperRateLookup2;
-  Estimations_Y.OutputTelemetri_est_l.normLongTireForce.RR = varargin_1_idx_2;
-  Estimations_Y.OutputTelemetri_est_l.SR.FL = Estimations_B.rtb_SR_n_FL;
-  Estimations_Y.OutputTelemetri_est_l.SR.FR = Estimations_B.rtb_SR_n_FR;
-  Estimations_Y.OutputTelemetri_est_l.SR.RL = Estimations_B.rtb_SR_n_RL;
-  Estimations_Y.OutputTelemetri_est_l.SR.RR = rtb_DamperRateLookup1;
-  Estimations_Y.OutputTelemetri_est_l.Fz_loadTransfer.FL =
+  Estimations_Y.OutputTelemetri_est_k.normLongTireForce.RR = varargin_1_idx_2;
+  Estimations_Y.OutputTelemetri_est_k.SR.FL = Estimations_B.rtb_SR_n_FL;
+  Estimations_Y.OutputTelemetri_est_k.SR.FR = Estimations_B.rtb_SR_n_FR;
+  Estimations_Y.OutputTelemetri_est_k.SR.RL = Estimations_B.rtb_SR_n_RL;
+  Estimations_Y.OutputTelemetri_est_k.SR.RR = rtb_DamperRateLookup1;
+  Estimations_Y.OutputTelemetri_est_k.Fz_loadTransfer.FL =
     rtb_Fz_loadTransfer_est_FL;
-  Estimations_Y.OutputTelemetri_est_l.Fz_loadTransfer.FR =
+  Estimations_Y.OutputTelemetri_est_k.Fz_loadTransfer.FR =
     rtb_Fz_loadTransfer_est_FR;
-  Estimations_Y.OutputTelemetri_est_l.Fz_loadTransfer.RL =
+  Estimations_Y.OutputTelemetri_est_k.Fz_loadTransfer.RL =
     rtb_Fz_loadTransfer_est_RL;
-  Estimations_Y.OutputTelemetri_est_l.Fz_loadTransfer.RR =
+  Estimations_Y.OutputTelemetri_est_k.Fz_loadTransfer.RR =
     rtb_Fz_loadTransfer_est_RR;
-  Estimations_Y.OutputTelemetri_est_l.Fz_Damper.FL = rtb_Fz_damper_est_FL;
-  Estimations_Y.OutputTelemetri_est_l.Fz_Damper.FR = rtb_Fz_damper_est_FR;
-  Estimations_Y.OutputTelemetri_est_l.Fz_Damper.RL = rtb_Fz_damper_est_RL;
-  Estimations_Y.OutputTelemetri_est_l.Fz_Damper.RR = rtb_Fz_damper_est_RR;
+  Estimations_Y.OutputTelemetri_est_k.Fz_Damper.FL = rtb_Fz_damper_est_FL;
+  Estimations_Y.OutputTelemetri_est_k.Fz_Damper.FR = rtb_Fz_damper_est_FR;
+  Estimations_Y.OutputTelemetri_est_k.Fz_Damper.RL = rtb_Fz_damper_est_RL;
+  Estimations_Y.OutputTelemetri_est_k.Fz_Damper.RR = rtb_Fz_damper_est_RR;
 }
 
 /* Model initialize function */

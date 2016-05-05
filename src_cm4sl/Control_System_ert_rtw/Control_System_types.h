@@ -7,14 +7,14 @@
  *
  * Code generated for Simulink model 'Control_System'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:32:19 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:15 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objective: Execution efficiency
- * Validation result: Passed (5), Warnings (5), Errors (2)
+ * Validation result: Not run
  */
 
 #ifndef RTW_HEADER_Control_System_types_h_
@@ -87,7 +87,6 @@ typedef struct {
   real32_T coasting_KERS_percent;
   real32_T max_battery_discharge;
   real32_T battery_voltage;
-  real_T scaling_factor;
 } Settings;
 
 #endif
@@ -127,6 +126,7 @@ typedef struct {
   real32_T Slip_ratio_ref;
   real32_T Kd;
   real32_T Kb;
+  real32_T full_gain_limit_kmh;
   real32_T Kp_start;
   real32_T Kp_end;
   real32_T Kp_scaling;
@@ -164,6 +164,8 @@ typedef struct {
   real32_T Ld;
   real32_T Jw;
   real32_T Mn;
+  real32_T aero_lift_coeff;
+  real32_T aero_ref_area;
 } CarParams;
 
 #endif
@@ -290,10 +292,10 @@ typedef struct stJxTitUMuT3Ho2jJeUFcJH stJxTitUMuT3Ho2jJeUFcJH_Contr_T;
 
 #endif                                 /*typedef_stJxTitUMuT3Ho2jJeUFcJH_Contr_T*/
 
-#ifndef struct_sxOEtKrnKDbijZ2mVJTGnCG
-#define struct_sxOEtKrnKDbijZ2mVJTGnCG
+#ifndef struct_sBpClZJFwMZrVbffZSdfz6E
+#define struct_sBpClZJFwMZrVbffZSdfz6E
 
-struct sxOEtKrnKDbijZ2mVJTGnCG
+struct sBpClZJFwMZrVbffZSdfz6E
 {
   real32_T GR;
   real32_T t_f;
@@ -314,16 +316,18 @@ struct sxOEtKrnKDbijZ2mVJTGnCG
   real32_T Ld;
   real32_T Jw;
   real32_T Mn;
+  real32_T aero_lift_coeff;
+  real32_T aero_ref_area;
 };
 
-#endif                                 /*struct_sxOEtKrnKDbijZ2mVJTGnCG*/
+#endif                                 /*struct_sBpClZJFwMZrVbffZSdfz6E*/
 
-#ifndef typedef_sxOEtKrnKDbijZ2mVJTGnCG_Contr_T
-#define typedef_sxOEtKrnKDbijZ2mVJTGnCG_Contr_T
+#ifndef typedef_sBpClZJFwMZrVbffZSdfz6E_Contr_T
+#define typedef_sBpClZJFwMZrVbffZSdfz6E_Contr_T
 
-typedef struct sxOEtKrnKDbijZ2mVJTGnCG sxOEtKrnKDbijZ2mVJTGnCG_Contr_T;
+typedef struct sBpClZJFwMZrVbffZSdfz6E sBpClZJFwMZrVbffZSdfz6E_Contr_T;
 
-#endif                                 /*typedef_sxOEtKrnKDbijZ2mVJTGnCG_Contr_T*/
+#endif                                 /*typedef_sBpClZJFwMZrVbffZSdfz6E_Contr_T*/
 
 /* Parameters (auto storage) */
 typedef struct P_Control_System_T_ P_Control_System_T;

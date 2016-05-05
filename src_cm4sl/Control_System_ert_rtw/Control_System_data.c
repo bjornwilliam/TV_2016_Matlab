@@ -7,14 +7,14 @@
  *
  * Code generated for Simulink model 'Control_System'.
  *
- * Model version                  : 1.1637
+ * Model version                  : 1.1659
  * Simulink Coder version         : 8.8 (R2015a) 09-Feb-2015
- * C/C++ source code generated on : Tue Apr 19 20:32:19 2016
+ * C/C++ source code generated on : Thu Apr 28 22:06:15 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objective: Execution efficiency
- * Validation result: Passed (5), Warnings (5), Errors (2)
+ * Validation result: Not run
  */
 
 #include "Control_System.h"
@@ -120,7 +120,7 @@ P_Control_System_T Control_System_P = {
   /*  Expression: [yawRateControl.Kp_start  yawRateControl.Kp_end]*yawRateControl.Kp_scaling
    * Referenced by: '<S9>/Kp Lookup'
    */
-  { 1500.0F, 1500.0F },
+  { 4500.0F, 4500.0F },
 
   /*  Expression: [0  yawRateControl.lookup_speed_end_kmh]
    * Referenced by: '<S9>/Kp Lookup'
