@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1661"
+    ComputedModelVersion    "1.1662"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [1319.0, 476.0, 1139.0, 870.0]
+      Location		      [276.0, 487.0, 1139.0, 870.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -97,21 +97,21 @@ Model {
 	}
 	Object {
 	  $ObjectID		  10
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1727"
+	  LoadSaveID		  "985"
 	  Extents		  [1089.0, 693.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [77.41151111791055, 1058.7305957815624]
+	  ZoomFactor		  [1.5]
+	  Offset		  [293.61896235078035, 487.14210440752481]
 	}
 	Object {
 	  $ObjectID		  11
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "4151"
+	  LoadSaveID		  "1"
 	  Extents		  [1089.0, 693.0]
-	  ZoomFactor		  [0.2]
-	  Offset		  [-614.97759978088766, -556.8096293376957]
+	  ZoomFactor		  [0.15]
+	  Offset		  [-789.6288766518951, -282.24527758080035]
 	}
 	Object {
 	  $ObjectID		  12
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu May 05 10:12:35 2016"
-  RTWModifiedTimeStamp	  384343941
-  ModelVersionFormat	  "1.%<AutoIncrement:1661>"
+  LastModifiedDate	  "Thu May 05 10:36:49 2016"
+  RTWModifiedTimeStamp	  384345114
+  ModelVersionFormat	  "1.%<AutoIncrement:1662>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -763,8 +763,8 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Code Generation"
-      ConfigPrmDlgPosition     [ 984, 75, 2208, 1356 ] 
+      CurrentDlgPage	      "Code Generation/Memory Sections"
+      ConfigPrmDlgPosition     [ 679, 291, 1919, 1610 ] 
     }
     Simulink.ConfigSet {
       $ObjectID		      26
@@ -2439,8 +2439,8 @@ Model {
       }
       System {
 	Name			"CarMaker"
-	Location		[1319, 476, 2458, 1346]
-	Open			off
+	Location		[276, 487, 1415, 1357]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2451,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"50"
+	ZoomFactor		"15"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3848,7 +3848,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Control_System\n"
-	    Location		    [1319, 476, 2458, 1346]
+	    Location		    [276, 487, 1415, 1357]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3860,7 +3860,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "22"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -4649,8 +4649,8 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Slip Rate Control\n"
-		    Location		    [1319, 476, 2458, 1346]
-		    Open		    off
+		    Location		    [1340, 824, 2479, 1694]
+		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7094,7 +7094,7 @@ Model {
 		    System {
 		    Name		    "Traction Controllers"
 		    Location		    [1319, 476, 2458, 1346]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7105,7 +7105,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "60"
+		    ZoomFactor		    "50"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -12394,7 +12394,6 @@ Model {
 		    Location		    [1313, 60, 1827, 434]
 		    Open		    on
 		    NumInputPorts	    "1"
-		    ZoomMode		    "yonly"
 		    List {
 		    ListType		    AxesTitles
 		    axes1		    "%<SignalLabel>"
@@ -12410,7 +12409,7 @@ Model {
 		    MarkerStyles	    "none|none|none|none|none|none"
 		    }
 		    ShowLegends		    on
-		    LegendLocations	    "0.72114     0.13993     0.21984     0.18004"
+		    LegendLocations	    "0.78923     0.11319     0.21984     0.18004"
 		    YMin		    "0.1998305084745763"
 		    YMax		    "0.2840677966101695"
 		    SaveName		    "ScopeData44"
@@ -14456,16 +14455,16 @@ Model {
 	      ZOrder		      126
 	      SrcBlock		      "Control\n"
 	      SrcPort		      1
-	      Points		      [151, 0]
+	      Points		      [220, 0]
 	      Branch {
 		ZOrder			574
-		Points			[17, 0; 0, 20]
+		Points			[15, 0]
 		DstBlock		"Output Interface\n"
 		DstPort			2
 	      }
 	      Branch {
 		ZOrder			480
-		Points			[0, 165; 379, 0; 0, 125]
+		Points			[0, 165; 310, 0; 0, 125]
 		DstBlock		"Ti_lim\n"
 		DstPort			1
 	      }
@@ -14742,7 +14741,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Debug Information\n"
-	    Location		    [1319, 476, 2458, 1346]
+	    Location		    [276, 487, 1415, 1357]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -14754,7 +14753,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Ti_lim"
@@ -15422,7 +15421,7 @@ Model {
 	      ZOrder		      350
 	      Floating		      off
 	      Location		      [1985, 908, 2498, 1327]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -15710,7 +15709,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Motor Rpm log\n\n"
-		Location		[1200, 463, 2500, 1518]
+		Location		[276, 487, 1415, 1357]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -15722,7 +15721,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"175"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Abs
 		  Name			  "Abs"
@@ -16003,7 +16002,7 @@ Model {
 		  ZOrder		  207
 		  Floating		  off
 		  Location		  [1811, 546, 2391, 957]
-		  Open			  on
+		  Open			  off
 		  NumInputPorts		  "1"
 		  List {
 		    ListType		    AxesTitles
@@ -16191,8 +16190,8 @@ Model {
 	      Position		      [2405, 2479, 2435, 2511]
 	      ZOrder		      272
 	      Floating		      off
-	      Location		      [1677, 1043, 2266, 1506]
-	      Open		      on
+	      Location		      [1423, 1060, 2241, 1523]
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -16209,7 +16208,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.87687     0.79664     0.17148     0.14543"
+	      LegendLocations	      "0.90087     0.79664     0.12347     0.14543"
 	      TimeRange		      "6.132483901515151"
 	      YMin		      "-17.48046875"
 	      YMax		      "20.95703125"
@@ -17594,8 +17593,8 @@ Model {
 	      Position		      [2240, 244, 2270, 276]
 	      ZOrder		      367
 	      Floating		      off
-	      Location		      [1085, 563, 1892, 958]
-	      Open		      on
+	      Location		      [1260, 634, 2067, 1029]
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -17629,8 +17628,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Simulation Results Logging"
-		Location		[1319, 476, 2458, 1346]
-		Open			on
+		Location		[1340, 824, 2479, 1694]
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -18935,7 +18934,7 @@ Model {
 	      Position		      [4300, 1599, 4330, 1631]
 	      ZOrder		      196
 	      Floating		      off
-	      Location		      [1375, 272, 1951, 678]
+	      Location		      [1636, 306, 2212, 712]
 	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
@@ -19141,7 +19140,7 @@ Model {
 	      ZOrder		      398
 	      Floating		      off
 	      Location		      [773, 1126, 1403, 1552]
-	      Open		      off
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -19158,6 +19157,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
+	      LegendLocations	      "0.80265     0.85055     0.13651    0.047731"
 	      TimeRange		      "20"
 	      YMin		      "0"
 	      YMax		      "90"
@@ -19546,8 +19546,8 @@ Model {
 	      Position		      [3055, 2064, 3085, 2096]
 	      ZOrder		      360
 	      Floating		      off
-	      Location		      [1944, 589, 2502, 939]
-	      Open		      on
+	      Location		      [1948, 584, 2506, 934]
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -19564,7 +19564,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.64456     0.77333     0.28674     0.10286"
+	      LegendLocations	      "0.078252     0.80762     0.28674     0.10286"
 	      TimeRange		      "3.078539235412475"
 	      YMax		      "12"
 	      SaveName		      "ScopeData17"
@@ -21528,7 +21528,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Estimations"
-	    Location		    [96, 86, 1396, 1141]
+	    Location		    [276, 487, 1415, 1357]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -21540,7 +21540,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "40"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
