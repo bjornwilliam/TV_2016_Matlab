@@ -1,4 +1,4 @@
-% Parameter file for the FSE models
+% Parameter file for Revolve TV 2016
 % Initialize parameters automatically when the model gets loaded:
 load('Buses.mat');
 
@@ -12,7 +12,7 @@ car_params = struct;
 speedEstimation = struct;
 
 i_Diff = 15.47; % mechanical transmission
-Use_Joystick = 1; % 1 means no, < 0 means yes
+Use_Joystick = 1; % 1 = No, -1 = yes
 
 
 settings.KERS_active = uint32(1);           % 1 = Kers can be used, 0 = Kers is not used
