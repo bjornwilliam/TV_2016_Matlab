@@ -21,7 +21,7 @@ settings.select_velocity_vx = uint32(2);    % 1 = estimated, 2 = INS, 3 = Optica
 settings.select_velocity_vy = uint32(2);    %                2 = INS, 3 = Optical
 % 1 = Engineering (No negative torque), 2 = with negative torque , 
 % 3 = static 25  , 4 = with negative, does not use Fz
-settings.TV_Method = uint32(2); 
+settings.TV_Method = uint32(3); 
 settings.use_estimated_Fz = uint32(0); % 1 = yes, 0 = no
 
 
@@ -146,14 +146,11 @@ settings.max_RPM = single(23000);
 
 
 % The speed at which KERS will be allowed again
-settings.KERS_speed_limit_hyst_high = single(5); % Can not KERS under 5 Km/h = 1.4 m/s
+settings.KERS_speed_limit_hyst_high = single(4); % Can not KERS under 5 Km/h = 1.4 m/s
 % The speed at which KERS will be turned off
-settings.KERS_speed_limit_hyst_low = single(1.8);
+settings.KERS_speed_limit_hyst_low = single(1.4);
 
-% This set point will be used when asking the motors to KERS
-% The RPM limit will not be reached due to the hysteris limits
-% set above, and in the Output interface block in the simulink diagram
-settings.KERS_motor_RPM_setpoint = single(500);
+settings.KERS_motor_RPM_setpoint = single(1200);
 
 
 
