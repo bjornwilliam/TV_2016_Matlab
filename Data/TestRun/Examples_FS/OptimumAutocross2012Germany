@@ -5,10 +5,10 @@ Description:
 	Analytical course, modeled by plane segments
 Vehicle = Revolve2016/TV2016
 Trailer =
-Tire.0 = Examples/GnistTireLinker
-Tire.1 = Examples/GnistTireLinker
-Tire.2 = Examples/GnistTireLinker
-Tire.3 = Examples/GnistTireLinker
+Tire.0 = Examples/FS_195_MODIFIED
+Tire.1 = Examples/FS_195_MODIFIED
+Tire.2 = Examples/FS_195_MODIFIED
+Tire.3 = Examples/FS_195_MODIFIED
 Snapshot.TimeLimit =
 Snapshot.DistLimit =
 VehicleLoad.0.mass = 0.0
@@ -91,7 +91,7 @@ Road.2Movie.TerrainFName =
 Road.Definition:
 	FileIdent IPGRoad 4.5
 	Origin    0.0 0 0 0
-	Default 2.5 2.5 50 50 0.66 0.66 0.0 0.0 0.0 0.0 0.0 0.0
+	Default 2.5 2.5 50 50 1.5 1.5 0.0 0.0 0.0 0.0 0.0 0.0
 	TurnRight  27.808 2.3221 - - - -  0.0 0.0 0.0
 	TurnRight  22.476 2.9749 - - - -  0.0 0.0 0.0
 	TurnRight  34.580 1.9701 - - - -  0.0 0.0 0.0
@@ -1107,9 +1107,9 @@ Env.Temp.Offset_Time:
 Driver.ParamIdent = IPGDriver 5
 Driver.Mode = std
 Driver.Long.DrivMaxSpeed = 0
-Driver.Long.CruisingSpeed = 110
-Driver.CornerCutCoef = 0.2
-Driver.ConsiderTraffic = 0
+Driver.Long.CruisingSpeed = 140
+Driver.CornerCutCoef = 0.8
+Driver.ConsiderTraffic = 1
 Driver.Traffic.TimeGapMin = 1.8
 Driver.Traffic.TimeGapMax = 5.0
 Driver.Traffic.DistMin = 6
@@ -1118,19 +1118,21 @@ Driver.Traffic.EcoCoef = 0.75
 Driver.Traffic.Overtake = 0
 Driver.Traffic.Overtake_Rate = 1
 Driver.Traffic.Overtake_dSpeedMin = 10
-Driver.Long.dtAccBrake = 0.1
-Driver.Long.axMax = 15
-Driver.Long.axMin = -10
-Driver.Long.ayMax = 20
+Driver.Long.dtAccBrake = 0.4
+Driver.Long.axMax = 25
+Driver.Long.axMin = -20
+Driver.Long.ayMax = 17
 Driver.Long.GGExp:
 	50 1.5 1.5
 Driver.Long.DevMax = 0.0
 Driver.Long.tReact = 0.0
 Driver.Long.TractionControl = 0
 Driver.DecShift.UseBrakePark = 0
-Driver.DecShift.tSwitchGear = 0
+Driver.DecShift.tSwitchGear = 0.5
 Driver.DecShift.nEngine.Limits:
+	2500 5000
 Driver.DecShift.nEngine.Shift:
+	3000 4500
 Driver.Lat.DevMax = 0.0
 Driver.Lat.tReact = 0.0
 Driver.Knowl.Long.tActionMin = 0

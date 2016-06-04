@@ -131,7 +131,7 @@ powerLimitControl.Kb = single(0.1); % Anti wind up
 
 powerLimitControl.upper_sat_limit = single(0);
 powerLimitControl.lower_sat_limit = single(-0.7); % Based on Max effect = 120KW, 8/12 = 0.6
-powerLimitControl.enable = uint32(0); % 1 == enabled , 0 = disabled
+powerLimitControl.enable = uint32(1); % 1 == enabled , 0 = disabled
 % ------------------------------
 % LIMITS AND TRESHOLDS
 % ------------------------------
