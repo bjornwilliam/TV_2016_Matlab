@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1694"
+    ComputedModelVersion    "1.1696"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1616.0, 876.0]
+      Location		      [-8.0, 0.0, 1612.0, 876.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -81,9 +81,9 @@ Model {
 	  $ObjectID		  8
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "3969"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.25]
+	  LoadSaveID		  "3979"
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [0.8]
 	  Offset		  [0.0, 0.0]
 	}
 	Object {
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 04 11:13:48 2016"
-  RTWModifiedTimeStamp	  386939607
-  ModelVersionFormat	  "1.%<AutoIncrement:1694>"
+  LastModifiedDate	  "Wed Jun 08 13:35:04 2016"
+  RTWModifiedTimeStamp	  387293689
+  ModelVersionFormat	  "1.%<AutoIncrement:1696>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2439,7 +2439,7 @@ Model {
       }
       System {
 	Name			"CarMaker"
-	Location		[-8, 0, 1608, 876]
+	Location		[-8, 0, 1604, 876]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3848,7 +3848,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Control_System\n"
-	    Location		    [-8, 0, 1608, 876]
+	    Location		    [-8, 0, 1604, 876]
 	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3879,7 +3879,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Control\n"
-		Location		[-8, 0, 1608, 876]
+		Location		[-8, 0, 1604, 876]
 		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -7093,7 +7093,7 @@ Model {
 		    RequestExecContextInheritance off
 		    System {
 		    Name		    "Traction Controllers"
-		    Location		    [-8, 0, 1608, 876]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -11335,7 +11335,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Throttle / Brake Mapping"
-		    Location		    [-8, 0, 1608, 876]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -11502,7 +11502,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Torque allocation\n"
-		    Location		    [-8, 0, 1608, 876]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -11897,7 +11897,7 @@ Model {
 		    RequestExecContextInheritance off
 		    System {
 		    Name		    "Torque Allocation"
-		    Location		    [-8, 0, 1608, 876]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -12603,7 +12603,7 @@ Model {
 		  }
 		  System {
 		    Name		    "Yaw Rate Controller\n"
-		    Location		    [-8, 0, 1608, 876]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -21382,7 +21382,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Estimations"
-	    Location		    [-8, 0, 1608, 876]
+	    Location		    [-8, 0, 1604, 876]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -21394,7 +21394,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21733,8 +21733,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Fx_Estimation"
-		Location		[-8, 0, 1608, 876]
-		Open			on
+		Location		[-8, 0, 1604, 876]
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -22668,8 +22668,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"RPM_to_linearVelocity"
-		Location		[829, 208, 1986, 1152]
-		Open			off
+		Location		[-8, 0, 1604, 876]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -22867,7 +22867,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"SR_Calculation"
-		Location		[477, 257, 1912, 1137]
+		Location		[-8, 0, 1604, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -22879,7 +22879,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"150"
 		Block {
 		  BlockType		  Inport
 		  Name			  "v_x"
@@ -52899,7 +52899,10 @@ Stateflow {
     firstTransition	    147
     firstJunction	    146
     viewObj		    139
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53097,7 +53100,10 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53125,9 +53131,9 @@ Stateflow {
       script		      "function whl_speed = rpmToWhlVelocity(sensors,meanWheelAngle,car_params)\n%#codegen\n\n\nS = mean"
       "WheelAngle; % Steering angle in rad( Mean of front wheels)\nc = single(2*pi/(car_params.GR*60));\n\n% Determine "
       "CoG Vx from motor RPM. Simple atm. Not considering vy.\nwhl_speed.FL = sensors.RPM_FL*c*car_params.r_eff*cos(S) "
-      "+ sensors.yawRate*car_params.t_f;\nwhl_speed.FR = sensors.RPM_FR*c*car_params.r_eff*cos(S) - sensors.yawRate*car"
-      "_params.t_f;\nwhl_speed.RL = sensors.RPM_RL*c*car_params.r_eff        + sensors.yawRate*car_params.t_r;\nwhl_spe"
-      "ed.RR = sensors.RPM_RR*c*car_params.r_eff        - sensors.yawRate*car_params.t_r;\n\n\n\n"
+      ";%+ sensors.yawRate*car_params.t_f;\nwhl_speed.FR = sensors.RPM_FR*c*car_params.r_eff*cos(S) ;%- sensors.yawRate"
+      "*car_params.t_f;\nwhl_speed.RL = sensors.RPM_RL*c*car_params.r_eff        ;%+ sensors.yawRate*car_params.t_r;\nw"
+      "hl_speed.RR = sensors.RPM_RR*c*car_params.r_eff        ;%- sensors.yawRate*car_params.t_r;\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -53267,10 +53273,7 @@ Stateflow {
     firstTransition	    166
     firstJunction	    165
     viewObj		    158
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
