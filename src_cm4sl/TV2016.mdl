@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1696"
+    ComputedModelVersion    "1.1699"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -79,7 +79,7 @@ Model {
 	}
 	Object {
 	  $ObjectID		  8
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "3979"
 	  Extents		  [1562.0, 699.0]
@@ -91,9 +91,9 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1034"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [60.816883475734471, 273.27426350024734]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.75]
+	  Offset		  [141.95974061859164, 400.35997778596158]
 	}
 	Object {
 	  $ObjectID		  10
@@ -115,10 +115,10 @@ Model {
 	}
 	Object {
 	  $ObjectID		  12
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4989"
-	  Extents		  [2526.0, 1399.0]
+	  Extents		  [1562.0, 699.0]
 	  ZoomFactor		  [2.0]
 	  Offset		  [203.88915307316995, 71.018606579945242]
 	}
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 08 13:35:04 2016"
-  RTWModifiedTimeStamp	  387293689
-  ModelVersionFormat	  "1.%<AutoIncrement:1696>"
+  LastModifiedDate	  "Sun Jun 12 19:19:42 2016"
+  RTWModifiedTimeStamp	  387659971
+  ModelVersionFormat	  "1.%<AutoIncrement:1699>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -11514,7 +11514,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -52137,7 +52137,10 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52169,17 +52172,21 @@ Stateflow {
       " (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 3 % static 25 %\n        alfa_r = single(0.5"
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
       "gle(0.5);\nend\n\n        \n        \n\n\nDC_voltage = states.DC_voltage;\nmax_discharge = settings.max_battery_"
-      "discharge;\n\n\nmax_torque_front = min(min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*ma"
-      "x(1,states.RPM_FL)*2*pi/60)) , ...\n                           (min(settings.max_motor_torque,(DC_voltage*max_di"
-      "scharge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60))));\n                       \nmax_torque_rear = min(min(set"
-      "tings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60)) , ...\n          "
-      "                 (min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RR)*2*"
-      "pi/60))));                     \n                       \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTor"
-      "que.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rea"
-      "r;\n\n                       \n%maxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_discharge*"
-      "(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60));\n%maxMotorTorque.mmt_RL = min(settings.max_motor_torque,(DC_volta"
-      "ge*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60));\n%maxMotorTorque.mmt_RR = min(settings.max_motor_t"
-      "orque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60));"
+      "discharge;\n\nomega_FL = single(states.RPM_FL*2*pi/60);\nomega_FR = single(states.RPM_FR*2*pi/60);\nomega_RL = s"
+      "ingle(states.RPM_RL*2*pi/60);\nomega_RR = single(states.RPM_RR*2*pi/60);\n\nmmt = settings.max_motor_torque;\n\n"
+      "\n\nmax_torque_front = min(mmt, (DC_voltage*max_discharge*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR"
+      "))) );\n\nmax_torque_rear = min(mmt, (DC_voltage*max_discharge*alfa_r)/ (2 * max( max(1,omega_RL), max(1,omega_R"
+      "R))) );\n\n% max_torque_front = min(min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1"
+      ",states.RPM_FL)*2*pi/60)) , ...\n%                            (min(settings.max_motor_torque,(DC_voltage*max_dis"
+      "charge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60))));\n%                        \n% max_torque_rear = min(min("
+      "settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60)) , ...\n%      "
+      "                      (min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_R"
+      "R)*2*pi/60))));                     \n%                        \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxM"
+      "otorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_tor"
+      "que_rear;\n\n                       \n%maxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_dis"
+      "charge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60));\n%maxMotorTorque.mmt_RL = min(settings.max_motor_torque,(D"
+      "C_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60));\n%maxMotorTorque.mmt_RR = min(settings.max_"
+      "motor_torque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60));"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52899,10 +52906,7 @@ Stateflow {
     firstTransition	    147
     firstJunction	    146
     viewObj		    139
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53100,10 +53104,7 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -56175,7 +56176,10 @@ Stateflow {
     firstTransition	    320
     firstJunction	    319
     viewObj		    306
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
