@@ -37,11 +37,13 @@ car_params.l_f = single(0.813); % Distance CoG to front axle
 car_params.l_r = single(0.717); % Distance CoG to rear axle
 car_params.CoG_height = single(0.265); % Height of Center of gravity [m]
 
-car_params.spring_constant_front = single(30000);
-car_params.spring_constant_rear  = single(35000);
-car_params.motion_ratio_front    = single(1);
-car_params.motion_ratio_rear     = single(1);
-
+car_params.spring_constant_front            = single(30000);
+car_params.spring_constant_rear             = single(35000);
+car_params.motion_ratio_front               = single(1);
+car_params.motion_ratio_rear                = single(1);
+car_params.preload_front_mm                 = single(4.5);
+car_params.preload_rear_mm                  = single(1.0);
+car_params.unsprung_mass_per_wheel_newton   = single(122.625)
 
 car_params.driver_mass = single(75);
 car_params.car_mass    = single(185);

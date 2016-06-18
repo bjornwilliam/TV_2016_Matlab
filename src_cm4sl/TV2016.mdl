@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1699"
+    ComputedModelVersion    "1.1705"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -73,9 +73,9 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "909"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [661.97901945948252, 363.3092528143917]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [586.15044803091132, 330.45210995724881]
 	}
 	Object {
 	  $ObjectID		  8
@@ -88,12 +88,12 @@ Model {
 	}
 	Object {
 	  $ObjectID		  9
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1034"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.75]
-	  Offset		  [141.95974061859164, 400.35997778596158]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-35.275304167557138, 464.032745356521]
 	}
 	Object {
 	  $ObjectID		  10
@@ -109,27 +109,27 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "934"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-525.898442681271, 677.581356989559]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [178.9682239853957, 901.64802365622575]
 	}
 	Object {
 	  $ObjectID		  12
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4989"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [2.0]
-	  Offset		  [203.88915307316995, 71.018606579945242]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-143.11084692682994, -18.481393420054729]
 	}
 	Object {
 	  $ObjectID		  13
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [741.32488936826508, 958.72393837202185]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [321.40822270159833, 818.72393837202185]
 	}
 	PropName		"EditorsInfo"
       }
@@ -139,11 +139,11 @@ Model {
   Creator		  "fh"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Willi"
+  LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jun 12 19:19:42 2016"
-  RTWModifiedTimeStamp	  387659971
-  ModelVersionFormat	  "1.%<AutoIncrement:1699>"
+  LastModifiedDate	  "Sat Jun 18 19:00:24 2016"
+  RTWModifiedTimeStamp	  388177150
+  ModelVersionFormat	  "1.%<AutoIncrement:1705>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2420,7 +2420,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "200"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5629"
+    SIDHighWatermark	    "5632"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -2451,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"60"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3860,7 +3860,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3891,7 +3891,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"60"
+		ZoomFactor		"150"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -11514,7 +11514,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "175"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -11590,7 +11590,7 @@ Model {
 		    Name		    "MATLAB Function"
 		    SID			    "4934"
 		    Ports		    [1, 1]
-		    Position		    [260, 646, 445, 704]
+		    Position		    [260, 551, 445, 609]
 		    ZOrder		    203
 		    LibraryVersion	    "1.32"
 		    ErrorFcn		    "Stateflow.Translate.translate"
@@ -11909,7 +11909,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "200"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "T_req"
@@ -12391,8 +12391,8 @@ Model {
 		    Position		    [690, 929, 720, 961]
 		    ZOrder		    359
 		    Floating		    off
-		    Location		    [1313, 60, 1827, 434]
-		    Open		    off
+		    Location		    [991, 89, 2004, 1054]
+		    Open		    on
 		    NumInputPorts	    "1"
 		    List {
 		    ListType		    AxesTitles
@@ -12409,7 +12409,7 @@ Model {
 		    MarkerStyles	    "none|none|none|none|none|none"
 		    }
 		    ShowLegends		    on
-		    LegendLocations	    "0.78923     0.11319     0.21984     0.18004"
+		    LegendLocations	    "0.85061     0.88532     0.11155    0.069775"
 		    YMin		    "0.1998305084745763"
 		    YMax		    "0.2840677966101695"
 		    SaveName		    "ScopeData44"
@@ -12439,7 +12439,7 @@ Model {
 		    Points		    [7, 0]
 		    Branch {
 		    ZOrder		    355
-		    Points		    [0, 145]
+		    Points		    [0, 50]
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    1
 		    }
@@ -12469,14 +12469,13 @@ Model {
 		    SrcPort		    1
 		    Points		    [16, 0]
 		    Branch {
-		    ZOrder		    340
-		    Points		    [0, 270]
+		    ZOrder		    375
+		    Points		    [0, 365]
 		    DstBlock		    "Bus\nSelector"
 		    DstPort		    1
 		    }
 		    Branch {
 		    ZOrder		    316
-		    Points		    [0, -95]
 		    DstBlock		    "Torque Allocation"
 		    DstPort		    3
 		    }
@@ -21394,7 +21393,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "25"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21974,7 +21973,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Fz_Estimation"
-		Location		[-8, -8, 1608, 868]
+		Location		[-8, 0, 1604, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -21986,7 +21985,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"80"
+		ZoomFactor		"60"
 		Block {
 		  BlockType		  Inport
 		  Name			  "sensors"
@@ -22055,7 +22054,7 @@ Model {
 		  ZOrder		  271
 		  NumberOfTableDimensions "1"
 		  BreakpointsForDimension1 "single([-200,0,200]);"
-		  Table			  "single([900,0,-900]);"
+		  Table			  "single([-500,0,500]);"
 		  ExtrapMethod		  "Clip"
 		  UseLastTableValue	  on
 		  InternalRulePriority	  "Speed"
@@ -22070,13 +22069,13 @@ Model {
 		Block {
 		  BlockType		  Lookup_n-D
 		  Name			  "DamperRateLookup1"
-		  SID			  "5514"
+		  SID			  "5630"
 		  Ports			  [1, 1]
 		  Position		  [550, 768, 615, 832]
-		  ZOrder		  281
+		  ZOrder		  284
 		  NumberOfTableDimensions "1"
 		  BreakpointsForDimension1 "single([-200,0,200]);"
-		  Table			  "single([900,0,-900]);"
+		  Table			  "single([-500,0,500]);"
 		  ExtrapMethod		  "Clip"
 		  UseLastTableValue	  on
 		  InternalRulePriority	  "Speed"
@@ -22085,13 +22084,13 @@ Model {
 		Block {
 		  BlockType		  Lookup_n-D
 		  Name			  "DamperRateLookup2"
-		  SID			  "5515"
+		  SID			  "5631"
 		  Ports			  [1, 1]
 		  Position		  [550, 868, 615, 932]
-		  ZOrder		  282
+		  ZOrder		  285
 		  NumberOfTableDimensions "1"
 		  BreakpointsForDimension1 "single([-200,0,200]);"
-		  Table			  "single([900,0,-900]);"
+		  Table			  "single([-500,0,500]);"
 		  ExtrapMethod		  "Clip"
 		  UseLastTableValue	  on
 		  InternalRulePriority	  "Speed"
@@ -22100,13 +22099,13 @@ Model {
 		Block {
 		  BlockType		  Lookup_n-D
 		  Name			  "DamperRateLookup3"
-		  SID			  "5516"
+		  SID			  "5632"
 		  Ports			  [1, 1]
 		  Position		  [550, 968, 615, 1032]
-		  ZOrder		  283
+		  ZOrder		  286
 		  NumberOfTableDimensions "1"
 		  BreakpointsForDimension1 "single([-200,0,200]);"
-		  Table			  "single([900,0,-900]);"
+		  Table			  "single([-500,0,500]);"
 		  ExtrapMethod		  "Clip"
 		  UseLastTableValue	  on
 		  InternalRulePriority	  "Speed"
@@ -22516,7 +22515,7 @@ Model {
 		}
 		Line {
 		  Name			  "<damper_rate_FR>"
-		  ZOrder		  67
+		  ZOrder		  82
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector"
 		  SrcPort		  2
@@ -22525,7 +22524,7 @@ Model {
 		}
 		Line {
 		  Name			  "<damper_rate_RL>"
-		  ZOrder		  70
+		  ZOrder		  84
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector"
 		  SrcPort		  3
@@ -22534,7 +22533,7 @@ Model {
 		}
 		Line {
 		  Name			  "<damper_rate_RR>"
-		  ZOrder		  71
+		  ZOrder		  85
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector"
 		  SrcPort		  4
@@ -22542,21 +22541,21 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  68
+		  ZOrder		  81
 		  SrcBlock		  "DamperRateLookup1"
 		  SrcPort		  1
 		  DstBlock		  "FzEstDamper"
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  69
+		  ZOrder		  83
 		  SrcBlock		  "DamperRateLookup2"
 		  SrcPort		  1
 		  DstBlock		  "FzEstDamper"
 		  DstPort		  4
 		}
 		Line {
-		  ZOrder		  72
+		  ZOrder		  86
 		  SrcBlock		  "DamperRateLookup3"
 		  SrcPort		  1
 		  DstBlock		  "FzEstDamper"
@@ -51508,7 +51507,10 @@ Stateflow {
     firstTransition	    79
     firstJunction	    78
     viewObj		    72
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    16
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51537,13 +51539,14 @@ Stateflow {
       "car_params.car_mass + car_params.driver_mass; % Total mass( driver + car) X\nl  = car_params.l; %Wheel base X\nl"
       "r = car_params.l_r; % X\nlf = car_params.l_f;% X\n\nef = car_params.t_f*2; % Front track X\ner = car_params.t_r*"
       "2; % Rear track X\n\n\nhc = car_params.CoG_height; % X\ng = 9.81; % X\nair_density = single(1.2);\n\nFz_loadTran"
-      "sfer_est.FL = (0.5*mv*(lr*g/l - hc*sensor.ax/l) - mv*(lr*g/l - hc*sensor.ax/l)*hc*sensor.ay/(ef*g))  + (vx^2 * c"
-      "ar_params.aero_ref_area* car_params.aero_lift_coeff*air_density)/8;\nFz_loadTransfer_est.FR = (0.5*mv*(lr*g/l - "
-      "hc*sensor.ax/l) + mv*(lr*g/l - hc*sensor.ax/l)*hc*sensor.ay/(ef*g))  + (vx^2 * car_params.aero_ref_area* car_par"
-      "ams.aero_lift_coeff*air_density)/8;\nFz_loadTransfer_est.RL = (0.5*mv*(lf*g/l + hc*sensor.ax/l) - mv*(lf*g/l + h"
-      "c*sensor.ax/l)*hc*sensor.ay/(er*g))  + (vx^2 * car_params.aero_ref_area* car_params.aero_lift_coeff*air_density)"
-      "/8;\nFz_loadTransfer_est.RR = (0.5*mv*(lf*g/l + hc*sensor.ax/l) + mv*(lf*g/l + hc*sensor.ax/l)*hc*sensor.ay/(er*"
-      "g))  + (vx^2 * car_params.aero_ref_area* car_params.aero_lift_coeff*air_density)/8;\n\nend\n\n\n\n\n\n\n"
+      "sfer_est.FL = single(0);%(0.5*mv*(lr*g/l - hc*sensor.ax/l) - mv*(lr*g/l - hc*sensor.ax/l)*hc*sensor.ay/(ef*g))  "
+      "+ (vx^2 * car_params.aero_ref_area* car_params.aero_lift_coeff*air_density)/8;\nFz_loadTransfer_est.FR = single("
+      "0);%(0.5*mv*(lr*g/l - hc*sensor.ax/l) + mv*(lr*g/l - hc*sensor.ax/l)*hc*sensor.ay/(ef*g))  + (vx^2 * car_params."
+      "aero_ref_area* car_params.aero_lift_coeff*air_density)/8;\nFz_loadTransfer_est.RL = single(0);%(0.5*mv*(lf*g/l +"
+      " hc*sensor.ax/l) - mv*(lf*g/l + hc*sensor.ax/l)*hc*sensor.ay/(er*g))  + (vx^2 * car_params.aero_ref_area* car_pa"
+      "rams.aero_lift_coeff*air_density)/8;\nFz_loadTransfer_est.RR = single(0);%(0.5*mv*(lf*g/l + hc*sensor.ax/l) + mv"
+      "*(lf*g/l + hc*sensor.ax/l)*hc*sensor.ay/(er*g))  + (vx^2 * car_params.aero_ref_area* car_params.aero_lift_coeff*"
+      "air_density)/8;\n\nend\n\n\n\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52171,22 +52174,13 @@ Stateflow {
       "  (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 2 % with negative torque\n        alfa_r = "
       " (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 3 % static 25 %\n        alfa_r = single(0.5"
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
-      "gle(0.5);\nend\n\n        \n        \n\n\nDC_voltage = states.DC_voltage;\nmax_discharge = settings.max_battery_"
-      "discharge;\n\nomega_FL = single(states.RPM_FL*2*pi/60);\nomega_FR = single(states.RPM_FR*2*pi/60);\nomega_RL = s"
-      "ingle(states.RPM_RL*2*pi/60);\nomega_RR = single(states.RPM_RR*2*pi/60);\n\nmmt = settings.max_motor_torque;\n\n"
-      "\n\nmax_torque_front = min(mmt, (DC_voltage*max_discharge*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR"
-      "))) );\n\nmax_torque_rear = min(mmt, (DC_voltage*max_discharge*alfa_r)/ (2 * max( max(1,omega_RL), max(1,omega_R"
-      "R))) );\n\n% max_torque_front = min(min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1"
-      ",states.RPM_FL)*2*pi/60)) , ...\n%                            (min(settings.max_motor_torque,(DC_voltage*max_dis"
-      "charge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60))));\n%                        \n% max_torque_rear = min(min("
-      "settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60)) , ...\n%      "
-      "                      (min(settings.max_motor_torque,(DC_voltage*max_discharge*(1-alfa_r))/(2*max(1,states.RPM_R"
-      "R)*2*pi/60))));                     \n%                        \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxM"
-      "otorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_tor"
-      "que_rear;\n\n                       \n%maxMotorTorque.mmt_FR = min(settings.max_motor_torque,(DC_voltage*max_dis"
-      "charge*(1-alfa_r))/(2*max(1,states.RPM_FR)*2*pi/60));\n%maxMotorTorque.mmt_RL = min(settings.max_motor_torque,(D"
-      "C_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RL)*2*pi/60));\n%maxMotorTorque.mmt_RR = min(settings.max_"
-      "motor_torque,(DC_voltage*max_discharge*(alfa_r))/(2*max(1,states.RPM_RR)*2*pi/60));"
+      "gle(0.5);\nend\n\nRPM_to_angular = single(2*pi/60);\n\nomega_FL = states.RPM_FL*RPM_to_angular;\nomega_FR = stat"
+      "es.RPM_FR*RPM_to_angular;\nomega_RL = states.RPM_RL*RPM_to_angular;\nomega_RR = states.RPM_RR*RPM_to_angular;\n\n"
+      "mmt = settings.max_motor_torque;\n\navailable_power = states.DC_voltage*settings.max_battery_discharge;\n\nmax_t"
+      "orque_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR))) );\n\nmax_torq"
+      "ue_rear = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,omega_RR))) );\n             "
+      "         \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque."
+      "mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -55942,7 +55936,10 @@ Stateflow {
     firstTransition	    304
     firstJunction	    303
     viewObj		    294
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55969,10 +55966,13 @@ Stateflow {
       isEML		      1
       script		      "function Fz_damper_est =  FzEstDamp(sensors, Fz_damp_FL, Fz_damp_FR, Fz_damp_RL, Fz_damp_RR, car_"
       "params)\n%#codegen\n\nKs_front    = car_params.spring_constant_front;\nKs_rear     = car_params.spring_constant_"
-      "rear;\n\nMR_front    = car_params.motion_ratio_front;\nMR_rear     = car_params.motion_ratio_rear;     \n\n\nFz_"
-      "damper_est.FL = (Ks_front*sensors.damper_pos_FL + Fz_damp_FL)*MR_front;\nFz_damper_est.FR = (Ks_front*sensors.da"
-      "mper_pos_FR + Fz_damp_FR)*MR_front;\nFz_damper_est.RL = (Ks_rear*sensors.damper_pos_RL  + Fz_damp_RL)*MR_rear;\n"
-      "Fz_damper_est.RR = (Ks_rear*sensors.damper_pos_RR  + Fz_damp_RR)*MR_rear;\n\n"
+      "rear;\n\nMR_front    = car_params.motion_ratio_front;\nMR_rear     = car_params.motion_ratio_rear;     \n\nprelo"
+      "ad_front = car_params.preload_front_mm;\npreload_rear = car_params.preload_rear_mm;\n\nFz_damper_est.FL = (Ks_fr"
+      "ont*(sensors.damper_pos_FL + preload_front) + Fz_damp_FL)*MR_front + car_params.unsprung_mass_per_wheel_newton;\n"
+      "Fz_damper_est.FR = (Ks_front*(sensors.damper_pos_FR + preload_front) + Fz_damp_FR)*MR_front + car_params.unsprun"
+      "g_mass_per_wheel_newton;\nFz_damper_est.RL = (Ks_rear*(sensors.damper_pos_RL + preload_rear) + Fz_damp_RL)*MR_re"
+      "ar + car_params.unsprung_mass_per_wheel_newton;\nFz_damper_est.RR = (Ks_rear*(sensors.damper_pos_RR + preload_re"
+      "ar) + Fz_damp_RR)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -56176,10 +56176,7 @@ Stateflow {
     firstTransition	    320
     firstJunction	    319
     viewObj		    306
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
