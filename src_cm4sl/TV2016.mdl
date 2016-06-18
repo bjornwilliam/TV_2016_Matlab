@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1705"
+    ComputedModelVersion    "1.1707"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -74,8 +74,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "909"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [586.15044803091132, 330.45210995724881]
+	  ZoomFactor		  [1.5]
+	  Offset		  [711.68378136424474, 381.91877662391551]
 	}
 	Object {
 	  $ObjectID		  8
@@ -88,21 +88,21 @@ Model {
 	}
 	Object {
 	  $ObjectID		  9
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1034"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-35.275304167557138, 464.032745356521]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-58.698884637872055, 279.11607868985431]
 	}
 	Object {
 	  $ObjectID		  10
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1727"
-	  Extents		  [1136.0, 515.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [-716.53764086852016, 491.33333333333314]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [891.79569246481321, 1337.1499999999996]
 	}
 	Object {
 	  $ObjectID		  11
@@ -110,8 +110,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "934"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [178.9682239853957, 901.64802365622575]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-102.67903079391863, 604.76469032289242]
 	}
 	Object {
 	  $ObjectID		  12
@@ -120,16 +120,16 @@ Model {
 	  LoadSaveID		  "4989"
 	  Extents		  [1562.0, 699.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-143.11084692682994, -18.481393420054729]
+	  Offset		  [-143.11084692682994, -18.4813934200547]
 	}
 	Object {
 	  $ObjectID		  13
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "3969"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [321.40822270159833, 818.72393837202185]
+	  ZoomFactor		  [1.25]
+	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 18 19:00:24 2016"
-  RTWModifiedTimeStamp	  388177150
-  ModelVersionFormat	  "1.%<AutoIncrement:1705>"
+  LastModifiedDate	  "Sat Jun 18 19:28:38 2016"
+  RTWModifiedTimeStamp	  388178910
+  ModelVersionFormat	  "1.%<AutoIncrement:1707>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2440,7 +2440,7 @@ Model {
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1604, 876]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2451,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"25"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3860,7 +3860,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3891,7 +3891,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"150"
+		ZoomFactor		"80"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -4649,7 +4649,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Slip Rate Control\n"
-		    Location		    [370, 107, 1556, 799]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -4661,7 +4661,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Ti_ref"
@@ -7105,7 +7105,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "30"
+		    ZoomFactor		    "150"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -11514,7 +11514,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -21393,7 +21393,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "25"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21733,7 +21733,7 @@ Model {
 	      System {
 		Name			"Fx_Estimation"
 		Location		[-8, 0, 1604, 876]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -23097,7 +23097,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"calculateMeanWheelAngle"
-		Location		[454, 115, 1850, 1183]
+		Location		[-8, 0, 1604, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -23303,7 +23303,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"createStateBus"
-		Location		[829, 208, 1986, 1152]
+		Location		[-8, 0, 1604, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -23315,7 +23315,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"25"
 		Block {
 		  BlockType		  Inport
 		  Name			  "mean_wheel_angle"
@@ -24133,7 +24133,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"friction_estimation"
-		Location		[96, 86, 1396, 1141]
+		Location		[-8, 0, 1604, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -50513,7 +50513,10 @@ Stateflow {
     firstTransition	    39
     firstJunction	    38
     viewObj		    25
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50547,31 +50550,31 @@ Stateflow {
       "kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n    Ki ="
       " min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor"
       "_torque*4);\nelse\n    Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n    "
-      "Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\nend\n\n\n\nend\n\n\n\n\n\n\n"
-      "% This one solves starting from 0 kmh with the driver controlling the\n% throttle. This statement reduces the ga"
-      "ins according to the requested\n% torque, to avoid oscillating torque output\n\n\n% if ( ( (T_req + 0.0001) > 0)"
-      " && (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n%     Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionC"
-      "ontrol.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     Ki_driving = min( "
-      "(a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torqu"
-      "e*4);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving"
-      ";\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_dri"
-      "ving;\n%     %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/("
-      "settings.max_motor_torque*4);\n%     %Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl"
-      ".Ki_end)  * abs(T_req)/(settings.max_motor_torque*4);\n% \n% % T_req positive and speed over full gain limit\n% "
-      "elseif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl.full_gain_limit_kmh))\n%     Kp_driving = min( (a_"
-      "kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Ki_driving = min( (a_ki*max(0,vx_k"
-      "mh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n"
-      "%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_drivin"
-      "g;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;    \n% else   \n%     Kp_FL = min( (a_kp*max(0,vx_kmh) "
-      "+ tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionControl."
-      "Kp_start), tractionControl.Kp_end);\n%     Kp_RL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractio"
-      "nControl.Kp_end);\n%     Kp_RR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n"
-      "%     \n%     Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_F"
-      "R = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RL = min( (a_ki*max"
-      "(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RR = min( (a_ki*max(0,vx_kmh) + tract"
-      "ionControl.Ki_start), tractionControl.Ki_end);\n%     \n%     %Kp = tractionControl.Kp_braking;\n%     %Ki = tra"
-      "ctionControl.Ki_braking;\n% end\n% \n% if ( (T_tv.FL < 0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) )\n"
-      "%     Kp = tractionControl.Kp_braking;\n%     Ki = tractionControl.Ki_braking;\n% end\n\n\n\n\n"
+      "Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\nend\n\nend\n\n\n\n\n\n\n% T"
+      "his one solves starting from 0 kmh with the driver controlling the\n% throttle. This statement reduces the gains"
+      " according to the requested\n% torque, to avoid oscillating torque output\n\n\n% if ( ( (T_req + 0.0001) > 0) &&"
+      " (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n%     Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionCont"
+      "rol.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     Ki_driving = min( (a_"
+      "ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4"
+      ");\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n"
+      "%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_drivin"
+      "g;\n%     %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(set"
+      "tings.max_motor_torque*4);\n%     %Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki"
+      "_end)  * abs(T_req)/(settings.max_motor_torque*4);\n% \n% % T_req positive and speed over full gain limit\n% els"
+      "eif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl.full_gain_limit_kmh))\n%     Kp_driving = min( (a_kp*"
+      "max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Ki_driving = min( (a_ki*max(0,vx_kmh)"
+      " + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n% "
+      "    Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;"
+      "\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;    \n% else   \n%     Kp_FL = min( (a_kp*max(0,vx_kmh) + "
+      "tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp"
+      "_start), tractionControl.Kp_end);\n%     Kp_RL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionC"
+      "ontrol.Kp_end);\n%     Kp_RR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%"
+      "     \n%     Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_FR"
+      " = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RL = min( (a_ki*max("
+      "0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RR = min( (a_ki*max(0,vx_kmh) + tracti"
+      "onControl.Ki_start), tractionControl.Ki_end);\n%     \n%     %Kp = tractionControl.Kp_braking;\n%     %Ki = trac"
+      "tionControl.Ki_braking;\n% end\n% \n% if ( (T_tv.FL < 0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) )\n%"
+      "     Kp = tractionControl.Kp_braking;\n%     Ki = tractionControl.Ki_braking;\n% end\n\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52174,13 +52177,13 @@ Stateflow {
       "  (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 2 % with negative torque\n        alfa_r = "
       " (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n    case 3 % static 25 %\n        alfa_r = single(0.5"
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
-      "gle(0.5);\nend\n\nRPM_to_angular = single(2*pi/60);\n\nomega_FL = states.RPM_FL*RPM_to_angular;\nomega_FR = stat"
-      "es.RPM_FR*RPM_to_angular;\nomega_RL = states.RPM_RL*RPM_to_angular;\nomega_RR = states.RPM_RR*RPM_to_angular;\n\n"
-      "mmt = settings.max_motor_torque;\n\navailable_power = states.DC_voltage*settings.max_battery_discharge;\n\nmax_t"
-      "orque_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR))) );\n\nmax_torq"
-      "ue_rear = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,omega_RR))) );\n             "
-      "         \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque."
-      "mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
+      "gle(0.5);\nend\n\nRPM_to_angular = single(2*pi/60);\nomega_FL = states.RPM_FL*RPM_to_angular;\nomega_FR = states"
+      ".RPM_FR*RPM_to_angular;\nomega_RL = states.RPM_RL*RPM_to_angular;\nomega_RR = states.RPM_RR*RPM_to_angular;\n\nm"
+      "mt = settings.max_motor_torque;\navailable_power = states.DC_voltage*settings.max_battery_discharge;\n\nmax_torq"
+      "ue_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR))) );\nmax_torque_re"
+      "ar = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,omega_RR))) );\n                  "
+      "    \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_R"
+      "L = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -53268,7 +53271,10 @@ Stateflow {
     firstTransition	    166
     firstJunction	    165
     viewObj		    158
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53302,10 +53308,10 @@ Stateflow {
       "ensors.RPM_der_FL;\nang_acc_FR = c*sensors.RPM_der_FR;\nang_acc_RL = c*sensors.RPM_der_RL;\nang_acc_RR = c*senso"
       "rs.RPM_der_RR;\n\n% T_motor.FL = (Iq_FL*Kt*sqrt(2)-(Lq-Ld)*Id_FL);\n% T_motor.FR = (Iq_FR*Kt*sqrt(2)-(Lq-Ld)*Id_"
       "FR);\n% T_motor.RL = (Iq_RL*Kt*sqrt(2)-(Lq-Ld)*Id_RL);\n% T_motor.RR = (Iq_RR*Kt*sqrt(2)-(Lq-Ld)*Id_RR);\n\nT_mo"
-      "tor.FL = (Iq_FL*Kt*sqrt(2));\nT_motor.FR = (Iq_FR*Kt*sqrt(2));\nT_motor.RL = (Iq_RL*Kt*sqrt(2));\nT_motor.RR = ("
-      "Iq_RR*Kt*sqrt(2));\n%T_FL = T_CM.FL;\n%T_FR = T_CM.FR;\n%T_RL = T_CM.RL;\n%T_RR = T_CM.RR;\n\n\n\nFx.FL = (T_mot"
-      "or.FL*GR - Jw*ang_acc_FL)/R;\nFx.FR = (T_motor.FR*GR - Jw*ang_acc_FR)/R;\nFx.RL = (T_motor.RL*GR - Jw*ang_acc_RL"
-      ")/R;\nFx.RR = (T_motor.RR*GR - Jw*ang_acc_RR)/R;"
+      "tor.FL = (Iq_FL*Kt);\nT_motor.FR = (Iq_FR*Kt);\nT_motor.RL = (Iq_RL*Kt);\nT_motor.RR = (Iq_RR*Kt);\n%T_FL = T_CM"
+      ".FL;\n%T_FR = T_CM.FR;\n%T_RL = T_CM.RL;\n%T_RR = T_CM.RR;\n\n\n\nFx.FL = (T_motor.FL*GR - Jw*ang_acc_FL)/R;\nFx"
+      ".FR = (T_motor.FR*GR - Jw*ang_acc_FR)/R;\nFx.RL = (T_motor.RL*GR - Jw*ang_acc_RL)/R;\nFx.RR = (T_motor.RR*GR - J"
+      "w*ang_acc_RR)/R;"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -53467,7 +53473,10 @@ Stateflow {
     firstTransition	    177
     firstJunction	    176
     viewObj		    168
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53498,11 +53507,11 @@ Stateflow {
       "ettings.mu;\n    mu_RR = settings.mu;\n    normLongTireForce.FL = single(0);\n    normLongTireForce.FR = single("
       "0);\n    normLongTireForce.RL = single(0);\n    normLongTireForce.RR = single(0);\nelse\n    normLongTireForce.F"
       "L = (Fx.FL/Fz.FL);\n    normLongTireForce.FR = (Fx.FR/Fz.FR);\n    normLongTireForce.RL = (Fx.RL/Fz.RL);\n    no"
-      "rmLongTireForce.RR = (Fx.RR/Fz.RR);\n    \n    if (SR.FL > 0.09) && (SR.FL < 0.13)\n        mu_FL = max( (Fx.FL/"
-      "Fz.FL), mu_FL);\n    end\n    if (SR.FR > 0.09) && (SR.FR < 0.15)\n        mu_FR = max( (Fx.FR/Fz.FR), mu_FR);\n"
-      "    end\n\n    if (SR.RL > 0.09) && (SR.RL < 0.15)\n        mu_RL = max( (Fx.RL/Fz.RL), mu_RL);\n    end\n\n    "
-      "if (SR.RR > 0.09) && (SR.RR < 0.15)\n       mu_RR = max( (Fx.RR/Fz.RR), mu_RR);\n    end\nend\n\n\nmu = (mu_FL +"
-      " mu_FR + mu_RL + mu_RR) / 4;\n\nend\n"
+      "rmLongTireForce.RR = (Fx.RR/Fz.RR);\n    \n%     if (SR.FL > 0.09) && (SR.FL < 0.13)\n%         mu_FL = max( (Fx"
+      ".FL/Fz.FL), mu_FL);\n%     end\n%     if (SR.FR > 0.09) && (SR.FR < 0.15)\n%         mu_FR = max( (Fx.FR/Fz.FR),"
+      " mu_FR);\n%     end\n% \n%     if (SR.RL > 0.09) && (SR.RL < 0.15)\n%         mu_RL = max( (Fx.RL/Fz.RL), mu_RL)"
+      ";\n%     end\n% \n%     if (SR.RR > 0.09) && (SR.RR < 0.15)\n%        mu_RR = max( (Fx.RR/Fz.RR), mu_RR);\n%    "
+      " end\nend\n\n\nmu = single(0);\n\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -56176,7 +56185,10 @@ Stateflow {
     firstTransition	    320
     firstJunction	    319
     viewObj		    306
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
