@@ -7,35 +7,11 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   5 \
+    NumChartData   1 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
-    }\
-    ChartData {\
-      Name         "mu_FL"\
-      Description  "EmlPersistent"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "mu_FR"\
-      Description  "EmlPersistent"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "mu_RL"\
-      Description  "EmlPersistent"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "mu_RR"\
-      Description  "EmlPersistent"\
-      SFName       ""\
-      Path         ""\
     }\
     ChartData {\
       Name         "firstIteration_not_empty"\

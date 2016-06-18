@@ -43,7 +43,7 @@ car_params.motion_ratio_front               = single(1);
 car_params.motion_ratio_rear                = single(1);
 car_params.preload_front_mm                 = single(4.5);
 car_params.preload_rear_mm                  = single(1.0);
-car_params.unsprung_mass_per_wheel_newton   = single(122.625)
+car_params.unsprung_mass_per_wheel_newton   = single(122.625);
 
 car_params.driver_mass = single(75);
 car_params.car_mass    = single(185);
