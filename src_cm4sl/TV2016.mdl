@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1708"
+    ComputedModelVersion    "1.1709"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -93,7 +93,7 @@ Model {
 	  LoadSaveID		  "1034"
 	  Extents		  [1562.0, 699.0]
 	  ZoomFactor		  [0.8]
-	  Offset		  [-58.698884637872055, 279.11607868985431]
+	  Offset		  [-58.698884637872084, 279.11607868985425]
 	}
 	Object {
 	  $ObjectID		  10
@@ -106,12 +106,12 @@ Model {
 	}
 	Object {
 	  $ObjectID		  11
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "934"
+	  LoadSaveID		  "1"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-102.67903079391863, 604.76469032289242]
+	  ZoomFactor		  [0.6]
+	  Offset		  [818.98126512283807, 628.01045958264194]
 	}
 	Object {
 	  $ObjectID		  12
@@ -124,12 +124,12 @@ Model {
 	}
 	Object {
 	  $ObjectID		  13
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "3982"
+	  LoadSaveID		  "2821"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [0.0, 0.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [-141.04393939393935, -16.373150083784822]
 	}
 	PropName		"EditorsInfo"
       }
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Will"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 18 19:34:28 2016"
-  RTWModifiedTimeStamp	  388179254
-  ModelVersionFormat	  "1.%<AutoIncrement:1708>"
+  LastModifiedDate	  "Sat Jun 18 22:06:56 2016"
+  RTWModifiedTimeStamp	  388182026
+  ModelVersionFormat	  "1.%<AutoIncrement:1709>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2440,7 +2440,7 @@ Model {
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1604, 876]
-	Open			off
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2451,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"25"
+	ZoomFactor		"60"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3880,7 +3880,7 @@ Model {
 	      System {
 		Name			"Control\n"
 		Location		[-8, 0, 1604, 876]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -3891,7 +3891,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"80"
+		ZoomFactor		"40"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -3957,7 +3957,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Power Limit Torque Reduction Controller\n"
-		    Location		    [370, 107, 1556, 799]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -3969,7 +3969,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -4547,7 +4547,7 @@ Model {
 		  Name			  "Red factor"
 		  SID			  "2248"
 		  Ports			  [1]
-		  Position		  [1430, 1314, 1460, 1346]
+		  Position		  [1410, 1314, 1440, 1346]
 		  ZOrder		  210
 		  Floating		  off
 		  Location		  [1165, 60, 1798, 623]
@@ -12392,7 +12392,7 @@ Model {
 		    ZOrder		    359
 		    Floating		    off
 		    Location		    [991, 89, 2004, 1054]
-		    Open		    on
+		    Open		    off
 		    NumInputPorts	    "1"
 		    List {
 		    ListType		    AxesTitles
@@ -21393,7 +21393,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21974,7 +21974,7 @@ Model {
 	      System {
 		Name			"Fz_Estimation"
 		Location		[-8, 0, 1604, 876]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -22867,7 +22867,7 @@ Model {
 	      System {
 		Name			"SR_Calculation"
 		Location		[-8, 0, 1604, 876]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -53099,7 +53099,10 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
