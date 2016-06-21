@@ -21,7 +21,7 @@ settings.select_velocity_vx = uint32(2);    % 1 = estimated, 2 = INS, 3 = Optica
 settings.select_velocity_vy = uint32(2);    %                2 = INS, 3 = Optical
 % 1 = Engineering (No negative torque), 2 = with negative torque , 
 % 3 = static 25  , 4 = with negative, does not use Fz
-settings.TV_Method = uint32(3); 
+settings.TV_Method = uint32(4); 
 settings.use_estimated_Fz = uint32(0); % 1 = yes, 0 = no
 
 
@@ -88,7 +88,7 @@ yawRateControl.meas_weight = single(0.5);
 yawRateControl.enable_r_ref_limit = uint32(1);
 yawRateControl.mu_scaling_r_ref_limit = single(1);
 
-yawRateControl.enable = uint32(0);
+yawRateControl.enable = uint32(1);
 
 % ------------------------------
 % Traction ontrol Parameters

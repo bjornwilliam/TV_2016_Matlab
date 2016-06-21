@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1709"
+    ComputedModelVersion    "1.1715"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -72,10 +72,10 @@ Model {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "909"
+	  LoadSaveID		  "985"
 	  Extents		  [1562.0, 699.0]
 	  ZoomFactor		  [1.5]
-	  Offset		  [711.68378136424474, 381.91877662391551]
+	  Offset		  [340.28623094767192, 457.69601308817408]
 	}
 	Object {
 	  $ObjectID		  8
@@ -101,21 +101,21 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1727"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [891.79569246481321, 1337.1499999999996]
+	  ZoomFactor		  [0.4]
+	  Offset		  [197.09930165070546, 231.74859491844813]
 	}
 	Object {
 	  $ObjectID		  11
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "3966"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [818.98126512283807, 628.01045958264194]
+	  ZoomFactor		  [1.5]
+	  Offset		  [178.66666666666674, 572.330244646957]
 	}
 	Object {
 	  $ObjectID		  12
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "4989"
 	  Extents		  [1562.0, 699.0]
@@ -126,10 +126,10 @@ Model {
 	  $ObjectID		  13
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "2821"
+	  LoadSaveID		  "1"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-141.04393939393935, -16.373150083784822]
+	  ZoomFactor		  [0.4]
+	  Offset		  [-1.3520682104949628, 513.67712624930869]
 	}
 	PropName		"EditorsInfo"
       }
@@ -139,11 +139,11 @@ Model {
   Creator		  "fh"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Will"
+  LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 18 22:06:56 2016"
-  RTWModifiedTimeStamp	  388182026
-  ModelVersionFormat	  "1.%<AutoIncrement:1709>"
+  LastModifiedDate	  "Tue Jun 21 21:32:09 2016"
+  RTWModifiedTimeStamp	  388445527
+  ModelVersionFormat	  "1.%<AutoIncrement:1715>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2451,7 +2451,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"40"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3849,7 +3849,7 @@ Model {
 	  System {
 	    Name		    "Control_System\n"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3860,7 +3860,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "150"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3891,7 +3891,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"40"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -4650,7 +4650,7 @@ Model {
 		  System {
 		    Name		    "Slip Rate Control\n"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -4661,7 +4661,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "150"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Ti_ref"
@@ -7105,7 +7105,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "150"
+		    ZoomFactor		    "40"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -7895,7 +7895,7 @@ Model {
 		    }
 		    System {
 		    Name		    "Slip Rate FL"
-		    Location		    [745, 121, 2045, 1176]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -8485,7 +8485,7 @@ Model {
 		    }
 		    System {
 		    Name		    "Slip Rate FR"
-		    Location		    [323, 205, 1480, 1149]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -9258,7 +9258,7 @@ Model {
 		    }
 		    System {
 		    Name		    "Slip Rate RL"
-		    Location		    [461, 231, 1618, 1175]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -9270,7 +9270,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "SR_ref"
@@ -9861,16 +9861,15 @@ Model {
 		    Points		    [94, 0]
 		    Branch {
 		    ZOrder		    33
-		    Points		    [0, -103]
+		    Points		    [0, -150]
 		    Branch {
 		    ZOrder		    34
-		    Points		    [0, -47]
 		    DstBlock		    "Switch2"
 		    DstPort		    2
 		    }
 		    Branch {
 		    ZOrder		    35
-		    Points		    [9, 0; 0, -57; -9, 0; 0, -60]
+		    Points		    [0, -70]
 		    DstBlock		    "Discrete-Time\nIntegrator2"
 		    DstPort		    2
 		    }
@@ -11097,7 +11096,7 @@ Model {
 		    ZOrder		    1108
 		    SrcBlock		    "MATLAB Function1"
 		    SrcPort		    3
-		    Points		    [383, 0; 0, 22; 556, 0; 0, -12]
+		    Points		    [383, 0; 0, 10]
 		    DstBlock		    "Slip Rate RL"
 		    DstPort		    4
 		    }
@@ -11123,15 +11122,16 @@ Model {
 		    }
 		    Branch {
 		    ZOrder		    845
-		    Points		    [53, 0; 0, 5]
+		    Points		    [53, 0]
 		    Branch {
-		    ZOrder		    1104
-		    Points		    [0, 405]
+		    ZOrder		    1290
+		    Points		    [0, 410]
 		    DstBlock		    "Slip Rate FR"
 		    DstPort		    1
 		    }
 		    Branch {
 		    ZOrder		    843
+		    Points		    [170, 0]
 		    DstBlock		    "Slip Rate FL"
 		    DstPort		    1
 		    }
@@ -14592,7 +14592,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Debug Information\n"
-	    Location		    [259, 137, 1445, 829]
+	    Location		    [-8, 0, 1604, 876]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -14604,7 +14604,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "30"
+	    ZoomFactor		    "175"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Ti_lim"
@@ -17444,8 +17444,8 @@ Model {
 	      Position		      [2240, 244, 2270, 276]
 	      ZOrder		      367
 	      Floating		      off
-	      Location		      [1260, 634, 2067, 1029]
-	      Open		      off
+	      Location		      [128, 169, 1138, 704]
+	      Open		      on
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -17462,7 +17462,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.84717     0.71983     0.10533     0.17046"
+	      LegendLocations	      "0.88182     0.79273    0.084158     0.12586"
 	      TimeRange		      "0.8646112600536191"
 	      YMin		      "0.7943037974683547"
 	      YMax		      "0.8702531645569622"
@@ -21382,7 +21382,7 @@ Model {
 	  System {
 	    Name		    "Estimations"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -21393,7 +21393,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21974,7 +21974,7 @@ Model {
 	      System {
 		Name			"Fz_Estimation"
 		Location		[-8, 0, 1604, 876]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -50513,10 +50513,7 @@ Stateflow {
     firstTransition	    39
     firstJunction	    38
     viewObj		    25
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51510,10 +51507,7 @@ Stateflow {
     firstTransition	    79
     firstJunction	    78
     viewObj		    72
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    16
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52903,10 +52897,7 @@ Stateflow {
     firstTransition	    147
     firstJunction	    146
     viewObj		    139
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53099,10 +53090,7 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53272,10 +53260,7 @@ Stateflow {
     firstTransition	    166
     firstJunction	    165
     viewObj		    158
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53474,10 +53459,7 @@ Stateflow {
     firstTransition	    177
     firstJunction	    176
     viewObj		    168
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53840,7 +53822,10 @@ Stateflow {
     firstTransition	    201
     firstJunction	    200
     viewObj		    187
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53866,20 +53851,22 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function Ti_lim =  TCOutputHandling(Ti_FL, Ti_FR, Ti_RL, Ti_RR, TC_FL,TC_FR,TC_RL,TC_RR,states, T"
-      "_req)\n%#codegen\n\nyawRate_p_lim = 0.3;\nay_p_lim = 3;\n\nstraightline = uint32(0);\n\nif ( (states.r > -yawRat"
-      "e_p_lim) && (states.r < yawRate_p_lim) &&...\n     (states.ay > -ay_p_lim) && (states.ay < ay_p_lim) )\n    stra"
-      "ightline = 1;\nelse\n    straightline = 0;\nend\n\n\n% FRONT SIDE\nn_cmp = single(-0.03);\np_cmp = single(0.03);"
-      "\n\n% If driving ~ straightline then couple the outputs\n% Else, each TC works individually. \nif      ( (straig"
-      "htline == 1) && (T_req > p_cmp) )\n    % Couple TC outputs to maintain stability on mu split surfaces \n    % un"
-      "der acceleration and deceleration\n    Ti_lim.FL = max(0, (Ti_FL + min(TC_FL,TC_FR)));\n    Ti_lim.FR = max(0, ("
-      "Ti_FR + min(TC_FL,TC_FR)));  \n    \n    Ti_lim.RL = max(0, (Ti_RL + min(TC_RL,TC_RR)));\n    Ti_lim.RR = max(0,"
-      " (Ti_RR + min(TC_RL,TC_RR)));\n \nelseif  ( (straightline == 1) && (T_req < n_cmp) )\n    % Couple TC outputs to"
-      " maintain stability on mu split surfaces \n    % under acceleration and deceleration\n    Ti_lim.FL = min(0, (Ti"
-      "_FL + max(TC_FL,TC_FR) ) );   \n    Ti_lim.FR = min(0, (Ti_FR + max(TC_FL,TC_FR) ) );    \n    Ti_lim.RL = min(0"
-      ", (Ti_RL + max(TC_RL,TC_RR) ) );\n    Ti_lim.RR = min(0, (Ti_RR + max(TC_RL,TC_RR) ) );   \nelse\n    % Decouple"
-      " TC outputs to avoid interferring too much with the stability\n    % of the vehicle while cornering. This is the"
-      " DYC systems job. \n    Ti_lim.FL = Ti_FL + TC_FL;\n    Ti_lim.FR = Ti_FR + TC_FR;\n    Ti_lim.RL = Ti_RL + TC_R"
-      "L;\n    Ti_lim.RR = Ti_RR + TC_RR;\nend\n\nend"
+      "_req)\n%#codegen\n\n\nTi_lim.FL = Ti_FL + TC_FL;\nTi_lim.FR = Ti_FR + TC_FR;\nTi_lim.RL = Ti_RL + TC_RL;\nTi_lim"
+      ".RR = Ti_RR + TC_RR;\n\n\n% yawRate_p_lim = 0.3;\n% ay_p_lim = 3;\n% \n% straightline = uint32(0);\n% \n% if ( ("
+      "states.r > -yawRate_p_lim) && (states.r < yawRate_p_lim) &&...\n%      (states.ay > -ay_p_lim) && (states.ay < a"
+      "y_p_lim) )\n%     straightline = 1;\n% else\n%     straightline = 0;\n% end\n% \n% \n% % FRONT SIDE\n% n_cmp = s"
+      "ingle(-0.03);\n% p_cmp = single(0.03);\n% \n% % If driving ~ straightline then couple the outputs\n% % Else, eac"
+      "h TC works individually. \n% if      ( (straightline == 1) && (T_req > p_cmp) )\n%     % Couple TC outputs to ma"
+      "intain stability on mu split surfaces \n%     % under acceleration and deceleration\n%     Ti_lim.FL = max(0, (T"
+      "i_FL + min(TC_FL,TC_FR)));\n%     Ti_lim.FR = max(0, (Ti_FR + min(TC_FL,TC_FR)));  \n%     \n%     Ti_lim.RL = m"
+      "ax(0, (Ti_RL + min(TC_RL,TC_RR)));\n%     Ti_lim.RR = max(0, (Ti_RR + min(TC_RL,TC_RR)));\n%  \n% elseif  ( (str"
+      "aightline == 1) && (T_req < n_cmp) )\n%     % Couple TC outputs to maintain stability on mu split surfaces \n%  "
+      "   % under acceleration and deceleration\n%     Ti_lim.FL = min(0, (Ti_FL + max(TC_FL,TC_FR) ) );   \n%     Ti_l"
+      "im.FR = min(0, (Ti_FR + max(TC_FL,TC_FR) ) );    \n%     Ti_lim.RL = min(0, (Ti_RL + max(TC_RL,TC_RR) ) );\n%   "
+      "  Ti_lim.RR = min(0, (Ti_RR + max(TC_RL,TC_RR) ) );   \n% else\n%     % Decouple TC outputs to avoid interferrin"
+      "g too much with the stability\n%     % of the vehicle while cornering. This is the DYC systems job. \n%     Ti_l"
+      "im.FL = Ti_FL + TC_FL;\n%     Ti_lim.FR = Ti_FR + TC_FR;\n%     Ti_lim.RL = Ti_RL + TC_RL;\n%     Ti_lim.RR = Ti"
+      "_RR + TC_RR;\n% end\n\nend"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -56217,128 +56204,132 @@ Stateflow {
       script		      "function [Ti_lim,Ti_max,Mz_error, Mz_allocated]  = torqueAllocation(T_req,states,maxMotorTorque,s"
       "ettings, car_params, Mz_ref,yawRateControl)\n%#codegen\n%STATES\nr = states.r;\nnegative_torque_limit = yawRateC"
       "ontrol.negative_torque_limit;\n\n%PARAMETERS\n%mu = states.mu;\nmu = settings.mu;\ntf = car_params.t_f*2;\ntr = "
-      "car_params.t_r*2;\nGR = car_params.GR;\nr_eff = car_params.r_eff;\nR = [r_eff; r_eff; r_eff; r_eff]';\n%Load Tra"
-      "nsfer\nFzi = [max(1,states.Fz_FL) max(1,states.Fz_FR) max(1,states.Fz_RL) max(1,states.Fz_RR)]';\nalfa_r =  (Fzi"
-      "(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi(4));\n%MZ\nS = states.wheel_angle;\n\nl1 = car_params.t_f*cos(S)"
-      ";\nl2 = car_params.t_f*cos(S);\nl3 = car_params.t_r;\nl4 = car_params.t_r;\nL = [-l1; l2; -l3; l4];\n\n\n\n%FIND"
-      " MAXIMUM ALLOWED MOTOR TORQUE, TIRE/MOTOR\nTi_max          = single(zeros(4,1));\nTi_max_tire     = single(zeros"
-      "(4,1));\n\nRPM = [states.RPM_FL, states.RPM_FR, states.RPM_RL, states.RPM_RR];\nTi_max_motor = [maxMotorTorque.m"
-      "mt_FL,maxMotorTorque.mmt_FR,maxMotorTorque.mmt_RL,maxMotorTorque.mmt_RR]; \n\n%Tire saturation based on mu and F"
-      "z\nfor i=1:4\n    Ti_max_tire(i) = Fzi(i)*mu*R(i)/GR;\nend\n\n\n% Find minimum of tire saturation Torque and mot"
-      "or\nfor i=1:4\n    Ti_max(i) = min(Ti_max_tire(i), Ti_max_motor(i));\nend\n%************************************"
-      "**********%\n\nT_F = single(zeros(2,1));\nT_R = single(zeros(2,1));\nsat_F = uint32(0);\nsat_R = uint32(0);\n\ni"
-      "f ( T_req >= 0)\n    switch settings.TV_Method\n        case 1\n            % Only positive Torque\n            "
-      "[T_F, sat_F] = allocatePositiveTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf);\n   "
-      "         [T_R, sat_R] = allocatePositiveTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr);"
-      "\n        case 2\n            % Can also allocate negative torque\n            [T_F, sat_F] = allocateTorque(Ti_"
-      "max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf, negative_torque_limit);\n            [T_R, sat"
-      "_R] = allocateTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr ,negative_torque_limit);\n "
-      "       case 3\n            % Static 25 percent to each wheel\n            T_F = [0.25*T_req; 0.25*T_req];\n     "
-      "       T_R = [0.25*T_req; 0.25*T_req];\n        case 4\n            % Allocation with negative torque, but does "
-      "not use Fz\n            [T_F, sat_F] = allocateTorque(Ti_max_motor(1), Ti_max_motor(2), T_req, R(1), R(2), (1-al"
-      "fa_r), Mz_ref, GR, tf, negative_torque_limit);\n            [T_R, sat_R] = allocateTorque(Ti_max_motor(3), Ti_ma"
-      "x_motor(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr ,negative_torque_limit);\n    end\n            \n    if ( "
-      "(sat_F == 1) && (sat_R == 1) )\n        % Nothing more to do\n    elseif ( (sat_F == 1) && (sat_R == 0) )     \n"
-      "         if ( T_F(1) < 0) \n            T_remaining = T_req - (T_F(2));\n         elseif (T_F(2) < 0) \n        "
-      "     T_remaining = T_req - (T_F(1));\n         else\n             T_remaining = T_req - (T_F(1) + T_F(2));\n    "
-      "     end\n         \n         if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l1*GR*T_F("
-      "1)/R(1) + l2*GR*T_F(2)/R(2));\n         else\n             Mz_remaining = single(0);\n         end \n         \n"
-      "        switch settings.TV_Method\n            case 1\n                % Only positive Torque\n                ["
-      "T_R sat_R] = allocatePositiveTorque(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n "
-      "           case 2\n                % Can also allocate negative torque\n                [T_R sat_R] = allocateTo"
-      "rque(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr,negative_torque_limit);\n          "
-      "  case 4\n                [T_R sat_R] = allocateTorque(Ti_max_motor(3), Ti_max_motor(4), T_remaining, R(3), R(4)"
-      ", 1 , Mz_remaining, GR, tr,negative_torque_limit);\n        end \n    elseif ( (sat_F == 0) && (sat_R == 1) )\n "
-      "        if ( T_R(1) < 0) \n            T_remaining = T_req - (T_R(2));\n         elseif (T_R(2) < 0) \n         "
-      "    T_remaining = T_req - (T_R(1));\n         else\n             T_remaining = T_req - (T_R(1) + T_R(2));\n     "
-      "    end        \n        % For example rear is saturated, and front can still use more torque\n        %T_remain"
-      "ing = T_req - (T_R(1) + T_R(2));\n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - "
-      "(-l3*GR*T_R(1)/R(3) + l4*GR*T_R(2)/R(4));\n        else\n             Mz_remaining = single(0);\n        end \n "
-      "       %Mz_remaining = Mz_ref*(1-alfa_r);\n        switch settings.TV_Method\n            case 1\n              "
-      "  % Only positive Torque\n                 [T_F sat_F] = allocatePositiveTorque(Ti_max(1), Ti_max(2), T_remainin"
-      "g, R(1), R(2), 1 , Mz_remaining, GR, tf);\n            case 2\n                % Can also allocate negative torq"
-      "ue\n                [T_F sat_F] = allocateTorque(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining"
-      ", GR, tf,negative_torque_limit);\n            case 4\n                [T_F sat_F] = allocateTorque(Ti_max_motor("
-      "1), Ti_max_motor(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf,negative_torque_limit);\n        end     "
-      " \n    else\n        %both false\n        % Nothing to do here either\n    end\nelse\n    %REGENERATIVE BRAKE CO"
-      "MMAND ( T_DRIVER_REQ < 0 )\n    switch settings.TV_Method\n        case 1\n            % Only positive Torque\n "
-      "           [T_F, sat_F] = allocateKersTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf"
-      ");\n            [T_R, sat_R] = allocateKersTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, t"
-      "r);\n            \n        case 2\n            % Can also allocate negative torque\n            [T_F, sat_F] = a"
-      "llocateKersTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf);\n            [T_R, sat_R"
-      "] = allocateKersTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr);\n        case 3\n      "
-      "      % Static 25 percent to each wheel\n            T_F = [0.25*T_req; 0.25*T_req];\n            T_R = [0.25*T_"
-      "req; 0.25*T_req];\n        case 4\n            % Allocation with negative torque, but does not use Fz\n         "
-      "   [T_F, sat_F] = allocateKersTorque(Ti_max_motor(1), Ti_max_motor(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR"
-      ", tf);\n            [T_R, sat_R] = allocateKersTorque(Ti_max_motor(3), Ti_max_motor(4), T_req, R(3), R(4), alfa_"
-      "r, Mz_ref, GR, tr);\n    end\n    if (sat_F == 1 && sat_R == 1)\n        %Nothing more to do\n        \n    else"
-      "if (sat_F == 1 && sat_R == 0)\n         T_remaining = T_req - (T_F(1) + T_F(2));\n         %Disable Mz_remaining"
-      " if yaw control disabled?\n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l1*GR"
-      "*T_F(1)/R(1) + l2*GR*T_F(2)/R(2));\n        else\n             Mz_remaining = single(0);\n        end\n        s"
-      "witch settings.TV_Method\n            case 1\n                % Only positive Torque\n                [T_R sat_R"
-      "] = allocateKersTorque(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n\n            "
-      "case 2\n                % Can also allocate negative torque\n                [T_R sat_R] = allocateKersTorque(Ti"
-      "_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n            case 3\n                % S"
-      "tatic 25 %\n            case 4\n                % Allocation with negative torque, but does not use Fz\n        "
-      "        [T_R sat_R] = allocateKersTorque(Ti_max_motor(3), Ti_max_motor(4), T_remaining, R(3), R(4), 1 , Mz_remai"
-      "ning, GR, tr);\n        end\n        \n    elseif (sat_F == 0 && sat_R == 1)\n        %For example rear is satur"
-      "ated, and front can still use more torque\n        T_remaining = T_req - (T_R(1) + T_R(2));\n        %Mz_remaini"
-      "ng = Mz_ref*(1-alfa_r);\n        \n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref -"
-      " (-l3*GR*T_R(1)/R(3) + l4*GR*T_R(2)/R(4));\n        else\n             Mz_remaining = single(0);\n        end\n "
-      "       switch settings.TV_Method\n            case 1\n                % Only positive Torque\n                [T"
-      "_F sat_F] = allocateKersTorque(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf); \n\n   "
-      "         case 2\n                % Can also allocate negative torque\n                [T_F sat_F] = allocateKers"
-      "Torque(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf); \n            case 3\n         "
-      "       % Static 25 %\n            case 4\n                % Allocation with negative torque, but does not use Fz"
-      "\n                [T_F sat_F] = allocateKersTorque(Ti_max_motor(1), Ti_max_motor(2), T_remaining, R(1), R(2), 1 "
-      ", Mz_remaining, GR, tf);             \n        end\n    else\n        %both false\n        %Nothing to do here e"
-      "ither\n    end\nend\n\nTi_all = [T_F' T_R'];\n\nTi_lim_struct = struct;\nTi_lim_struct.FL = Ti_all(1);\nTi_lim_s"
-      "truct.FR = Ti_all(2);\nTi_lim_struct.RL = Ti_all(3);\nTi_lim_struct.RR = Ti_all(4);\n\nTi_lim = Ti_lim_struct;\n"
-      "\n% Calculate what yaw moment that was achieved with the current \n% allocation\nFx_all = prod([Ti_all; 1./R;])*"
-      "GR;\nMz_allocated = L'*Fx_all';\nMz_error = Mz_ref - Mz_allocated;\nend\n\n\nfunction [T, sat] = allocateTorque("
-      "L_max, R_max, T_req,...\n          R_eff_L, R_eff_R, alfa, Mz_ref, GR, t, negative_torque_limit)\n      \n    T "
-      "= single(zeros(2,1));\n    sat = uint32(0);\n    % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref"
-      "*R_eff_L/(GR*t)) + abs(alfa*Mz_ref*R_eff_R/(GR*t));\n    % Take absolute value since T_req can be negative in ca"
-      "se of KERS\n    T_driver = alfa*T_req;\n\n    if ( Mz_ref <= 0)\n        % Implies that left side should realize"
-      " the TV torque,\n        % since only torque >= 0 is used here.\n        % Mz is defined positive counter clockw"
-      "ise\n        L = min( [TV_des, T_driver, L_max]); \n        if ( (L < TV_des) ) %&& (T_driver > 0))\n           "
-      " % Not fulfilled desired yaw moment\n            R = - min( [(TV_des - L), R_max, negative_torque_limit]);\n    "
-      "        T = [L;R];\n        else\n            max_t_add = min([(L_max-TV_des), R_max, (T_driver-L)/2]);\n       "
-      "     L = L + max_t_add;\n            R = max_t_add;\n            T = [L;R];\n        end\n        % Floats compa"
-      "rison\n        if ( (L + 0.001) < (T_driver))\n            sat = uint32(1);\n        end\n        return;\n    e"
-      "lse\n        R = min( [TV_des, T_driver, R_max]);\n        %Max torque that can be added to both  \n        if ("
-      " (R < TV_des) ) % && (T_driver > 0) )\n            L = -min( [(TV_des - R), L_max,negative_torque_limit]);\n    "
-      "        T = [L;R];\n        else\n            max_t_add = min([(R_max - TV_des),L_max, (T_driver-R)/2]);\n      "
-      "      R = R + max_t_add;\n            L = max_t_add;\n            T = [L;R];\n        end\n        \n        if "
-      "( (R + 0.001) < (T_driver))\n            sat = uint32(1);\n        end\n        return;\n    end\nend\n\nfunctio"
-      "n [T, sat] = allocateKersTorque(L_max, R_max, T_req, R_eff_L, R_eff_R, alfa, Mz_ref, GR, t )\n    T = single(zer"
-      "os(2,1));\n    sat = uint32(0);\n    % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref*R_eff_L/(GR"
-      "*t)) + abs(alfa*Mz_ref*R_eff_R/(GR*t));\n    % Take absolute value since T_req can be negative in case of KERS\n"
-      "    T_driver = abs(alfa*T_req);\n   \n    if (Mz_ref + 0.0001 >= 0)\n        % Positive Mz_ref requires left sid"
-      "e (inner wheels)\n        % to brake more than the outer wheels.\n        L = min( [TV_des, T_driver, L_max]);\n"
-      "        %Max torque that can be added to both\n        if L_max < abs(TV_des)\n            max_t_add = single(0)"
-      ";\n        else\n            max_t_add = min([(L_max-TV_des), R_max, (T_driver-L)/2]);\n        end \n        L "
-      "= - (L + max_t_add);\n        R = - max_t_add;\n        T = [L;R];\n        % Floats comparison\n        if ( (a"
-      "bs(L) + abs(R) + 0.001) < T_driver)\n            sat = uint32(1);\n        end\n        return;\n    else\n     "
-      "   R = min( [abs(TV_des), T_driver, R_max]);\n        %Max torque that can be added to both\n        if R_max < "
-      "abs(TV_des)\n            max_t_add = single(0);\n        else\n            max_t_add = min([(R_max-abs(TV_des)),"
-      " L_max, (T_driver-R)/2]);\n        end\n        R = - (R + max_t_add);\n        L = - max_t_add;\n        T = [L"
-      ";R];\n        % Floats comparison\n        if ( (abs(L) + abs(R) + 0.001) < T_driver)\n            sat = uint32("
-      "1);\n        end\n        return;\n    end\nend\nfunction [T, sat] = allocatePositiveTorque(L_max, R_max, T_req,"
-      "...\n          R_eff_L, R_eff_R, alfa, Mz_ref, GR, t )\n      \n    T = single(zeros(2,1));\n    sat = uint32(0)"
-      ";\n    % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref*R_eff_L/(GR*t)) + abs(alfa*Mz_ref*R_eff_R"
-      "/(GR*t));\n    % Take absolute value since T_req can be negative in case of KERS\n    T_driver = alfa*T_req;\n\n"
-      "    if ( Mz_ref <= 0)\n        % Implies that left side should realize the TV torque,\n        % since only torq"
-      "ue >= 0 is used here.\n        % Mz is defined positive counter clockwise\n        L = min( [TV_des, T_driver, L"
-      "_max]);\n        %Max torque that can be added to both\n        %Skal det ikke være L < TV_des\n        if L_max"
-      " < abs(TV_des)\n            max_t_add = single(0);\n        else\n            max_t_add = min([(L_max-TV_des), R"
-      "_max, (T_driver-L)/2]);\n        end \n        L = L + max_t_add;\n        R = max_t_add;\n        T = [L;R];  \n"
-      "        % Floats comparison\n        if ( (L + R + 0.001) < (T_driver))\n            sat = uint32(1);\n        e"
-      "nd\n        return;\n    else\n        R = min( [abs(TV_des), T_driver, R_max]);\n        %Max torque that can b"
-      "e added to both\n        if R_max < abs(TV_des)\n            max_t_add = single(0);\n        else\n            m"
-      "ax_t_add = min([(R_max-abs(TV_des)),L_max, (T_driver-R)/2]);\n        end\n        R = R + max_t_add;\n        L"
-      " = max_t_add;\n        T = [L;R];\n        % Floats comparison\n        if ( (L + R + 0.001) < (T_driver))\n    "
-      "        sat = uint32(1);\n        end\n        return;\n    end\nend\n\n"
+      "car_params.t_r*2;\nGR = car_params.GR;\nr_eff = car_params.r_eff;\nR = [r_eff; r_eff; r_eff; r_eff]';\n\n\nFzi ="
+      " [max(1,states.Fz_FL) max(1,states.Fz_FR) max(1,states.Fz_RL) max(1,states.Fz_RR)]';\nswitch settings.TV_Method\n"
+      "    case 1\n        % Only positive Torque\n       alfa_r =  (Fzi(3) + Fzi(4)) / (Fzi(1) + Fzi(2) + Fzi(3) + Fzi"
+      "(4));\n    case 2\n        % Can also allocate negative torque\n       alfa_r =  (Fzi(3) + Fzi(4)) / (Fzi(1) + F"
+      "zi(2) + Fzi(3) + Fzi(4));\n    case 3\n        % Static 25 percent to each wheel\n        alfa_r = single(0.5);\n"
+      "    case 4\n        % Allocation with negative torque, but does not use Fz\n        alfa_r = single(0.5); \n    "
+      "otherwise\n        alfa_r = single(0.5);       \nend\n\nS = states.wheel_angle;\n\nl1 = car_params.t_f*cos(S);\n"
+      "l2 = car_params.t_f*cos(S);\nl3 = car_params.t_r;\nl4 = car_params.t_r;\nL = [-l1; l2; -l3; l4];\n\n\n\n%FIND MA"
+      "XIMUM ALLOWED MOTOR TORQUE, TIRE/MOTOR\nTi_max          = single(zeros(4,1));\nTi_max_tire     = single(zeros(4,"
+      "1));\n\nRPM = [states.RPM_FL, states.RPM_FR, states.RPM_RL, states.RPM_RR];\nTi_max_motor = [maxMotorTorque.mmt_"
+      "FL,maxMotorTorque.mmt_FR,maxMotorTorque.mmt_RL,maxMotorTorque.mmt_RR]; \n\n%Tire saturation based on mu and Fz\n"
+      "for i=1:4\n    Ti_max_tire(i) = Fzi(i)*mu*R(i)/GR;\nend\n\n\n% Find minimum of tire saturation Torque and motor\n"
+      "for i=1:4\n    Ti_max(i) = min(Ti_max_tire(i), Ti_max_motor(i));\nend\n%****************************************"
+      "******%\n\nT_F = single(zeros(2,1));\nT_R = single(zeros(2,1));\nsat_F = uint32(0);\nsat_R = uint32(0);\n\nif ( "
+      "T_req >= 0)\n    switch settings.TV_Method\n        case 1\n            % Only positive Torque\n            [T_F"
+      ", sat_F] = allocatePositiveTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf);\n       "
+      "     [T_R, sat_R] = allocatePositiveTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr);\n  "
+      "      case 2\n            % Can also allocate negative torque\n            [T_F, sat_F] = allocateTorque(Ti_max("
+      "1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf, negative_torque_limit);\n            [T_R, sat_R] "
+      "= allocateTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr ,negative_torque_limit);\n     "
+      "   case 3\n            % Static 25 percent to each wheel\n            T_F = [0.25*T_req; 0.25*T_req];\n         "
+      "   T_R = [0.25*T_req; 0.25*T_req];\n        case 4\n            % Allocation with negative torque, but does not "
+      "use Fz\n            [T_F, sat_F] = allocateTorque(Ti_max_motor(1), Ti_max_motor(2), T_req, R(1), R(2), (1-alfa_r"
+      "), Mz_ref, GR, tf, negative_torque_limit);\n            [T_R, sat_R] = allocateTorque(Ti_max_motor(3), Ti_max_mo"
+      "tor(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr ,negative_torque_limit);\n    end\n            \n    if ( (sat"
+      "_F == 1) && (sat_R == 1) )\n        % Nothing more to do\n    elseif ( (sat_F == 1) && (sat_R == 0) )     \n    "
+      "     if ( T_F(1) < 0) \n            T_remaining = T_req - (T_F(2));\n         elseif (T_F(2) < 0) \n            "
+      " T_remaining = T_req - (T_F(1));\n         else\n             T_remaining = T_req - (T_F(1) + T_F(2));\n        "
+      " end\n         \n         if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l1*GR*T_F(1)/R"
+      "(1) + l2*GR*T_F(2)/R(2));\n         else\n             Mz_remaining = single(0);\n         end \n         \n    "
+      "    switch settings.TV_Method\n            case 1\n                % Only positive Torque\n                [T_R "
+      "sat_R] = allocatePositiveTorque(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n     "
+      "       case 2\n                % Can also allocate negative torque\n                [T_R sat_R] = allocateTorque"
+      "(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr,negative_torque_limit);\n            ca"
+      "se 4\n                [T_R sat_R] = allocateTorque(Ti_max_motor(3), Ti_max_motor(4), T_remaining, R(3), R(4), 1 "
+      ", Mz_remaining, GR, tr,negative_torque_limit);\n        end \n    elseif ( (sat_F == 0) && (sat_R == 1) )\n     "
+      "    if ( T_R(1) < 0) \n            T_remaining = T_req - (T_R(2));\n         elseif (T_R(2) < 0) \n             "
+      "T_remaining = T_req - (T_R(1));\n         else\n             T_remaining = T_req - (T_R(1) + T_R(2));\n         "
+      "end        \n        % For example rear is saturated, and front can still use more torque\n        %T_remaining "
+      "= T_req - (T_R(1) + T_R(2));\n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l3"
+      "*GR*T_R(1)/R(3) + l4*GR*T_R(2)/R(4));\n        else\n             Mz_remaining = single(0);\n        end \n     "
+      "   %Mz_remaining = Mz_ref*(1-alfa_r);\n        switch settings.TV_Method\n            case 1\n                % "
+      "Only positive Torque\n                 [T_F sat_F] = allocatePositiveTorque(Ti_max(1), Ti_max(2), T_remaining, R"
+      "(1), R(2), 1 , Mz_remaining, GR, tf);\n            case 2\n                % Can also allocate negative torque\n"
+      "                [T_F sat_F] = allocateTorque(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR"
+      ", tf,negative_torque_limit);\n            case 4\n                [T_F sat_F] = allocateTorque(Ti_max_motor(1), "
+      "Ti_max_motor(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf,negative_torque_limit);\n        end      \n "
+      "   else\n        %both false\n        % Nothing to do here either\n    end\nelse\n    %REGENERATIVE BRAKE COMMAN"
+      "D ( T_DRIVER_REQ < 0 )\n    switch settings.TV_Method\n        case 1\n            % Only positive Torque\n     "
+      "       [T_F, sat_F] = allocateKersTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf);\n"
+      "            [T_R, sat_R] = allocateKersTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr);\n"
+      "            \n        case 2\n            % Can also allocate negative torque\n            [T_F, sat_F] = alloca"
+      "teKersTorque(Ti_max(1), Ti_max(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf);\n            [T_R, sat_R] = a"
+      "llocateKersTorque(Ti_max(3), Ti_max(4), T_req, R(3), R(4), alfa_r, Mz_ref, GR, tr);\n        case 3\n           "
+      " % Static 25 percent to each wheel\n            T_F = [0.25*T_req; 0.25*T_req];\n            T_R = [0.25*T_req; "
+      "0.25*T_req];\n        case 4\n            % Allocation with negative torque, but does not use Fz\n            [T"
+      "_F, sat_F] = allocateKersTorque(Ti_max_motor(1), Ti_max_motor(2), T_req, R(1), R(2), (1-alfa_r), Mz_ref, GR, tf)"
+      ";\n            [T_R, sat_R] = allocateKersTorque(Ti_max_motor(3), Ti_max_motor(4), T_req, R(3), R(4), alfa_r, Mz"
+      "_ref, GR, tr);\n    end\n    if (sat_F == 1 && sat_R == 1)\n        %Nothing more to do\n        \n    elseif (s"
+      "at_F == 1 && sat_R == 0)\n         T_remaining = T_req - (T_F(1) + T_F(2));\n         %Disable Mz_remaining if y"
+      "aw control disabled?\n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l1*GR*T_F("
+      "1)/R(1) + l2*GR*T_F(2)/R(2));\n        else\n             Mz_remaining = single(0);\n        end\n        switch"
+      " settings.TV_Method\n            case 1\n                % Only positive Torque\n                [T_R sat_R] = a"
+      "llocateKersTorque(Ti_max(3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n\n            case "
+      "2\n                % Can also allocate negative torque\n                [T_R sat_R] = allocateKersTorque(Ti_max("
+      "3), Ti_max(4), T_remaining, R(3), R(4), 1 , Mz_remaining, GR, tr);\n            case 3\n                % Static"
+      " 25 %\n            case 4\n                % Allocation with negative torque, but does not use Fz\n             "
+      "   [T_R sat_R] = allocateKersTorque(Ti_max_motor(3), Ti_max_motor(4), T_remaining, R(3), R(4), 1 , Mz_remaining,"
+      " GR, tr);\n        end\n        \n    elseif (sat_F == 0 && sat_R == 1)\n        %For example rear is saturated,"
+      " and front can still use more torque\n        T_remaining = T_req - (T_R(1) + T_R(2));\n        %Mz_remaining = "
+      "Mz_ref*(1-alfa_r);\n        \n        if (yawRateControl.enable == 1)\n             Mz_remaining = Mz_ref - (-l3"
+      "*GR*T_R(1)/R(3) + l4*GR*T_R(2)/R(4));\n        else\n             Mz_remaining = single(0);\n        end\n      "
+      "  switch settings.TV_Method\n            case 1\n                % Only positive Torque\n                [T_F sa"
+      "t_F] = allocateKersTorque(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf); \n\n        "
+      "    case 2\n                % Can also allocate negative torque\n                [T_F sat_F] = allocateKersTorqu"
+      "e(Ti_max(1), Ti_max(2), T_remaining, R(1), R(2), 1 , Mz_remaining, GR, tf); \n            case 3\n              "
+      "  % Static 25 %\n            case 4\n                % Allocation with negative torque, but does not use Fz\n   "
+      "             [T_F sat_F] = allocateKersTorque(Ti_max_motor(1), Ti_max_motor(2), T_remaining, R(1), R(2), 1 , Mz_"
+      "remaining, GR, tf);             \n        end\n    else\n        %both false\n        %Nothing to do here either"
+      "\n    end\nend\n\nTi_all = [T_F' T_R'];\n\nTi_lim_struct = struct;\nTi_lim_struct.FL = Ti_all(1);\nTi_lim_struct"
+      ".FR = Ti_all(2);\nTi_lim_struct.RL = Ti_all(3);\nTi_lim_struct.RR = Ti_all(4);\n\nTi_lim = Ti_lim_struct;\n\n% C"
+      "alculate what yaw moment that was achieved with the current \n% allocation\nFx_all = prod([Ti_all; 1./R;])*GR;\n"
+      "Mz_allocated = L'*Fx_all';\nMz_error = Mz_ref - Mz_allocated;\nend\n\n\nfunction [T, sat] = allocateTorque(L_max"
+      ", R_max, T_req,...\n          R_eff_L, R_eff_R, alfa, Mz_ref, GR, t, negative_torque_limit)\n      \n    T = sin"
+      "gle(zeros(2,1));\n    sat = uint32(0);\n    % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref*R_ef"
+      "f_L/(GR*t)) + abs(alfa*Mz_ref*R_eff_R/(GR*t));\n    % Take absolute value since T_req can be negative in case of"
+      " KERS\n    T_driver = alfa*T_req;\n\n    if ( Mz_ref <= 0)\n        % Implies that left side should realize the "
+      "TV torque,\n        % since only torque >= 0 is used here.\n        % Mz is defined positive counter clockwise\n"
+      "        L = min( [TV_des, T_driver, L_max]); \n        if ( (L < TV_des) ) %&& (T_driver > 0))\n            % No"
+      "t fulfilled desired yaw moment\n            R = - min( [(TV_des - L), R_max, negative_torque_limit]);\n         "
+      "   T = [L;R];\n        else\n            max_t_add = min([(L_max-TV_des), R_max, (T_driver-L)/2]);\n            "
+      "L = L + max_t_add;\n            R = max_t_add;\n            T = [L;R];\n        end\n        % Floats comparison"
+      "\n        if ( (L + 0.001) < (T_driver))\n            sat = uint32(1);\n        end\n        return;\n    else\n"
+      "        R = min( [TV_des, T_driver, R_max]);\n        %Max torque that can be added to both  \n        if ( (R <"
+      " TV_des) ) % && (T_driver > 0) )\n            L = -min( [(TV_des - R), L_max,negative_torque_limit]);\n         "
+      "   T = [L;R];\n        else\n            max_t_add = min([(R_max - TV_des),L_max, (T_driver-R)/2]);\n           "
+      " R = R + max_t_add;\n            L = max_t_add;\n            T = [L;R];\n        end\n        \n        if ( (R "
+      "+ 0.001) < (T_driver))\n            sat = uint32(1);\n        end\n        return;\n    end\nend\n\nfunction [T,"
+      " sat] = allocateKersTorque(L_max, R_max, T_req, R_eff_L, R_eff_R, alfa, Mz_ref, GR, t )\n    T = single(zeros(2,"
+      "1));\n    sat = uint32(0);\n    % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref*R_eff_L/(GR*t)) "
+      "+ abs(alfa*Mz_ref*R_eff_R/(GR*t));\n    % Take absolute value since T_req can be negative in case of KERS\n    T"
+      "_driver = abs(alfa*T_req);\n   \n    if (Mz_ref + 0.0001 >= 0)\n        % Positive Mz_ref requires left side (in"
+      "ner wheels)\n        % to brake more than the outer wheels.\n        L = min( [TV_des, T_driver, L_max]);\n     "
+      "   %Max torque that can be added to both\n        if L_max < abs(TV_des)\n            max_t_add = single(0);\n  "
+      "      else\n            max_t_add = min([(L_max-TV_des), R_max, (T_driver-L)/2]);\n        end \n        L = - ("
+      "L + max_t_add);\n        R = - max_t_add;\n        T = [L;R];\n        % Floats comparison\n        if ( (abs(L)"
+      " + abs(R) + 0.001) < T_driver)\n            sat = uint32(1);\n        end\n        return;\n    else\n        R "
+      "= min( [abs(TV_des), T_driver, R_max]);\n        %Max torque that can be added to both\n        if R_max < abs(T"
+      "V_des)\n            max_t_add = single(0);\n        else\n            max_t_add = min([(R_max-abs(TV_des)), L_ma"
+      "x, (T_driver-R)/2]);\n        end\n        R = - (R + max_t_add);\n        L = - max_t_add;\n        T = [L;R];\n"
+      "        % Floats comparison\n        if ( (abs(L) + abs(R) + 0.001) < T_driver)\n            sat = uint32(1);\n "
+      "       end\n        return;\n    end\nend\nfunction [T, sat] = allocatePositiveTorque(L_max, R_max, T_req,...\n "
+      "         R_eff_L, R_eff_R, alfa, Mz_ref, GR, t )\n      \n    T = single(zeros(2,1));\n    sat = uint32(0);\n   "
+      " % Desired torque vectoring torque\n    TV_des = abs(alfa*Mz_ref*R_eff_L/(GR*t)) + abs(alfa*Mz_ref*R_eff_R/(GR*t"
+      "));\n    % Take absolute value since T_req can be negative in case of KERS\n    T_driver = alfa*T_req;\n\n    if"
+      " ( Mz_ref <= 0)\n        % Implies that left side should realize the TV torque,\n        % since only torque >= "
+      "0 is used here.\n        % Mz is defined positive counter clockwise\n        L = min( [TV_des, T_driver, L_max])"
+      ";\n        %Max torque that can be added to both\n        %Skal det ikke være L < TV_des\n        if L_max < abs"
+      "(TV_des)\n            max_t_add = single(0);\n        else\n            max_t_add = min([(L_max-TV_des), R_max, "
+      "(T_driver-L)/2]);\n        end \n        L = L + max_t_add;\n        R = max_t_add;\n        T = [L;R];  \n     "
+      "   % Floats comparison\n        if ( (L + R + 0.001) < (T_driver))\n            sat = uint32(1);\n        end\n "
+      "       return;\n    else\n        R = min( [abs(TV_des), T_driver, R_max]);\n        %Max torque that can be add"
+      "ed to both\n        if R_max < abs(TV_des)\n            max_t_add = single(0);\n        else\n            max_t_"
+      "add = min([(R_max-abs(TV_des)),L_max, (T_driver-R)/2]);\n        end\n        R = R + max_t_add;\n        L = ma"
+      "x_t_add;\n        T = [L;R];\n        % Floats comparison\n        if ( (L + R + 0.001) < (T_driver))\n         "
+      "   sat = uint32(1);\n        end\n        return;\n    end\nend\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
