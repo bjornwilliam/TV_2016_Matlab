@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1715"
+    ComputedModelVersion    "1.1724"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -55,9 +55,9 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1110"
-	  Extents		  [1136.0, 515.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [-1067.0977107772387, 737.81993281783059]
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [1044.1343485846614, 1134.6204292648677]
 	}
 	Object {
 	  $ObjectID		  6
@@ -117,19 +117,19 @@ Model {
 	  $ObjectID		  12
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "4989"
+	  LoadSaveID		  "909"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-143.11084692682994, -18.4813934200547]
+	  ZoomFactor		  [0.8]
+	  Offset		  [354.85255889592668, 293.75]
 	}
 	Object {
 	  $ObjectID		  13
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "1642"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.4]
-	  Offset		  [-1.3520682104949628, 513.67712624930869]
+	  ZoomFactor		  [0.8]
+	  Offset		  [1524.3580858211571, 64.460999547055138]
 	}
 	PropName		"EditorsInfo"
       }
@@ -141,9 +141,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jun 21 21:32:09 2016"
-  RTWModifiedTimeStamp	  388445527
-  ModelVersionFormat	  "1.%<AutoIncrement:1715>"
+  LastModifiedDate	  "Wed Jun 22 20:01:08 2016"
+  RTWModifiedTimeStamp	  388526466
+  ModelVersionFormat	  "1.%<AutoIncrement:1724>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2420,7 +2420,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "200"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5632"
+    SIDHighWatermark	    "5633"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -2440,7 +2440,7 @@ Model {
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1604, 876]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -3849,7 +3849,7 @@ Model {
 	  System {
 	    Name		    "Control_System\n"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -4547,7 +4547,7 @@ Model {
 		  Name			  "Red factor"
 		  SID			  "2248"
 		  Ports			  [1]
-		  Position		  [1410, 1314, 1440, 1346]
+		  Position		  [1450, 1314, 1480, 1346]
 		  ZOrder		  210
 		  Floating		  off
 		  Location		  [1165, 60, 1798, 623]
@@ -4611,7 +4611,7 @@ Model {
 		  Name			  "Red factor2"
 		  SID			  "3249"
 		  Ports			  [1]
-		  Position		  [1545, 1194, 1575, 1226]
+		  Position		  [1625, 1219, 1655, 1251]
 		  ZOrder		  218
 		  Floating		  off
 		  Location		  [1165, 60, 1798, 623]
@@ -11898,7 +11898,7 @@ Model {
 		    System {
 		    Name		    "Torque Allocation"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -12582,7 +12582,7 @@ Model {
 		  BlockType		  SubSystem
 		  Name			  "Yaw Rate Controller\n"
 		  SID			  "1110"
-		  Ports			  [2, 4]
+		  Ports			  [2, 5]
 		  Position		  [230, 844, 340, 926]
 		  ZOrder		  9
 		  RequestExecContextInheritance	off
@@ -12614,7 +12614,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "30"
+		    ZoomFactor		    "150"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "States"
@@ -13262,6 +13262,16 @@ Model {
 		    IconDisplay		    "Port number"
 		    OutDataTypeStr	    "single"
 		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Mz_ref_to_telemetry"
+		    SID			    "5633"
+		    Position		    [1705, 1353, 1735, 1367]
+		    ZOrder		    347
+		    Port		    "5"
+		    IconDisplay		    "Port number"
+		    OutDataTypeStr	    "single"
+		    }
 		    Line {
 		    ZOrder		    1
 		    SrcBlock		    "States"
@@ -13301,8 +13311,18 @@ Model {
 		    ZOrder		    272
 		    SrcBlock		    "Sum2"
 		    SrcPort		    1
+		    Points		    [193, 0]
+		    Branch {
+		    ZOrder		    474
+		    Points		    [0, 80]
+		    DstBlock		    "Mz_ref_to_telemetry"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    471
 		    DstBlock		    "Product3"
 		    DstPort		    2
+		    }
 		    }
 		    Line {
 		    ZOrder		    163
@@ -13384,7 +13404,7 @@ Model {
 		    ZOrder		    184
 		    SrcBlock		    "Mz_error\n"
 		    SrcPort		    1
-		    Points		    [209, 0]
+		    Points		    [229, 0]
 		    Branch {
 		    ZOrder		    407
 		    Points		    [0, 30]
@@ -13393,7 +13413,7 @@ Model {
 		    }
 		    Branch {
 		    ZOrder		    405
-		    Points		    [20, 0; 0, -45]
+		    Points		    [0, -45]
 		    DstBlock		    "Product11"
 		    DstPort		    2
 		    }
@@ -13472,7 +13492,7 @@ Model {
 		}
 		Block {
 		  BlockType		  Outport
-		  Name			  "Mz_ref"
+		  Name			  "Mz_ref_to_telemetry"
 		  SID			  "1713"
 		  Position		  [665, 578, 695, 592]
 		  ZOrder		  190
@@ -13510,19 +13530,9 @@ Model {
 		  ZOrder		  872
 		  SrcBlock		  "Yaw Rate Controller\n"
 		  SrcPort		  4
-		  Points		  [34, 0]
-		  Branch {
-		    ZOrder		    916
-		    Points		    [0, -330]
-		    DstBlock		    "Mz_ref"
-		    DstPort		    1
-		  }
-		  Branch {
-		    ZOrder		    195
-		    Points		    [93, 0; 0, 100]
-		    DstBlock		    "Torque allocation\n"
-		    DstPort		    1
-		  }
+		  Points		  [127, 0; 0, 115]
+		  DstBlock		  "Torque allocation\n"
+		  DstPort		  1
 		}
 		Line {
 		  ZOrder		  7
@@ -13699,7 +13709,7 @@ Model {
 		  Points		  [66, 0]
 		  Branch {
 		    ZOrder		    960
-		    Points		    [0, 125]
+		    Points		    [0, 150]
 		    DstBlock		    "Red factor2"
 		    DstPort		    1
 		  }
@@ -13778,6 +13788,14 @@ Model {
 		    DstBlock		    "Mz_error"
 		    DstPort		    1
 		  }
+		}
+		Line {
+		  ZOrder		  984
+		  SrcBlock		  "Yaw Rate Controller\n"
+		  SrcPort		  5
+		  Points		  [75, 0; 0, -330]
+		  DstBlock		  "Mz_ref_to_telemetry"
+		  DstPort		  1
 		}
 	      }
 	    }
@@ -14085,7 +14103,7 @@ Model {
 		}
 		Block {
 		  BlockType		  Inport
-		  Name			  "Mz_ref"
+		  Name			  "Mz_ref_to_telemetry"
 		  SID			  "4710::21"
 		  Position		  [20, 206, 40, 224]
 		  ZOrder		  12
@@ -14158,7 +14176,7 @@ Model {
 		}
 		Line {
 		  ZOrder		  23
-		  SrcBlock		  "Mz_ref"
+		  SrcBlock		  "Mz_ref_to_telemetry"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  4
@@ -14261,7 +14279,7 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Outport
-	      Name		      "Mz_ref"
+	      Name		      "Mz_ref_to_telemetry"
 	      SID		      "1718"
 	      Position		      [1185, 448, 1215, 462]
 	      ZOrder		      76
@@ -14354,7 +14372,7 @@ Model {
 	      }
 	      Branch {
 		ZOrder			542
-		DstBlock		"Mz_ref"
+		DstBlock		"Mz_ref_to_telemetry"
 		DstPort			1
 	      }
 	    }
@@ -14593,7 +14611,7 @@ Model {
 	  System {
 	    Name		    "Debug Information\n"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -14604,7 +14622,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "175"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Ti_lim"
@@ -17445,7 +17463,7 @@ Model {
 	      ZOrder		      367
 	      Floating		      off
 	      Location		      [128, 169, 1138, 704]
-	      Open		      on
+	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
 		ListType		AxesTitles
@@ -17462,7 +17480,7 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.88182     0.79273    0.084158     0.12586"
+	      LegendLocations	      "0.87789     0.79315    0.084158     0.12586"
 	      TimeRange		      "0.8646112600536191"
 	      YMin		      "0.7943037974683547"
 	      YMax		      "0.8702531645569622"
@@ -19056,7 +19074,7 @@ Model {
 	      Position		      [2835, 254, 2865, 286]
 	      ZOrder		      316
 	      Floating		      off
-	      Location		      [1023, 60, 1591, 365]
+	      Location		      [738, 81, 1461, 671]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -19074,7 +19092,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.79343     0.73989     0.13908     0.11803"
 	      TimeRange		      "10"
 	      YMin		      "-2"
 	      YMax		      "2"
@@ -50198,7 +50215,10 @@ Stateflow {
     firstTransition	    23
     firstJunction	    22
     viewObj		    10
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    27
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50226,21 +50246,12 @@ Stateflow {
       script		      "function [r_der_error,r_error, vx, r_ref,r_lim,ay_max]...\n          = yawrate_reference(states, "
       "yawRateControl, car_params,settings)\n      \n%#codegen\nr_lim = single(0);\nay_max = single(0);\n\ndelta = stat"
       "es.wheel_angle;\ndelta_der = states.wheel_speed;\n\n\n% If Ku is negative there will be a problem if the denomin"
-      "ator approaches\n% zero at high speeds\n\n\n%denominator = (car_params.l_f + car_params.l_r + car_params.Ku*stat"
-      "es.V_x^2);\n%r_ref = (states.V_x/(car_params.l_f + car_params.l_r + car_params.Ku*states.V_x^2))* delta;\nL = si"
-      "ngle(1.5);\nr_ref = (states.V_x/(L + yawRateControl.Ku*states.V_x^2))* delta;\n\n\n\n\n%Fzi = [states.Fz_FL stat"
-      "es.Fz_FR states.Fz_RL states.Fz_RR];\nif yawRateControl.enable_r_ref_limit == 1\n%     ay_max = (1/car_params.ma"
-      "ss)*sqrt(max(0, sum(Fzi.*settings.mu_max_r)^2 - (car_params.mass*abs(states.ax))^2));\n%     r_lim = (ay_max/abs"
-      "(states.V_x))*sign(r_ref);\n%     if abs(r_ref) > abs(r_lim) \n%         r_ref = r_lim;\n%     end\n    r_lim = "
-      "settings.mu*yawRateControl.mu_scaling_r_ref_limit*9.81/states.V_x;\n    if abs(r_ref) > abs(r_lim)\n        r_re"
-      "f = r_lim*sign(r_ref);\n    end\nend\n\nr = states.r;\nr_error = r_ref-r;\n\nr_ref_der = (states.ax*delta + stat"
-      "es.V_x*delta_der)/L;\nr_der_error = r_ref_der*yawRateControl.ref_weight - states.r_der*yawRateControl.meas_weigh"
-      "t;\n\n\nvx = states.V_x;\n\n\n\n\n\n\n%--------------------------%\n%-----FEED FORWARD---------%\n%-------------"
-      "-------------%\n\n% Cornering Stiffnesses\n% Cr = 26000;\n% Cf = 26000;\n% \n% lf = car_params.l_f;\n% lr = car_"
-      "params.l_r;\n% Nbeta = lf*Cf - lr*Cr;\n% Nr = (lf^2*Cf + lr^2*Cr)/states.V_x;\n% Ndelta = -lf*Cf;\n% Ybeta = Cf+"
-      "Cr;\n% Yr = (lf*Cf - lr*Cr)/states.V_x;\n% Ydelta = -Cf;\n% \n% C = car_params.mass*states.V_x*Nbeta + Nr*Ybeta "
-      "- Nbeta*Yr;\n% \n% E = Nbeta*Ydelta - Ndelta*Ybeta;\n% F1 = -Ybeta;\n% \n% Mz_FF = (C*r_ref/delta - E)*delta/(F1"
-      ");\n\n\n\n\n"
+      "ator approaches\n% zero at high speeds\nr_ref = (states.V_x/(yawRateControl.r_ref_tuning_param + yawRateControl."
+      "Ku*states.V_x^2))* delta;\n\n\n\n\n%Fzi = [states.Fz_FL states.Fz_FR states.Fz_RL states.Fz_RR];\nif yawRateCont"
+      "rol.enable_r_ref_limit == 1\n    r_lim = settings.mu*yawRateControl.mu_scaling_r_ref_limit*9.81/states.V_x;\n   "
+      " if abs(r_ref) > abs(r_lim)\n        r_ref = r_lim*sign(r_ref);\n    end\nend\n\nr = states.r;\nr_error = r_ref-"
+      "r;\n\nr_ref_der = (states.ax*delta + states.V_x*delta_der)/yawRateControl.r_ref_tuning_param;\nr_der_error = r_r"
+      "ef_der*yawRateControl.ref_weight - states.r_der*yawRateControl.meas_weight;\n\n\nvx = states.V_x;\n\nend\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -51132,7 +51143,10 @@ Stateflow {
     firstTransition	    60
     firstJunction	    59
     viewObj		    52
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51321,7 +51335,10 @@ Stateflow {
     firstTransition	    70
     firstJunction	    69
     viewObj		    62
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51346,9 +51363,9 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function OutputTelemetri_control = OutputTelemetri(states, T_req, r_ref, Mz_ref)\n%#codegen\n\nOu"
-      "tputTelemetri_control.T_req   = T_req;\nOutputTelemetri_control.Mz_ref  = Mz_ref;\nOutputTelemetri_control.r_ref"
-      "   = r_ref;"
+      script		      "function OutputTelemetri_control = OutputTelemetri(states, T_req, r_ref, Mz_ref_to_telemetry)\n%#"
+      "codegen\n\nOutputTelemetri_control.T_req   = T_req;\nOutputTelemetri_control.Mz_ref  = Mz_ref_to_telemetry;\nOut"
+      "putTelemetri_control.r_ref   = r_ref;\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -51439,7 +51456,7 @@ Stateflow {
   data {
     id			    68
     ssIdNumber		    8
-    name		    "Mz_ref"
+    name		    "Mz_ref_to_telemetry"
     linkNode		    [62 67 0]
     scope		    INPUT_DATA
     machine		    1
@@ -52137,10 +52154,7 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53822,10 +53836,7 @@ Stateflow {
     firstTransition	    201
     firstJunction	    200
     viewObj		    187
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55933,10 +55944,7 @@ Stateflow {
     firstTransition	    304
     firstJunction	    303
     viewObj		    294
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    10
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -56173,10 +56181,7 @@ Stateflow {
     firstTransition	    320
     firstJunction	    319
     viewObj		    306
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

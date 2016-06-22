@@ -1,0 +1,20 @@
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Competition_SkidPad	2016-06-22 19:46:59
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Competition_SkidPad
+
+TIME	25.758
+SIM_END		Examples_FS/FS_Competition_SkidPad	25.757s	267.701m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Competition_SkidPad	2016-06-22 20:05:49
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Competition_SkidPad
+
+TIME	14.164
+SIM_END		Examples_FS/FS_Competition_SkidPad	14.16s	135.445m

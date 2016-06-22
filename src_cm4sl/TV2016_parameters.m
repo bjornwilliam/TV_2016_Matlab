@@ -64,6 +64,7 @@ car_params.aero_ref_area   = single(1.1008);
 % Yaw Rate Control Parameters
 % ------------------------------
 yawRateControl.Ku = single(0); % Understeer coefficient
+yawRateControl.r_ref_tuning_param = single(1.5)
 yawRateControl.negative_torque_limit = 10;
 yawRateControl.max_moment = single(2000);
 
