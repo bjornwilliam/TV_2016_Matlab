@@ -1,0 +1,10 @@
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-06-25 15:46:44
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	11.686
+SIM_END		Examples_FS/FS_Acceleration	11.685s	62.9298m
