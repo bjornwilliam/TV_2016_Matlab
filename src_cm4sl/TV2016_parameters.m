@@ -126,13 +126,13 @@ tractionControl.Ki_scaling = single(1);
 tractionControl.Kp_braking = single(150); % 150
 tractionControl.Ki_braking = single(450); % 450
 tractionControl.lookup_speed_end_kmh = single(50);
-tractionControl.enable = uint32(1);
+tractionControl.enable = uint32(0);
 
 
 % ------------------------------
 % Power Limit Control Parameters
 % ------------------------------
-powerLimitControl.positive_power_limit = single(79000); % Positive effect limit
+powerLimitControl.positive_power_limit = single(40000); % Positive effect limit
 powerLimitControl.negative_power_limit = single(100000); %
 powerLimitControl.Kp = single(0.000007); % (0.000003
 powerLimitControl.Ki = single(0.0010);  % single(0.0002)

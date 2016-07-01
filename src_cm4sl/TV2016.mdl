@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1728"
+    ComputedModelVersion    "1.1735"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -49,24 +49,24 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		11
+	Dimension		6
 	Object {
 	  $ObjectID		  5
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1110"
+	  LoadSaveID		  "909"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [1044.1343485846614, 1134.6204292648677]
+	  ZoomFactor		  [1.25]
+	  Offset		  [557.61353250762681, 472.54686584096]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1016"
-	  Extents		  [1346.0, 891.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  LoadSaveID		  "1034"
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [15.650000000000091, 306.43333333333339]
 	}
 	Object {
 	  $ObjectID		  7
@@ -74,8 +74,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "985"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [340.28623094767192, 457.69601308817408]
+	  ZoomFactor		  [1.0]
+	  Offset		  [127.96570171164944, 319.83205662210486]
 	}
 	Object {
 	  $ObjectID		  8
@@ -90,64 +90,19 @@ Model {
 	  $ObjectID		  9
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1034"
+	  LoadSaveID		  "1642"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-58.698884637872084, 279.11607868985425]
+	  ZoomFactor		  [1.5]
+	  Offset		  [1536.9055743865458, 1571.495282153337]
 	}
 	Object {
 	  $ObjectID		  10
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1727"
+	  LoadSaveID		  "4151"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.4]
-	  Offset		  [197.09930165070546, 231.74859491844813]
-	}
-	Object {
-	  $ObjectID		  11
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "3966"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.4]
-	  Offset		  [-1057.1675111812065, -64.8530886863764]
-	}
-	Object {
-	  $ObjectID		  12
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [2.0]
-	  Offset		  [0.0, 0.0]
-	}
-	Object {
-	  $ObjectID		  13
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1642"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.1]
-	  Offset		  [-4409.3860240257873, -248.21537200483755]
-	}
-	Object {
-	  $ObjectID		  14
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.3]
-	  Offset		  [827.00016826738647, 545.8029091905837]
-	}
-	Object {
-	  $ObjectID		  15
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1520"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [3.0]
-	  Offset		  [838.95077284319768, 599.03595681004185]
+	  ZoomFactor		  [0.25]
+	  Offset		  [-2401.4522530744548, 1120.5944174114543]
 	}
 	PropName		"EditorsInfo"
       }
@@ -159,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jun 25 15:52:43 2016"
-  RTWModifiedTimeStamp	  388770498
-  ModelVersionFormat	  "1.%<AutoIncrement:1728>"
+  LastModifiedDate	  "Fri Jul 01 22:46:27 2016"
+  RTWModifiedTimeStamp	  389289734
+  ModelVersionFormat	  "1.%<AutoIncrement:1735>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -202,7 +157,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    16
+    $ObjectID		    11
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "TV2016"
     Array {
@@ -266,13 +221,13 @@ Model {
     Type		    "Handle"
     Dimension		    3
     Simulink.ConfigSet {
-      $ObjectID		      17
+      $ObjectID		      12
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  18
+	  $ObjectID		  13
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -307,7 +262,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  19
+	  $ObjectID		  14
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -340,7 +295,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  20
+	  $ObjectID		  15
 	  Version		  "1.15.0"
 	  BlockReduction	  on
 	  BooleanDataType	  on
@@ -384,7 +339,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  21
+	  $ObjectID		  16
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -473,7 +428,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  22
+	  $ObjectID		  17
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -513,7 +468,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  23
+	  $ObjectID		  18
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -528,7 +483,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  24
+	  $ObjectID		  19
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -541,7 +496,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  25
+	  $ObjectID		  20
 	  Version		  "1.15.0"
 	  SystemTargetFile	  "ert.tlc"
 	  TLCOptions		  ""
@@ -606,7 +561,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      26
+	      $ObjectID		      21
 	      Version		      "1.15.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
@@ -649,7 +604,7 @@ Model {
 	    }
 	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      27
+	      $ObjectID		      22
 	      Version		      "1.15.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
@@ -785,13 +740,13 @@ Model {
       ConfigPrmDlgPosition     [ 679, 291, 1919, 1610 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      28
+      $ObjectID		      23
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  29
+	  $ObjectID		  24
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -826,7 +781,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  30
+	  $ObjectID		  25
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -859,7 +814,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  31
+	  $ObjectID		  26
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -916,7 +871,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  32
+	  $ObjectID		  27
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1005,7 +960,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  33
+	  $ObjectID		  28
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1045,7 +1000,7 @@ Model {
 	  ProdEqTarget		  off
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  34
+	  $ObjectID		  29
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1060,7 +1015,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  35
+	  $ObjectID		  30
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1073,7 +1028,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  36
+	  $ObjectID		  31
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1153,7 +1108,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      37
+	      $ObjectID		      32
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1228,7 +1183,7 @@ Model {
 	    }
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      38
+	      $ObjectID		      33
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1322,13 +1277,13 @@ Model {
       ConfigPrmDlgPosition     [ 1313, 199, 2457, 1291 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      39
+      $ObjectID		      34
       Version		      "1.15.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  40
+	  $ObjectID		  35
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -1363,7 +1318,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  41
+	  $ObjectID		  36
 	  Version		  "1.15.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1396,7 +1351,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  42
+	  $ObjectID		  37
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1453,7 +1408,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  43
+	  $ObjectID		  38
 	  Version		  "1.15.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1542,7 +1497,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  44
+	  $ObjectID		  39
 	  Version		  "1.15.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1582,7 +1537,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  45
+	  $ObjectID		  40
 	  Version		  "1.15.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -1597,7 +1552,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  46
+	  $ObjectID		  41
 	  Version		  "1.15.0"
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -1610,7 +1565,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  47
+	  $ObjectID		  42
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
@@ -1690,7 +1645,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      48
+	      $ObjectID		      43
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1765,7 +1720,7 @@ Model {
 	    }
 	    RTWinTarget.RTWinTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      49
+	      $ObjectID		      44
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
@@ -1856,11 +1811,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    17
+    $ObjectID		    12
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    50
+    $ObjectID		    45
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1930,12 +1885,6 @@ Model {
       LockScale		      off
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
-    }
-    Block {
-      BlockType		      ActionPort
-      InitializeStates	      "held"
-      PropagateVarSize	      "Only when execution is resumed"
-      ActionType	      "unset"
     }
     Block {
       BlockType		      BusCreator
@@ -2404,13 +2353,6 @@ Model {
       AllowDiffInputSizes     off
     }
     Block {
-      BlockType		      SwitchCase
-      CaseConditions	      "{1}"
-      ShowDefaultCase	      on
-      ZeroCross		      on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      Terminator
     }
     Block {
@@ -2425,7 +2367,7 @@ Model {
   System {
     Name		    "TV2016"
     Location		    [-8, 0, 1604, 876]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -2438,7 +2380,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "200"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "6118"
+    SIDHighWatermark	    "6121"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -2451,14 +2393,14 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		51
+	$ObjectID		46
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMaker4SLss.bmp'));"
       }
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1604, 876]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2469,7 +2411,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"30"
+	ZoomFactor		"50"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -3866,7 +3808,7 @@ Model {
 	  System {
 	    Name		    "Control_System\n"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3877,7 +3819,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "125"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3908,7 +3850,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"80"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -4678,7 +4620,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "150"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Ti_ref"
@@ -7111,7 +7053,7 @@ Model {
 		    System {
 		    Name		    "Traction Controllers"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7122,7 +7064,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "40"
+		    ZoomFactor		    "25"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -11353,7 +11295,7 @@ Model {
 		  System {
 		    Name		    "Throttle / Brake Mapping"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -11531,7 +11473,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
+		    ZoomFactor		    "125"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -11591,16 +11533,6 @@ Model {
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
-		    }
-		    Block {
-		    BlockType		    MultiPortSwitch
-		    Name		    "Index\nVector2"
-		    SID			    "4988"
-		    Ports		    [4, 1]
-		    Position		    [1725, 1328, 1785, 1442]
-		    ZOrder		    367
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
 		    BlockType		    SubSystem
@@ -11723,186 +11655,6 @@ Model {
 		    ZOrder		    360
 		    ShowName		    off
 		    DisplayOption	    "bar"
-		    }
-		    Block {
-		    BlockType		    SwitchCase
-		    Name		    "Switch Case"
-		    SID			    "4975"
-		    Ports		    [1, 4]
-		    Position		    [1220, 1290, 1355, 1580]
-		    ZOrder		    363
-		    CaseConditions	    "{1,2,3}"
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Switch Case Action\nSubsystem"
-		    SID			    "4976"
-		    Ports		    [1, 1, 0, 0, 0, 0, 0, 1]
-		    Position		    [1495, 1383, 1565, 1417]
-		    ZOrder		    364
-		    TreatAsAtomicUnit	    on
-		    RequestExecContextInheritance off
-		    System {
-		    Name		    "Switch Case Action\nSubsystem"
-		    Location		    [319, 422, 817, 722]
-		    Open		    off
-		    ModelBrowserVisibility  off
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "In1"
-		    SID			    "4977"
-		    Position		    [75, 78, 105, 92]
-		    ZOrder		    -1
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    ActionPort
-		    Name		    "Action Port"
-		    SID			    "4978"
-		    Position		    [170, 15, 229, 43]
-		    ZOrder		    -2
-		    ActionType		    "case"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "4979"
-		    Position		    [325, 78, 355, 92]
-		    ZOrder		    -3
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    ZOrder		    1
-		    SrcBlock		    "In1"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Switch Case Action\nSubsystem1"
-		    SID			    "4980"
-		    Ports		    [1, 1, 0, 0, 0, 0, 0, 1]
-		    Position		    [1495, 1298, 1565, 1332]
-		    ZOrder		    365
-		    TreatAsAtomicUnit	    on
-		    RequestExecContextInheritance off
-		    System {
-		    Name		    "Switch Case Action\nSubsystem1"
-		    Location		    [319, 422, 817, 722]
-		    Open		    off
-		    ModelBrowserVisibility  off
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "In1"
-		    SID			    "4981"
-		    Position		    [75, 78, 105, 92]
-		    ZOrder		    -1
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    ActionPort
-		    Name		    "Action Port"
-		    SID			    "4982"
-		    Position		    [170, 15, 229, 43]
-		    ZOrder		    -2
-		    ActionType		    "case"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "4983"
-		    Position		    [325, 78, 355, 92]
-		    ZOrder		    -3
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    ZOrder		    1
-		    SrcBlock		    "In1"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Switch Case Action\nSubsystem2"
-		    SID			    "4984"
-		    Ports		    [1, 1, 0, 0, 0, 0, 0, 1]
-		    Position		    [1495, 1468, 1565, 1502]
-		    ZOrder		    366
-		    TreatAsAtomicUnit	    on
-		    RequestExecContextInheritance off
-		    System {
-		    Name		    "Switch Case Action\nSubsystem2"
-		    Location		    [319, 422, 817, 722]
-		    Open		    off
-		    ModelBrowserVisibility  off
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "In1"
-		    SID			    "4985"
-		    Position		    [75, 78, 105, 92]
-		    ZOrder		    -1
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    ActionPort
-		    Name		    "Action Port"
-		    SID			    "4986"
-		    Position		    [170, 15, 229, 43]
-		    ZOrder		    -2
-		    ActionType		    "case"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "4987"
-		    Position		    [325, 78, 355, 92]
-		    ZOrder		    -3
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    ZOrder		    1
-		    SrcBlock		    "In1"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
 		    }
 		    Block {
 		    BlockType		    SubSystem
@@ -12301,7 +12053,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Mz_error"
 		    SID			    "4999"
-		    Position		    [925, 318, 955, 332]
+		    Position		    [1010, 298, 1040, 312]
 		    ZOrder		    172
 		    NamePlacement	    "alternate"
 		    Port		    "2"
@@ -12369,6 +12121,7 @@ Model {
 		    }
 		    Branch {
 		    ZOrder		    10
+		    Points		    [0, -20]
 		    DstBlock		    "Mz_error"
 		    DstPort		    1
 		    }
@@ -12408,7 +12161,7 @@ Model {
 		    Position		    [690, 929, 720, 961]
 		    ZOrder		    359
 		    Floating		    off
-		    Location		    [991, 89, 2004, 1054]
+		    Location		    [353, 90, 1366, 819]
 		    Open		    off
 		    NumInputPorts	    "1"
 		    List {
@@ -12426,7 +12179,6 @@ Model {
 		    MarkerStyles	    "none|none|none|none|none|none"
 		    }
 		    ShowLegends		    on
-		    LegendLocations	    "0.85061     0.88532     0.11155    0.069775"
 		    YMin		    "0.1998305084745763"
 		    YMax		    "0.2840677966101695"
 		    SaveName		    "ScopeData44"
@@ -12541,45 +12293,6 @@ Model {
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    307
-		    SrcBlock		    "Switch Case"
-		    SrcPort		    1
-		    Points		    [78, 0; 0, -47]
-		    DstBlock		    "Switch Case Action\nSubsystem1"
-		    DstPort		    ifaction
-		    }
-		    Line {
-		    ZOrder		    308
-		    SrcBlock		    "Switch Case"
-		    SrcPort		    2
-		    Points		    [65, 0; 0, -32]
-		    DstBlock		    "Switch Case Action\nSubsystem"
-		    DstPort		    ifaction
-		    }
-		    Line {
-		    ZOrder		    309
-		    SrcBlock		    "Switch Case"
-		    SrcPort		    3
-		    Points		    [65, 0; 0, -17]
-		    DstBlock		    "Switch Case Action\nSubsystem2"
-		    DstPort		    ifaction
-		    }
-		    Line {
-		    ZOrder		    310
-		    Points		    [1092, 1435; 94, 0]
-		    Branch {
-		    ZOrder		    312
-		    Points		    [0, -166; 404, 0; 0, 71]
-		    DstBlock		    "Index\nVector2"
-		    DstPort		    1
-		    }
-		    Branch {
-		    ZOrder		    311
-		    DstBlock		    "Switch Case"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
 		    ZOrder		    314
 		    SrcBlock		    "T_req"
 		    SrcPort		    1
@@ -12620,7 +12333,7 @@ Model {
 		  System {
 		    Name		    "Yaw Rate Controller\n"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -12631,7 +12344,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "150"
+		    ZoomFactor		    "60"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "States"
@@ -14639,7 +14352,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "10"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Ti_lim"
@@ -15419,7 +15132,7 @@ Model {
 	      SID		      "2277"
 	      Position		      [2265, 2857, 2335, 2893]
 	      ZOrder		      308
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15430,7 +15143,7 @@ Model {
 	      SID		      "3256"
 	      Position		      [2265, 2547, 2335, 2583]
 	      ZOrder		      336
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15441,7 +15154,7 @@ Model {
 	      SID		      "4440"
 	      Position		      [2265, 2487, 2335, 2523]
 	      ZOrder		      368
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15503,7 +15216,7 @@ Model {
 	      SID		      "2278"
 	      Position		      [2280, 2982, 2350, 3018]
 	      ZOrder		      309
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15514,7 +15227,7 @@ Model {
 	      SID		      "2146"
 	      Position		      [2380, 3144, 2430, 3186]
 	      ZOrder		      292
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15525,7 +15238,7 @@ Model {
 	      SID		      "2279"
 	      Position		      [2280, 3077, 2350, 3113]
 	      ZOrder		      310
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15536,7 +15249,7 @@ Model {
 	      SID		      "2147"
 	      Position		      [2290, 3275, 2340, 3315]
 	      ZOrder		      291
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15547,7 +15260,7 @@ Model {
 	      SID		      "2148"
 	      Position		      [2395, 3030, 2445, 3070]
 	      ZOrder		      295
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15558,7 +15271,7 @@ Model {
 	      SID		      "2149"
 	      Position		      [2395, 2905, 2445, 2945]
 	      ZOrder		      296
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15569,7 +15282,7 @@ Model {
 	      SID		      "2280"
 	      Position		      [2270, 3212, 2340, 3248]
 	      ZOrder		      311
-	      Gain		      "1/i_Diff"
+	      Gain		      "1/car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -15596,7 +15309,7 @@ Model {
 	      System {
 		Name			"Motor Rpm log\n\n"
 		Location		[-8, 0, 1604, 876]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -15607,7 +15320,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"300"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Abs
 		  Name			  "Abs"
@@ -15678,7 +15391,7 @@ Model {
 		  SID			  "1523"
 		  Position		  [605, 422, 650, 458]
 		  ZOrder		  200
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -15706,7 +15419,7 @@ Model {
 		  SID			  "1525"
 		  Position		  [625, 492, 670, 528]
 		  ZOrder		  202
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -15734,7 +15447,7 @@ Model {
 		  SID			  "1527"
 		  Position		  [635, 567, 680, 603]
 		  ZOrder		  204
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -15762,7 +15475,7 @@ Model {
 		  SID			  "1529"
 		  Position		  [590, 352, 635, 388]
 		  ZOrder		  198
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -16094,7 +15807,6 @@ Model {
 		MarkerStyles		"none|none|none|none|none|none"
 	      }
 	      ShowLegends	      on
-	      LegendLocations	      "0.81041     0.77288     0.12347     0.14543"
 	      TimeRange		      "0.6318807718866338"
 	      YMin		      "13.57421875"
 	      YMax		      "14.51171875"
@@ -17513,8 +17225,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Simulation Results Logging"
-		Location		[1340, 824, 2479, 1694]
-		Open			off
+		Location		[-8, 0, 1604, 876]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -17525,7 +17237,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"20"
+		ZoomFactor		"25"
 		Block {
 		  BlockType		  Inport
 		  Name			  "r_ref"
@@ -17716,7 +17428,7 @@ Model {
 		  SID			  "4674"
 		  Position		  [255, 1527, 300, 1563]
 		  ZOrder		  401
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -17744,7 +17456,7 @@ Model {
 		  SID			  "4676"
 		  Position		  [275, 1597, 320, 1633]
 		  ZOrder		  403
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -17772,7 +17484,7 @@ Model {
 		  SID			  "4678"
 		  Position		  [285, 1672, 330, 1708]
 		  ZOrder		  405
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -17800,7 +17512,7 @@ Model {
 		  SID			  "4680"
 		  Position		  [240, 1457, 285, 1493]
 		  ZOrder		  399
-		  Gain			  "i_Diff"
+		  Gain			  "car_params.GR"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -19058,7 +18770,7 @@ Model {
 	      Position		      [1785, 1639, 1815, 1671]
 	      ZOrder		      391
 	      Floating		      off
-	      Location		      [305, 1149, 1009, 1494]
+	      Location		      [305, 544, 1009, 889]
 	      Open		      off
 	      NumInputPorts	      "1"
 	      List {
@@ -21408,15 +21120,15 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "Estimations"
 	  SID			  "3966"
-	  Ports			  [3, 7]
-	  Position		  [1205, 1076, 1940, 1364]
+	  Ports			  [3, 8]
+	  Position		  [1205, 1078, 1940, 1367]
 	  ZOrder		  444
 	  TreatAsAtomicUnit	  on
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Estimations"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -21427,7 +21139,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "40"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -22000,8 +21712,8 @@ Model {
 	      BlockType		      SubSystem
 	      Name		      "Fz_Estimation"
 	      SID		      "2821"
-	      Ports		      [2, 3]
-	      Position		      [475, 671, 675, 779]
+	      Ports		      [2, 4]
+	      Position		      [475, 673, 675, 782]
 	      ZOrder		      494
 	      TreatAsAtomicUnit	      on
 	      RequestExecContextInheritance off
@@ -22019,7 +21731,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"60"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
 		  Name			  "sensors"
@@ -22149,7 +21861,7 @@ Model {
 		  BlockType		  SubSystem
 		  Name			  "FzEstDamper"
 		  SID			  "4873"
-		  Ports			  [5, 1]
+		  Ports			  [5, 2]
 		  Position		  [695, 548, 900, 1052]
 		  ZOrder		  270
 		  LibraryVersion	  "1.32"
@@ -22173,7 +21885,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "23"
+		    SIDHighWatermark	    "24"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "sensors"
@@ -22232,16 +21944,22 @@ Model {
 		    Name		    " SFunction "
 		    SID			    "4873::16"
 		    Tag			    "Stateflow S-Function TV2016 28"
-		    Ports		    [5, 2]
+		    Ports		    [5, 3]
 		    Position		    [180, 110, 230, 230]
 		    ZOrder		    7
 		    FunctionName	    "sf_sfun"
 		    Parameters		    "car_params"
-		    PortCounts		    "[5 2]"
+		    PortCounts		    "[5 3]"
 		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "Fz_damper_est"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "alfa_r"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -22261,36 +21979,45 @@ Model {
 		    ZOrder		    -5
 		    IconDisplay		    "Port number"
 		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "alfa_r"
+		    SID			    "4873::24"
+		    Position		    [460, 136, 480, 154]
+		    ZOrder		    15
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
 		    Line {
-		    ZOrder		    1
+		    ZOrder		    9
 		    SrcBlock		    "sensors"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    2
+		    ZOrder		    10
 		    SrcBlock		    "Fz_damp_FL"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    3
+		    ZOrder		    11
 		    SrcBlock		    "Fz_damp_FR"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    ZOrder		    4
+		    ZOrder		    12
 		    SrcBlock		    "Fz_damp_RL"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    5
+		    ZOrder		    13
 		    SrcBlock		    "Fz_damp_RR"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -22298,7 +22025,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "Fz_damper_est"
-		    ZOrder		    6
+		    ZOrder		    14
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -22306,14 +22033,23 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    7
+		    Name		    "alfa_r"
+		    ZOrder		    15
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    3
+		    DstBlock		    "alfa_r"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    16
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    8
+		    ZOrder		    17
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -22481,9 +22217,18 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Fz_damper_est"
 		  SID			  "4879"
-		  Position		  [1360, 793, 1390, 807]
+		  Position		  [1375, 653, 1405, 667]
 		  ZOrder		  276
 		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "alfa_r"
+		  SID			  "6119"
+		  Position		  [1330, 918, 1360, 932]
+		  ZOrder		  287
+		  Port			  "4"
 		  IconDisplay		  "Port number"
 		}
 		Line {
@@ -22599,10 +22344,10 @@ Model {
 		  ZOrder		  15
 		  SrcBlock		  "FzEstDamper"
 		  SrcPort		  1
-		  Points		  [253, 0]
+		  Points		  [253, 0; 0, -15]
 		  Branch {
 		    ZOrder		    38
-		    Points		    [0, -270]
+		    Points		    [0, -130]
 		    DstBlock		    "Index\nVector"
 		    DstPort		    3
 		  }
@@ -22632,6 +22377,13 @@ Model {
 		  SrcPort		  1
 		  DstBlock		  "FzEstLoadTransfer"
 		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  97
+		  SrcBlock		  "FzEstDamper"
+		  SrcPort		  2
+		  DstBlock		  "alfa_r"
+		  DstPort		  1
 		}
 	      }
 	    }
@@ -24720,6 +24472,15 @@ Model {
 	      Port		      "7"
 	      IconDisplay	      "Port number"
 	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "alfa_r"
+	      SID		      "6120"
+	      Position		      [815, 758, 845, 772]
+	      ZOrder		      497
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	    }
 	    Line {
 	      ZOrder		      2
 	      SrcBlock		      "Fx_Estimation"
@@ -25056,7 +24817,7 @@ Model {
 	      ZOrder		      323
 	      SrcBlock		      "Fz_Estimation"
 	      SrcPort		      3
-	      Points		      [38, 0; 0, 795]
+	      Points		      [38, 0; 0, 815]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      5
 	    }
@@ -25064,7 +24825,7 @@ Model {
 	      ZOrder		      322
 	      SrcBlock		      "Fz_Estimation"
 	      SrcPort		      2
-	      Points		      [82, 0; 0, 785]
+	      Points		      [82, 0; 0, 795]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      4
 	    }
@@ -25108,6 +24869,13 @@ Model {
 	      SrcPort		      2
 	      Points		      [721, 0; 0, 640]
 	      DstBlock		      "T_motor"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      655
+	      SrcBlock		      "Fz_Estimation"
+	      SrcPort		      4
+	      DstBlock		      "alfa_r"
 	      DstPort		      1
 	    }
 	  }
@@ -36870,7 +36638,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "200"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Motor_speed_ref_in_RPM"
@@ -36953,7 +36721,7 @@ Model {
 		    Position		    [300, 597, 315, 623]
 		    ZOrder		    112
 		    NamePlacement	    "alternate"
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -36964,7 +36732,7 @@ Model {
 		    SID			    "3273"
 		    Position		    [600, 544, 645, 576]
 		    ZOrder		    132
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -37317,7 +37085,7 @@ Model {
 		    }
 		    System {
 		    Name		    "AMK FR"
-		    Location		    [-8, -8, 2568, 1568]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -37329,7 +37097,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "200"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Motor_speed_ref_in_RPM"
@@ -37411,7 +37179,7 @@ Model {
 		    SID			    "5009"
 		    Position		    [220, 592, 265, 628]
 		    ZOrder		    112
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -37422,7 +37190,7 @@ Model {
 		    SID			    "5010"
 		    Position		    [600, 544, 645, 576]
 		    ZOrder		    132
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -37777,7 +37545,7 @@ Model {
 		    }
 		    System {
 		    Name		    "AMK RL"
-		    Location		    [-8, -8, 2568, 1568]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -37789,7 +37557,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "200"
+		    ZoomFactor		    "125"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Motor_speed_ref_in_RPM"
@@ -37871,7 +37639,7 @@ Model {
 		    SID			    "5025"
 		    Position		    [220, 592, 265, 628]
 		    ZOrder		    112
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -37882,7 +37650,7 @@ Model {
 		    SID			    "5026"
 		    Position		    [600, 544, 645, 576]
 		    ZOrder		    132
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -38237,7 +38005,7 @@ Model {
 		    }
 		    System {
 		    Name		    "AMK RR"
-		    Location		    [-8, -8, 2568, 1568]
+		    Location		    [-8, 0, 1604, 876]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -38249,7 +38017,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "200"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Motor_speed_ref_in_RPM"
@@ -38331,7 +38099,7 @@ Model {
 		    SID			    "5041"
 		    Position		    [220, 592, 265, 628]
 		    ZOrder		    112
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -38342,7 +38110,7 @@ Model {
 		    SID			    "5042"
 		    Position		    [600, 544, 645, 576]
 		    ZOrder		    132
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -39054,7 +38822,7 @@ Model {
 		    SID			    "1248"
 		    Position		    [410, 1499, 460, 1541]
 		    ZOrder		    12
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -39076,7 +38844,7 @@ Model {
 		    SID			    "1250"
 		    Position		    [410, 1565, 460, 1605]
 		    ZOrder		    10
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -39087,7 +38855,7 @@ Model {
 		    SID			    "1251"
 		    Position		    [410, 1640, 460, 1680]
 		    ZOrder		    16
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -39098,7 +38866,7 @@ Model {
 		    SID			    "1252"
 		    Position		    [410, 1710, 460, 1750]
 		    ZOrder		    17
-		    Gain		    "i_Diff"
+		    Gain		    "car_params.GR"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -41247,7 +41015,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Sensors\n"
-	    Location		    [745, 121, 2045, 1176]
+	    Location		    [-8, 0, 1604, 876]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -41259,7 +41027,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "30"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "\"Measured Power\""
@@ -43425,7 +43193,7 @@ Model {
 	      SID		      "824"
 	      Position		      [1025, 1407, 1070, 1443]
 	      ZOrder		      199
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43453,7 +43221,7 @@ Model {
 	      SID		      "826"
 	      Position		      [1045, 1477, 1090, 1513]
 	      ZOrder		      201
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43481,7 +43249,7 @@ Model {
 	      SID		      "828"
 	      Position		      [1055, 1552, 1100, 1588]
 	      ZOrder		      203
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43509,7 +43277,7 @@ Model {
 	      SID		      "2858"
 	      Position		      [715, 2767, 760, 2803]
 	      ZOrder		      437
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43537,7 +43305,7 @@ Model {
 	      SID		      "2860"
 	      Position		      [715, 2552, 760, 2588]
 	      ZOrder		      431
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43576,7 +43344,7 @@ Model {
 	      SID		      "4958"
 	      Position		      [205, 4177, 250, 4213]
 	      ZOrder		      522
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43604,7 +43372,7 @@ Model {
 	      SID		      "4960"
 	      Position		      [205, 3962, 250, 3998]
 	      ZOrder		      516
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43632,7 +43400,7 @@ Model {
 	      SID		      "4962"
 	      Position		      [205, 4032, 250, 4068]
 	      ZOrder		      518
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43660,7 +43428,7 @@ Model {
 	      SID		      "4964"
 	      Position		      [205, 4102, 250, 4138]
 	      ZOrder		      520
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43699,7 +43467,7 @@ Model {
 	      SID		      "2854"
 	      Position		      [715, 2622, 760, 2658]
 	      ZOrder		      433
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43727,7 +43495,7 @@ Model {
 	      SID		      "2856"
 	      Position		      [715, 2692, 760, 2728]
 	      ZOrder		      435
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -43738,7 +43506,7 @@ Model {
 	      SID		      "830"
 	      Position		      [1010, 1337, 1055, 1373]
 	      ZOrder		      197
-	      Gain		      "i_Diff"
+	      Gain		      "car_params.GR"
 	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
@@ -48628,7 +48396,7 @@ Model {
 	  Position		  [1045, 2109, 1075, 2141]
 	  ZOrder		  409
 	  Floating		  off
-	  Location		  [1132, 1033, 1675, 1430]
+	  Location		  [10, 60, 1610, 871]
 	  Open			  off
 	  NumInputPorts		  "1"
 	  List {
@@ -48646,10 +48414,9 @@ Model {
 	    MarkerStyles	    "none|none|none|none|none|none"
 	  }
 	  ShowLegends		  on
-	  LegendLocations	  "0.66973     0.86986     0.26335    0.051217"
 	  TimeRange		  "0.4308378623188407"
-	  YMin			  "0"
-	  YMax			  "114853.5564853556"
+	  YMin			  "-3500"
+	  YMax			  "0"
 	  SaveName		  "ScopeData37"
 	  LimitDataPoints	  off
 	}
@@ -49131,7 +48898,7 @@ Model {
 	  ZOrder		  791
 	  SrcBlock		  "Bus\nCreator3"
 	  SrcPort		  1
-	  Points		  [72, 0; 0, -70]
+	  Points		  [72, 0; 0, -65]
 	  DstBlock		  "Estimations"
 	  DstPort		  2
 	}
@@ -49139,7 +48906,7 @@ Model {
 	  ZOrder		  864
 	  SrcBlock		  "Rate Transition4"
 	  SrcPort		  1
-	  Points		  [172, 0; 0, 810]
+	  Points		  [172, 0; 0, 815]
 	  DstBlock		  "Estimations"
 	  DstPort		  1
 	}
@@ -49154,7 +48921,7 @@ Model {
 	  ZOrder		  869
 	  SrcBlock		  "Estimations"
 	  SrcPort		  2
-	  Points		  [253, 0; 0, 430]
+	  Points		  [253, 0; 0, 435]
 	  DstBlock		  "Debug Information\n"
 	  DstPort		  8
 	}
@@ -49162,7 +48929,7 @@ Model {
 	  ZOrder		  896
 	  SrcBlock		  "Estimations"
 	  SrcPort		  3
-	  Points		  [203, 0; 0, 315]
+	  Points		  [203, 0; 0, 325]
 	  DstBlock		  "Debug Information\n"
 	  DstPort		  7
 	}
@@ -49234,7 +49001,7 @@ Model {
 	  ZOrder		  912
 	  SrcBlock		  "Bus\nCreator"
 	  SrcPort		  1
-	  Points		  [157, 0; 0, -1090]
+	  Points		  [157, 0; 0, -1085]
 	  DstBlock		  "Estimations"
 	  DstPort		  3
 	}
@@ -49273,7 +49040,7 @@ Model {
 	  ZOrder		  1014
 	  SrcBlock		  "Estimations"
 	  SrcPort		  4
-	  Points		  [152, 0; 0, 500]
+	  Points		  [152, 0; 0, 515]
 	  DstBlock		  "Debug Information\n"
 	  DstPort		  10
 	}
@@ -49610,7 +49377,7 @@ Model {
 	  ZOrder		  1313
 	  SrcBlock		  "Estimations"
 	  SrcPort		  6
-	  Points		  [45, 0; 0, 825]
+	  Points		  [45, 0; 0, 850]
 	  DstBlock		  "Bus\nSelector"
 	  DstPort		  1
 	}
@@ -49618,7 +49385,7 @@ Model {
 	  ZOrder		  1310
 	  SrcBlock		  "Estimations"
 	  SrcPort		  5
-	  Points		  [95, 0; 0, 610]
+	  Points		  [95, 0; 0, 630]
 	  DstBlock		  "Debug Information\n"
 	  DstPort		  12
 	}
@@ -49995,7 +49762,7 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		52
+	$ObjectID		47
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMakerGUI.bmp'));"
       }
@@ -50078,7 +49845,7 @@ Stateflow {
     name		    "TV2016"
     created		    "14-Oct-2015 10:05:28"
     isLibrary		    0
-    firstTarget		    322
+    firstTarget		    323
     sfVersion		    80000005
   }
   chart {
@@ -50231,7 +49998,10 @@ Stateflow {
     firstTransition	    23
     firstJunction	    22
     viewObj		    10
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    27
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50537,7 +50307,10 @@ Stateflow {
     firstTransition	    39
     firstJunction	    38
     viewObj		    25
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50562,40 +50335,41 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function [SR_FL,SR_FR,SR_RL,SR_RR, Kp, Ki] = slipRatioAndGains(states, T_req, tractionControl,set"
-      "tings,T_tv)\n%#codegen\n\n\nSR_FL = states.SR_FL;\nSR_FR = states.SR_FR;\nSR_RL = states.SR_RL;\nSR_RR = states."
-      "SR_RR;\n\n\n\nif (states.V_x >= 0) \n    vx_kmh = states.V_x*3.6;\nelse\n    vx_kmh = single(0);\nend\n\n    \n\n"
-      "a_kp = single((tractionControl.Kp_end - tractionControl.Kp_start) / tractionControl.lookup_speed_end_kmh);\na_ki"
-      " = single((tractionControl.Ki_end - tractionControl.Ki_start) / tractionControl.lookup_speed_end_kmh);\n\n\n\nif"
-      " ( ( (T_req + 0.0001) > 0) && (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n    Kp = min( (a_kp*max(0,vx_"
-      "kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n    Ki ="
-      " min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor"
-      "_torque*4);\nelse\n    Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n    "
-      "Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\nend\n\nend\n\n\n\n\n\n\n% T"
-      "his one solves starting from 0 kmh with the driver controlling the\n% throttle. This statement reduces the gains"
-      " according to the requested\n% torque, to avoid oscillating torque output\n\n\n% if ( ( (T_req + 0.0001) > 0) &&"
-      " (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n%     Kp_driving = min( (a_kp*max(0,vx_kmh) + tractionCont"
-      "rol.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     Ki_driving = min( (a_"
-      "ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4"
-      ");\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n"
-      "%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_drivin"
-      "g;\n%     %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(set"
-      "tings.max_motor_torque*4);\n%     %Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki"
-      "_end)  * abs(T_req)/(settings.max_motor_torque*4);\n% \n% % T_req positive and speed over full gain limit\n% els"
-      "eif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl.full_gain_limit_kmh))\n%     Kp_driving = min( (a_kp*"
-      "max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Ki_driving = min( (a_ki*max(0,vx_kmh)"
-      " + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n% "
-      "    Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;"
-      "\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;    \n% else   \n%     Kp_FL = min( (a_kp*max(0,vx_kmh) + "
-      "tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp"
-      "_start), tractionControl.Kp_end);\n%     Kp_RL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionC"
-      "ontrol.Kp_end);\n%     Kp_RR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%"
-      "     \n%     Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_FR"
-      " = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RL = min( (a_ki*max("
-      "0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RR = min( (a_ki*max(0,vx_kmh) + tracti"
-      "onControl.Ki_start), tractionControl.Ki_end);\n%     \n%     %Kp = tractionControl.Kp_braking;\n%     %Ki = trac"
-      "tionControl.Ki_braking;\n% end\n% \n% if ( (T_tv.FL < 0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0) )\n%"
-      "     Kp = tractionControl.Kp_braking;\n%     Ki = tractionControl.Ki_braking;\n% end\n\n\n\n\n"
+      script		      "function [SR_FL, SR_FR, SR_RL, SR_RR, Kp, Ki] = slipRatioAndGains(states, T_req, tractionControl,"
+      " settings, T_tv)\n29function [SR_FL,SR_FR,SR_RL,SR_RR, Kp, Ki] = slipRatioAndGains(states, T_req, tractionContro"
+      "l,settings,T_tv)\n%#codegen\n\n\nSR_FL = states.SR_FL;\nSR_FR = states.SR_FR;\nSR_RL = states.SR_RL;\nSR_RR = st"
+      "ates.SR_RR;\n\n\n\nif (states.V_x >= 0) \n    vx_kmh = states.V_x*3.6;\nelse\n    vx_kmh = single(0);\nend\n\n  "
+      "  \n\na_kp = single((tractionControl.Kp_end - tractionControl.Kp_start) / tractionControl.lookup_speed_end_kmh);"
+      "\na_ki = single((tractionControl.Ki_end - tractionControl.Ki_start) / tractionControl.lookup_speed_end_kmh);\n\n"
+      "\n\nif ( ( (T_req + 0.0001) > 0) && (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n    Kp = min( (a_kp*max"
+      "(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n  "
+      "  Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max"
+      "_motor_torque*4);\nelse\n    Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);"
+      "\n    Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\nend\n\nend\n\n\n\n\n\n"
+      "\n% This one solves starting from 0 kmh with the driver controlling the\n% throttle. This statement reduces the "
+      "gains according to the requested\n% torque, to avoid oscillating torque output\n\n\n% if ( ( (T_req + 0.0001) > "
+      "0) && (vx_kmh < tractionControl.full_gain_limit_kmh) )   \n%     Kp_driving = min( (a_kp*max(0,vx_kmh) + tractio"
+      "nControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)/(settings.max_motor_torque*4);\n%     Ki_driving = min"
+      "( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end)  * abs(T_req)/(settings.max_motor_tor"
+      "que*4);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving;\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_drivi"
+      "ng;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_driving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_d"
+      "riving;\n%     %Kp = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end)  * abs(T_req)"
+      "/(settings.max_motor_torque*4);\n%     %Ki = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionContr"
+      "ol.Ki_end)  * abs(T_req)/(settings.max_motor_torque*4);\n% \n% % T_req positive and speed over full gain limit\n"
+      "% elseif ( ( (T_req + 0.0001) > 0) && (vx_kmh > tractionControl.full_gain_limit_kmh))\n%     Kp_driving = min( ("
+      "a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Ki_driving = min( (a_ki*max(0,vx"
+      "_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Kp_FL = Kp_driving;\n%     Kp_FR = Kp_driving"
+      ";\n%     Kp_RL = Kp_driving;\n%     Kp_RR = Kp_driving;\n%     \n%     Ki_FL = Ki_driving;\n%     Ki_FR = Ki_dri"
+      "ving;\n%     Ki_RL = Ki_driving;\n%     Ki_RR = Ki_driving;    \n% else   \n%     Kp_FL = min( (a_kp*max(0,vx_km"
+      "h) + tractionControl.Kp_start), tractionControl.Kp_end);\n%     Kp_FR = min( (a_kp*max(0,vx_kmh) + tractionContr"
+      "ol.Kp_start), tractionControl.Kp_end);\n%     Kp_RL = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), trac"
+      "tionControl.Kp_end);\n%     Kp_RR = min( (a_kp*max(0,vx_kmh) + tractionControl.Kp_start), tractionControl.Kp_end"
+      ");\n%     \n%     Ki_FL = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     "
+      "Ki_FR = min( (a_ki*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RL = min( (a_ki"
+      "*max(0,vx_kmh) + tractionControl.Ki_start), tractionControl.Ki_end);\n%     Ki_RR = min( (a_ki*max(0,vx_kmh) + t"
+      "ractionControl.Ki_start), tractionControl.Ki_end);\n%     \n%     %Kp = tractionControl.Kp_braking;\n%     %Ki ="
+      " tractionControl.Ki_braking;\n% end\n% \n% if ( (T_tv.FL < 0) || (T_tv.FR < 0) || (T_tv.RL < 0) || (T_tv.RR < 0)"
+      " )\n%     Kp = tractionControl.Kp_braking;\n%     Ki = tractionControl.Ki_braking;\n% end\n\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -51156,7 +50930,10 @@ Stateflow {
     firstTransition	    60
     firstJunction	    59
     viewObj		    52
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52161,7 +51938,10 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52194,11 +51974,11 @@ Stateflow {
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
       "gle(0.5);\nend\n\nRPM_to_angular = single(2*pi/60);\nomega_FL = states.RPM_FL*RPM_to_angular;\nomega_FR = states"
       ".RPM_FR*RPM_to_angular;\nomega_RL = states.RPM_RL*RPM_to_angular;\nomega_RR = states.RPM_RR*RPM_to_angular;\n\nm"
-      "mt = settings.max_motor_torque;\navailable_power = states.DC_voltage*settings.max_battery_discharge;\n\nmax_torq"
-      "ue_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR))) );\nmax_torque_re"
-      "ar = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,omega_RR))) );\n                  "
-      "    \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_R"
-      "L = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
+      "mt = settings.max_motor_torque;\navailable_power = states.DC_voltage*settings.max_battery_discharge;\navailable_"
+      "power = single(80000);\n\nmax_torque_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), m"
+      "ax(1,omega_FR))) );\nmax_torque_rear = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,"
+      "omega_RR))) );\n                      \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_t"
+      "orque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -55948,11 +55728,11 @@ Stateflow {
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 295 0 0]
-    firstTransition	    304
-    firstJunction	    303
+    firstTransition	    305
+    firstJunction	    304
     viewObj		    294
     machine		    1
-    ssIdHighWaterMark	    10
+    ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    296
@@ -55976,15 +55756,16 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function Fz_damper_est =  FzEstDamp(sensors, Fz_damp_FL, Fz_damp_FR, Fz_damp_RL, Fz_damp_RR, car_"
-      "params)\n%#codegen\n\nKs_front    = car_params.spring_constant_front;\nKs_rear     = car_params.spring_constant_"
-      "rear;\n\nMR_front    = car_params.motion_ratio_front;\nMR_rear     = car_params.motion_ratio_rear;     \n\nprelo"
-      "ad_front = car_params.preload_front_mm;\npreload_rear = car_params.preload_rear_mm;\n\nFz_damper_est.FL = (Ks_fr"
-      "ont*(sensors.damper_pos_FL + preload_front) + Fz_damp_FL)*MR_front + car_params.unsprung_mass_per_wheel_newton;\n"
-      "Fz_damper_est.FR = (Ks_front*(sensors.damper_pos_FR + preload_front) + Fz_damp_FR)*MR_front + car_params.unsprun"
-      "g_mass_per_wheel_newton;\nFz_damper_est.RL = (Ks_rear*(sensors.damper_pos_RL + preload_rear) + Fz_damp_RL)*MR_re"
-      "ar + car_params.unsprung_mass_per_wheel_newton;\nFz_damper_est.RR = (Ks_rear*(sensors.damper_pos_RR + preload_re"
-      "ar) + Fz_damp_RR)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\n\n"
+      script		      "function [Fz_damper_est, alfa_r] =  FzEstDamp(sensors, Fz_damp_FL, Fz_damp_FR, Fz_damp_RL, Fz_dam"
+      "p_RR, car_params)\n%#codegen\n\nKs_front    = car_params.spring_constant_front;\nKs_rear     = car_params.spring"
+      "_constant_rear;\n\nMR_front    = car_params.motion_ratio_front;\nMR_rear     = car_params.motion_ratio_rear;    "
+      " \n\npreload_front = car_params.preload_front_mm;\npreload_rear = car_params.preload_rear_mm;\n\nFz_damper_est.F"
+      "L = (Ks_front*(sensors.damper_pos_FL + preload_front) + Fz_damp_FL)*MR_front + car_params.unsprung_mass_per_whee"
+      "l_newton;\nFz_damper_est.FR = (Ks_front*(sensors.damper_pos_FR + preload_front) + Fz_damp_FR)*MR_front + car_par"
+      "ams.unsprung_mass_per_wheel_newton;\nFz_damper_est.RL = (Ks_rear*(sensors.damper_pos_RL + preload_rear) + Fz_dam"
+      "p_RL)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\nFz_damper_est.RR = (Ks_rear*(sensors.damper_pos_RR +"
+      " preload_rear) + Fz_damp_RR)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\n\nalfa_r = (Fz_damper_est.RL "
+      "+ Fz_damper_est.RR) / (Fz_damper_est.FL + Fz_damper_est.FR + Fz_damper_est.RL + Fz_damper_est.RR);\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -56121,7 +55902,7 @@ Stateflow {
     id			    302
     ssIdNumber		    8
     name		    "car_params"
-    linkNode		    [294 301 0]
+    linkNode		    [294 301 303]
     scope		    PARAMETER_DATA
     machine		    1
     props {
@@ -56139,8 +55920,30 @@ Stateflow {
     }
     dataType		    "Inherit: Same as Simulink"
   }
-  junction {
+  data {
     id			    303
+    ssIdNumber		    11
+    name		    "alfa_r"
+    linkNode		    [294 302 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    304
     position		    [23.5747 49.5747 7]
     chart		    294
     linkNode		    [294 0 0]
@@ -56149,7 +55952,7 @@ Stateflow {
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    304
+    id			    305
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [28.125 13.875 102.544 14.964]
     fontSize		    12
@@ -56157,7 +55960,7 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      303
+      id		      304
       intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
@@ -56173,26 +55976,29 @@ Stateflow {
     ssIdNumber		    2
   }
   instance {
-    id			    305
+    id			    306
     name		    "CarMaker/Estimations/Fz_Estimation/FzEstDamper"
     machine		    1
     chart		    294
   }
   chart {
-    id			    306
+    id			    307
     name		    "CarMaker/Control_System\n/Control\n/Torque allocation\n/Torque Allocation/TorqueAllocation"
     windowPosition	    [352.761 488.141 161 328]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1280 1024 1.000677131425054]
-    treeNode		    [0 307 0 0]
-    firstTransition	    320
-    firstJunction	    319
-    viewObj		    306
+    treeNode		    [0 308 0 0]
+    firstTransition	    321
+    firstJunction	    320
+    viewObj		    307
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
-    firstData		    308
+    firstData		    309
     chartFileNumber	    29
     disableImplicitCasting  1
     eml {
@@ -56200,14 +56006,14 @@ Stateflow {
     }
   }
   state {
-    id			    307
+    id			    308
     labelString		    "eML_blk_kernel()"
     position		    [18 64.5 118 66]
     fontSize		    12
-    chart		    306
-    treeNode		    [306 0 0 0]
+    chart		    307
+    treeNode		    [307 0 0 0]
     superState		    SUBCHART
-    subviewer		    306
+    subviewer		    307
     ssIdNumber		    1
     type		    FUNC_STATE
     decomposition	    CLUSTER_STATE
@@ -56346,10 +56152,10 @@ Stateflow {
     }
   }
   data {
-    id			    308
+    id			    309
     ssIdNumber		    5
     name		    "Ti_lim"
-    linkNode		    [306 0 309]
+    linkNode		    [307 0 310]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -56367,32 +56173,10 @@ Stateflow {
     dataType		    "Bus: Ti_lim"
   }
   data {
-    id			    309
+    id			    310
     ssIdNumber		    22
     name		    "T_req"
-    linkNode		    [306 308 310]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    310
-    ssIdNumber		    23
-    name		    "states"
-    linkNode		    [306 309 311]
+    linkNode		    [307 309 311]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -56412,9 +56196,9 @@ Stateflow {
   }
   data {
     id			    311
-    ssIdNumber		    35
-    name		    "maxMotorTorque"
-    linkNode		    [306 310 312]
+    ssIdNumber		    23
+    name		    "states"
+    linkNode		    [307 310 312]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -56434,9 +56218,31 @@ Stateflow {
   }
   data {
     id			    312
+    ssIdNumber		    35
+    name		    "maxMotorTorque"
+    linkNode		    [307 311 313]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    313
     ssIdNumber		    24
     name		    "settings"
-    linkNode		    [306 311 313]
+    linkNode		    [307 312 314]
     scope		    PARAMETER_DATA
     paramIndexForInitFromWorkspace 1
     machine		    1
@@ -56456,10 +56262,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    313
+    id			    314
     ssIdNumber		    28
     name		    "car_params"
-    linkNode		    [306 312 314]
+    linkNode		    [307 313 315]
     scope		    PARAMETER_DATA
     machine		    1
     props {
@@ -56478,10 +56284,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    314
+    id			    315
     ssIdNumber		    29
     name		    "Mz_ref"
-    linkNode		    [306 313 315]
+    linkNode		    [307 314 316]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -56500,32 +56306,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    315
+    id			    316
     ssIdNumber		    30
     name		    "Ti_max"
-    linkNode		    [306 314 316]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    316
-    ssIdNumber		    31
-    name		    "Mz_error"
-    linkNode		    [306 315 317]
+    linkNode		    [307 315 317]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -56545,9 +56329,9 @@ Stateflow {
   }
   data {
     id			    317
-    ssIdNumber		    32
-    name		    "Mz_allocated"
-    linkNode		    [306 316 318]
+    ssIdNumber		    31
+    name		    "Mz_error"
+    linkNode		    [307 316 318]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -56567,9 +56351,31 @@ Stateflow {
   }
   data {
     id			    318
+    ssIdNumber		    32
+    name		    "Mz_allocated"
+    linkNode		    [307 317 319]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    319
     ssIdNumber		    34
     name		    "yawRateControl"
-    linkNode		    [306 317 0]
+    linkNode		    [307 318 0]
     scope		    PARAMETER_DATA
     paramIndexForInitFromWorkspace 2
     machine		    1
@@ -56589,16 +56395,16 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   junction {
-    id			    319
+    id			    320
     position		    [23.5747 49.5747 7]
-    chart		    306
-    linkNode		    [306 0 0]
-    subviewer		    306
+    chart		    307
+    linkNode		    [307 0 0]
+    subviewer		    307
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    320
+    id			    321
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [36.125 25.875 102.544 14.964]
     fontSize		    12
@@ -56606,14 +56412,14 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      319
+      id		      320
       intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
-    chart		    306
-    linkNode		    [306 0 0]
+    chart		    307
+    linkNode		    [307 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    306
+    subviewer		    307
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
@@ -56622,13 +56428,13 @@ Stateflow {
     ssIdNumber		    2
   }
   instance {
-    id			    321
+    id			    322
     name		    "CarMaker/Control_System\n/Control\n/Torque allocation\n/Torque Allocation/TorqueAllocation"
     machine		    1
-    chart		    306
+    chart		    307
   }
   target {
-    id			    322
+    id			    323
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1
