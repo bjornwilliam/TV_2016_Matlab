@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1735"
+    ComputedModelVersion    "1.1736"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -52,21 +52,21 @@ Model {
 	Dimension		6
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "909"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [557.61353250762681, 472.54686584096]
-	}
-	Object {
-	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1034"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [15.650000000000091, 306.43333333333339]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-118.74999999999989, 263.43333333333339]
+	}
+	Object {
+	  $ObjectID		  6
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1"
+	  Extents		  [1562.0, 699.0]
+	  ZoomFactor		  [0.5]
+	  Offset		  [752.0, 426.0]
 	}
 	Object {
 	  $ObjectID		  7
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 01 22:46:27 2016"
-  RTWModifiedTimeStamp	  389289734
-  ModelVersionFormat	  "1.%<AutoIncrement:1735>"
+  LastModifiedDate	  "Fri Jul 01 23:43:20 2016"
+  RTWModifiedTimeStamp	  389313989
+  ModelVersionFormat	  "1.%<AutoIncrement:1736>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2400,7 +2400,7 @@ Model {
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1604, 876]
-	Open			off
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -3808,7 +3808,7 @@ Model {
 	  System {
 	    Name		    "Control_System\n"
 	    Location		    [-8, 0, 1604, 876]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3819,7 +3819,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "60"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3850,7 +3850,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"175"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -11473,7 +11473,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -21139,7 +21139,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "60"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21731,7 +21731,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Inport
 		  Name			  "sensors"
@@ -50336,8 +50336,7 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function [SR_FL, SR_FR, SR_RL, SR_RR, Kp, Ki] = slipRatioAndGains(states, T_req, tractionControl,"
-      " settings, T_tv)\n29function [SR_FL,SR_FR,SR_RL,SR_RR, Kp, Ki] = slipRatioAndGains(states, T_req, tractionContro"
-      "l,settings,T_tv)\n%#codegen\n\n\nSR_FL = states.SR_FL;\nSR_FR = states.SR_FR;\nSR_RL = states.SR_RL;\nSR_RR = st"
+      " settings, T_tv)\n%#codegen\n\n\nSR_FL = states.SR_FL;\nSR_FR = states.SR_FR;\nSR_RL = states.SR_RL;\nSR_RR = st"
       "ates.SR_RR;\n\n\n\nif (states.V_x >= 0) \n    vx_kmh = states.V_x*3.6;\nelse\n    vx_kmh = single(0);\nend\n\n  "
       "  \n\na_kp = single((tractionControl.Kp_end - tractionControl.Kp_start) / tractionControl.lookup_speed_end_kmh);"
       "\na_ki = single((tractionControl.Ki_end - tractionControl.Ki_start) / tractionControl.lookup_speed_end_kmh);\n\n"
@@ -51974,11 +51973,11 @@ Stateflow {
       ");\n    case 4 % with negative torque, no Fz\n        alfa_r = single(0.5);\n    otherwise\n        alfa_r = sin"
       "gle(0.5);\nend\n\nRPM_to_angular = single(2*pi/60);\nomega_FL = states.RPM_FL*RPM_to_angular;\nomega_FR = states"
       ".RPM_FR*RPM_to_angular;\nomega_RL = states.RPM_RL*RPM_to_angular;\nomega_RR = states.RPM_RR*RPM_to_angular;\n\nm"
-      "mt = settings.max_motor_torque;\navailable_power = states.DC_voltage*settings.max_battery_discharge;\navailable_"
-      "power = single(80000);\n\nmax_torque_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), m"
-      "ax(1,omega_FR))) );\nmax_torque_rear = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,"
-      "omega_RR))) );\n                      \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_t"
-      "orque_front;\nmaxMotorTorque.mmt_RL = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
+      "mt = settings.max_motor_torque;\navailable_power = states.DC_voltage*settings.max_battery_discharge;\n\nmax_torq"
+      "ue_front = min(mmt, (available_power*(1-alfa_r))/ (2 * max( max(1,omega_FL), max(1,omega_FR))) );\nmax_torque_re"
+      "ar = min(mmt, (available_power*alfa_r)     / (2 * max( max(1,omega_RL), max(1,omega_RR))) );\n                  "
+      "    \nmaxMotorTorque.mmt_FL = max_torque_front;\nmaxMotorTorque.mmt_FR = max_torque_front;\nmaxMotorTorque.mmt_R"
+      "L = max_torque_rear;\nmaxMotorTorque.mmt_RR = max_torque_rear;\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -55731,7 +55730,10 @@ Stateflow {
     firstTransition	    305
     firstJunction	    304
     viewObj		    294
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
