@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1736"
+    ComputedModelVersion    "1.1741"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1612.0, 876.0]
+      Location		      [-8.0, -8.0, 1616.0, 876.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -52,30 +52,30 @@ Model {
 	Dimension		6
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1034"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-118.74999999999989, 263.43333333333339]
+	  LoadSaveID		  "909"
+	  Extents		  [1566.0, 699.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [48.226190476190595, 187.46428571428589]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
-	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [0.5]
-	  Offset		  [752.0, 426.0]
+	  LoadSaveID		  "2821"
+	  Extents		  [1566.0, 699.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [-313.95412775628131, 164.00754599272625]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "985"
+	  LoadSaveID		  "3165"
 	  Extents		  [1562.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [127.96570171164944, 319.83205662210486]
+	  ZoomFactor		  [4.0]
+	  Offset		  [411.35000000000019, 243.09999999999991]
 	}
 	Object {
 	  $ObjectID		  8
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 01 23:43:20 2016"
-  RTWModifiedTimeStamp	  389313989
-  ModelVersionFormat	  "1.%<AutoIncrement:1736>"
+  LastModifiedDate	  "Sat Jul 02 21:37:11 2016"
+  RTWModifiedTimeStamp	  389396200
+  ModelVersionFormat	  "1.%<AutoIncrement:1741>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2399,8 +2399,8 @@ Model {
       }
       System {
 	Name			"CarMaker"
-	Location		[-8, 0, 1604, 876]
-	Open			on
+	Location		[-8, -8, 1608, 868]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -3807,8 +3807,8 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Control_System\n"
-	    Location		    [-8, 0, 1604, 876]
-	    Open		    off
+	    Location		    [-8, -8, 1608, 868]
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3819,7 +3819,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "80"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "states"
@@ -3838,7 +3838,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Control\n"
-		Location		[-8, 0, 1604, 876]
+		Location		[-8, -8, 1608, 868]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -3850,7 +3850,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"175"
+		ZoomFactor		"150"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -4609,7 +4609,7 @@ Model {
 		  System {
 		    Name		    "Slip Rate Control\n"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7064,7 +7064,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "25"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "states"
@@ -7855,7 +7855,7 @@ Model {
 		    System {
 		    Name		    "Slip Rate FL"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7866,7 +7866,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "400"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "SR_ref"
@@ -11294,7 +11294,7 @@ Model {
 		  RequestExecContextInheritance	off
 		  System {
 		    Name		    "Throttle / Brake Mapping"
-		    Location		    [-8, 0, 1604, 876]
+		    Location		    [-8, -8, 1608, 868]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -11462,7 +11462,7 @@ Model {
 		  System {
 		    Name		    "Torque allocation\n"
 		    Location		    [-8, 0, 1604, 876]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -11473,7 +11473,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "50"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -12332,7 +12332,7 @@ Model {
 		  }
 		  System {
 		    Name		    "Yaw Rate Controller\n"
-		    Location		    [-8, 0, 1604, 876]
+		    Location		    [-8, -8, 1608, 868]
 		    Open		    off
 		    ModelBrowserVisibility  off
 		    ModelBrowserWidth	    200
@@ -12344,7 +12344,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "60"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "States"
@@ -21127,7 +21127,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Estimations"
-	    Location		    [-8, 0, 1604, 876]
+	    Location		    [-8, -8, 1608, 868]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -21139,7 +21139,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "60"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -21719,8 +21719,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Fz_Estimation"
-		Location		[-8, 0, 1604, 876]
-		Open			off
+		Location		[-8, -8, 1608, 868]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -21731,7 +21731,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"125"
+		ZoomFactor		"60"
 		Block {
 		  BlockType		  Inport
 		  Name			  "sensors"
@@ -49998,10 +49998,7 @@ Stateflow {
     firstTransition	    23
     firstJunction	    22
     viewObj		    10
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    27
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50307,10 +50304,7 @@ Stateflow {
     firstTransition	    39
     firstJunction	    38
     viewObj		    25
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -50929,10 +50923,7 @@ Stateflow {
     firstTransition	    60
     firstJunction	    59
     viewObj		    52
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51937,10 +51928,7 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52379,7 +52367,10 @@ Stateflow {
     firstTransition	    129
     firstJunction	    128
     viewObj		    122
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55761,13 +55752,19 @@ Stateflow {
       script		      "function [Fz_damper_est, alfa_r] =  FzEstDamp(sensors, Fz_damp_FL, Fz_damp_FR, Fz_damp_RL, Fz_dam"
       "p_RR, car_params)\n%#codegen\n\nKs_front    = car_params.spring_constant_front;\nKs_rear     = car_params.spring"
       "_constant_rear;\n\nMR_front    = car_params.motion_ratio_front;\nMR_rear     = car_params.motion_ratio_rear;    "
-      " \n\npreload_front = car_params.preload_front_mm;\npreload_rear = car_params.preload_rear_mm;\n\nFz_damper_est.F"
-      "L = (Ks_front*(sensors.damper_pos_FL + preload_front) + Fz_damp_FL)*MR_front + car_params.unsprung_mass_per_whee"
-      "l_newton;\nFz_damper_est.FR = (Ks_front*(sensors.damper_pos_FR + preload_front) + Fz_damp_FR)*MR_front + car_par"
-      "ams.unsprung_mass_per_wheel_newton;\nFz_damper_est.RL = (Ks_rear*(sensors.damper_pos_RL + preload_rear) + Fz_dam"
-      "p_RL)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\nFz_damper_est.RR = (Ks_rear*(sensors.damper_pos_RR +"
-      " preload_rear) + Fz_damp_RR)*MR_rear + car_params.unsprung_mass_per_wheel_newton;\n\nalfa_r = (Fz_damper_est.RL "
-      "+ Fz_damper_est.RR) / (Fz_damper_est.FL + Fz_damper_est.FR + Fz_damper_est.RL + Fz_damper_est.RR);\nend\n"
+      " \n\npreload_front = car_params.preload_front_mm;\npreload_rear = car_params.preload_rear_mm;\n\nunsprung = car_"
+      "params.unsprung_mass_per_wheel_newton;\n% 0 - 1 mm, Go from 0 to neutral Fz\nFL_scaling = single(min(sensors.dam"
+      "per_pos_FL, single(1)));\nFR_scaling = single(min(sensors.damper_pos_FR, single(1)));\nRL_scaling = single(min(s"
+      "ensors.damper_pos_RL, single(1)));\nRR_scaling = single(min(sensors.damper_pos_RR, single(1)));\n\n% Fz_damper_e"
+      "st.FL = (Ks_front*(sensors.damper_pos_FL + preload_front) + Fz_damp_FL)*MR_front + unsprung;\n% Fz_damper_est.FR"
+      " = (Ks_front*(sensors.damper_pos_FR + preload_front) + Fz_damp_FR)*MR_front + unsprung;\n% Fz_damper_est.RL = (K"
+      "s_rear*(sensors.damper_pos_RL + preload_rear) + Fz_damp_RL)*MR_rear + unsprung;\n% Fz_damper_est.RR = (Ks_rear*("
+      "sensors.damper_pos_RR + preload_rear) + Fz_damp_RR)*MR_rear + unsprung;\n\nFz_damper_est.FL = Ks_front*sensors.d"
+      "amper_pos_FL + Fz_damp_FL + (unsprung + preload_front*Ks_front)*FL_scaling;\nFz_damper_est.FR = Ks_front*sensors"
+      ".damper_pos_FR + Fz_damp_FR + (unsprung + preload_front*Ks_front)*FR_scaling;\n\nFz_damper_est.RL = Ks_rear*sens"
+      "ors.damper_pos_RL + Fz_damp_RL + (unsprung + preload_rear*Ks_rear)*RL_scaling;\nFz_damper_est.RR = Ks_rear*senso"
+      "rs.damper_pos_RR + Fz_damp_RR + (unsprung + preload_rear*Ks_rear)*RR_scaling;\n\nalfa_r = (Fz_damper_est.RL + Fz"
+      "_damper_est.RR) / (Fz_damper_est.FL + Fz_damper_est.FR + Fz_damper_est.RL + Fz_damper_est.RR);\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -55993,10 +55990,7 @@ Stateflow {
     firstTransition	    321
     firstJunction	    320
     viewObj		    307
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
