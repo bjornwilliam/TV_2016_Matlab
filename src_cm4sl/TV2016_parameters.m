@@ -99,7 +99,7 @@ yawRateControl.meas_weight = single(0.5);
 yawRateControl.enable_r_ref_limit = uint32(1);
 yawRateControl.mu_scaling_r_ref_limit = single(1);
 
-yawRateControl.enable = uint32(1);
+yawRateControl.enable = uint32(0);
 
 % ------------------------------
 % Traction ontrol Parameters
@@ -132,7 +132,7 @@ tractionControl.enable = uint32(0);
 % ------------------------------
 % Power Limit Control Parameters
 % ------------------------------
-powerLimitControl.positive_power_limit = single(40000); % Positive effect limit
+powerLimitControl.positive_power_limit = single(80000); % Positive effect limit
 powerLimitControl.negative_power_limit = single(100000); %
 powerLimitControl.Kp = single(0.000007); % (0.000003
 powerLimitControl.Ki = single(0.0010);  % single(0.0002)
