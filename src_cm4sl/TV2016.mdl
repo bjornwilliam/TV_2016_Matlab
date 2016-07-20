@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1750"
+    ComputedModelVersion    "1.1759"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,10 +54,10 @@ Model {
 	  $ObjectID		  5
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "3982"
 	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [0.2]
-	  Offset		  [-663.10449741479806, -334.3202711564827]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-199.18333333333362, 13.133333333333383]
 	}
 	Object {
 	  $ObjectID		  6
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jul 07 20:45:38 2016"
-  RTWModifiedTimeStamp	  389825129
-  ModelVersionFormat	  "1.%<AutoIncrement:1750>"
+  LastModifiedDate	  "Sun Jul 17 11:52:06 2016"
+  RTWModifiedTimeStamp	  390656901
+  ModelVersionFormat	  "1.%<AutoIncrement:1759>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2400,7 +2400,7 @@ Model {
       System {
 	Name			"CarMaker"
 	Location		[-8, 0, 1608, 876]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2411,7 +2411,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"20"
+	ZoomFactor		"50"
 	Block {
 	  BlockType		  BusCreator
 	  Name			  "Bus\nCreator"
@@ -21127,7 +21127,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Estimations"
-	    Location		    [-8, -8, 1608, 868]
+	    Location		    [-8, 0, 1608, 876]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -21139,7 +21139,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -22652,8 +22652,8 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"SR_Calculation"
-		Location		[-8, 0, 1604, 876]
-		Open			off
+		Location		[-8, 0, 1608, 876]
+		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -22664,7 +22664,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"150"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Inport
 		  Name			  "v_x"
@@ -50655,10 +50655,7 @@ Stateflow {
     firstTransition	    50
     firstJunction	    49
     viewObj		    41
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -51933,10 +51930,7 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52375,10 +52369,7 @@ Stateflow {
     firstTransition	    129
     firstJunction	    128
     viewObj		    122
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52696,7 +52687,10 @@ Stateflow {
     firstTransition	    147
     firstJunction	    146
     viewObj		    139
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52721,10 +52715,16 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function SR = slipRatioCalculation(V_x,whl_v,sensor,car_params)\n%#codegen\n\nSR.FL = single((whl"
-      "_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nSR.FR = single((whl_v.FR - V_x) / max([0.01, abs(whl_v.FR"
-      "), abs(V_x)]));\nSR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V_x)]));\nSR.RR = single((whl_v"
-      ".RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
+      script		      "function SR = slipRatioCalculation(V_x,whl_v,sensor,car_params)\n%#codegen\n\n% kistler sensor 27"
+      ".5 cm to the left of center\n\ndistance_left_side = single(0.325);\ndistance_right_side = single(0.875);\n\n% Vx"
+      "_FL = -sensor.yawRate*distance_left_side  + V_x;\n% Vx_FR =  sensor.yawRate*distance_right_side + V_x;\n% Vx_RL "
+      "= -sensor.yawRate*distance_left_side  + V_x;\n% Vx_RR =  sensor.yawRate*distance_right_side + V_x;\n% %Remember "
+      "to compensate to each wheel based on yaw rate\n% SR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), a"
+      "bs(V_x)]));\n% SR.FR = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl"
+      "_v.RL - Vx_RL) / max([0.01, abs(whl_v.RL), abs(V_x)]));\n% SR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(wh"
+      "l_v.RR), abs(V_x)]));\n\nSR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nSR.FR = singl"
+      "e((whl_v.FR - V_x) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - V_x) / max([0.01, abs(wh"
+      "l_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -53621,10 +53621,7 @@ Stateflow {
     firstTransition	    201
     firstJunction	    200
     viewObj		    187
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55998,10 +55995,7 @@ Stateflow {
     firstTransition	    321
     firstJunction	    320
     viewObj		    307
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    35
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
