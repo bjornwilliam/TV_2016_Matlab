@@ -1,0 +1,159 @@
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:29:53
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:30:23
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:30:55
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:31:22
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:31:47
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+SIM_END		Examples_FS/FS_Acceleration	0s	0m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:31:53
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:32:49
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0343m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:34:18
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0397m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:37:02
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.879
+SIM_END		Examples_FS/FS_Acceleration	3.878s	75.0366m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:39:21
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.899
+SIM_END		Examples_FS/FS_Acceleration	3.898s	75.0373m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:41:11
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.894
+SIM_END		Examples_FS/FS_Acceleration	3.893s	75.0352m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 17:48:35
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.894
+SIM_END		Examples_FS/FS_Acceleration	3.893s	75.0378m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 18:05:34
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.892
+SIM_END		Examples_FS/FS_Acceleration	3.891s	75.0605m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 18:07:00
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	3.891
+SIM_END		Examples_FS/FS_Acceleration	3.89s	75.0338m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 18:08:55
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	5.099
+SIM_END		Examples_FS/FS_Acceleration	5.098s	75.033m
+APPLICATION	CarMaker 5.0.2 - Car_Generic #351 (5.0.2)
+COMPILED	fh@daniel.ipg 2015-09-30 13:47:18
+SIM_START	Examples_FS/FS_Acceleration	2016-07-20 18:13:46
+TIME	0.001
+WARNING		PowerTrain OpenXWD: No selected PowerTrainXWD model; calculation using DVA is possible, but without 'integration substepping'
+TIME	0.000
+SIMULATE	Examples_FS/FS_Acceleration
+
+TIME	4.166
+SIM_END		Examples_FS/FS_Acceleration	4.165s	75.0311m
