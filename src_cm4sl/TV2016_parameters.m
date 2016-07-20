@@ -21,7 +21,7 @@ settings.select_velocity_vx = uint32(3);    % 1 = estimated, 2 = INS, 3 = Optica
 settings.select_velocity_vy = uint32(3);    %                2 = INS, 3 = Optical
 % 1 = Engineering (No negative torque), 2 = with negative torque , 
 % 3 = static 25  , 4 = with negative, does not use Fz
-settings.TV_Method = uint32(4); 
+settings.TV_Method = uint32(2); 
 settings.use_estimated_Fz = uint32(0); % 1 = yes, 0 = no
 
 settings.max_motor_torque = single(21);

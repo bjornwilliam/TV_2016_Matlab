@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1759"
+    ComputedModelVersion    "1.1763"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -56,8 +56,8 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "3982"
 	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-199.18333333333362, 13.133333333333383]
+	  ZoomFactor		  [1.5]
+	  Offset		  [6.3666666666665606, 76.03333333333336]
 	}
 	Object {
 	  $ObjectID		  6
@@ -73,7 +73,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "3165"
-	  Extents		  [1562.0, 699.0]
+	  Extents		  [1566.0, 699.0]
 	  ZoomFactor		  [4.0]
 	  Offset		  [411.35000000000019, 243.09999999999991]
 	}
@@ -82,7 +82,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "3979"
-	  Extents		  [1562.0, 699.0]
+	  Extents		  [1566.0, 699.0]
 	  ZoomFactor		  [0.8]
 	  Offset		  [0.0, 0.0]
 	}
@@ -91,7 +91,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "1642"
-	  Extents		  [1562.0, 699.0]
+	  Extents		  [1566.0, 699.0]
 	  ZoomFactor		  [1.5]
 	  Offset		  [1536.9055743865458, 1571.495282153337]
 	}
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jul 17 11:52:06 2016"
-  RTWModifiedTimeStamp	  390656901
-  ModelVersionFormat	  "1.%<AutoIncrement:1759>"
+  LastModifiedDate	  "Wed Jul 20 13:01:15 2016"
+  RTWModifiedTimeStamp	  390920468
+  ModelVersionFormat	  "1.%<AutoIncrement:1763>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2380,7 +2380,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "200"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "6121"
+    SIDHighWatermark	    "6123"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
@@ -21139,7 +21139,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Fz_CM"
@@ -22664,7 +22664,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"125"
+		ZoomFactor		"150"
 		Block {
 		  BlockType		  Inport
 		  Name			  "v_x"
@@ -22719,7 +22719,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "34"
+		    SIDHighWatermark	    "35"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "V_x"
@@ -22790,21 +22790,21 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    23
+		    ZOrder		    36
 		    SrcBlock		    "V_x"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    24
+		    ZOrder		    37
 		    SrcBlock		    "whl_v"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
-		    ZOrder		    25
+		    ZOrder		    38
 		    SrcBlock		    "sensor"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
@@ -22812,7 +22812,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "SR"
-		    ZOrder		    26
+		    ZOrder		    39
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -22820,14 +22820,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    27
+		    ZOrder		    40
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    28
+		    ZOrder		    41
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -22839,7 +22839,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "SR"
 		  SID			  "3984"
-		  Position		  [570, 188, 600, 202]
+		  Position		  [570, 153, 600, 167]
 		  ZOrder		  -2
 		  IconDisplay		  "Port number"
 		}
@@ -22854,6 +22854,7 @@ Model {
 		  ZOrder		  3
 		  SrcBlock		  "Slip ratio"
 		  SrcPort		  1
+		  Points		  [0, -35]
 		  DstBlock		  "SR"
 		  DstPort		  1
 		}
@@ -22883,7 +22884,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"calculateMeanWheelAngle"
-		Location		[-8, 0, 1604, 876]
+		Location		[-8, 0, 1608, 876]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -52691,7 +52692,7 @@ Stateflow {
     machine		    1
     subviewS {
     }
-    ssIdHighWaterMark	    20
+    ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    141
@@ -52716,15 +52717,18 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function SR = slipRatioCalculation(V_x,whl_v,sensor,car_params)\n%#codegen\n\n% kistler sensor 27"
-      ".5 cm to the left of center\n\ndistance_left_side = single(0.325);\ndistance_right_side = single(0.875);\n\n% Vx"
-      "_FL = -sensor.yawRate*distance_left_side  + V_x;\n% Vx_FR =  sensor.yawRate*distance_right_side + V_x;\n% Vx_RL "
-      "= -sensor.yawRate*distance_left_side  + V_x;\n% Vx_RR =  sensor.yawRate*distance_right_side + V_x;\n% %Remember "
-      "to compensate to each wheel based on yaw rate\n% SR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), a"
-      "bs(V_x)]));\n% SR.FR = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl"
-      "_v.RL - Vx_RL) / max([0.01, abs(whl_v.RL), abs(V_x)]));\n% SR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(wh"
-      "l_v.RR), abs(V_x)]));\n\nSR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nSR.FR = singl"
-      "e((whl_v.FR - V_x) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - V_x) / max([0.01, abs(wh"
-      "l_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
+      ".5 cm to the left of center\n% Transform SFII to CoG \n\n% x_pos_SFII = single(0.7);\n% y_pos_SFII = single(0.27"
+      "5);\nhypotenus_SFII = single(0.75);\nangle_SFII = single(0.41); % rad \nVx_CoG = -sensor.yawRate*hypotenus_SFII*"
+      "sin(angle_SFII) + V_x;\n\nwhl_pos_x = single(0.76);\nwhl_pos_y = single(0.6);\nhypo_CoG_whl = single(0.9683);\na"
+      "ngle_whl_CoG = single(atan(whl_pos_y/whl_pos_x)); % single(0.6683); % rad\n\nv_omega = sensor.yawRate*hypo_CoG_w"
+      "hl;\n\nVx_FL = -sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_FR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RL = -si"
+      "n(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\n\n% Using velocity compensate"
+      "d for yaw rate at each wheel hub \nSR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nS"
+      "R.FR = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - Vx_RL) / m"
+      "ax([0.01, abs(whl_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(whl_v.RR), abs(V_x)]))"
+      ";\n\n% SR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\n% SR.FR = single((whl_v.FR - V_"
+      "x) / max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V"
+      "_x)]));\n% SR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52889,7 +52893,10 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55583,7 +55590,10 @@ Stateflow {
     firstTransition	    292
     firstJunction	    291
     viewObj		    286
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
