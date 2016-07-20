@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1763"
+    ComputedModelVersion    "1.1765"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -57,16 +57,16 @@ Model {
 	  LoadSaveID		  "3982"
 	  Extents		  [1566.0, 699.0]
 	  ZoomFactor		  [1.5]
-	  Offset		  [6.3666666666665606, 76.03333333333336]
+	  Offset		  [-93.4809523809526, -62.469780201601907]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "909"
+	  LoadSaveID		  "3966"
 	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [0.0, 0.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [658.41707844647044, 333.91631849990233]
 	}
 	Object {
 	  $ObjectID		  7
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 20 13:01:15 2016"
-  RTWModifiedTimeStamp	  390920468
-  ModelVersionFormat	  "1.%<AutoIncrement:1763>"
+  LastModifiedDate	  "Wed Jul 20 15:50:03 2016"
+  RTWModifiedTimeStamp	  390930589
+  ModelVersionFormat	  "1.%<AutoIncrement:1765>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3808,7 +3808,7 @@ Model {
 	  System {
 	    Name		    "Control_System\n"
 	    Location		    [-8, 0, 1608, 876]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3850,7 +3850,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"60"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Inport
 		  Name			  "States\n"
@@ -11473,7 +11473,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
+		    ZoomFactor		    "150"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Mz_ref"
@@ -21128,7 +21128,7 @@ Model {
 	  System {
 	    Name		    "Estimations"
 	    Location		    [-8, 0, 1608, 876]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -22839,7 +22839,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "SR"
 		  SID			  "3984"
-		  Position		  [570, 153, 600, 167]
+		  Position		  [575, 188, 605, 202]
 		  ZOrder		  -2
 		  IconDisplay		  "Port number"
 		}
@@ -22854,7 +22854,6 @@ Model {
 		  ZOrder		  3
 		  SrcBlock		  "Slip ratio"
 		  SrcPort		  1
-		  Points		  [0, -35]
 		  DstBlock		  "SR"
 		  DstPort		  1
 		}
@@ -51931,7 +51930,10 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52717,18 +52719,18 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function SR = slipRatioCalculation(V_x,whl_v,sensor,car_params)\n%#codegen\n\n% kistler sensor 27"
-      ".5 cm to the left of center\n% Transform SFII to CoG \n\n% x_pos_SFII = single(0.7);\n% y_pos_SFII = single(0.27"
-      "5);\nhypotenus_SFII = single(0.75);\nangle_SFII = single(0.41); % rad \nVx_CoG = -sensor.yawRate*hypotenus_SFII*"
-      "sin(angle_SFII) + V_x;\n\nwhl_pos_x = single(0.76);\nwhl_pos_y = single(0.6);\nhypo_CoG_whl = single(0.9683);\na"
-      "ngle_whl_CoG = single(atan(whl_pos_y/whl_pos_x)); % single(0.6683); % rad\n\nv_omega = sensor.yawRate*hypo_CoG_w"
-      "hl;\n\nVx_FL = -sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_FR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RL = -si"
-      "n(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\n\n% Using velocity compensate"
-      "d for yaw rate at each wheel hub \nSR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nS"
-      "R.FR = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - Vx_RL) / m"
-      "ax([0.01, abs(whl_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(whl_v.RR), abs(V_x)]))"
-      ";\n\n% SR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\n% SR.FR = single((whl_v.FR - V_"
-      "x) / max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V"
-      "_x)]));\n% SR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
+      ".5 cm to the left of center\n% Transform SFII to CoG \n\nx_pos_SFII = single(0.7);\ny_pos_SFII = single(0.275);\n"
+      "hypotenus_SFII = single(0.75);\nangle_SFII = single(0.3743); % rad \nVx_CoG = -sensor.yawRate*hypotenus_SFII*sin"
+      "(angle_SFII) + V_x;\n\nwhl_pos_x = single(0.76);\nwhl_pos_y = single(0.6);\nhypo_CoG_whl = single(0.9683);\nangl"
+      "e_whl_CoG = single(atan(whl_pos_y/whl_pos_x)); % single(0.6683); % rad\n\nv_omega = sensor.yawRate*hypo_CoG_whl;"
+      "\n\nVx_FL = -sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_FR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RL = -sin(a"
+      "ngle_whl_CoG)*v_omega + Vx_CoG;\nVx_RR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\n\n% Using velocity compensated f"
+      "or yaw rate at each wheel hub \nSR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nSR.F"
+      "R = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - Vx_RL) / max("
+      "[0.01, abs(whl_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n"
+      "\n% SR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\n% SR.FR = single((whl_v.FR - V_x) "
+      "/ max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V_x)"
+      "]));\n% SR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -52893,10 +52895,7 @@ Stateflow {
     firstTransition	    156
     firstJunction	    155
     viewObj		    149
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -55590,10 +55589,7 @@ Stateflow {
     firstTransition	    292
     firstJunction	    291
     viewObj		    286
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    21
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
