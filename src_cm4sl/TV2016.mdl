@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1765"
+    ComputedModelVersion    "1.1770"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 20 15:50:03 2016"
-  RTWModifiedTimeStamp	  390930589
-  ModelVersionFormat	  "1.%<AutoIncrement:1765>"
+  LastModifiedDate	  "Thu Jul 21 21:50:39 2016"
+  RTWModifiedTimeStamp	  391038638
+  ModelVersionFormat	  "1.%<AutoIncrement:1770>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -51930,10 +51930,7 @@ Stateflow {
     firstTransition	    109
     firstJunction	    108
     viewObj		    103
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52719,18 +52716,18 @@ Stateflow {
     eml {
       isEML		      1
       script		      "function SR = slipRatioCalculation(V_x,whl_v,sensor,car_params)\n%#codegen\n\n% kistler sensor 27"
-      ".5 cm to the left of center\n% Transform SFII to CoG \n\nx_pos_SFII = single(0.7);\ny_pos_SFII = single(0.275);\n"
-      "hypotenus_SFII = single(0.75);\nangle_SFII = single(0.3743); % rad \nVx_CoG = -sensor.yawRate*hypotenus_SFII*sin"
-      "(angle_SFII) + V_x;\n\nwhl_pos_x = single(0.76);\nwhl_pos_y = single(0.6);\nhypo_CoG_whl = single(0.9683);\nangl"
-      "e_whl_CoG = single(atan(whl_pos_y/whl_pos_x)); % single(0.6683); % rad\n\nv_omega = sensor.yawRate*hypo_CoG_whl;"
-      "\n\nVx_FL = -sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_FR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\nVx_RL = -sin(a"
-      "ngle_whl_CoG)*v_omega + Vx_CoG;\nVx_RR =  sin(angle_whl_CoG)*v_omega + Vx_CoG;\n\n% Using velocity compensated f"
-      "or yaw rate at each wheel hub \nSR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), abs(V_x)]));\nSR.F"
-      "R = single((whl_v.FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(V_x)]));\nSR.RL = single((whl_v.RL - Vx_RL) / max("
-      "[0.01, abs(whl_v.RL), abs(V_x)]));\nSR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n"
-      "\n% SR.FL = single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\n% SR.FR = single((whl_v.FR - V_x) "
-      "/ max([0.01, abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V_x)"
-      "]));\n% SR.RR = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
+      ".5 cm to the left of center\n% Transform SFII to CoG \n\n% x_pos_SFII = single(0.65);\n% y_pos_SFII = single(0.2"
+      "75);\n% hypotenus_SFII = single(0.7058);\n% angle_SFII = single(0.3743); % rad \n% Vx_CoG = -sensor.yawRate*hypo"
+      "tenus_SFII*sin(angle_SFII) + V_x;\n\n% whl_pos_x = single(0.76);\n% whl_pos_y = single(0.6);\n% hypo_CoG_whl = s"
+      "ingle(0.9683);\n% angle_whl_CoG = single(atan(whl_pos_y/whl_pos_x)); % single(0.6683); % rad\n\nvx_to_wheel_fact"
+      "or = single(0.6);\nvx_omega = sensor.yawRate*vx_to_wheel_factor;\n\nVx_FL = -vx_omega + V_x;\nVx_FR =  vx_omega "
+      "+ V_x;\nVx_RL = -vx_omega + V_x;\nVx_RR =  vx_omega + V_x;\n\n% Using velocity compensated for yaw rate at each "
+      "wheel hub \nSR.FL = single((whl_v.FL - Vx_FL) / max([0.01, abs(whl_v.FL), abs(Vx_FL)]));\nSR.FR = single((whl_v."
+      "FR - Vx_FR) / max([0.01, abs(whl_v.FR), abs(Vx_FR)]));\nSR.RL = single((whl_v.RL - Vx_RL) / max([0.01, abs(whl_v"
+      ".RL), abs(Vx_RL)]));\nSR.RR = single((whl_v.RR - Vx_RR) / max([0.01, abs(whl_v.RR), abs(Vx_RR)]));\n\n% SR.FL = "
+      "single((whl_v.FL - V_x) / max([0.01, abs(whl_v.FL), abs(V_x)]));\n% SR.FR = single((whl_v.FR - V_x) / max([0.01,"
+      " abs(whl_v.FR), abs(V_x)]));\n% SR.RL = single((whl_v.RL - V_x) / max([0.01, abs(whl_v.RL), abs(V_x)]));\n% SR.R"
+      "R = single((whl_v.RR - V_x) / max([0.01, abs(whl_v.RR), abs(V_x)]));\n\nend\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
