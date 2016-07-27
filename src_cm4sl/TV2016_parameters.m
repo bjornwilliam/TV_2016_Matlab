@@ -132,10 +132,11 @@ tractionControl.enable = uint32(1);
 % ------------------------------
 % Power Limit Control Parameters
 % ------------------------------
-powerLimitControl.positive_power_limit = single(59000); % Positive effect limit
+powerLimitControl.positive_power_limit_red = single(70000); % Positive effect limit
+powerLimitControl.positive_power_limit = single(58000); % Positive effect limit
 powerLimitControl.negative_power_limit = single(100000); %
-powerLimitControl.Kp = single(0.000007); % (0.000003
-powerLimitControl.Ki = single(0.0010);  % single(0.0002)
+powerLimitControl.Kp = single(0.0000009); % (0.000003
+powerLimitControl.Ki = single(0.0002);  % single(0.0002)
 
 powerLimitControl.upper_sat_limit = single(0);
 powerLimitControl.lower_sat_limit = single(-0.7); % Based on Max effect = 120KW, 8/12 = 0.6
